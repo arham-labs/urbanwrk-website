@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cinzel: ['cinzel', 'sans-serif'],
+        kepler: ['kepler', 'sans-serif']
+      },
       colors: {
         primary: '#C72030',
         dark: '#1A1A1A',
