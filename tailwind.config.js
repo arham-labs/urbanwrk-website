@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#C72030',
+        dark: '#1A1A1A',
+        bglight1: '#F6F4EE',
+        bglight2: '#EFEDE5',
+        bglight3: '#DAD6C9'
+      },
       screens: {
         "2xl": "1561px",
       },
