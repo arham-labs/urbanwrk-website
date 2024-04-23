@@ -9,7 +9,6 @@ module.exports = {
     extend: {
       fontFamily: {
         cinzel: ['cinzel', 'sans-serif'],
-        worksans: ['worksans', 'sans-serif'],
         kepler: ['kepler', 'sans-serif']
       },
       colors: {

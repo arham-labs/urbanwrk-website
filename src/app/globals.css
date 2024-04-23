@@ -8,11 +8,6 @@
 }
 
 @font-face {
-    font-family: "WorkSans";
-    src: url('../../public/fonts/WorkSans-Regular.ttf');
-}
-
-@font-face {
     font-family: "Kepler";
     src: url('../../public/fonts/KeplerStd-Italic.otf');
 }
