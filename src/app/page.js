@@ -1,6 +1,9 @@
+import AboutCard from "@/components/home/aboutCard";
 
 export default function Home() {
   return (
-   <div>hi</div>
+   <>
+    <AboutCard/>
+   </>
   );
 }
