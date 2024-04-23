@@ -11,3 +11,7 @@
     font-family: "Kepler";
     src: url('../../public/fonts/KeplerStd-Italic.otf');
 }
+
+body {
+    color: #1A1A1A;
+}
