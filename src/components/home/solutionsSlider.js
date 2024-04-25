@@ -47,7 +47,7 @@ export default function SolutionSlider() {
         nextArrow: <SampleNextArrow />,
         variableWidth: true,
         centerMode: false,
-        className: 'space-x-10',
+
         responsive: [
             {
                 breakpoint: 1024,
@@ -67,9 +67,9 @@ export default function SolutionSlider() {
     };
     return (
         <div className="slider-container">
-            <Slider {...settings} className="space-x-10">
+            <Slider {...settings} >
                 {[...Array(4)].map((_, index) => (
-                    <div  key={index} className="pl-[40px]">
+                    <div  key={index} className="pr-[40px]">
                     <SolutionCard />
                     </div>
                 ))}
@@ -79,6 +79,3 @@ export default function SolutionSlider() {
 }
 
 
-// function SolutionCardWrapper({ children }) {
-//     return <div ><div className="mx-14">{children}</div></div>;
-// }

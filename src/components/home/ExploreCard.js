@@ -22,22 +22,22 @@ export default function ExploreCard() {
                     </p>
 
                 </div>
-                <div>
-                    <div className='absolute bottom-24 inset-x-0 flex justify-center items-center font-medium text-[65px] '>
-                        <div className='bg-bglight1 w-[894px] h-[117px] relative flex justify-between items-center'>
-                            <div className='flex-grow flex items-center justify-center'>
-                                <BasicSelect />
-                            </div>
-                            <div className='flex-grow flex items-center justify-center'>
-                                <BasicSelect />
-                            </div>
-                            <div className='flex-grow flex items-center justify-center'>
-                                <div className='text-[25px]'>Explore</div>
-                                <Image src="/images/home/explore.svg" height={24} width={18} alt='exploreSvg' className='ml-1' />
-                            </div>
+
+                <div className='absolute bottom-24 inset-x-0 flex justify-center items-center font-medium text-[65px] '>
+                    <div className='bg-bglight1 w-[894px] h-[117px] relative flex justify-between items-center'>
+                        <div className='flex-grow flex items-center justify-center'>
+                            <BasicSelect />
+                        </div>
+                        <div className='flex-grow flex items-center justify-center'>
+                            <BasicSelect />
+                        </div>
+                        <div className='flex-grow flex items-center justify-center'>
+                            <div className='text-[25px]'>Explore</div>
+                            <Image src="/images/home/explore.svg" height={24} width={18} alt='exploreSvg' className='ml-1' />
                         </div>
                     </div>
                 </div>
+
 
 
 

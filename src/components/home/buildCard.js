@@ -17,7 +17,7 @@ export default function BuildCard() {
                         </div>
                     </div>
                     <div className='w-1/2 pl-10'> {/* Added left padding here */}
-                        <Image src="/images/home/aboutUs.png" height={614} width={685} alt="aboutUs" />
+                        <Image src="/images/home/buildCard1.png" height={650} width={685} alt="aboutUs" />
                     </div>
                 </div>
             </div>
