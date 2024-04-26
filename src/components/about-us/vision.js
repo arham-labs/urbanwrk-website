@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Vision() {
     return (
         <div className="bg-bglight1 py-[60px] md:py-[100px] text-secondary px-6 md:px-0 flex flex-col justify-center">
-            <div className="w-full md:w-[90%] lg:w-[84%] md:m-auto">
-                <h2 className="text-2xl mb-20 uppercase">The Team Behind the vision</h2>
+            <div className="w-full md:w-[88%] md:m-auto">
+                <h2 className="text-xl lg:text-2xl mb-10 text-center lg:text-left lg:mb-20 uppercase">The Team Behind the vision</h2>
                 <div className="flex flex-col items-center mb-10 lg:mb-32 md:flex-row md:gap-10 xl:gap-0">
                     <div className="aspect-[13/16] w-full mb-7 md:w-[45%] md:aspect-square md:mb-0">
                         <Image src="/images/about-us/anuj.png" width={900} height={900} alt="image" className="w-full object-cover h-full" />
