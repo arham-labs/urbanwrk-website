@@ -37,10 +37,6 @@ export default function ExploreCard() {
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     )

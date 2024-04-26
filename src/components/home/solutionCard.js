@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function SolutionCard() {
   return (
-    <div className='w-[422px] h-[557px] bg-[#F6F4EE]'>
+    <div className='w-[424px] h-[557px] bg-[#F6F4EE] '>
 
       <div className='flex flex-col justify-between'>
         <div>
