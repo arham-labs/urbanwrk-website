@@ -4,7 +4,7 @@ import React from 'react'
 export default function Amenities() {
     return (
         <div className='bg-white'>
-            <div className='w-[88%] mx-auto py-20'>
+            <div className='mx-auto py-20'>
                 <div className='flex justify-between items-center'>
                     <h2 className='text-[24px] uppercase font-normal'>AMENITIES</h2>
                     <div className='flex items-center'>

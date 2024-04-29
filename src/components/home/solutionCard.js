@@ -1,13 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 export default function SolutionCard() {
-  return (
-    <div className='w-[424px] h-[557px] bg-[#F6F4EE] '>
 
-      <div className='flex flex-col justify-between'>
+  return (
+    <div className='w-full md:w-[100%] md:max-w-[424px]  bg-[#F6F4EE] md:rounded-lg'>
+
+      <div className='flex flex-col justify-between '>
         <div>
-          <Image src="/images/home/solutionCard1.png" height={400} width={422} alt='SolutionCard' />
+          <Image src="/images/home/solutionCard1.png" height={400} width={422} alt='SolutionCard'  className='h-full w-full'/>
         </div>
         <div>
           <div className='flex justify-between items-center pb-3 pt-4 px-5'>

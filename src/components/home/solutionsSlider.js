@@ -15,9 +15,9 @@ export default function SolutionSlider() {
         const { className, style, onClick } = props;
         return (
             <>
-                <Image src="/images/home/rightArrow.svg" height={160} width={72} alt='SolutionCard' className={`${className}  `}
+                <Image src="/images/home/rightArrow.svg" height={80} width={50} alt='SolutionCard' className={`${className}  `}
                     onClick={onClick}
-                    style={{ width: '100px', height: "100px", color: "transparent", right: "2px" }} />
+                    style={{ width: '80px', height: "80px", color: "transparent", right: "2px" }} />
             </>
         );
     }

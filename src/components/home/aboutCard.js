@@ -9,7 +9,7 @@ export default function AboutCard() {
                     <div className='w-1/2 aspect-[38/39]'>
                         <Image src="/images/home/aboutUs.png" height={666} width={683} alt="aboutUs" />
                     </div>
-                    <div className='w-1/2 flex flex-col justify-center pl-12'> 
+                    <div className='w-1/2 flex flex-col justify-center pl-12'>
                         <>
                             <h1 className='font-medium text-6xl pb-8'>We are UrbanWrk</h1>
                             <p className='text-base pb-4'>Where your vision and creativity find their shape and reality. Where you can build your office space, your way, as the foundation of your legacy.</p>
