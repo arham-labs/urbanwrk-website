@@ -16,7 +16,9 @@ module.exports = {
         dark: '#1A1A1A',
         bglight1: '#F6F4EE',
         bglight2: '#EFEDE5',
-        bglight3: '#DAD6C9'
+        bglight3: '#D5DBDB',
+        bglight4: '#DBC2A9',
+        bglight5: '#C4B89D'
       },
       screens: {
         "2xl": "1561px",
