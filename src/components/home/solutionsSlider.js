@@ -8,6 +8,15 @@ import Image from "next/image";
 
 
 export default function SolutionSlider() {
+const data=[
+    {img:"/images/home/solutionCard1.png",title1:"Tailormade",title2:"Offices",desc:"Fully-managed, branded solution built as per your vision, within 45-60 days."},
+    {img:"/images/home/solutionCard2.png",title1:"Ready-To-Work",title2:"In Offices",desc:"Ready offices for your growing team to move in and get to work immediately."},
+    {img:"/images/home/solutionCard3.png",title1:"Meeting",title2:"Rooms",desc:"Ready offices for your growing team to move in and get to work immediately."},
+    {img:"/images/home/solutionCard3.png",title1:"Meeting",title2:"Rooms",desc:"Ready offices for your growing team to move in and get to work immediately."},
+    {img:"/images/home/solutionCard3.png",title1:"Meeting",title2:"Rooms",desc:"Ready offices for your growing team to move in and get to work immediately."},
+
+]
+
 
 
 
@@ -45,9 +54,9 @@ export default function SolutionSlider() {
         slidesToShow: 3,
         slidesToScroll: 3,
         nextArrow: <SampleNextArrow />,
-      
+
         responsive: [
-         
+
             {
                 breakpoint: 600,
                 settings: {
@@ -60,9 +69,9 @@ export default function SolutionSlider() {
     return (
         <div className="slider-container">
             <Slider {...settings} >
-                {[...Array(6)].map((_, index) => (
-                    <div  key={index} className="pr-[40px]">
-                    <SolutionCard />
+                {data.map((item, index) => (
+                    <div key={index} className="pr-[25px]">
+                        <SolutionCard  item={item}/>
                     </div>
                 ))}
             </Slider>
