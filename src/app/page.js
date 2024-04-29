@@ -6,12 +6,13 @@ import ExploreCard from "@/components/home/ExploreCard";
 import ReviewCard from "@/components/home/reviewCard";
 import Reviews from "@/components/home/reviews";
 import Partners from "@/components/home/partners";
+import GoodCompany from "@/components/home/goodCompany";
 
 
 export default function Home() {
   return (
     <>
-      <div className="bg-[#F6F4EE] ">
+      <div className="bg-bglight1 ">
         <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">
           <AboutCard />
         </div>
@@ -21,11 +22,18 @@ export default function Home() {
           <Solutions />
         </div>
       </div>
+      <div className="bg-bglight1 ">
+        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+          <GoodCompany />
+        </div>
+      </div>
+
+
       <ExploreCard />
       <UrbanTech />
-      <BuildCard />
+      {/* <BuildCard /> 
       <Reviews />
-      <Partners />
+      <Partners /> */}
     </>
   );
 }

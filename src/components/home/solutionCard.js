@@ -4,7 +4,7 @@ import React from 'react';
 export default function SolutionCard({item}) {
 
   return (
-    <div className='w-full md:w-[100%] md:max-w-[430px]  bg-[#F6F4EE] md:rounded-lg'>
+    <div className='w-full md:w-[100%] md:max-w-[430px] relative bg-[#F6F4EE] md:rounded-lg min-h-[557px]'>
 
       <div className='flex flex-col justify-between '>
         <div>
@@ -27,7 +27,7 @@ export default function SolutionCard({item}) {
           <p className='text-base px-5 pt-2 pb-5'>{item.desc}</p>
         </div>
       </div>
-      <div className='bg-primary h-3 border border-primary mt-1'></div>
+      <div className='bg-primary h-3 border border-primary mt-1 bottom-0 w-full absolute'></div>
     </div>
   )
 }
