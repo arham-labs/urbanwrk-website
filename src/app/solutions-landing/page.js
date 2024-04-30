@@ -12,6 +12,8 @@ import SolutionBanner from '@/components/solutionsLanding/solutionBanner'
 export default function page() {
     return (
         <>
+
+
             <SolutionBanner />
             <Solutions />
             <CompareSolutions />
