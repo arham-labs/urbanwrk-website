@@ -11,7 +11,7 @@ import GoodCompany from "@/components/home/goodCompany";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <div className="bg-bglight1 ">
         <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">
           <AboutCard />
@@ -30,10 +30,19 @@ export default function Home() {
 
 
       <ExploreCard />
-      <UrbanTech />
-      {/* <BuildCard /> 
-      <Reviews />
-      <Partners /> */}
-    </>
+      <div className="bg-bglight1 ">
+        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+          <UrbanTech />
+        </div>
+      </div>
+      <div className="bg-white ">
+        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+          <BuildCard />
+        </div>
+      </div>
+
+      {/* <Reviews /> */}
+      {/* <Partners /> */}
+    </div>
   );
 }

@@ -1,22 +1,46 @@
 import Image from 'next/image'
 import React from 'react'
+import CommonBtnKnowMore from './commonBtnKnowMore'
 
 export default function UrbanTech() {
     return (
-        <div className='bg-white'>
-            <div className='w-[88%] mx-auto py-20'>
-                <div className='flex items-center'>
+        <div className='bg-bglight1'>
+            <div className='  max-md:hidden'>
+                <div className='flex items-center gap-[25px]'>
                     <div className='w-1/2 '>
                         <Image src="/images/home/urbanTech1.png" height={666} width={683} alt="aboutUs" />
                     </div>
                     <div className='w-1/2 flex flex-col justify-center pl-12'>
                         <>
-                            <p>URBANWRK TECH</p>
-                            <h1 className='font-medium text-6xl pb-8'>Integrate the next gen of work</h1>
-                            <p className='text-base pb-4'>Get the best of managed workspace solutions for your owned or leased real estate. Optimise costs, give employees the space to collaborate and the tools to work from more offices across multiple cities.</p>
-                            <div className='pt-7'>
-                                <button className='py-2 px-[40px] bg-dark text-white'>Book a Demo</button>
-                            </div>
+                            <h2 className='font-normal text-6xl '>Integrate the</h2>
+                            <h2 className='font-normal text-6xl pb-6 font-kepler '> next gen of work</h2>
+
+                            <p className='text-base pb-6 w-[80%]'>Step into the future of workspaces where technology empowers productivity. Harness our proprietary centralised app and digital platforms that give you unprecedented insights and enhanced convenience.</p>
+                            {/* <div className='pt-7 flex'>
+                                <div className='  text-dark pr-2'>Book a Demo</div>
+                                <Image src="/images/home/explore.svg" height={18} width={18} alt='exploreSvg' className='ml-1' />
+                            </div> */}
+                            <CommonBtnKnowMore btnName="Know more" />
+                        </>
+                    </div>
+                </div>
+            </div>
+            <div className='md:hidden'>
+                <div className='flex flex-col items-center'>
+                    <div className='w-full '>
+                        <Image src="/images/home/urbanTech1.png" height={666} width={683} alt="aboutUs" />
+                    </div>
+                    <div className=' flex flex-col justify-center pt-10 '>
+                        <>
+                            <h2 className='font-normal text-3xl '>Integrate the</h2>
+                            <h2 className='font-normal text-3xl pb-6 font-kepler '> next gen of work</h2>
+
+                            <p className='text-base pb-6 w-[80%]'>Step into the future of workspaces where technology empowers productivity. Harness our proprietary centralised app and digital platforms that give you unprecedented insights and enhanced convenience.</p>
+                            {/* <div className='pt-7 flex'>
+                                <div className='  text-dark pr-2'>Book a Demo</div>
+                                <Image src="/images/home/explore.svg" height={18} width={18} alt='exploreSvg' className='ml-1' />
+                            </div> */}
+                            <CommonBtnKnowMore btnName="Know more" />
                         </>
                     </div>
                 </div>
