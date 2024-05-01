@@ -7,6 +7,7 @@ import ReviewCard from "@/components/home/reviewCard";
 import Reviews from "@/components/home/reviews";
 import Partners from "@/components/home/partners";
 import GoodCompany from "@/components/home/goodCompany";
+import FormCard from "@/components/home/formCard";
 
 
 export default function Home() {
@@ -43,6 +44,11 @@ export default function Home() {
 
       {/* <Reviews /> */}
       {/* <Partners /> */}
+      <div className="bg-white ">
+        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+          <FormCard />
+        </div>
+      </div>
     </div>
   );
 }
