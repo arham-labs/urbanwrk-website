@@ -9,18 +9,22 @@ function SolutionMobileSlider({data}) {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
     };
     return (
         <div className="slider-container">
             <Slider {...settings}>
             {data.map((item, index) => (
-                    <div key={index} className="pr-[25px]">
+                    <div key={index} className=" mb-6 ">
                         <SolutionCard item={item} />
                     </div>
                 ))}
             </Slider>
+            
         </div>
+        
     );
 }
 

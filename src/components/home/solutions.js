@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import SolutionCard from './solutionCard'
@@ -21,7 +22,7 @@ export default function Solutions() {
             <div className='w-full  max-md:hidden mx-auto py-20'>
                 <SolutionSlider />
             </div>
-            <div className='w-full  md:hidden mx-auto py-10'>
+            <div className='w-full  md:hidden  py-10'>
                 <SolutionMobileSlider data={data} />
             </div>
 
