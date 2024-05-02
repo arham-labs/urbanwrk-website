@@ -5,13 +5,14 @@ import "./globals.css"; // Assuming this is your global CSS file
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const worksans = Work_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={worksans.className}>{children}</body>
+      <body className={worksans.className}>
+        {children}
+      </body>
     </html>
   );
 }
