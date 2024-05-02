@@ -9,9 +9,11 @@ import LocationBanner from '@/components/locationInside/locationBanner';
 export default function page() {
   return (
     <>
+    <div className='pt-20'>
       <LocationBanner />
-      <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">
-        {/* <Restaurants /> */}
+    </div>
+      <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] ">
+        <Restaurants />
       </div>
       {/* <LocationCard /> */}
       {/* <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">

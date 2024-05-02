@@ -1,14 +1,10 @@
-"use client"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import SolutionCard from "./solutionCard";
-import Image from "next/image";
 
 
 export default function SolutionSlider() {
-  
+
     const data = [
         { img: "/images/home/solutionCard1.png", title1: "Tailormade", title2: "Offices", desc: "Fully-managed, branded solution built as per your vision, within 45-60 days." },
         { img: "/images/home/solutionCard2.png", title1: "Ready-To-Work", title2: "In Offices", desc: "Ready offices for your growing team to move in and get to work immediately." },
@@ -17,44 +13,15 @@ export default function SolutionSlider() {
         { img: "/images/home/solutionCard5.png", title1: "Advertise", title2: "With Us", desc: "Promotional spaces across 10 mn+ sq ft of prime real estate to put your brand on top of minds." }
     ]
 
-
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <>
-               <Image src="/images/home/rightArrow.svg" height={80} width={50} alt='SolutionCard' className={`${className}  `}
-                    onClick={onClick}
-                    style={{ width: '60px', height: "50px", color: "transparent", right: "-2%",top:"50%" }} />
-            </>
-        );
-    }
-
-    function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <>
-                <Image src="/images/home/rightArrow.svg" height={160} width={72} alt='SolutionCard' className={`${className}  `}
-                    onClick={onClick}
-                    style={{ width: '100px', height: "100px", color: "transparent" }} />
-            </>
-        );
-    }
-
-
-
-
-
-
-    const settings = {
+    var settings = {
         dots: false,
-        infinite: false,
-        speed: 500,
+        infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3,
-        nextArrow: <SampleNextArrow />,
-
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
         responsive: [
-
             {
                 breakpoint: 600,
                 settings: {
@@ -70,12 +37,14 @@ export default function SolutionSlider() {
                 }
             },
         ]
-    };
+    }
+
     return (
-        <div className="slider-container  max-w-[1920px] mx-auto flex flex-col justify-between ">
+        <div className="slider-container">
             <Slider {...settings} >
+
                 {data.map((item, index) => (
-                    <div key={index} className="pl-[30px] max-w-[462px]">
+                    <div key={index} className="pl-[30px] max-w-[462px]" >
                         <SolutionCard item={item} />
                     </div>
                 ))}
@@ -83,5 +52,3 @@ export default function SolutionSlider() {
         </div>
     );
 }
-
-

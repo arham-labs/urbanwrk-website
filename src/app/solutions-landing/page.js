@@ -15,7 +15,7 @@ export default function page() {
     return (
         <>
 
-            <div className="bg-bglight1 flex justify-center items-center">
+            <div className="bg-bglight1 flex justify-center items-center pt-20">
                 <div className="max-w-[1920px] ">
                     <SolutionBanner />
                 </div>
