@@ -8,8 +8,8 @@ import Reviews from "@/components/home/reviews";
 
 import React from 'react'
 import SolutionBanner from '@/components/solutionsLanding/solutionBanner'
-import Solutions from '@/components/home/solutions';
 import CompareSolution from '@/components/solutionsLanding/compareSolution';
+import Solutions from '@/components/solutionsLanding/solutions';
 
 export default function page() {
     return (

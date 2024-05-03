@@ -8,11 +8,14 @@ import Reviews from "@/components/home/reviews";
 import Partners from "@/components/home/partners";
 import GoodCompany from "@/components/home/goodCompany";
 import FormCard from "@/components/home/formCard";
+import Testimonial from "@/common/testimonial";
+import HomeBanner from "@/components/home/homeBanner";
 
 
 export default function Home() {
   return (
     <div>
+      <HomeBanner />
       <div className="bg-bglight1 pt-20">
         <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">
           <AboutCard />
@@ -42,8 +45,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <Reviews /> */}
-      {/* <Partners /> */}
+      <div className="bg-bglight4 ">
+        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+          <Testimonial />
+        </div>
+      </div>
+
+
       <div className="bg-white ">
         <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
           <FormCard />

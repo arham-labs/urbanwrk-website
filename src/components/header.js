@@ -13,7 +13,7 @@ export default function Header() {
             name: "Solutions"
         },
         {
-            link: '/location-inside',
+            link: '/location',
             name: "Locations"
         },
         {
