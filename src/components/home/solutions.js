@@ -1,12 +1,11 @@
+
 "use client"
-import Image from 'next/image'
-import React, { useEffect, useRef } from 'react'
-import SolutionCard from './solutionCard'
+import React from 'react'
 import SolutionSlider from './solutionsSlider'
 import SolutionMobileSlider from './solutionMobileSlider'
 
 export default function Solutions() {
-    const sliderRef = useRef();
+
 
     const data = [
         { img: "/images/home/solutionCard1.png", title1: "Tailormade", title2: "Offices", desc: "Fully-managed, branded solution built as per your vision, within 45-60 days." },
@@ -27,7 +26,6 @@ export default function Solutions() {
             <div className='w-full  md:hidden  py-3'>
                 <SolutionMobileSlider data={data} />
             </div>
-
         </div>
     )
 }

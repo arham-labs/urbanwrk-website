@@ -57,7 +57,13 @@ export default function FormCard() {
                         <input type="checkbox" {...register("newsUpdates")} />
                         <label className='ml-2 text-sm'>{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
                     </div>
-                    <button className='text-base max-md:w-full bg-dark px-6 py-1 text-white w-[165px]'>Submit</button>                </form>
+                    <div className='border-black border flex px-6 my-1 h-[36px] w-fit '>
+
+                        <button className='text-base bg-transparent  py-1 text-black '>Submit
+                        </button>
+                        <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
+                    </div>
+                </form>
             </div>
         </div>
     );

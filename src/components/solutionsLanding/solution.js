@@ -1,9 +1,8 @@
 
 "use client"
 import React from 'react'
-import SolutionSlider from '../home/solutionsSlider'
-import SolutionMobileSlider from '../home/solutionMobileSlider'
-
+import SolutionSlider from './solutionsSlider'
+import SolutionMobileSlider from './solutionMobileSlider'
 
 export default function Solutions() {
 
@@ -17,10 +16,10 @@ export default function Solutions() {
     ]
     return (
         <div>
-            <div className='w-full  max-md:hidden mx-auto '>
+            <div className='w-full  max-md:hidden mx-auto py-20'>
                 <SolutionSlider />
             </div>
-            <div className='w-full  md:hidden '>
+            <div className='w-full  md:hidden  py-3'>
                 <SolutionMobileSlider data={data} />
             </div>
         </div>
