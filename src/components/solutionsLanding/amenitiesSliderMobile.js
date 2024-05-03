@@ -53,10 +53,25 @@ export default function AmenitiesSliderMobile() {
                     </div>))}
             </Slider>
             <style jsx global>{`
-      .slick-dots  {text-align:left !important; }
-      .slick-dots  {bottom:-4px !important; }
-`}
-            </style>
+                .slick-dots {
+                    text-align: left !important;
+                    bottom: 0px;
+                    width: 100%;
+                    padding: 0;
+                }
+                .slick-dots li {
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+                .slick-dots li button:before {
+                    color: #7D7C7C !important;
+                    font-size: 8px !important;
+                }
+                .slick-dots li.slick-active button:before {
+                    color: #C72030 !important;
+                    font-size: 8px !important;
+                }
+            `}</style>
         </div>
 
     )
