@@ -33,13 +33,13 @@ export default function page() {
             {/* <CompareSolutions /> */}
             <div className="bg-[#FFFFFF] ">
                 <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
-                    <Amenities />
+                    <Amenities noshow={true}/>
                 </div>
             </div>
 
             <ExploreCard />
             <div className="bg-bglight4 ">
-                <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+                <div className="  max-w-[1920px] py-20  mx-auto ">
                     <Testimonial />
                 </div>
             </div>

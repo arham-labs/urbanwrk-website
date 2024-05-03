@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       <div className="bg-bglight4 ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className="  max-w-[1920px]   mx-auto ">
           <Testimonial />
         </div>
       </div>
