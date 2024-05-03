@@ -1,9 +1,9 @@
 'use client'
 import Image from "next/image";
-import section1 from '../../public/images/solutions/section-1.png'
-import section2 from '../../public/images/solutions/section-2.png'
-import section3 from '../../public/images/solutions/section-3.png'
-import section4 from '../../public/images/solutions/section-4.png'
+import section1 from '../../public/images/about-us/bespoke-office/section-1.png'
+import section2 from '../../public/images/about-us/bespoke-office/section-2.png'
+import section3 from '../../public/images/about-us/bespoke-office/section-3.png'
+import section4 from '../../public/images/about-us/bespoke-office/section-4.png'
 import { useState } from "react";
 
 const titles = [
@@ -69,12 +69,12 @@ export default function ActiveCard() {
             {showData.map((item, i) =>
                 <div className="flex flex-col lg:flex-row items-end gap-10 lg:gap-24" key={i}>
                     <div className="w-full lg:w-1/2">
-                        <Image src={item.source} width={1600} height={1200} className="aspect-[15/13]" alt="image" />
+                        <Image src={item.source} className="aspect-[15/13]" alt="image" />
                     </div>
                     <div className="flex flex-col w-full lg:w-1/2">
                         <div className="border-b border-[#747474] pb-6 lg:pb-10 mb-6 lg:mb-7">
                             <p className="leading-6 w-full lg:w-[85%] text-sm lg:text-base mb-7 font-medium">{item.desc}</p>
-                            <ul className="text-sm flex flex-col gap-6 lg:gap-4 w-auto lg:w-[80%] list-disc ml-6 lg:ml-7">
+                            <ul className="text-sm flex flex-col font-medium gap-6 lg:gap-4 w-auto lg:w-[80%] list-disc ml-6 lg:ml-7">
                                 {item.list.map((el, i) =>
                                     <li key={i}>{el}</li>
                                 )}

@@ -1,14 +1,16 @@
 import Image from "next/image";
+import mobileBanner from '../../../../public/images/about-us/bespoke-office/mobile-banner.png'
+import DesktopBanner from '../../../../public/images/about-us/bespoke-office/desktop-banner.png'
 
 export default function Herobanner() {
     return (
         <div className="text-white relative">
             <div className="flex justify-center items-center ">
                 <div className="h-[700px] overflow-hidden md:hidden ">
-                    <Image width={1280} height={640} sizes="100vw" priority={true} alt="hero-banner" src="/images/solutions/mobile-banner.png" />
+                    <Image sizes="100vw" priority={true} alt="hero-banner" src={mobileBanner} />
                 </div>
                 <div className="hidden md:flex md:h-screen w-full md:justify-center md:items-center">
-                    <Image width={1280} className="h-full w-full object-cover" height={640} sizes="100vw" priority={true} alt="hero-banner" src="/images/solutions/desktop-banner.png" />
+                    <Image className="h-full w-full object-cover" sizes="100vw" priority={true} alt="hero-banner" src={DesktopBanner} />
                 </div>
                 <div className="absolute text-center bottom-32 lg:bottom-24 w-full">
                     <div className="flex flex-col gap-1 lg:gap-3 mx-auto text-3xl lg:text-5xl 2xl:text-6xl">

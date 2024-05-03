@@ -2,13 +2,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
+import Radha from '../../public/images/radha-shrestha.png'
+import Affinity from '../../public/images/affinity-banner.png'
+import AON from '../../public/images/aon-banner.png'
+import Quote from '../../public/images/quote.svg'
+import CoinDCX from '../../public/images/coindcx.svg'
+import AffinityLogo from '../../public/images/affinity.svg';
+import AONLogo from '../../public/images/aon.svg'
 
-export default function Testimonial() {
+export default function Testimonial({ leftAlign }) {
 
     const reviewsData = [
-        { name: "Radha Shrestha", position: "Director", desc: "The flexibility and scalability allowed CoinDCX to adapt quickly to new markets and team sizes.", logo: "/images/coindcx.svg", source: "/images/radha-shrestha.png" },
-        { name: "Rahuk Kamble", position: "Senior Manager, HR", desc: "We appreciate the excellent assistance and support we receive from the UrbanWrk team. We love the high-quality service and professionalism.", logo: "/images/affinity.svg", source: "/images/affinity-banner.png" },
-        { name: "Amit Phogat", position: "Manager", desc: "UrbanWrk offers the best of modern worksapces, premium hospitality and hassle-free processes with flexible solutions.", logo: "/images/aon.svg", source: "/images/aon-banner.png" }
+        { name: "Radha Shrestha", position: "Director", desc: "The flexibility and scalability allowed CoinDCX to adapt quickly to new markets and team sizes.", logo: CoinDCX, source: Radha },
+        { name: "Rahuk Kamble", position: "Senior Manager, HR", desc: "We appreciate the excellent assistance and support we receive from the UrbanWrk team. We love the high-quality service and professionalism.", logo: AffinityLogo, source: Affinity },
+        { name: "Amit Phogat", position: "Manager", desc: "UrbanWrk offers the best of modern worksapces, premium hospitality and hassle-free processes with flexible solutions.", logo: AONLogo, source: AON }
     ]
 
     const settings = {
@@ -16,7 +23,7 @@ export default function Testimonial() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         arrows: false,
     };
@@ -26,20 +33,20 @@ export default function Testimonial() {
             <Slider {...settings}>
                 {reviewsData.map((el, i) =>
                     <div className="text-center lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]" key={i}>
-                        <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full">
+                        <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full mb-8 lg:mb-0">
                             <div className="w-full lg:w-[45%]">
-                                <Image src={el.source} alt="radha" width={1200} height={900} className="aspect-[10/8] lg:aspect-[9/8]" />
+                                <Image src={el.source} alt="image" className="aspect-[10/8] lg:aspect-[9/8] w-full h-full" />
                             </div>
                             <div className="w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start gap-2 pt-6 lg:pt-0">
                                 <div className="flex items-start gap-0 lg:gap-8">
-                                    <Image src="/images/about-us/quote.svg" className="w-7 lg:w-12" width={100} height={100} alt="quote" />
+                                    <Image src={Quote} className="w-7 lg:w-12" alt="quote" />
                                     <p className="leading-[21px] lg:leading-[32px] text-sm lg:text-xl font-medium mt-2 lg:mt-5">{el.desc}</p>
                                 </div>
-                                <div className="flex flex-col ml-[78px]">
+                                <div className="flex flex-col">
                                     <div className="flex flex-col items-center lg:items-start gap-1">
                                         <span className="text-sm font-semibold">{el.name}</span>
                                         <span className="font-kepler text-sm">{el.position}</span>
-                                        <Image src={el.logo} alt="coindcx" width={50} height={50} className={`${i == 1 ? "w-20" : "w-14"}`} />
+                                        <Image src={el.logo} alt="logo" className={`${i == 1 ? "w-20" : "w-14"}`} />
                                     </div>
                                     <Link href="/" className="mt-5 border-black border p-2 text-sm lg:text-base lg:px-10 font-medium">Discover more</Link>
 
@@ -52,7 +59,6 @@ export default function Testimonial() {
             <style>{`
              .slick-dots{
                 text-align: center !important;
-                bottom: -60px !important;
              }
              .slick-dots li { margin: 0 !important; }
              .slick-dots li button:before { 

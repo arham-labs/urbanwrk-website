@@ -24,7 +24,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex flex-col gap-2 lg:gap-6">
-                        <Link href="/about-us" className="text-lg uppercase">Solutions</Link>
+                        <span className="text-lg uppercase">Solutions</span>
                         <div className="flex flex-col gap-2">
                             {[{ link: "/bespoke-office", title: "Bespoke Offices" }].map((el, i) =>
                                 <Link className="text-sm font-light" href={el.link} key={i}>
@@ -51,7 +51,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4 lg:gap-6 items-center">
+                <div className="flex flex-col gap-4 lg:gap-6 lg:items-center">
                     <div className="flex gap-2">
                         <Link href="/">
                             <Image src={Facebook} alt="facebook" />

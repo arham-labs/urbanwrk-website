@@ -23,14 +23,19 @@ export default function Grade() {
                 </div>
                 <div className="w-full lg:w-[60%]">
                     {GradeData.map((el, i) =>
-                        <div key={i} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 2xl:gap-24 items-center'>
-                            <div className={`flex gap-5 items-center ${i > 2 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-7 mb-7"}`}>
+                        <div key={i} className='grid grid-cols-1 lg:grid-cols-2 font-medium lg:gap-16 2xl:gap-24 items-center'>
+                            <div className={`flex gap-5 items-center ${i == 0 ? "mt-0" : "mt-7"} ${i > 2 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-7"}`}>
                                 <Image src={el.source} alt={el.title} className='w-16' />
-                                <span className='text-lg'>{el.title}</span>
+                                <span className='text-base lg:text-lg uppercase'>{el.title}</span>
                             </div>
-                            <div className={`hidden lg:block pb-7 ${i > 0 ? "border-0" : "border-b border-[#7A7A7A] mb-7"}`}>
-                                <span>{el.subtitle}</span>
+                            <div className={`hidden lg:block pb-7 mt-7 ${i > 0 ? "border-0" : "border-b border-[#7A7A7A]"}`}>
+                                <span className='text-lg'>{el.subtitle}</span>
                             </div>
+                        </div>
+                    )}
+                    {GradeData.slice(0,2).map((el, i) =>
+                        <div key={i} className={`pt-7 font-medium lg:hidden ${i > 0 ? "border-0" : "mt-7 border-t pb-7 border-b border-[#7A7A7A]"}`}>
+                            <span className='text-base lg:text-lg'>{el.subtitle}</span>
                         </div>
                     )}
                 </div>
