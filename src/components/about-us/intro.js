@@ -7,7 +7,7 @@ export default function Intro() {
                 <div className="w-full lg:w-[600px] mb-5 lg:mb-10">
                     <div className="flex items-start gap-0 lg:gap-2">
                         <Image src="/images/about-us/quote.svg" className="w-7 lg:w-12" width={100} height={100} alt="quote" />
-                        <p className="leading-6 lg:leading-[40px] text-sm lg:text-2xl font-medium mt-2 lg:mt-5">By redefining the benchmark for the workspace experience, we're giving the power back to the doers - to produce their finest
+                        <p className="leading-6 lg:leading-[40px] text-sm lg:text-2xl font-medium mt-2 lg:mt-5">By redefining the benchmark for the workspace experience, we&#39;re giving the power back to the doers - to produce their finest
                             work in the way that suits them best.</p>
                     </div>
                 </div>

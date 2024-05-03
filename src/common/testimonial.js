@@ -25,7 +25,7 @@ export default function Testimonial() {
         <div className="bg-bglight4 pt-16 pb-24 px-6">
             <Slider {...settings}>
                 {reviewsData.map((el, i) =>
-                    <div className="text-center lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
+                    <div className="text-center lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]" key={i}>
                         <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full">
                             <div className="w-full lg:w-[45%]">
                                 <Image src={el.source} alt="radha" width={1200} height={900} className="aspect-[10/8] lg:aspect-[9/8]" />

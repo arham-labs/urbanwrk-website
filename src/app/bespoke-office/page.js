@@ -37,7 +37,7 @@ export default function Page() {
                     <div className="px-6 lg:px-0 w-full lg:w-1/2 flex flex-col gap-7 lg:gap-14">
                         <div className="w-full lg:w-[65%] m-auto flex flex-col items-center gap-5 lg:gap-10">
                             {Array(3).fill("").map((el, i) =>
-                                <div className="flex items-start gap-5 lg:gap-10">
+                                <div className="flex items-start gap-5 lg:gap-10" key={i}>
                                     <span className="text-3xl lg:text-5xl text-primary font-kepler">0{i + 1}</span>
                                     <div className="flex flex-col gap-1 lg:gap-2 text-dark">
                                         <span className="text-lg lg:text-2xl">Meet with our team</span>
@@ -59,7 +59,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2">
-                    <Image src="/images/solutions/productivity.png" width={900} height={900} className="w-full aspect-[8/9] lg:aspect-[13/11]" />
+                    <Image src="/images/solutions/productivity.png" alt="productivity" width={900} height={900} className="w-full aspect-[8/9] lg:aspect-[13/11]" />
                 </div>
             </div>
             <div className="bg-bglight2 py-14 lg:py-20">

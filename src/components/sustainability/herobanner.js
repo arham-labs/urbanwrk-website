@@ -14,7 +14,7 @@ export default function Herobanner() {
                     <Image src="/images/sustainability/igbc.svg" alt="igbc" width={80} height={80} className="w-16 lg:w-20 2xl:w-24 my-3 lg:my-0" />
                     <ul className="leading-6 text-sm 2xl:text-base">
                         {sustainData.map((el, i) =>
-                            <li>{el}</li>
+                            <li key={i}>{el}</li>
                         )}
                     </ul>
                 </div>
