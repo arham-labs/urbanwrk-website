@@ -25,7 +25,7 @@ export default function WorkSpace() {
                             <p className="leading-6 text-sm 2xl:text-base font-medium">is the battle cry for action. It’s an acknowledgement that while ideas may be limitless, their true value only manifests through execution. Leaving your mark means imparting a piece of yourself into everything you do, turning every endeavour into a legend. It’s about creating your legacy through your work.</p>
                         </div>
                     </div>
-                    <div className="aspect-square lg:aspect-[9/10] w-full lg:w-1/2 relative lg:absolute lg:-top-[80px] lg:right-0">
+                    <div className="aspect-square lg:aspect-[9/10] w-full lg:w-1/2 relative lg:absolute lg:top-0 xl:-top-[80px] lg:right-0">
                         <Image src={LeaveMark} alt="leave-mark-image" className="aspect-square lg:aspect-[9/10] w-full"/>
                     </div>
                 </div>

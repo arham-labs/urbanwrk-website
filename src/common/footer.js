@@ -35,13 +35,6 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 lg:gap-6">
                         <Link href="/location" className="text-lg uppercase">Locations</Link>
-                        <div className="flex flex-col gap-2">
-                            {[{ link: "/mumbai", title: "Mumbai" }].map((el, i) =>
-                                <Link className="text-sm font-light" href={el.link} key={i}>
-                                    <span className="block">{el.title}</span>
-                                </Link>
-                            )}
-                        </div>
                     </div>
                     <div className="flex flex-col gap-2 lg:gap-6">
                         <span href="/location" className="text-lg uppercase">Enquiry</span>

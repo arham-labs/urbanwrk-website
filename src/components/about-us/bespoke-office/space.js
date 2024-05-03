@@ -14,7 +14,7 @@ export default function Space() {
         <div className="bg-bglight3 text-white pb-14 lg:pb-0">
             <div className="flex flex-col lg:flex-row items-center lg:pl-0 max-w-[1920px] mx-auto 2xl:pr-40 lg:pr-[120px] gap-10 lg:gap-20">
                 <div className="w-full lg:w-1/2">
-                    <div className="relative">
+                    <div className="relative h-full">
                         <Image src={SpaceImage} alt="space" className="w-full aspect-[8/9] lg:aspect-[7/8]" />
                         <div className="absolute top-1/2 text-3xl lg:text-5xl left-1/2 -translate-y-1/2 -translate-x-1/2 flex justify-center flex-col">
                             <span className="block mb-2">You space,</span>
@@ -23,12 +23,12 @@ export default function Space() {
                     </div>
                 </div>
                 <div className="px-6 lg:px-0 w-full lg:w-1/2 flex flex-col gap-7 lg:gap-14">
-                    <div className="w-full lg:w-[65%] m-auto flex flex-col items-start lg:items-center gap-5 lg:gap-10">
+                    <div className="w-full xl:w-[65%] m-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
                         {MeetData.map((item, i) =>
                             <div className="flex items-start gap-5 lg:gap-10" key={i}>
-                                <span className="text-3xl lg:text-5xl text-primary font-kepler">0{i + 1}</span>
+                                <span className="text-3xl xl:text-5xl text-primary font-kepler">0{i + 1}</span>
                                 <div className="flex flex-col gap-1 lg:gap-2 text-dark">
-                                    <span className="text-lg lg:text-2xl font-medium">{item.title}</span>
+                                    <span className="text-lg xl:text-2xl font-medium">{item.title}</span>
                                     <p className="leading-6 text-sm font-medium">{item.desc}</p>
                                 </div>
                             </div>

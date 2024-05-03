@@ -42,14 +42,13 @@ export default function Testimonial({ leftAlign }) {
                                     <Image src={Quote} className="w-7 lg:w-12" alt="quote" />
                                     <p className="leading-[21px] lg:leading-[32px] text-sm lg:text-xl font-medium mt-2 lg:mt-5">{el.desc}</p>
                                 </div>
-                                <div className="flex flex-col">
+                                <div className="flex flex-col lg:items-baseline">
                                     <div className="flex flex-col items-center lg:items-start gap-1">
                                         <span className="text-sm font-semibold">{el.name}</span>
                                         <span className="font-kepler text-sm">{el.position}</span>
                                         <Image src={el.logo} alt="logo" className={`${i == 1 ? "w-20" : "w-14"}`} />
                                     </div>
-                                    <Link href="/" className="mt-5 border-black border p-2 text-sm lg:text-base lg:px-10 font-medium">Discover more</Link>
-
+                                    <Link href="/" className="mt-5 border-black border p-2 text-sm lg:text-base lg:px-10 font-medium ml-[75px]">Discover more</Link>
                                 </div>
                             </div>
                         </div>
@@ -64,6 +63,11 @@ export default function Testimonial({ leftAlign }) {
              .slick-dots li button:before { 
                 color: #C72030 !important; 
                 font-size: 8px !important;
+            }
+            @media screen and (min-width:1024px){
+                .slick-dots{
+                    bottom: -52px !important;
+                }
             }
             `}
             </style>
