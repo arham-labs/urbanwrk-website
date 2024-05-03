@@ -19,7 +19,7 @@ export default function WorkSwings() {
                         <span className="font-medium">Where work</span>
                         <span className="font-kepler">finds wings</span>
                     </div>
-                    <p className="leading-6 text-sm 2xl:text-base font-medium">In a world that moves fast, where ideas burst into life every day, we are a space for the dreamers, the doers, the makers
+                    <p className="leading-6 text-sm xl:text-base font-medium">In a world that moves fast, where ideas burst into life every day, we are a space for the dreamers, the doers, the makers
                         and the innovators. We are here to help you create something meaningful- through our signature hospitality,
                         a community of like-minded members, and an energizing eco-conscious experience.</p>
                 </div>
