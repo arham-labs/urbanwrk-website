@@ -15,3 +15,7 @@
 body {
     color: #1A1A1A;
 }
+
+.scrollbar-hide{
+    scrollbar-width: none;
+}

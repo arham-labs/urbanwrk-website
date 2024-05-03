@@ -26,11 +26,11 @@ export default function Testimonial() {
             <Slider {...settings}>
                 {reviewsData.map((el, i) =>
                     <div className="text-center lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
-                        <div className="flex lg:flex-row flex-col gap-5 lg:gap-20">
+                        <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full">
                             <div className="w-full lg:w-[45%]">
                                 <Image src={el.source} alt="radha" width={1200} height={900} className="aspect-[10/8] lg:aspect-[9/8]" />
                             </div>
-                            <div className="w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start gap-2 pt-6">
+                            <div className="w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start gap-2 pt-6 lg:pt-0">
                                 <div className="flex items-start gap-0 lg:gap-8">
                                     <Image src="/images/about-us/quote.svg" className="w-7 lg:w-12" width={100} height={100} alt="quote" />
                                     <p className="leading-[21px] lg:leading-[32px] text-sm lg:text-xl font-medium mt-2 lg:mt-5">{el.desc}</p>
@@ -41,7 +41,7 @@ export default function Testimonial() {
                                         <span className="font-kepler text-sm">{el.position}</span>
                                         <Image src={el.logo} alt="coindcx" width={50} height={50} className={`${i == 1 ? "w-20" : "w-14"}`} />
                                     </div>
-                                    <Link href="/" className="mt-5 bg-black p-2 text-sm text-white lg:py-1 lg:px-10">Discover more</Link>
+                                    <Link href="/" className="mt-5 border-black border p-2 text-sm lg:text-base lg:px-10 font-medium">Discover more</Link>
 
                                 </div>
                             </div>

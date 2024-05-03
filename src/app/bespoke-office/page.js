@@ -1,8 +1,10 @@
 import Link from "next/link";
-import CommonCard from "../common/commoncard";
 import Image from "next/image";
-import Blog from "../common/blog";
-import Testimonial from "../common/testimonial";
+import Blog from "@/common/blog";
+import Testimonial from "@/common/testimonial";
+import CommonCard from "@/common/commoncard";
+import Herobanner from "@/components/solutions/herobanner";
+import ActiveCard from "@/common/activecard";
 
 export default function Page() {
 
@@ -12,13 +14,13 @@ export default function Page() {
         { title: "We take the work out of work", source: "/images/about-us/workwing-3.png", desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?" }
     ]
 
-
     return (
         <div>
+            <Herobanner />
             <div className="bg-bglight6 py-16 lg:py-20">
                 <div className="w-[88%] m-auto">
                     <span className="text-2xl font-medium block mb-10">WHY CHOOSE US?</span>
-                    <CommonCard data={ChooseData}/>
+                    <CommonCard data={ChooseData} />
                 </div>
             </div>
             <div className="bg-bglight3 text-white pb-14 lg:pb-0">
@@ -57,63 +59,20 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2">
-                     <Image src="/images/solutions/productivity.png" width={900} height={900} className="w-full aspect-[8/9] lg:aspect-[13/11]"/>
+                    <Image src="/images/solutions/productivity.png" width={900} height={900} className="w-full aspect-[8/9] lg:aspect-[13/11]" />
                 </div>
             </div>
-            {/* <div className="w-[88%] m-auto py-24 flex items-start gap-10">
-                <div className="w-1/2 flex flex-col gap-3">
-                    <div className="w-[80%] flex flex-col">
-                        <span className="text-5xl font-medium block mb-2">The best version</span>
-                        <span className="text-5xl font-kepler">of your vision</span>
-                        <p className="leading-6 text-sm mt-5">Your office space should reflect your ambition. We marry eco-conscious design principles with high aesthetics for a sustainable and stunning space. Biophilic design creates the warm, inviting environment so essential for mental wellness and productivity boost. Better air and water quality, water conservation, and superior HVAC standards are fundamental to every office. With your brand integrated at key touchpoints, your office becomes a part of your organisation's experience.</p>
-                        <Link href="/" className="mt-5">Know more</Link>
-                    </div>
-                </div>
-                <div className="w-1/2 flex justify-end">
-                    <div className="w-[75%] bg-bglight1 py-14 px-20 flex flex-col gap-12">
-                        {Array(3).fill("").map((el, i) =>
-                            <div key={i} className="flex flex-col gap-2">
-                                <span className="font-medium text-xl">Certifiably superior</span>
-                                <p className="leading-6 text-sm">India's first Platinum rated IGBC Offices that add an element of pride and modernity</p>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div> */}
-            <div className="bg-bglight2 py-16 lg:py-20">
+            <div className="bg-bglight2 py-14 lg:py-20">
                 <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
-                    <div className="w-[500px] mb-14 flex flex-col gap-3">
-                        <span className="text-5xl font-medium">See more ways</span>
-                        <span className="text-5xl font-kepler">to finds your space</span>
+                    <div className="w-full lg:w-[500px] text-2xl lg:text-4xl 2xl:text-5xl mb-6 lg:mb-14 flex flex-col gap-2 lg:gap-3">
+                        <span className="font-medium">See more ways</span>
+                        <span className="font-kepler">to finds your space</span>
                     </div>
-                    <div className="flex flex-col gap-10">
-                        <div className="border-b border-[#747474] pb-4 flex justify-center items-center">
-                            {Array(4).fill("").map((_, i) =>
-                                <a className="text-xl uppercase w-1/3 text-center">
-                                    <span>Flexi Desks</span>
-                                </a>
-                            )}
-                        </div>
-                        <div className="flex items-center gap-24">
-                            <div className="w-1/2">
-                                <Image src="/images/office.png" width={800} height={800} className="aspect-[15/13]" alt="image" />
-                            </div>
-                            <div className="flex flex-col w-1/2">
-                                <div className="border-b border-[#747474] pb-10">
-                                    <p className="leading-6 w-[85%] text-base mb-7">Semi-branded offices for a team of up to 100 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.</p>
-                                    <ul className="text-sm flex flex-col gap-4 w-[80%] list-disc ml-7">
-                                        {Array(5).fill("").map((el, i) =>
-                                            <li>Ready office space that can take on your brand identity</li>
-                                        )}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ActiveCard />
                 </div>
             </div>
-            <Blog/>
-            <Testimonial/>
+            <Blog />
+            <Testimonial />
         </div>
     )
 }

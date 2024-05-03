@@ -1,4 +1,4 @@
-import CommonCard from '@/app/common/commoncard'
+import CommonCard from '@/common/commoncard'
 
 export default function WorkSwings() {
 

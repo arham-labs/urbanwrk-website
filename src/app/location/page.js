@@ -1,5 +1,5 @@
+import Blog from "@/common/blog";
 import Image from "next/image";
-import Blog from "../common/blog";
 
 export default function Page() {
     return (
