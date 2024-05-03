@@ -17,18 +17,9 @@ export default function Header() {
             name: "Locations"
         },
         {
-            link: '',
+            link: '/about-us',
             name: "About Us"
         },
-        {
-            link: '',
-            name: "UrbanWrk Tech"
-        },
-        {
-            link: '/contact-us',
-            name: "Contact Us"
-        },
-       
     ]
 
     const OpenDrawer = () => {
