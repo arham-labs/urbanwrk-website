@@ -28,8 +28,6 @@ export default function GoodCompanySliderMobile() {
                     </div>
                 </div>
             ))}
-       
-
         </Slider>
     );
 }

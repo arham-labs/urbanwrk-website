@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CompareSolutions() {
+export default function CompareSolutionsTable() {
     return (
         <div className='bg-white'>
             <div className='w-[88%] mx-auto py-20'>

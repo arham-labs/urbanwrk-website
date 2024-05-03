@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Cinzel";
-    src: url('../../public/fonts/Cinzel-Regular.ttf');
+  font-family: "Cinzel";
+  src: url("../../public/fonts/Cinzel-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Kepler";
-    src: url('../../public/fonts/KeplerStd-Italic.otf');
+  font-family: "Kepler";
+  src: url("../../public/fonts/KeplerStd-Italic.otf");
 }
 
 body {

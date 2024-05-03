@@ -3,32 +3,30 @@ import React from 'react';
 
 export default function SolutionBanner() {
     return (
-        <div className='bg-[#F6F4EE] '>
-            <div className='my-20'>
-                <div className='flex  md:flex-row max-md:hidden'>
-                    <div className='max-w-[1920px] md:w-1/2 flex justify-center  flex-col md:px-8 py-20'>
-                        <h2 className='text-4xl md:text-5xl lg:text-6xl  text-center md:text-left leading-tight font-medium max-w-md md:max-w-none'>
-                            Find the space that
+        <div className='bg-[#F6F4EE]'>
+            <>
+                <div className='flex flex-col md:flex-row '>
+                    <div className='max-w-[1920px] max-md:px-6 mx-auto 2xl:px-[160px] lg:px-[120px] md:w-1/2 flex justify-center flex-col md:px-8 py-10 md:py-20'>
+                        <h2 className='text-3xl md:text-5xl lg:text-6xl text-left leading-tight font-medium max-w-md md:max-w-none'>
+                            Find the space that <span className='font-kepler'>feels truly yours</span> 
                         </h2>
-                        <h2 className='text-4xl md:text-5xl lg:text-6xl text-center md:text-left leading-tight font-medium max-w-md md:max-w-none font-kepler'>
-                            feels truly yours
-                        </h2>
-                        <div>
-                            <p className='pt-6 text-base text-center md:text-left'>Explore workspaces that speak to your workstyle. From private floors to personal desks in vibrant coworking spaces with the best facilities, we have everything you need to build your dream. Super flexible, with minimum three-month contracts, now there’s nothing stopping you from working towards your dream.</p>
+                        <div className='pt-6'>
+                            <p className='text-base md:text-lg text-left'>
+                                Explore workspaces that speak to your workstyle. From private floors to personal desks in vibrant coworking spaces with the best facilities, we have everything you need to build your dream. Super flexible, with minimum three-month contracts, now there’s nothing stopping you from working towards your dream.
+                            </p>
                         </div>
                     </div>
-                    <div className=' h-[100vh] md:w-1/2  '>
+                    <div className='md:w-1/2'>
                         <Image
                             src="/images/solutionsLanding/banner.png"
                             alt="solution-page"
-                            height={900}
-                            width={895}
+                            height={500} // Adjust height for smaller screens
+                            width={784}
                             className='h-full w-full'
-
                         />
                     </div>
                 </div>
-            </div>
+            </>
         </div>
     );
 }

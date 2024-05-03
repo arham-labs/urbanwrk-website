@@ -13,7 +13,7 @@ import FormCard from "@/components/home/formCard";
 export default function Home() {
   return (
     <div>
-      <div className="bg-bglight1 ">
+      <div className="bg-bglight1 pt-20">
         <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">
           <AboutCard />
         </div>

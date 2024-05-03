@@ -1,10 +1,13 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import SolutionCard from './solutionCard'
 import SolutionSlider from './solutionsSlider'
 import SolutionMobileSlider from './solutionMobileSlider'
 
 export default function Solutions() {
+    const sliderRef = useRef();
+
     const data = [
         { img: "/images/home/solutionCard1.png", title1: "Tailormade", title2: "Offices", desc: "Fully-managed, branded solution built as per your vision, within 45-60 days." },
         { img: "/images/home/solutionCard2.png", title1: "Ready-To-Work", title2: "In Offices", desc: "Ready offices for your growing team to move in and get to work immediately." },
@@ -21,7 +24,7 @@ export default function Solutions() {
             <div className='w-full  max-md:hidden mx-auto py-20'>
                 <SolutionSlider />
             </div>
-            <div className='w-full  md:hidden mx-auto py-10'>
+            <div className='w-full  md:hidden  py-10'>
                 <SolutionMobileSlider data={data} />
             </div>
 

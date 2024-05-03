@@ -1,25 +1,23 @@
 import Image from 'next/image'
 import React from 'react'
+import AmenitiesSlider from './amenitiesSlider'
+import AmenitiesSliderMobile from './amenitiesSliderMobile'
 
 export default function Amenities() {
     return (
         <div className='bg-white'>
-            <div className='mx-auto py-20'>
-                <div className='flex justify-between items-center'>
-                    <h2 className='text-[24px] uppercase font-normal'>AMENITIES</h2>
-                    <div className='flex items-center'>
-                        <span className='text-base'>View all</span>
-                        <Image src="/images/home/explore.svg" height={18} width={20} alt='exploreSvg' className='ml-1' style={{ height: '18px', width: '18px' }} />
+            <div className='mx-auto '>
+                <div className='flex flex-col justify-between items-center'>
+                    <div className='flex justify-between w-full'>
+                        <h2 className='text-[24px] max-md:text-[20px] uppercase font-normal'>AMENITIES</h2>
                     </div>
+ 
                 </div>
-
-                <div className='p-2 flex flex-wrap'>
-                    {[...Array(8)].map((_, index) => (
-                        <div key={index} className="p-[110px] ">
-                            <Image src="/images/solutionsLanding/amenities1.svg" alt={"img"} width={50} height={50}
-                            />
-                            <span>Conference rooms</span>
-                        </div>))}
+                <div className='max-md:hidden'>
+                    <AmenitiesSlider />
+                </div>
+                <div className='md:hidden '>
+                    <AmenitiesSliderMobile />
                 </div>
             </div>
         </div>
