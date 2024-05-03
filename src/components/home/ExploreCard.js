@@ -6,6 +6,8 @@ import LookingImageSlider from './lookingImageSlider'
 
 
 export default function ExploreCard() {
+    const city=["Mumbai","Pune","Nagpur"]
+    const solution=["Tailormade Offices","Ready-To-Work In Offices","Meeting Rooms"]
     return (
         <div>
             <div className='relative'>
@@ -28,10 +30,10 @@ export default function ExploreCard() {
                 <div className='absolute bottom-24 inset-x-0 flex justify-center items-center font-medium text-[65px] px-5 '>
                     <div className='bg-bglight1 px-10 gap-10 flex-wrap py-4 relative flex justify-between items-center max-md:flex-col'>
                         <div className='flex-grow flex items-center justify-center'>
-                            <BasicSelect />
+                            <BasicSelect labelName="city" list={city}/>
                         </div>
                         <div className='flex-grow flex items-center justify-center'>
-                            <BasicSelect />
+                            <BasicSelect labelName="solution" list={solution}/>
                         </div>
                         <div className='flex-grow flex items-center justify-center'>
                             <div className='text-[25px]'>Explore</div>

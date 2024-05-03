@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 
-const BasicSelect = () => {
+const BasicSelect = ({ labelName, list }) => {
     const [age, setAge] = useState('');
 
     const handleChange = (event) => {
@@ -18,11 +18,11 @@ const BasicSelect = () => {
                 className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm "
             >
                 <option value="" disabled hidden style={{ color: '#A5A5A5' }}>
-                    City
+                    {labelName}
                 </option>
-                <option value={10}>Ten</option>
-                <option value={20}>Twenty</option>
-                <option value={30}>Thirty</option>
+                {list?.map((data, i) =>
+                    <option value={data} key={i}>{data}</option>)}
+
             </select>
         </div>
     );

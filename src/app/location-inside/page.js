@@ -12,7 +12,7 @@ export default function page() {
     <div className='pt-20'>
       <LocationBanner />
     </div>
-      <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] ">
+      <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] py-20">
         <Restaurants />
       </div>
       {/* <LocationCard /> */}

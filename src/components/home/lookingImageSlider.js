@@ -22,13 +22,13 @@ export default function LookingImageSlider() {
     return (
         <div>
             <Slider {...settings} >
-                {[...Array(5)].map((_, i) =>
+                {[...Array(4)].map((_, i) =>
                     <div  key={i}>
                         <div className='max-md:hidden h-[80vh]'>
-                            <Image src={`/images/locationInside/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[100vh] w-full object-top' unoptimized />
+                            <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[100vh] w-full object-top' unoptimized />
                         </div>
                         <div className='md:hidden max-md:h-[100vh]'>
-                            <Image src={`/images/locationInside/mobileBanner/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full  ' unoptimized />
+                            <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full  ' unoptimized />
                         </div>
                     </div>
                 )}
