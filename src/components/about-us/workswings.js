@@ -15,7 +15,7 @@ export default function WorkSwings() {
         <div className="bg-bglight1 py-16 pb-24 lg:py-32">
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
                 <div className="w-full lg:w-[500px] mb-10 lg:mb-[10%]">
-                    <div className="flex items-start gap-0 lg:gap-3 flex-col text-2xl lg:text-4xl 2xl:text-5xl mb-4 lg:mb-7">
+                    <div className="flex items-start gap-0 lg:gap-3 flex-col text-2xl lg:text-4xl xl:text-5xl mb-4 lg:mb-7">
                         <span className="font-medium">Where work</span>
                         <span className="font-kepler">finds wings</span>
                     </div>

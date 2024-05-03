@@ -29,7 +29,7 @@ export default function Space() {
                                 <span className="text-3xl xl:text-5xl text-primary font-kepler">0{i + 1}</span>
                                 <div className="flex flex-col gap-1 lg:gap-2 text-dark">
                                     <span className="text-lg xl:text-2xl font-medium">{item.title}</span>
-                                    <p className="leading-6 text-sm font-medium">{item.desc}</p>
+                                    <p className="leading-6 text-sm lg:text-base font-medium">{item.desc}</p>
                                 </div>
                             </div>
                         )}
