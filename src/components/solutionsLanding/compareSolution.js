@@ -12,8 +12,12 @@ export default function CompareSolution() {
                 <div className=' flex flex-col md:items-center md:justify-center'>
                     <h2 className='text-[45px] max-md:text-[28px] font-normal  '>Compare our solutions</h2>
                     <div className='w-full flex  justify-end max-md:justify-start max-md:pt-2'>
-                        <div className='text-[25px] max-md:text-sm'>Explore</div>
-                        <Image src="/images/home/explore.svg" height={18} width={24} alt='exploreSvg' className='ml-1 max-md:w-[15px]' />
+                        <div className='border-black border flex px-8 my-1 h-[36px] w-fit'>
+
+                            <button className='text-base bg-transparent  py-1 text-black '>Explore
+                            </button>
+                            <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
+                        </div>
                     </div>
                 </div>
             </div>
