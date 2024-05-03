@@ -4,6 +4,7 @@ import "./globals.css"; // Assuming this is your global CSS file
 //for slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "@/common/footer";
 import Header from "@/components/header";
 
 const worksans = Work_Sans({ subsets: ["latin"] });
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className={worksans.className}>
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -13,17 +13,9 @@
 }
 
 body {
-  color: #1a1a1a;
+    color: #1A1A1A;
 }
 
-.slick-dots li button:before {
-  color: #DAD6C9 !important;
-  font-size: 8px !important;
-  opacity : 1 !important;
-
-}
-
-.slick-dots li.slick-active button:before   {
-  color: #C72030 !important;
-  font-size: 8px !important;
+.scrollbar-hide{
+    scrollbar-width: none;
 }

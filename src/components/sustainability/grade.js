@@ -1,0 +1,40 @@
+import IGBC from '../../../public/images/sustainability/igbc.svg';
+import BIS from '../../../public/images/sustainability/bis.svg';
+import ASHRAE from '../../../public/images/sustainability/ashrae.svg'
+import Image from 'next/image';
+
+export default function Grade() {
+
+    const GradeData = [
+        { source: IGBC, title: "Green Interiors Certification by IGBC", subtitle: "Energy Conservation & Building Codes (2017)" },
+        { source: BIS, title: "BIS certified products", subtitle: "National Building Code (2016)" },
+        { source: IGBC, title: "Health & Wellbeing (WELL) Certification by IGBC", subtitle: "" },
+        { source: ASHRAE, title: "Ashrae (2012) for HVAC & Indoor Air Quality", subtitle: "" }
+    ]
+
+    return (
+        <div className="py-16 bg-bglight3 lg:py-20">
+            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px] flex flex-col lg:flex-row items-start gap-10 2xl:gap-20">
+                <div className="w-full lg:w-[40%]">
+                    <div className="flex flex-col text-2xl lg:text-4xl 2xl:text-5xl gap-1 w-full lg:w-[70%]">
+                        <span className="font-medium">Enterprise grade infrastructure</span>
+                        <span className="font-kepler">to power your work</span>
+                    </div>
+                </div>
+                <div className="w-full lg:w-[60%]">
+                    {GradeData.map((el, i) =>
+                        <div key={i} className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 2xl:gap-24 items-center'>
+                            <div className={`flex gap-5 items-center ${i > 2 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-7 mb-7"}`}>
+                                <Image src={el.source} alt={el.title} className='w-16' />
+                                <span className='text-lg'>{el.title}</span>
+                            </div>
+                            <div className={`hidden lg:block pb-7 ${i > 0 ? "border-0" : "border-b border-[#7A7A7A] mb-7"}`}>
+                                <span>{el.subtitle}</span>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>)
+}
+

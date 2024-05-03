@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/common/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -23,6 +24,15 @@ module.exports = {
       },
       screens: {
         "2xl": "1561px",
+      },
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' }
+        }
+      },
+      animation: {
+        "loop-scroll": "loop-scroll 10s linear infinite"
       },
     },
   },
