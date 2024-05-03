@@ -42,7 +42,6 @@ export default function SolutionSlider() {
     return (
         <div className="slider-container">
             <Slider {...settings} >
-
                 {data.map((item, index) => (
                     <div key={index} className="pl-[30px] max-w-[462px]" >
                         <SolutionCard item={item} />

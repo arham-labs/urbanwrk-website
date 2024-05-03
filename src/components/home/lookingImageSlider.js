@@ -6,11 +6,11 @@ import Slider from 'react-slick';
 
 
 
-export default function LocationBanner() {
+export default function LookingImageSlider() {
 
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -25,7 +25,7 @@ export default function LocationBanner() {
                 {[...Array(5)].map((_, i) =>
                     <div  key={i}>
                         <div className='max-md:hidden h-[80vh]'>
-                            <Image src={`/images/locationInside/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full ' unoptimized />
+                            <Image src={`/images/locationInside/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[100vh] w-full object-top' unoptimized />
                         </div>
                         <div className='md:hidden max-md:h-[100vh]'>
                             <Image src={`/images/locationInside/mobileBanner/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full  ' unoptimized />
@@ -33,20 +33,7 @@ export default function LocationBanner() {
                     </div>
                 )}
             </Slider>
-            <style jsx global>{`
-                .slick-dots  {
-                    bottom: 20px !important;
-                }
-                .slick-dots li button:before {
-                    color: white !important;
-                    font-size: 8px !important;
-                }
-                .slick-dots li.slick-active button:before   {
-                    color: #C72030 !important;
-                    font-size: 8px !important;
-
-                }
-            `}</style>
+            
         </div>
     )
 }

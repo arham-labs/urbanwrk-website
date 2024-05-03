@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import Dropdown from './dropdown'
 import BasicSelect from './dropdown'
+import LookingImageSlider from './lookingImageSlider'
 
 
 export default function ExploreCard() {
@@ -9,13 +10,14 @@ export default function ExploreCard() {
         <div>
             <div className='relative'>
                 <div>
-                    <Image src="/images/home/exploreCard3.png" height={836} width={422} alt="exploreCard" className='h-[100vh] w-full object-top' unoptimized />
+                    {/* <Image src="/images/home/exploreCard3.png" height={836} width={422} alt="exploreCard" className='h-[100vh] w-full object-top' unoptimized /> */}
+                    <LookingImageSlider />
                 </div>
-                <div className='absolute top-28 inset-x-0 flex justify-center items-center font-medium text-[65px] max-md:text-[28px]'>
+                <div className='absolute  top-28 inset-x-0 flex justify-center items-center font-medium text-[65px] max-md:text-[28px]'>
                     <div >What are you looking for?</div>
                 </div>
-                <div className='absolute md:bottom-60 bottom-96  inset-x-0 flex justify-center items-center font-medium text-[65px]'>
-                    <p className='text-[30px] md:py-20 text-white md:w-[40%] w-full  text-center max-md:text-[20px]'>
+                <div className='absolute md:bottom-28     bottom-96  inset-x-0 flex justify-center items-center font-medium text-[65px]'>
+                    <p className='text-[30px] md:py-20 text-white md:w-[753px] w-full  text-center max-md:text-[20px]'>
                         Leave your mark with office spaces in cities that are,
                         <br className="lg:hidden" />
                         shaping the economy&apos;s next chapter.
