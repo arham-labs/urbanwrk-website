@@ -22,7 +22,7 @@ export default function LocationParkSliderMobile() {
                     </div>
                 ))}
             </Slider>
-            <style jsx global>{`
+            <style>{`
                 .slick-dots {
                     text-align: center !important;
                     bottom: 20px;

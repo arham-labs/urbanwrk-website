@@ -6,7 +6,7 @@ export default function AboutCard() {
 
         <div className='w-full mx-auto py-20'>
             <div className='flex  max-md:hidden'>
-                <div className='w-1/2 aspect-[16/11]'>
+                <div className='w-[60%] aspect-[16/11]'>
                     <Image src="/images/home/aboutUs.png" height={666} width={683} className="h-full w-full object-cover" alt="aboutUs" />
                 </div>
                 <div className='w-1/2 flex flex-col justify-center pl-12'>

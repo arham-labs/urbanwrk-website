@@ -21,15 +21,12 @@ export default function page() {
   ]
   return (
     <>
-      <div className='pt-20 '>
+      <div>
         <LocationBanner />
       </div>
       <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20">
         <Restaurants />
       </div>
-
-      
-
       <Speciality data={specilatiesData} title="Amenities" />
       <div className="px-6  mx-auto 2xl:px-[160px] lg:px-[100px] pb-20  bg-bglight3">
         <Amenities noshow={false}/>

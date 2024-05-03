@@ -52,7 +52,7 @@ export default function AmenitiesSliderMobile() {
 
                     </div>))}
             </Slider>
-            <style jsx global>{`
+            <style>{`
                 .slick-dots {
                     text-align: left !important;
                     bottom: 0px;
