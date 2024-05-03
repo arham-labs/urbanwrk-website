@@ -38,7 +38,7 @@ export default function AmenitiesSlider() {
             <>
                 <Image src="/images/home/rightArrow.svg" height={80} width={50} alt='SolutionCard' className={`${className}  `}
                     onClick={onClick}
-                    style={{ width: '60px', height: "50px", color: "transparent", right: "-2%", top: "50%" }} />
+                    style={{ width: '60px', height: "50px", color: "transparent", top: "50%" }} />
             </>
         );
     }
@@ -47,9 +47,9 @@ export default function AmenitiesSlider() {
         const { className, style, onClick } = props;
         return (
             <>
-                <Image src="/images/home/rightArrow.svg" height={160} width={72} alt='SolutionCard' className={`${className}  `}
+                <Image src="/images/home/leftArrow.svg" height={80} width={50} alt='SolutionCard' className={`${className}  `}
                     onClick={onClick}
-                    style={{ width: '100px', height: "100px", color: "transparent" }} />
+                    style={{ width: '60px', height: "50px", color: "transparent", top: "50%" }} />
             </>
         );
     }
@@ -65,6 +65,7 @@ export default function AmenitiesSlider() {
         slidesToScroll: 3,
         rows: 2,
         nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
 
     };
     return (
@@ -72,7 +73,7 @@ export default function AmenitiesSlider() {
             <Slider {...settings} >
 
                 {data?.map((item, index) => (
-                    <div key={index} className="flex flex-wrap gap-40   pt-20">
+                    <div key={index} className="flex flex-wrap justify-center items-center  p-14">
                         <Image src={item?.img} alt={"img"} width={50} height={50}
                         />
                         <div className="pt-6">{item?.title}</div>

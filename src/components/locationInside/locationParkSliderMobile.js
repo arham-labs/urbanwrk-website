@@ -1,9 +1,9 @@
 "use client"
-import React from "react";
+import React from 'react'
 import Slider from "react-slick";
-import SolutionCard from "./solutionCard";
+import LocationSpaceCardMobile from './locationSpaceCardMobile';
 
-function SolutionMobileSlider({data}) {
+export default function LocationParkSliderMobile() {
     const settings = {
         dots: true,
         infinite: true,
@@ -14,11 +14,11 @@ function SolutionMobileSlider({data}) {
         autoplaySpeed: 1500,
     };
     return (
-        <div className="slider-container">
+        <div className="slider-container relative">
             <Slider {...settings}>
-            {data.map((item, index) => (
-                    <div key={index} className=" mb-12 ">
-                        <SolutionCard item={item} />
+                {[...Array(3)].map((item, index) => (
+                    <div key={index} className="mb-12">
+                        <LocationSpaceCardMobile />
                     </div>
                 ))}
             </Slider>
@@ -43,8 +43,5 @@ function SolutionMobileSlider({data}) {
                 }
             `}</style>
         </div>
-        
     );
 }
-
-export default SolutionMobileSlider;

@@ -5,7 +5,7 @@ import AmenitiesSliderMobile from './amenitiesSliderMobile'
 
 export default function Amenities() {
     return (
-        <div className='bg-white'>
+       
             <div className='mx-auto '>
                 <div className='flex flex-col justify-between items-center'>
                     <div className='flex justify-between w-full'>
@@ -20,6 +20,6 @@ export default function Amenities() {
                     <AmenitiesSliderMobile />
                 </div>
             </div>
-        </div>
+      
     )
 }
