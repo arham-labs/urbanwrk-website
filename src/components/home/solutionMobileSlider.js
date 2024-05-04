@@ -17,7 +17,7 @@ function SolutionMobileSlider({data}) {
         <div className="slider-container">
             <Slider {...settings}>
             {data.map((item, index) => (
-                    <div key={index} className=" mb-12 ">
+                    <div key={index} className=" mb-6 px-1 ">
                         <SolutionCard item={item} />
                     </div>
                 ))}

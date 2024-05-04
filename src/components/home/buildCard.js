@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CommonBtnKnowMore from './commonBtnKnowMore'
+import ExploreBtn from './exploreBtn'
 
 export default function BuildCard() {
     return (
@@ -16,7 +17,7 @@ export default function BuildCard() {
                             </div>
                             <p className='text-base py-4'>When it comes to productivity, we put the planet first. Why? Because research has proven that a work environment that is aligned with its natural environment makes for better, more positive outcome.</p>
                             <div className='pt-7'>
-                                <CommonBtnKnowMore btnName="Read more" />
+                            <ExploreBtn btnName={"Read more"}/>
                             </div>
                         </div>
                     </div>

@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-bglight1 ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
           <GoodCompany />
         </div>
       </div>

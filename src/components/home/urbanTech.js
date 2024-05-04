@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CommonBtnKnowMore from './commonBtnKnowMore'
+import ExploreBtn from './exploreBtn'
 
 export default function UrbanTech() {
     return (
@@ -20,7 +21,8 @@ export default function UrbanTech() {
                                 <div className='  text-dark pr-2'>Book a Demo</div>
                                 <Image src="/images/home/explore.svg" height={18} width={18} alt='exploreSvg' className='ml-1' />
                             </div> */}
-                            <CommonBtnKnowMore btnName="Know more" />
+                            <ExploreBtn btnName={"Know more"}/>
+
                         </>
                     </div>
                 </div>
