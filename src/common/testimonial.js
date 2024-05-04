@@ -9,13 +9,14 @@ import Quote from '../../public/images/quote.svg'
 import CoinDCX from '../../public/images/coindcx.svg'
 import AffinityLogo from '../../public/images/affinity.svg';
 import AONLogo from '../../public/images/aon.svg'
+import Arrow from '../../public/images/arrow.svg'
 
 export default function Testimonial({ leftAlign }) {
 
     const reviewsData = [
         { name: "Radha Shrestha", position: "Director", desc: "The flexibility and scalability allowed CoinDCX to adapt quickly to new markets and team sizes.", logo: CoinDCX, source: Radha },
-        { name: "Rahuk Kamble", position: "Senior Manager, HR", desc: "We appreciate the excellent assistance and support we receive from the UrbanWrk team. We love the high-quality service and professionalism.", logo: AffinityLogo, source: Affinity },
-        { name: "Amit Phogat", position: "Manager", desc: "UrbanWrk offers the best of modern worksapces, premium hospitality and hassle-free processes with flexible solutions.", logo: AONLogo, source: AON }
+        { name: "Amit Phogat", position: "Manager", desc: "UrbanWrk offers the best of modern worksapces, premium hospitality and hassle-free processes with flexible solutions.", logo: AONLogo, source: AON },
+        { name: "Rahuk Kamble", position: "Senior Manager, HR", desc: "We appreciate the excellent assistance and support we receive from the UrbanWrk team. We love the high-quality service and professionalism.", logo: AffinityLogo, source: Affinity }
     ]
 
     const settings = {
@@ -40,15 +41,18 @@ export default function Testimonial({ leftAlign }) {
                             <div className="w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start gap-2 pt-6 lg:pt-0">
                                 <div className="flex items-start gap-0 lg:gap-8">
                                     <Image src={Quote} className="w-7 lg:w-12" alt="quote" />
-                                    <p className="leading-[21px] lg:leading-[32px] text-sm lg:text-xl font-medium mt-2 lg:mt-5">{el.desc}</p>
+                                    <p className="leading-[21px] !lg:leading-6 text-sm lg:text-base font-medium mt-2 lg:mt-5">{el.desc}</p>
                                 </div>
                                 <div className="flex flex-col lg:items-baseline">
                                     <div className="flex flex-col items-center lg:items-start gap-1">
-                                        <span className="text-sm font-semibold">{el.name}</span>
-                                        <span className="font-kepler text-sm">{el.position}</span>
-                                        <Image src={el.logo} alt="logo" className={`${i == 1 ? "w-20" : "w-14"}`} />
+                                        <span className="text-sm lg:text-base font-semibold">{el.name}</span>
+                                        <span className="font-kepler text-sm lg:text-base">{el.position}</span>
+                                        <Image src={el.logo} alt="logo" className={`${i == 2 ? "w-20" : "w-14"}`} />
                                     </div>
-                                    <Link href="/" className="mt-5 border-black border p-2 text-sm lg:text-base lg:px-10 font-medium ml-[75px]">Discover more</Link>
+                                    <Link href="/" className="mt-5 border-black border p-2 flex items-center gap-2 text-sm lg:text-base lg:px-8 font-medium lg:ml-[75px]">
+                                        <span>Discover more</span>
+                                        <Image src={Arrow} alt="arrow" className="w-3" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

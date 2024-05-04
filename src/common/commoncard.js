@@ -20,7 +20,7 @@ export default function CommonCard({ data, leftAlign }) {
                             <Image src={el.source} className="aspect-[17/19] w-full" alt="card" />
                         </div>
                         <span className="text-2xl font-medium block mb-3">{el.title}</span>
-                        <p className="leading-[21px] text-sm font-medium">{el.desc}</p>
+                        <p className="leading-[21px] text-sm lg:text-base font-medium">{el.desc}</p>
                     </div>
                 )}
             </div>
