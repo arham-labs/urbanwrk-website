@@ -16,12 +16,9 @@ export default function SolutionCard({ item }) {
               <div className='text-[30px] leading-[1.2] '>{item.title1}</div>
               <div className='text-[30px] leading-[1.2]'>{item.title2}</div>
             </div>
-
-            <div className='border-black border flex px-8 my-1 h-[36px] '>
-
-              <button className='text-base bg-transparent  py-1 text-black '>Explore
-              </button>
-              <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
+            <div className='border-black border flex h-[36px] hover:bg-primary hover:text-white cursor-pointer'>
+              <div className='text-base bg-transparent  px-8 flex  py-1 text-black hover:text-white'>Explore <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1  ' />
+              </div>
             </div>
 
           </div>

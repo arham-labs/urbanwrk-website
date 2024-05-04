@@ -16,13 +16,13 @@ export default function Home() {
   return (
     <div>
       <HomeBanner />
-      <div className="bg-bglight1 pt-20">
-        <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px]">
+      <div className="bg-bglight1 ">
+        <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] py-20">
           <AboutCard />
         </div>
       </div>
       <div className="bg-[#FFFFFF] ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[120px]">
           <Solutions />
         </div>
       </div>

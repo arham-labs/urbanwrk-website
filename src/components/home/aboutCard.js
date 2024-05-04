@@ -4,7 +4,7 @@ import React from 'react'
 export default function AboutCard() {
     return (
 
-        <div className='w-full mx-auto py-20'>
+        <div className='w-full mx-auto '>
             <div className='flex  max-md:hidden'>
                 <div className='w-[60%] aspect-[16/11]'>
                     <Image src="/images/home/aboutUs.png" height={666} width={683} className="h-full w-full object-cover" alt="aboutUs" />
