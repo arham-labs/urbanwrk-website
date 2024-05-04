@@ -20,7 +20,7 @@ export default function CommonCard({ data, leftAlign }) {
                             <Image src={el.source} className="aspect-[17/19] w-full" alt="card" />
                         </div>
                         <span className="text-2xl font-medium block mb-3">{el.title}</span>
-                        <p className="leading-[21px] text-sm font-medium">{el.desc}</p>
+                        <p className="leading-[21px] text-sm lg:text-base font-medium">{el.desc}</p>
                     </div>
                 )}
             </div>
@@ -32,7 +32,7 @@ export default function CommonCard({ data, leftAlign }) {
                                 <Image src={el.source} className="aspect-[17/19] w-full" alt="card" />
                             </div>
                             <span className="text-2xl font-medium block mb-3 lg:mb-5">{el.title}</span>
-                            <p className="leading-[21px] text-sm font-medium">{el.desc}</p>
+                            <p className="leading-[21px] text-sm font-medium mb-5">{el.desc}</p>
                         </div>
                     )}
                 </Slider>
@@ -41,7 +41,7 @@ export default function CommonCard({ data, leftAlign }) {
              .slick-dots li { margin: 0 !important; }
              .slick-dots li button:before { 
                 color: #C72030 !important; 
-                font-size: 8px !important;
+                font-size: 10px !important;
             }
             `}
             </style>

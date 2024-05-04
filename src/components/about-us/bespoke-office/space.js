@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SpaceImage from '../../../../public/images/about-us/bespoke-office/space.png'
 import Link from "next/link";
+import Arrow from '../../../../public/images/arrow.svg'
 
 export default function Space() {
 
@@ -29,11 +30,14 @@ export default function Space() {
                                 <span className="text-3xl xl:text-5xl text-primary font-kepler">0{i + 1}</span>
                                 <div className="flex flex-col gap-1 lg:gap-2 text-dark">
                                     <span className="text-lg xl:text-2xl font-medium">{item.title}</span>
-                                    <p className="leading-6 text-sm font-medium">{item.desc}</p>
+                                    <p className="leading-6 text-sm lg:text-base font-normal lg:font-medium">{item.desc}</p>
                                 </div>
                             </div>
                         )}
-                        <Link href="/" className="border border-dark text-dark w-fit px-7 py-2 mt-5 lg:mt-0">Contact us</Link>
+                        <Link href="/" className="border border-dark text-dark w-fit flex items-center gap-2 px-7 py-2 mt-5 lg:mt-0 ml-[45px] lg:ml-[70px] xl:ml-[90px]">
+                            <span>Contact us</span>
+                            <Image src={Arrow} alt="arrow" className="w-3"/>
+                        </Link>
                     </div>
                 </div>
             </div>

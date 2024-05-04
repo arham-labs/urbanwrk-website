@@ -15,11 +15,11 @@ export default function WorkSwings() {
         <div className="bg-bglight1 py-16 pb-24 lg:py-32">
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
                 <div className="w-full lg:w-[500px] mb-10 lg:mb-[10%]">
-                    <div className="flex items-start gap-0 lg:gap-3 flex-col text-2xl lg:text-4xl 2xl:text-5xl mb-4 lg:mb-7">
+                    <div className="flex items-start gap-0 lg:gap-3 flex-col text-2xl lg:text-4xl xl:text-5xl mb-4 lg:mb-7">
                         <span className="font-medium">Where work</span>
                         <span className="font-kepler">finds wings</span>
                     </div>
-                    <p className="leading-6 text-sm 2xl:text-base font-medium">In a world that moves fast, where ideas burst into life every day, we are a space for the dreamers, the doers, the makers
+                    <p className="leading-6 text-sm xl:text-base font-medium">In a world that moves fast, where ideas burst into life every day, we are a space for the dreamers, the doers, the makers
                         and the innovators. We are here to help you create something meaningful- through our signature hospitality,
                         a community of like-minded members, and an energizing eco-conscious experience.</p>
                 </div>
