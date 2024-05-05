@@ -21,7 +21,7 @@ export default function BuildCard() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-1/2 ,l-20'>
+                    <div className='w-1/2'>
                         <Image src="/images/home/buildCard1.png" height={650} width={685} alt="aboutUs" />
                     </div>
                 </div>

@@ -2,13 +2,13 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const ExploreBtn = ({btnName}) => {
+const ExploreBtn = ({btnName,mobileCenter}) => {
 
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div 
-      className='border-black border flex h-[36px] w-fit hover:bg-primary hover:text-white cursor-pointer'
+      className={`border-black border flex h-[36px] w-fit  hover:bg-primary hover:text-white cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

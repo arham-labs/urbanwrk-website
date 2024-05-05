@@ -44,7 +44,7 @@ export default function GoodCompany() {
                 </div>
                 <div className='w-full flex flex-wrap  justify-center items-center' style={{ transition: 'opacity 0.5s ease'}}>
                     {[...Array(12)].map((_, i) => (
-                        <div className='w-[100px]  mx-10 py-10 flex flex-col justify-around' key={i}>
+                        <div className='w-[110px]  mx-10 py-10 flex flex-col justify-around' key={i}>
                             <div className='flex justify-center items-center h-[100px] w-[100px] ' >
                                 <Image src={`/images/home/logo${(currentIndex + i) % 12 + 1}.svg`} height={50} width={60} alt="logo" className='w-full' />
                             </div>

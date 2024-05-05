@@ -7,11 +7,11 @@ export default function SolutionCard({ item }) {
 
 
   return (
-    <div className='w-full md:w-[100%] md:max-w-[430px] relative bg-[#F6F4EE] md:rounded-lg min-h-[557px] max-md:min-h-[496px]'>
+    <div className='w-full md:w-[100%] md:max-w-[430px] relative bg-[#F6F4EE] md:rounded-lg min-h-[557px] max-md:min-h-[500px]'>
 
       <div className='flex flex-col justify-between '>
         <div>
-          <Image src={item.img} height={400} width={422} alt='SolutionCard' className='h-full w-full max-md:min-h-[300px]' />
+          <Image src={item.img} height={400} width={422} alt='SolutionCard' className='h-full w-full max-md:min-h-[300px] max-md:max-h-[350px]' />
         </div>
         <div>
           <div className='flex justify-between  pb-3 pt-4 px-5'>

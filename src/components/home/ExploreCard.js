@@ -16,7 +16,7 @@ export default function ExploreCard() {
                     {/* <Image src="/images/home/exploreCard3.png" height={836} width={422} alt="exploreCard" className='h-[100vh] w-full object-top' unoptimized /> */}
                     <LookingImageSlider />
                 </div>
-                <div className='absolute  top-14   md:top-20 inset-x-0 flex justify-center items-center font-medium text-[65px] max-md:text-[26px] max-md:tracking-[-0.56px]'>
+                <div className='absolute  top-14   md:top-20 inset-x-0 flex justify-center items-center font-medium text-6xl max-md:text-[26px] max-md:tracking-[-0.56px]'>
                     <div >What are you looking for?</div>
                 </div>
                 <div className='absolute md:bottom-40  bottom-80    inset-x-0 flex justify-center items-center font-medium text-[65px]'>
