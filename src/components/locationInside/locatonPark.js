@@ -4,7 +4,7 @@ import LocationParkSliderMobile from './locationParkSliderMobile'
 
 export default function LocatonPark() {
     return (
-        <div className='py-20'>
+        <div>
             <div className='max-md:hidden'>
                 <LocationParkSlider />
             </div>
