@@ -65,7 +65,7 @@ export default function FormCard() {
                             </div>
                             <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
                         </div> */}
-                        <div className='w-full'>
+                        <div className='w-full pt-2'>
                             <ExploreBtn btnName={"submit"} />
                         </div>
                     </form>
