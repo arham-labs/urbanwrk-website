@@ -12,7 +12,7 @@ const ExploreBtn = ({btnName,mobileCenter}) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <span className='text-base bg-transparent px-8 max-md:px-4  flex py-1 text-black hover:text-white'>
+      <span className='text-base bg-transparent px-4 max-md:px-4  flex py-1 text-black hover:text-white'>
         {btnName} 
         <Image
           src={isHovered ? "/images/home/lightArrow.svg" : "/images/home/btnArrow.svg"} 

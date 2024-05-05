@@ -37,7 +37,10 @@ export default function LocationBanner() {
                 font-size: 8px !important;
                 opacity:1
             }
-         
+                .slick-dots{
+                    bottom: -26px !important;
+                }
+            }
             `}
             </style>
         </div>

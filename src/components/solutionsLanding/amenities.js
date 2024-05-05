@@ -16,7 +16,7 @@ export default function Amenities({noshow}) {
                 <div className='max-md:hidden'>
                     <AmenitiesSlider />
                 </div>
-                <div className='md:hidden '>
+                <div className='md:hidden mb-6'>
                     <AmenitiesSliderMobile />
                 </div>
             </div>

@@ -14,10 +14,10 @@ export default function SolutionCard({ item }) {
           <Image src={item.img} height={400} width={422} alt='SolutionCard' className='h-full w-full max-md:min-h-[300px] max-md:max-h-[350px]' />
         </div>
         <div>
-          <div className='flex justify-between  pb-3 pt-4 px-5'>
+          <div className='flex justify-between  pb-3 pt-4 px-3'>
             <div>
-              <div className='text-[30px] max-md:text-lg  leading-[1.2] '>{item.title1}</div>
-              <div className='text-[30px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
+              <div className='text-[28px] max-md:text-lg  leading-[1.2] '>{item.title1}</div>
+              <div className='text-[28px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
             </div>
            <ExploreBtn btnName={"Explore"}/>
 

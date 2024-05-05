@@ -20,7 +20,7 @@ export default function Solutions() {
             <div className='w-full  max-md:hidden mx-auto '>
                 <SolutionSlider />
             </div>
-            <div className='w-full  md:hidden '>
+            <div className='w-full  md:hidden pb-2'>
                 <SolutionMobileSlider data={data} />
             </div>
         </div>

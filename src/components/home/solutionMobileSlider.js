@@ -25,7 +25,7 @@ function SolutionMobileSlider({data}) {
             <style>{`
                 .slick-dots {
                     text-align: center !important;
-                    bottom: -28px;
+                    bottom: -28px !important;
                     width: 100%;
                     padding: 0;
                 }

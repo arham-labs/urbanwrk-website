@@ -17,17 +17,17 @@ export default function Home() {
     <div>
       <HomeBanner />
       <div className="bg-bglight1 ">
-        <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] py-20">
+        <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] py-20 max-md:py-16">
           <AboutCard />
         </div>
       </div>
       <div className="bg-[#FFFFFF] ">
-        <div className=" px-6 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[120px] max-md:py-16">
           <Solutions />
         </div>
       </div>
       <div className="bg-bglight1 ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
+        <div className=" px-6 max-w-[1920px] py-20 max-md:pt-16  max-md:pb-20 mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
           <GoodCompany />
         </div>
       </div>
@@ -35,12 +35,12 @@ export default function Home() {
 
       <ExploreCard />
       <div className="bg-bglight1 ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[120px]">
           <UrbanTech />
         </div>
       </div>
       <div className="bg-white ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[120px]">
           <BuildCard />
         </div>
       </div>
@@ -53,7 +53,7 @@ export default function Home() {
 
 
       <div className="bg-white ">
-        <div className=" px-6 max-w-[1920px] py-20  mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16  mx-auto 2xl:px-[160px] lg:px-[120px]">
           <FormCard />
         </div>
       </div>
