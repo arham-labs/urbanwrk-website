@@ -5,7 +5,7 @@ export default function Speciality({ data, title }) {
 
     return (
         <div className="bg-bglight3 py-16 lg:py-20">
-            <div className="px-6 max-w-[1920px] mx-auto lg:px-[120px] 2xl:px-40 flex flex-col gap-10 lg:gap-20 lg:flex-row items-center">
+            <div className="px-6 max-w-[1920px] mx-auto lg:px-[100px] 2xl:px-40 flex flex-col gap-10 lg:gap-20 lg:flex-row items-center">
                 <div className="w-full lg:w-[45%] aspect-square lg:h-[600px]">
                     <Image src={WorkingSpace} alt="image" className="w-full object-cover h-full" />
                 </div>

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import ProductivityImage from '../../../../public/images/about-us/bespoke-office/productivity.png'
-import Arrow from '../../../../public/images/arrow.svg'
-import Link from 'next/link'
+import LinkButton from '@/common/linkbtn'
 
 export default function Productivity() {
     return (
@@ -10,11 +9,8 @@ export default function Productivity() {
                 <div className="flex flex-col w-full lg:w-[67%] mx-auto text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
                     <span className="font-medium">Planet-first</span>
                     <span className="font-kepler mt-1">productivity</span>
-                    <p className="leading-6 mt-5 text-sm xl:text-base font-normal lg:font-medium">Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.</p>
-                    <Link href="/" className="border border-dark text-dark text-sm lg:text-base w-fit flex items-center gap-2 px-7 py-2 mt-7">
-                        <span>Know more</span>
-                        <Image src={Arrow} alt="arrow" className="w-3" />
-                    </Link>
+                    <p className="leading-6 mt-5 text-sm xl:text-base font-normal lg:font-medium mb-7">Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.</p>
+                    <LinkButton title="Know more" href="" />
                 </div>
             </div>
             <div className="w-full lg:w-1/2">

@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Blog1 from '../../public/images/blog1.png'
 import Blog2 from '../../public/images/blog2.png'
-import Arrow from '../../public/images/arrow.svg'
 import Blog1Mobile from '../../public/images/blog1-mobile.png'
 import Blog2Mobile from '../../public/images/blog2-mobile.png'
-import Link from "next/link";
+import LinkButton from "./linkbtn";
 
 export default function Blog() {
     return (
         <div className="bg-bglight6 py-16 lg:py-24">
-            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
+            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px]">
                 <span className="text-2xl block mb-12">BLOG</span>
                 <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16 mb-10">
                     <div className="w-full lg:w-1/2 flex flex-col gap-8">
@@ -36,10 +35,7 @@ export default function Blog() {
                     </div>
                 </div>
                 <div className="flex justify-start lg:justify-center w-full">
-                    <Link href="/" className="border border-dark flex justify-center text-dark w-fit hover:bg-primary hover:text-white hover:border-transparent transition-all delay-75 ease-in-out items-center gap-2 px-7 py-2">
-                        <span>Read more</span>
-                        <Image src={Arrow} alt="arrow" className="w-3" />
-                    </Link>
+                    <LinkButton title="Read more" href=""/>
                 </div>
             </div>
         </div>)

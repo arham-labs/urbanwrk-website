@@ -5,7 +5,7 @@ import LeaveMark from '../../../public/images/about-us/leave-mark.png'
 export default function WorkSpace() {
     return (
         <div className="py-16 lg:pt-0 lg:pb-40">
-            <div className="px-6 max-w-[1920px] mx-auto 2xl:pr-40 2xl:pl-52 lg:pl-40 lg:pr-[120px] lg:w-auto flex flex-col">
+            <div className="px-6 max-w-[1920px] mx-auto 2xl:pr-40 2xl:pl-52 lg:pl-40 lg:pr-[100px] lg:w-auto flex flex-col">
                 <div className="flex flex-col lg:flex-row gap-7 lg:gap-0 items-center mb-10 lg:mb-0">
                     <div className="aspect-square w-full lg:w-1/2 flex items-center lg:justify-center">
                         <Image src={Space} className="w-full lg:w-[65%]" alt="space-image" />
