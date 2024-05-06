@@ -10,6 +10,7 @@ const ExploreBtn = ({ btnName }) => {
       className={`border-black border flex h-[36px] w-fit transition-all delay-75 ease-in-out hover:bg-primary hover:text-white cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      
     >
       <span className='text-base bg-transparent px-4 max-md:px-4 flex py-1 text-black hover:text-white'>
         {btnName}

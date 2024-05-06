@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import ExploreBtn from './exploreBtn';
+import LinkButton from '@/common/linkbtn';
 
 export default function SolutionCard({ item }) {
 
@@ -19,8 +20,8 @@ export default function SolutionCard({ item }) {
               <div className='text-[24px] max-md:text-lg  leading-[1.2] '>{item.title1}</div>
               <div className='text-[24px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
             </div>
-           <ExploreBtn btnName={"Explore"}/>
-
+            {/* <ExploreBtn btnName={"Explore"} hrefLink={"/tailormade-office"}/> */}
+            <LinkButton href="/tailormade-office" title="Explore" />
           </div>
           <div className='px-5'>
             <div className='border-black border'></div>
