@@ -11,7 +11,7 @@ export default function Herobanner() {
                     <div className="flex flex-col gap-3 lg:gap-5 w-full lg:w-[65%] 2xl:w-[60%] mx-auto mb-10 lg:mb-0">
                         <div className="flex flex-row text-2xl lg:text-4xl xl:text-6xl gap-3 2xl:gap-5">
                             <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Lead with</h1>
-                            <span className="font-kepler mt-[2.5px] block text-[28px] lg:text-4xl xl:text-5xl 2xl:text-6xl">integrity</span>
+                            <span className="font-kepler mt-[3.2px] block text-[28px] lg:text-4xl xl:text-5xl 2xl:text-6xl">integrity</span>
                         </div>
                         <p className="text-sm xl:text-base font-medium">With the first and only IGBC Platinum rated office spaces in India</p>
                         <Image src={IGBC} alt="igbc" className="w-16 lg:w-20 2xl:w-24 my-3 lg:my-0" />
