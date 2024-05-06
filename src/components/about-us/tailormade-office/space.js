@@ -17,14 +17,14 @@ export default function Space() {
                 <div className="w-full lg:w-1/2">
                     <div className="relative h-full">
                         <Image src={SpaceImage} alt="space" className="w-full aspect-[8/9] lg:aspect-[7/8]" />
-                        <div className="absolute top-1/2 text-3xl lg:text-5xl left-1/2 -translate-y-1/2 -translate-x-1/2 flex justify-center flex-col">
+                        <div className="absolute top-1/2 text-3xl lg:text-5xl 2xl:text-6xl left-1/2 -translate-y-1/2 -translate-x-1/2 flex justify-center flex-col">
                             <span className="block mb-2">You space,</span>
                             <span className="font-kepler">made easy</span>
                         </div>
                     </div>
                 </div>
                 <div className="px-6 lg:px-0 w-full lg:w-1/2 flex flex-col gap-7 lg:gap-14">
-                    <div className="w-full xl:w-[60%] 2xl:w-[70%] lg:ml-24 mr-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
+                    <div className="w-full lg:w-[60%] 2xl:w-[70%] lg:ml-24 mr-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
                         {MeetData.map((item, i) =>
                             <div className="flex items-start gap-5 lg:gap-10" key={i}>
                                 <span className="text-3xl xl:text-5xl text-primary font-kepler">0{i + 1}</span>

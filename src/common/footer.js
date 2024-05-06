@@ -7,11 +7,11 @@ import LinkedIn from '../../public/images/LinkedIn.svg'
 
 export default function Footer() {
     return (
-        <section id="footer" className="bg-black text-white py-14 lg:py-20">
+        <section id="footer" className="bg-black text-white py-16 lg:py-20">
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
-                <div className="flex flex-col justify-between items-start mb-10 lg:mb-16">
+                <Link href="/" className="flex flex-col justify-between items-start mb-10 lg:mb-16">
                     <Image src={UrbanWRKLogo} className="" alt="urbanwrk-logo" />
-                </div>
+                </Link>
                 <div className="flex flex-col lg:flex-row w-full justify-between">
                     <div className="mb-8 grid lg:grid-cols-4 gap-5 lg:gap-10 lg:mb-0">
                         <div className="flex flex-col gap-2 lg:gap-6">
@@ -27,7 +27,7 @@ export default function Footer() {
                         <div className="flex flex-col gap-2 lg:gap-6">
                             <Link href="/solutions" className="text-lg uppercase">Solutions</Link>
                             <div className="flex flex-col gap-2">
-                                {[{ link: "/bespoke-office", title: "Bespoke Offices" }].map((el, i) =>
+                                {[{ link: "/tailormade-office", title: "Tailormade Offices" }].map((el, i) =>
                                     <Link className="text-sm font-light" href={el.link} key={i}>
                                         <span className="block">{el.title}</span>
                                     </Link>
@@ -35,7 +35,14 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-2 lg:gap-6">
-                            <Link href="/location" className="text-lg uppercase">Locations</Link>
+                            <span href="/location" className="text-lg uppercase">Locations</span>
+                            <div className="flex flex-col gap-2">
+                                {[{ link: "/mumbai", title: "Mumbai" }].map((el, i) =>
+                                    <Link className="text-sm font-light" href={el.link} key={i}>
+                                        <span className="block">{el.title}</span>
+                                    </Link>
+                                )}
+                            </div>
                         </div>
                         <div className="flex flex-col gap-2 lg:gap-6">
                             <span href="/location" className="text-lg uppercase">Enquiry</span>

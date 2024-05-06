@@ -72,7 +72,7 @@ export default function ActiveCard() {
             {showData.map((item, i) =>
                 <div className="flex flex-col lg:flex-row items-end gap-10 lg:gap-24" key={i}>
                     <div className="w-full lg:w-1/2">
-                        <Image src={item.source} className="aspect-[15/13]" alt="image" />
+                        <Image src={item.source} className="aspect-[15/13] w-full" alt="image" />
                     </div>
                     <div className="flex flex-col w-full lg:w-1/2">
                         <div className="border-b border-[#747474] pb-6 lg:pb-10 mb-6 lg:mb-7">
@@ -83,7 +83,7 @@ export default function ActiveCard() {
                                 )}
                             </ul>
                         </div>
-                        <Link href="/" className="border border-dark text-dark w-fit flex items-center gap-2 px-7 py-2">
+                        <Link href="/" className="border border-dark text-dark w-fit hover:bg-primary hover:text-white hover:border-transparent transition-all delay-75 ease-in-out flex items-center gap-2 px-7 py-2">
                             <span>{item.btn}</span>
                             <Image src={Arrow} alt="arrow" className="w-3" />
                         </Link>

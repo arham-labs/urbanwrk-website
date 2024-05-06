@@ -3,7 +3,7 @@ import Quote from '../../../public/images/quote.svg'
 
 export default function Intro() {
     return (
-        <div className="bg-bglight5 py-14 lg:py-16">
+        <div className="bg-bglight5 py-16">
             <div className="w-[88%] m-auto flex flex-col justify-center text-center items-center">
                 <div className="w-full lg:w-[600px] mb-5 lg:mb-10">
                     <div className="flex items-start gap-0 lg:gap-2">
