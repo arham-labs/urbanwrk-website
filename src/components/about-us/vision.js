@@ -6,11 +6,11 @@ import LinkedIn from '../../../public/images/about-us/linkedin.svg'
 
 export default function Vision() {
     return (
-        <div className="bg-bglight1 py-[60px] md:py-[100px] text-secondary">
+        <div className="bg-bglight1 py-[60px] lg:py-[100px] text-secondary">
             <div className="px-6 max-w-[1920px] mx-auto lg:px-[120px] 2xl:px-40 flex flex-col justify-center">
                 <h2 className="text-xl lg:text-2xl mb-12 text-center lg:text-left lg:mb-20 uppercase">The Team Behind the vision</h2>
-                <div className="flex flex-col items-center lg:items-end mb-10 lg:mb-32 md:flex-row md:gap-10 xl:gap-0">
-                    <div className="aspect-[13/16] w-full mb-7 md:w-[45%] md:aspect-square md:mb-0">
+                <div className="flex flex-col items-center lg:items-end mb-10 lg:mb-32 lg:flex-row lg:gap-10 xl:gap-0">
+                    <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
                         <Image src={Anuj} alt="image" className="w-full object-cover h-full" />
                     </div>
                     <div className="w-full lg:w-[60%]">
@@ -21,8 +21,8 @@ export default function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center lg:items-end mb-10 lg:mb-32 md:flex-row-reverse md:gap-10 xl:gap-0">
-                    <div className="aspect-[13/16] w-full mb-7 md:w-[45%] md:aspect-square md:mb-0">
+                <div className="flex flex-col items-center lg:items-end mb-10 lg:mb-32 lg:flex-row-reverse lg:gap-10 xl:gap-0">
+                    <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
                         <Image src={Harsh} alt="image" className="w-full object-cover h-full" />
                     </div>
                     <div className="w-full lg:w-[60%]">
@@ -33,8 +33,8 @@ export default function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center lg:items-end md:flex-row md:gap-10 xl:gap-0">
-                    <div className="aspect-[13/16] w-full mb-7 md:w-[45%] md:aspect-square md:mb-0">
+                <div className="flex flex-col items-center lg:items-end lg:flex-row lg:gap-10 xl:gap-0">
+                    <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
                         <Image src={Abbishek} alt="image" className="w-full object-cover h-full" />
                     </div>
                     <div className="w-full lg:w-[60%]">

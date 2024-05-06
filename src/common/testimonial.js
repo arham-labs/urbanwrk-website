@@ -41,7 +41,7 @@ export default function Testimonial({ leftAlign }) {
                             <div className="w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start gap-2 pt-6 lg:pt-0">
                                 <div className="flex items-start gap-0 lg:gap-8">
                                     <Image src={Quote} className="w-7 lg:w-12" alt="quote" />
-                                    <p className="leading-[21px] !lg:leading-6 text-sm lg:text-base font-medium mt-2 lg:mt-5">{el.desc}</p>
+                                    <p className="leading-[21px] !lg:leading-6 text-sm lg:text-base 2xl:text-lg font-medium mt-2 lg:mt-5">{el.desc}</p>
                                 </div>
                                 <div className="flex flex-col lg:items-baseline">
                                     <div className="flex flex-col items-center lg:items-start gap-1">
