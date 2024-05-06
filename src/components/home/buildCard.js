@@ -6,7 +6,7 @@ import ExploreBtn from './exploreBtn'
 export default function BuildCard() {
     return (
         <div className='bg-white'>
-                <div className='flex items-center max-md:hidden '>
+                <div className='flex items-center max-lg:hidden '>
                     <div className='w-1/2 flex flex-col justify-center'>
                         <div className='w-[80%]'>
                             <h2 className='font-normal text-6xl flex flex-wrap '>Build something</h2>
@@ -25,7 +25,7 @@ export default function BuildCard() {
                         <Image src="/images/home/buildCard1.png" height={650} width={685} alt="aboutUs" />
                     </div>
                 </div>
-                <div className='flex items-center flex-col md:hidden'>
+                <div className='flex items-center flex-col lg:hidden'>
                 <div className='w-full'>
                         <Image src="/images/home/buildCard1.png" height={650} width={685} alt="aboutUs" />
                     </div>

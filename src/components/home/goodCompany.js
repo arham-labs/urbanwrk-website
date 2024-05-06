@@ -37,13 +37,13 @@ export default function GoodCompany() {
 
     return (
         <div className="bg-bglight1">
-            <div className=" px-6 max-w-[1920px] pt-20 pb-12 max-md:pt-16  max-md:pb-20 mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
-                <div className='max-md:hidden md:flex md:justify-between'>
+            <div className=" px-6 max-w-[1920px] pt-20 pb-12 max-md:pt-16  max-md:pb-20 mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[100px] lg:pr-[60px]">
+                <div className='max-lg:hidden lg:flex lg:justify-between'>
                     <div className='w-1/2 '>
                         <h2 className='text-[45px] leading-[1.2]'>In good</h2>
                         <h2 className='text-[55px]  font-kepler leading-[1.2]'>company with</h2>
                     </div>
-                    <div className='w-full flex flex-wrap  justify-center items-center' style={{ transition: 'opacity 0.5s ease' }}>
+                    <div className=' max-lg:hidden  w-full flex flex-wrap  justify-center items-center' style={{ transition: 'opacity 0.5s ease' }}>
                         {[...Array(12)].map((_, i) => (
                             <div className='w-[110px]  mx-10 py-10 flex flex-col justify-around' key={i}>
                                 <div className='flex opacity-0 fade-in-out justify-center items-center h-[100px] w-[100px] ' >
@@ -56,7 +56,7 @@ export default function GoodCompany() {
                         ))}
                     </div>
                 </div>
-                <div className='md:hidden'>
+                <div className='lg:hidden'>
                     <div className='w-full  text-center'>
                         <h2 className='text-3xl   pb-1'>In good</h2>
                         <h2 className='text-3xl  font-kepler'>company with</h2>

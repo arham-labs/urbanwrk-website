@@ -5,7 +5,7 @@ import ExploreBtn from '../home/exploreBtn'
 export default function LocationSpace() {
     return (
         <div>
-            <div className='bg-[#F6F4EE] w-full flex gap-[60px] max-md:hidden'>
+            <div className='bg-[#F6F4EE] w-full flex gap-[60px] max-lg:hidden'>
                 <div className='w-[60%] h-[429px]'>
                     <Image src="/images/locationInside/locationSpace.png" alt='space' height={300} width={300} className='h-full w-full' unoptimized />
                 </div>
@@ -30,7 +30,7 @@ export default function LocationSpace() {
 
                 </div>
             </div>
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
                 <div className='bg-[#F6F4EE] w-full flex flex-col '>
                     <div className='w-full h-[429px]'>
                         <Image src="/images/locationInside/locationSpace.png" alt='space' height={300} width={300} className='h-full w-full' unoptimized />

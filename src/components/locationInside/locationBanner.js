@@ -24,7 +24,7 @@ export default function LocationBanner() {
                 {[...Array(5)].map((_, i) => (
                     <div key={i}>
                         <div className='h-[100vh]' style={{ position: 'relative' }}>
-                            <Image src={`/images/locationInside/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full max-md:object-cover' unoptimized />
+                            <Image src={`/images/locationInside/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full max-md:object-cover md:object-cover' unoptimized />
                         </div>
                     </div>
                 ))}
@@ -41,14 +41,14 @@ export default function LocationBanner() {
             <style jsx>{`
                 .dots-container {
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 30px;
                     left: 50%;
                     transform: translateX(-50%);
                     display: flex;
                 }
                 .dot {
-                    width: 10px;
-                    height: 10px;
+                    width: 8px;
+                    height: 8px;
                     border-radius: 50%;
                     background-color: white;
                     margin-right: 10px;
