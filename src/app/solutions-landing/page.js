@@ -28,11 +28,18 @@ export default function page() {
                     <Solutions />
                 </div>
             </div>
-            <CompareSolution />
-          
+            <div className='bg-bglight6'>
+                <div className="max-w-[1920px] mx-auto ">
+                    <CompareSolution />
+
+                </div>
+            </div>
+
+
+
             <div className="bg-[#FFFFFF] ">
-                <div className=" px-6 max-w-[1920px] py-20 max-md:py-16 mx-auto 2xl:px-[160px] lg:px-[120px]">
-                    <Amenities noshow={true}/>
+                <div className=" px-6 max-w-[1920px] pt-20 pb-12 max-md:py-16 mx-auto 2xl:px-[160px] lg:px-[120px]">
+                    <Amenities noshow={true} />
                 </div>
             </div>
 
@@ -43,7 +50,7 @@ export default function page() {
                 </div>
             </div>
             <div className="bg-bglight1 ">
-            <div className=" px-6 max-w-[1920px] py-20 max-md:pt-16  max-md:pb-20 mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
+                <div className=" px-6 max-w-[1920px] pt-20 pb-12 max-md:pt-16  max-md:pb-20 mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
 
                     <GoodCompany />
                 </div>
@@ -53,7 +60,7 @@ export default function page() {
                     <FormCard />
                 </div>
             </div>
-           
+
         </>
     )
 }
