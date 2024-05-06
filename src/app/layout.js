@@ -9,6 +9,12 @@ import Header from "@/components/header";
 
 const worksans = Work_Sans({ subsets: ["latin"] });
 
+export const metadata = {
+  title: "UrbanWrk",
+  icons: '/images/favicon.svg',
+};
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
