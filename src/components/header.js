@@ -35,7 +35,7 @@ export default function Header() {
             <div >
                 <div className={`fixed w-full bg-[#FFF] ${pathname === "/" ? "animate-banner-header banner-header " : ""} top-0 z-50 flex justify-between items-center py-3 px-6 md:px-12 md:py-0 lg:px-[100px] 2xl:px-[160px]`}>
                     <Link href="/" className="">
-                        <Image src="/images/logo.svg" priority={true} width={150} height={150} className="w-32 h-20 lg:w-44 lg:h-24" alt="urbanwork-logo" />
+                        <Image src="/images/logo.svg" priority={true} width={150} height={150} className="w-32 h-12 lg:w-44 lg:h-20 " alt="urbanwork-logo" />
                     </Link>
                     <a title="drawer" className="cursor-pointer md:hidden" onClick={OpenDrawer}>
                         <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />

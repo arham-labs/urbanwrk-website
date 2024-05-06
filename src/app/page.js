@@ -14,8 +14,10 @@ import HomeBanner from "@/components/home/homeBanner";
 
 export default function Home() {
   return (
-    <div>
-      <HomeBanner />
+    <>
+      <div className="md:pt-20 ">
+        <HomeBanner />
+      </div>
       <div className="bg-bglight1 ">
         <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] py-20 max-md:py-16">
           <AboutCard />
@@ -33,8 +35,8 @@ export default function Home() {
       </div>
 
 
-        <ExploreCard />
-   
+      <ExploreCard />
+
       <div className="bg-bglight1 ">
         <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[120px]">
           <UrbanTech />
@@ -51,7 +53,7 @@ export default function Home() {
           <Testimonial />
         </div>
       </div>
-          <FormCard />
-    </div>
+      <FormCard />
+    </>
   );
 }

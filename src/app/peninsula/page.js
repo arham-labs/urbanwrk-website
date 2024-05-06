@@ -15,7 +15,9 @@ export default function page() {
 
   return (
     <>
-      <LocationBanner />
+      <div className="pt-0 ">
+        <LocationBanner />
+      </div>
       <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16 ">
         <Restaurants />
       </div>

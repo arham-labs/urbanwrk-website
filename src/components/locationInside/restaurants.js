@@ -34,22 +34,17 @@ export default function Restaurants() {
                         </div>)}
                     </div>
                 </div>
-                <div className='bg-[#F6F4EE] w-[363px] max-md:w-full max-md:py-10'>
+                <div className='bg-[#F6F4EE] w-1/2 max-md:w-full max-md:py-10 '>
                     <div className='flex flex-col justify-center items-center h-full '>
                         <p className='font-medium text-xl'>Want to find your space?</p>
                         <p className='mt-3'>Get in touch with us to know more.</p>
-                        <div className='w-[260px]'>
-                            <div className='border border-[#747474] my-5 w-full opacity-45  '></div>
-                        </div>
                         <div className='flex flex-col justify-center items-center'>
-                            <p className='text-base'>Call us Mon-Fri - 08:30-18:00</p>
-                            <p className='text-base mb-2'>+91 98765 43210 or</p>
-                            {/* <div className='border-black border flex px-8 my-2'>
-                                <button className='text-base bg-transparent  py-1 text-black '>Share your details
-                                </button>
-                                <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
-                            </div> */}
-                            <div  className="my-2">
+                            <div className='w-fit'>
+                                <div className='border border-[#747474] my-5 w-full opacity-45  '></div>
+                                <p className='text-base'>Call us Mon-Fri - 08:30-18:00       +91 98765 43210 or</p>
+                            </div>
+
+                            <div className="py-8">
                                 <ExploreBtn btnName="Share your details" />
                             </div>
                         </div>
