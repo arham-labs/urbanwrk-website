@@ -16,7 +16,7 @@ export default function Grade() {
         <div className="py-16 bg-bglight3 lg:py-20">
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px] flex flex-col lg:flex-row items-start gap-10 2xl:gap-20">
                 <div className="w-full lg:w-[40%]">
-                    <div className="flex flex-col text-2xl lg:text-4xl xl:text-[39px] 2xl:text-5xl gap-1 w-full lg:w-[70%]">
+                    <div className="flex flex-col text-2xl lg:text-4xl xl:xl:text-5xl gap-1 w-full lg:w-[70%]">
                         <span className="font-medium">Enterprise grade infrastructure</span>
                         <span className="font-kepler">to power your work</span>
                     </div>
