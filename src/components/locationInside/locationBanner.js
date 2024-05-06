@@ -7,13 +7,13 @@ export default function LocationBanner() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const settings = {
-        dots: false, // Disable default dots
+        dots: false, 
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 1700,
         arrows: false,
         afterChange: (current) => setCurrentSlide(current)
     };

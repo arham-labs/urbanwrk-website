@@ -32,9 +32,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-bglight1 ">
+
         <ExploreCard />
-      </div>
+   
       <div className="bg-bglight1 ">
         <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[120px]">
           <UrbanTech />
@@ -51,11 +51,7 @@ export default function Home() {
           <Testimonial />
         </div>
       </div>
-
-
-      
           <FormCard />
-      
     </div>
   );
 }
