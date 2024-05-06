@@ -5,6 +5,7 @@ import Choose from "@/components/about-us/bespoke-office/choose";
 import Space from "@/components/about-us/bespoke-office/space";
 import Ways from "@/components/about-us/bespoke-office/ways";
 import Productivity from "@/components/about-us/bespoke-office/productivity";
+import ExploreCard from "@/components/home/ExploreCard";
 
 export default function Page() {
 
@@ -14,9 +15,10 @@ export default function Page() {
             <Choose/>
             <Space/>
             <Productivity/>
+            <ExploreCard/>
             <Ways/>
-            <Blog />
             <Testimonial />
+            <Blog />
         </>
     )
 }

@@ -9,7 +9,7 @@ export default function Herobanner() {
                     <div className="w-full lg:w-[60%]">
                         <div className="flex flex-col gap-1 mb-5">
                             <span className="uppercase text-lg">Workspaces in</span>
-                            <span className="font-kepler text-2xl lg:text-4xl 2xl:text-5xl">Mumbai</span>
+                            <h1 className="font-kepler text-2xl lg:text-4xl xl:text-6xl">Mumbai</h1>
                         </div>
                         <p className="text-sm 2xl:text-base font-medium">Mumbai, with its blend of culture, commerce, and connectivity, offers an unparalleled work environment that&#39;s as dynamic as the city itself. Find diverse workspaces from vibrant suburbs to business hubs of Nariman Point, all equipped with world-class amenities like on-site fitness centres, cafés, lounges, and state-of-the-art meeting rooms, supported by a dedicated team to make your workday perfect in every way.</p>
                     </div>

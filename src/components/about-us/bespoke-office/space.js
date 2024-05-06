@@ -24,7 +24,7 @@ export default function Space() {
                     </div>
                 </div>
                 <div className="px-6 lg:px-0 w-full lg:w-1/2 flex flex-col gap-7 lg:gap-14">
-                    <div className="w-full xl:w-[70%] lg:ml-24 mr-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
+                    <div className="w-full xl:w-[60%] 2xl:w-[70%] lg:ml-24 mr-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
                         {MeetData.map((item, i) =>
                             <div className="flex items-start gap-5 lg:gap-10" key={i}>
                                 <span className="text-3xl xl:text-5xl text-primary font-kepler">0{i + 1}</span>

@@ -13,10 +13,10 @@ export default function Herobanner() {
                     <Image className="h-full w-full object-cover" sizes="100vw" priority={true} alt="hero-banner" src={DesktopBanner} />
                 </div>
                 <div className="absolute text-center bottom-32 lg:bottom-24 w-full">
-                    <div className="flex flex-col gap-1 lg:gap-3 mx-auto text-3xl lg:text-5xl 2xl:text-6xl">
-                        <h1 className="font-medium">Tailormade</h1>
+                    <div className="flex flex-col gap-1 lg:gap-3 mx-auto text-3xl lg:text-6xl">
+                        <h1>Tailormade</h1>
                         <span className="font-kepler">offices</span>
-                        <p className="text-sm lg:text-base">Your workspace, tailored to your workstyle.</p>
+                        <p className="text-sm lg:text-base font-normal">Your workspace, tailored to your workstyle.</p>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ export default function Testimonial({ leftAlign }) {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
     };
@@ -36,7 +36,7 @@ export default function Testimonial({ leftAlign }) {
                     <div className="text-center !flex lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]" key={i}>
                         <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full mb-8 lg:mb-0">
                             <div className="w-full lg:w-[45%]">
-                                <Image src={el.source} alt="image" className="aspect-[10/8] lg:aspect-[9/8] w-full h-full" />
+                                <Image src={el.source} alt="image" width={1920} height={1080} className="aspect-[10/8] lg:aspect-[9/7] w-full h-full" />
                             </div>
                             <div className="w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start gap-2 pt-6 lg:pt-0">
                                 <div className="flex items-start gap-0 lg:gap-8">
