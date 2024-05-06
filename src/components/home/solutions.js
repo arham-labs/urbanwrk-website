@@ -17,13 +17,17 @@ export default function Solutions() {
     return (
         <div>
             <div className='text-center'>
-                <div className='font-medium text-[28px] md:text-[65px] pb-0'>Solutions</div>
-                <div className='font-kepler text-[28px] md:text-[65px] text-center pt-0'>for everything you need</div>
+                <div className='font-medium text-3xl md:text-6xl leading-[1.2] '>
+                    Solutions
+                    <div className='font-kepler text-3xl md:text-[65px] text-center leading-[1.2]'>
+                        for everything you need
+                    </div>
+                </div>
             </div>
-            <div className='w-full  max-md:hidden mx-auto py-20'>
+            <div className='w-full  max-md:hidden mx-auto pt-20'>
                 <SolutionSlider />
             </div>
-            <div className='w-full  md:hidden  py-3'>
+            <div className='w-full  md:hidden  pt-8   pb-4'>
                 <SolutionMobileSlider data={data} />
             </div>
         </div>

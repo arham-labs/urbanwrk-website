@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CommonBtnKnowMore from './commonBtnKnowMore'
+import ExploreBtn from './exploreBtn'
 
 export default function BuildCard() {
     return (
@@ -15,12 +16,12 @@ export default function BuildCard() {
                                 <p className='text-base font-medium '>India’s first & only IGBC Platinum rated office spaces.</p>
                             </div>
                             <p className='text-base py-4'>When it comes to productivity, we put the planet first. Why? Because research has proven that a work environment that is aligned with its natural environment makes for better, more positive outcome.</p>
-                            <div className='pt-7'>
-                                <CommonBtnKnowMore btnName="Read more" />
+                            <div className='pt-2'>
+                            <ExploreBtn btnName={"Read more"}/>
                             </div>
                         </div>
                     </div>
-                    <div className='w-1/2 ,l-20'>
+                    <div className='w-1/2'>
                         <Image src="/images/home/buildCard1.png" height={650} width={685} alt="aboutUs" />
                     </div>
                 </div>
@@ -37,7 +38,7 @@ export default function BuildCard() {
                                 <p className='text-base font-medium '>India’s first & only IGBC Platinum rated office spaces.</p>
                             </div>
                             <p className='text-base py-4'>When it comes to productivity, we put the planet first. Why? Because research has proven that a work environment that is aligned with its natural environment makes for better, more positive outcome.</p>
-                            <div className='pt-7'>
+                            <div className='pt-2'>
                                 <CommonBtnKnowMore btnName="Read more" />
                             </div>
                         </div>

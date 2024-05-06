@@ -17,15 +17,15 @@ function SolutionMobileSlider({data}) {
         <div className="slider-container">
             <Slider {...settings}>
             {data.map((item, index) => (
-                    <div key={index} className=" mb-12 ">
+                    <div key={index} className=" mb-6 px-1 ">
                         <SolutionCard item={item} />
                     </div>
                 ))}
             </Slider>
-            <style jsx global>{`
+            <style>{`
                 .slick-dots {
                     text-align: center !important;
-                    bottom: 20px;
+                    bottom: -28px !important;
                     width: 100%;
                     padding: 0;
                 }

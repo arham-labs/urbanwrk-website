@@ -17,12 +17,12 @@ export default function LocationParkSliderMobile() {
         <div className="slider-container relative">
             <Slider {...settings}>
                 {[...Array(3)].map((item, index) => (
-                    <div key={index} className="mb-12">
+                    <div key={index} className="mb-16 p-1">
                         <LocationSpaceCardMobile />
                     </div>
                 ))}
             </Slider>
-            <style jsx global>{`
+            <style>{`
                 .slick-dots {
                     text-align: center !important;
                     bottom: 20px;
