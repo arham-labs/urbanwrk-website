@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CommonBtnKnowMore from '../home/commonBtnKnowMore'
+import ExploreBtn from '../home/exploreBtn'
 
 export default function Restaurants() {
 
@@ -43,10 +44,13 @@ export default function Restaurants() {
                         <div className='flex flex-col justify-center items-center'>
                             <p className='text-base'>Call us Mon-Fri - 08:30-18:00</p>
                             <p className='text-base mb-2'>+91 98765 43210 or</p>
-                            <div className='border-black border flex px-8 my-2'>
+                            {/* <div className='border-black border flex px-8 my-2'>
                                 <button className='text-base bg-transparent  py-1 text-black '>Share your details
                                 </button>
                                 <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
+                            </div> */}
+                            <div  className="my-2">
+                                <ExploreBtn btnName="Share your details" />
                             </div>
                         </div>
                     </div>

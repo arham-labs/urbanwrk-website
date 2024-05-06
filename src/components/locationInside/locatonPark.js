@@ -9,7 +9,7 @@ export default function LocatonPark() {
                 <LocationParkSlider />
             </div>
             <div className='md:hidden '>
-                {/* <LocationParkSliderMobile /> */}
+                <LocationParkSliderMobile />
             </div>
         </div>
     )
