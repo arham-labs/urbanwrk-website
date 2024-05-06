@@ -54,9 +54,9 @@ export default function page() {
 
                 </div>
             </div> */}
-            
+
             <GoodCompany />
-                    <FormCard />
+            <FormCard />
 
         </>
     )

@@ -23,7 +23,7 @@ export default function FormCard() {
                         <h2 className='text-2xl font-normal  lg:text-4xl lg:pb-2'>Always find your space</h2>
                         <h2 className='text-3xl font-normal lg:text-5xl font-kepler'>in the city of your choice.</h2>
                         <p className='py-4 max-lg:py-6'>Fill in the details below or call us at +91 98765 43210</p>
-                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:w-[350px] lg:w-[400px] xl:w-[462px] lg:mt-4">
+                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:w-full lg:w-[400px] xl:w-[462px] lg:mt-4">
                             <div className='mb-4'>
                                 <label className='block font-semibold'>Name:</label>
                                 <input type="text" {...register("name", { required: true })} className="border-black border-solid border w-full h-[38px]" />
