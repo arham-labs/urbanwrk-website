@@ -36,8 +36,8 @@ export default function LocationParkSlider() {
   return (
     <div className="slider-container">
       <Slider {...settings} >
-        {[...Array(3)].map((item, index) => (
-          <div key={index} className="pl-[20px] " >
+        {[...Array(3)].map((_, index) => (
+          <div key={index} className="pl-[20px]" >
             <LocationSpaceCard />
           </div>
         ))}

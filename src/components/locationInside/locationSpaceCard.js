@@ -9,30 +9,31 @@ export default function LocationSpaceCard() {
                 <div className='bg-[#F6F4EE] w-[350px]'>
                     <div className='flex flex-col justify-center items-center p-3'>
                         <div className='ml-3'>
+
                             <p className='font-medium text-2xl '>Peninsula Park</p>
                             <p className='mt-1 text-[#7D7C7C] font-semibold'>Lower Parel</p>
                             <p className='mt-3 font-light'>Parel Station - 5 min walk</p>
                             <p className='mt-0 font-light'>Best for restaurants, commute-friendly</p>
                             <p className='mt-3 font-normal'>A thriving corporate park in the heart of Mumbai.</p>
-                            <div class='flex flex-col items-center'>
-                                <div class='flex justify-between w-full  '>
-                                    <div class='flex mt-7  items-center w-1/2 '>
+                            <div className='flex flex-col items-center'>
+                                <div className='flex justify-between w-full  '>
+                                    <div className='flex mt-7  items-center w-1/2 '>
                                         <Image src="/images/locationInside/locationSpaceCardlogo4.svg" height={40} width={35} alt='exploreSvg' className='ml-1' />
-                                        <p class='text-xs ml-2  px-2'>Concierge Team </p>
+                                        <p className='text-xs ml-2  px-2'>Concierge Team </p>
                                     </div>
-                                    <div class='flex  mt-7   items-center w-1/2'>
+                                    <div className='flex  mt-7   items-center w-1/2'>
                                         <Image src="/images/locationInside/locationSpaceCardlogo2.svg" height={40} width={35} alt='exploreSvg' className='ml-1' />
-                                        <p class='text-xs mr-2  px-2'>Cafeteria</p>
+                                        <p className='text-xs mr-2  px-2'>Cafeteria</p>
                                     </div>
                                 </div>
-                                <div class='flex justify-between  w-full '>
-                                    <div class='flex mt-7  items-center w-1/2'>
+                                <div className='flex justify-between  w-full '>
+                                    <div className='flex mt-7  items-center w-1/2'>
                                         <Image src="/images/locationInside/locationSpaceCardlogo3.svg" height={40} width={35} alt='exploreSvg' className='ml-1' />
-                                        <p class=' mr-2 text-xs x px-2'>Parking</p>
+                                        <p className=' mr-2 text-xs x px-2'>Parking</p>
                                     </div>
-                                    <div class='flex mt-7  items-center w-1/2'>
+                                    <div className='flex mt-7  items-center w-1/2'>
                                         <Image src="/images/locationInside/locationSpaceCardlogo1.svg" height={40} width={35} alt='exploreSvg' className='ml-1' />
-                                        <p class='text-xs mr-2  px-2'>24 x 7 Access</p>
+                                        <p className='text-xs mr-2  px-2'>24 x 7 Access</p>
                                     </div>
                                 </div>
                             </div>

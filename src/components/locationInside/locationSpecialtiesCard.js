@@ -14,7 +14,7 @@ export default function LocationSpecialtiesCard() {
         <div className="bg-bglight3 py-16 lg:pt-20 lg:pb-12 max-md:pb-0 ">
             <div className="px-6 max-w-[1920px] mx-auto lg:px-[120px] 2xl:px-40 flex flex-col gap-10 lg:gap-20 lg:flex-row items-center">
                 <div className="w-full lg:w-[45%] aspect-square lg:h-[600px]">
-                    <Image src="/images/locationInside/locationAmenities.png" height={100} width={100} alt="image" className="w-full object-cover h-full" />
+                    <Image src="/images/locationInside/locationAmenities.png" height={100} width={100} alt="image" className="w-full object-cover h-full"  unoptimized/>
                 </div>
                 <div className="w-full lg:w-[65%]">
                     <span className="text-3xl lg:text-4xl block mb-8 lg:mb-10">Amenities</span>

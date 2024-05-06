@@ -21,8 +21,8 @@ export default function page() {
       <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16 ">
         <Restaurants />
       </div>
-      {/* <Speciality data={specilatiesData} title="Amenities" />
-       */}
+
+
       <div className='bg-bglight3 '>
         <LocationSpecialtiesCard />
         <div className="px-6  mx-auto 2xl:px-[160px] lg:px-[100px] pb-16 max-md:pb-4   bg-bglight3">
