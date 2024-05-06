@@ -9,7 +9,7 @@ export default function Header() {
     const pathname = usePathname();
     const headerData = [
         {
-            link: '/solutions-landing',
+            link: '/solutions',
             name: "Solutions"
         },
         {

@@ -6,7 +6,7 @@ export default function CompareSolution() {
 
     return (
         <div className='flex max-md:flex-col '>
-            <div className='w-1/2 max-md:w-full max-md:h-[220px]'>
+            <div className='w-1/2 max-md:w-full max-md:h-[220px] md:h-[383px]'>
                 <Image src="/images/solutionsLanding/compareSolution.png" alt="compare solution" height={383} width={837} className='w-full h-full' />
             </div>
 

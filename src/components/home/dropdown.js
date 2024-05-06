@@ -9,7 +9,7 @@ const BasicSelect = ({ labelName, list }) => {
     };
 
     return (
-        <div className="w-72  ">
+        <div className="w-72 max-md:w-full  ">
             <select
                 id="age"
                 name="age"

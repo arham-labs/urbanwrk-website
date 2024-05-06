@@ -28,7 +28,7 @@ export default function LookingImageSlider() {
                             <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[875px] w-full object-top' unoptimized />
                         </div>
                         <div className='md:hidden '>
-                            <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[800px] w-full  ' unoptimized />
+                            <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[800px] w-full  object-cover' unoptimized />
                         </div>
                     </div>
                 )}

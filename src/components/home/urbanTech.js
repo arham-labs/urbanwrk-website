@@ -14,7 +14,7 @@ export default function UrbanTech() {
                     <div className='w-1/2 flex flex-col justify-center pl-12'>
                         <>
                             <h2 className='font-normal text-6xl '>Integrate the</h2>
-                            <h2 className='font-normal text-6xl pb-6 font-kepler '> next gen of work</h2>
+                            <h2 className='font-normal text-7xl pb-6 font-kepler '> next gen of work</h2>
 
                             <p className='text-base pb-6 w-[80%]'>Step into the future of workspaces where technology empowers productivity. Harness our proprietary centralised app and digital platforms that give you unprecedented insights and enhanced convenience.</p>
                             {/* <div className='pt-7 flex'>
@@ -35,7 +35,7 @@ export default function UrbanTech() {
                     <div className=' flex flex-col justify-center pt-10 '>
                         <>
                             <h2 className='font-normal text-3xl '>Integrate the</h2>
-                            <h2 className='font-normal text-3xl pb-6 font-kepler '> next gen of work</h2>
+                            <h2 className='font-normal text-4xl pb-6 font-kepler '> next gen of work</h2>
 
                             <p className='text-base pb-6 w-[80%]'>Step into the future of workspaces where technology empowers productivity. Harness our proprietary centralised app and digital platforms that give you unprecedented insights and enhanced convenience.</p>
                             {/* <div className='pt-7 flex'>

@@ -14,7 +14,7 @@ export default function SolutionCard({ item }) {
           <Image src={item.img} height={400} width={422} alt='SolutionCard' className='h-full w-full max-md:min-h-[300px] max-md:max-h-[350px]' />
         </div>
         <div>
-          <div className='flex justify-between  pb-3 pt-4 px-3'>
+          <div className='flex justify-between  pb-3 pt-3 px-3'>
             <div>
               <div className='text-[28px] max-md:text-lg  leading-[1.2] '>{item.title1}</div>
               <div className='text-[28px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
@@ -22,7 +22,7 @@ export default function SolutionCard({ item }) {
            <ExploreBtn btnName={"Explore"}/>
 
           </div>
-          <div className='px-5'>
+          <div className='px-3'>
             <div className='border-black border'></div>
           </div>
           <p className='text-base px-5 pt-2 pb-5 max-md:text-sm max-md:pb-1 '>{item.desc}</p>

@@ -8,17 +8,17 @@ export default function GoodCompanySliderMobile() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 2, 
-        slidesToScroll: 2, 
+        slidesToShow: 2,
+        slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 2000,
-        rows: 2,
+        rows: 3,
         arrows:false
     };
 
     return (
         <Slider {...settings}>
-            {[...Array(12)].map((_, i) => (
+            {[...Array(18)].map((_, i) => (
                 <div className='w-[50%] m-4  flex flex-col justify-around' key={i}>
                     <div className='flex justify-center items-center h-[100px] w-[100px] mx-auto'>
                         <Image src={`/images/home/logo${i + 1}.svg`} height={50} width={60} alt="logo" className='w-full' />

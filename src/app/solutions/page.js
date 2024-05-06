@@ -55,11 +55,7 @@ export default function page() {
                     <GoodCompany />
                 </div>
             </div>
-            <div className="bg-white ">
-                <div className=" px-6 max-w-[1920px] py-20 max-md:py-16  mx-auto 2xl:px-[160px] lg:px-[120px]">
                     <FormCard />
-                </div>
-            </div>
 
         </>
     )
