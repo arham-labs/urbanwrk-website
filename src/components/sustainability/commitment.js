@@ -18,20 +18,20 @@ export default function Commitment() {
         <div className="px-6 py-14 lg:py-20 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px] flex flex-col lg:flex-row items-start">
             <div className="flex flex-col w-full lg:w-[65%]">
                 <div className="w-full lg:w-[91%] 2xl:w-[72%]">
-                    <p className="text-sm 2xl:text-base leading-6 mb-12 lg:mb-6 font-medium">Our commitment to sustainability is exemplified through our Platinum Rated Green Interiors, which represent the highest standard in environmentally responsible building practices.  We minimise ecological impact and ensure that our workspaces support the well-being of our clients and contribute positively to the environment.</p>
+                    <p className="text-sm xl:text-base leading-6 mb-12 lg:mb-6 font-medium">Our commitment to sustainability is exemplified through our Platinum Rated Green Interiors, which represent the highest standard in environmentally responsible building practices.  We minimise ecological impact and ensure that our workspaces support the well-being of our clients and contribute positively to the environment.</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {commitmentData.map((item, i) =>
                             <div key={i} className="flex flex-col border-b border-[#747474] pb-4 2xl:pb-7 gap-2 2xl:gap-3">
                                 <Image src={item.source} alt="image" className="w-10 mb-2 2xl:w-14" />
-                                <span className="font-semibold text-lg">{item.title}</span>
+                                <span className="font-semibold text-lg xl:text-xl">{item.title}</span>
                                 <p className="leading-6 text-sm">{item.desc}</p>
                             </div>
                         )}
                     </div>
                 </div>
             </div>
-            <div className="w-full lg:w-[35%] mt-10 lg:mt-0">
-                <Image src={commitmentImage} alt="commitment" className="w-full aspect-[10/11] lg:aspect-[7/9]" />
+            <div className="w-full lg:w-[35%] mt-10 lg:mt-0 lg:h-[675px]">
+                <Image src={commitmentImage} alt="commitment" className="w-full object-cover h-full aspect-[10/11] lg:aspect-[7/9]" />
             </div>
         </div>)
 }

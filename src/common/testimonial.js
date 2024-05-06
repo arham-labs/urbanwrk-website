@@ -33,7 +33,7 @@ export default function Testimonial({ leftAlign }) {
         <div className="bg-bglight4 pt-16 pb-24 px-6">
             <Slider {...settings}>
                 {reviewsData.map((el, i) =>
-                    <div className="text-center lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]" key={i}>
+                    <div className="text-center !flex lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]" key={i}>
                         <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full mb-8 lg:mb-0">
                             <div className="w-full lg:w-[45%]">
                                 <Image src={el.source} alt="image" className="aspect-[10/8] lg:aspect-[9/8] w-full h-full" />

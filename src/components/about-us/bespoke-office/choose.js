@@ -13,7 +13,7 @@ export default function Choose() {
 
     return (
         <div className="bg-bglight6 py-16 lg:py-20">
-            <div className="w-[88%] m-auto">
+            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
                 <span className="text-xl 2xl:text-2xl font-medium block mb-10">WHY CHOOSE US?</span>
                 <CommonCard leftAlign={true} data={ChooseData} />
             </div>
