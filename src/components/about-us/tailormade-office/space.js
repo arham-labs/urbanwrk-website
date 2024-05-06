@@ -33,7 +33,7 @@ export default function Space() {
                                 </div>
                             </div>
                         )}
-                        <LinkButton title="Contact us" href="" />
+                        <LinkButton title="Contact us" href="" marginspace={true}/>
                     </div>
                 </div>
             </div>
