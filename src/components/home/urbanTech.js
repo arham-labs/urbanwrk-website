@@ -6,7 +6,7 @@ import ExploreBtn from './exploreBtn'
 export default function UrbanTech() {
     return (
         <div className='bg-bglight1'>
-            <div className='  max-md:hidden'>
+            <div className='  max-lg:hidden'>
                 <div className='flex items-center gap-[25px]'>
                     <div className='w-1/2 '>
                         <Image src="/images/home/urbanTech1.png" height={666} width={683} alt="aboutUs" />
@@ -27,10 +27,10 @@ export default function UrbanTech() {
                     </div>
                 </div>
             </div>
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
                 <div className='flex flex-col items-center'>
                     <div className='w-full '>
-                        <Image src="/images/home/urbanTech1.png" height={666} width={683} alt="aboutUs" />
+                        <Image src="/images/home/urbanTech1.png" height={666} width={683} alt="aboutUs" className='w-full'/>
                     </div>
                     <div className=' flex flex-col justify-center pt-10 '>
                         <>

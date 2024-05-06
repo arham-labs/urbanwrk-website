@@ -5,7 +5,7 @@ export default function AboutCard() {
     return (
 
         <div className='w-full mx-auto '>
-            <div className='flex  max-md:hidden'>
+            <div className='flex  max-lg:hidden'>
                 <div className='w-[60%] aspect-[16/11]'>
                     <Image src="/images/home/aboutUs.png" height={666} width={683} className="h-full w-full object-cover" alt="aboutUs" />
                 </div>
@@ -17,7 +17,7 @@ export default function AboutCard() {
                 </div>
             </div>
 
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
                 <div className='aspect-[15/16]'>
                     <Image src="/images/home/aboutUs.png" height={360} width={352}  alt="aboutUs" className='h-full w-full' />
                 </div>

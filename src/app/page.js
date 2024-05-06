@@ -19,12 +19,12 @@ export default function Home() {
         <HomeBanner />
       </div>
       <div className="bg-bglight1 ">
-        <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[120px] py-20 max-md:py-16">
+        <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16">
           <AboutCard />
         </div>
       </div>
       <div className="bg-[#FFFFFF] ">
-        <div className=" px-6 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[120px] max-md:py-16">
+        <div className=" px-6 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[100px] max-md:py-16">
           <Solutions />
         </div>
       </div>
@@ -33,12 +33,12 @@ export default function Home() {
       <ExploreCard />
 
       <div className="bg-bglight1 ">
-        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[100px]">
           <UrbanTech />
         </div>
       </div>
       <div className="bg-white ">
-        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[120px]">
+        <div className=" px-6 max-w-[1920px] py-20 max-md:py-16   mx-auto 2xl:px-[160px] lg:px-[100px]">
           <BuildCard />
         </div>
       </div>

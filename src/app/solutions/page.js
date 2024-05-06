@@ -49,12 +49,13 @@ export default function page() {
                     <Testimonial />
                 </div>
             </div>
-            <div className="bg-bglight1 ">
+            {/* <div className="bg-bglight1 ">
                 <div className=" px-6 max-w-[1920px] pt-20 pb-12 max-md:pt-16  max-md:pb-20 mx-auto 2xl:pl-[160px] 2xl:pr-[140px] lg:pl-[120px] lg:pr-[60px]">
 
-                    <GoodCompany />
                 </div>
-            </div>
+            </div> */}
+            
+            <GoodCompany />
                     <FormCard />
 
         </>
