@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import ExploreBtn from '../home/exploreBtn'
 
 export default function LocationSpaceCard() {
     return (
@@ -38,10 +39,13 @@ export default function LocationSpaceCard() {
                                 </div>
                             </div>
                             <div className='border-[#747474] border mt-4'></div>
-                            <div className='border-black border flex px-8 mb-3 mt-8 w-fit'>
+                            {/* <div className='border-black border flex px-8 mb-3 mt-8 w-fit'>
                                 <button className='text-base bg-transparent  py-1 text-black '>Explore
                                 </button>
                                 <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
+                            </div> */}
+                            <div className='mb-3 mt-8'>
+                                <ExploreBtn btnName="Explore"/>
                             </div>
                         </div>
 
