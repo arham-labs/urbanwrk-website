@@ -17,7 +17,7 @@ export default function HomeBuild() {
         "Access to co-working spaces, lounges, WellnessWrk Gym and BuzzWrk Café", "Exclusive access to all our events, seminars and industry talks"
     ]
     return (
-        <div className="py-16 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px] flex flex-col gap-7 lg:gap-0 lg:flex-row items-center">
+        <div className="py-16 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col gap-7 lg:gap-0 lg:flex-row items-center">
             <div className="flex flex-col w-full lg:w-1/2">
                 <div className="w-full lg:w-[88%]">
                     <div className="flex flex-col text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-7">

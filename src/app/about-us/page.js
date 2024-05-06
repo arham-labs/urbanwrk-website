@@ -4,6 +4,7 @@ import Speciality from "@/common/speciality";
 import Vision from "@/components/about-us/vision";
 import WorkSpace from "@/components/about-us/workspace";
 import WorkSwings from "@/components/about-us/workswings";
+import FormCard from "@/components/home/formCard";
 
 export default function Page() {
 
@@ -24,6 +25,7 @@ export default function Page() {
             <Speciality data={specilatiesData} title="Why Us"/>
             <Intro />
             <Vision />
+            <FormCard/>
         </>
     )
 }

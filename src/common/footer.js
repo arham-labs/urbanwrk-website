@@ -8,7 +8,7 @@ import LinkedIn from '../../public/images/LinkedIn.svg'
 export default function Footer() {
     return (
         <section id="footer" className="bg-black text-white py-16 lg:py-20">
-            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
+            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px]">
                 <Link href="/" className="flex flex-col justify-between items-start mb-10 lg:mb-16">
                     <Image src={UrbanWRKLogo} className="" alt="urbanwrk-logo" />
                 </Link>

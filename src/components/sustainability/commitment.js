@@ -15,7 +15,7 @@ export default function Commitment() {
     ]
 
     return (
-        <div className="px-6 py-16 lg:py-20 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px] flex flex-col lg:flex-row items-start">
+        <div className="px-6 py-16 lg:py-20 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col lg:flex-row items-start">
             <div className="flex flex-col w-full lg:w-[65%]">
                 <div className="w-full lg:w-[91%] 2xl:w-[72%]">
                     <p className="text-sm xl:text-base leading-6 mb-12 lg:mb-6 font-medium">Our commitment to sustainability is exemplified through our Platinum Rated Green Interiors, which represent the highest standard in environmentally responsible building practices.  We minimise ecological impact and ensure that our workspaces support the well-being of our clients and contribute positively to the environment.</p>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SpaceImage from '../../../../public/images/about-us/bespoke-office/space.png'
-import Link from "next/link";
-import Arrow from '../../../../public/images/arrow.svg'
+import LinkButton from "@/common/linkbtn";
 
 export default function Space() {
 
@@ -34,10 +33,7 @@ export default function Space() {
                                 </div>
                             </div>
                         )}
-                        <Link href="/" className="border border-dark text-dark w-fit flex items-center gap-2 px-7 py-2 mt-5 lg:mt-0 ml-[45px] lg:ml-[70px] xl:ml-[90px]">
-                            <span>Contact us</span>
-                            <Image src={Arrow} alt="arrow" className="w-3"/>
-                        </Link>
+                        <LinkButton title="Contact us" href="" marginspace={true}/>
                     </div>
                 </div>
             </div>

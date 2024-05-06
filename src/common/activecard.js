@@ -4,10 +4,8 @@ import section1 from '../../public/images/about-us/bespoke-office/section-1.png'
 import section2 from '../../public/images/about-us/bespoke-office/section-2.png'
 import section3 from '../../public/images/about-us/bespoke-office/section-3.png'
 import section4 from '../../public/images/about-us/bespoke-office/section-4.png'
-import Arrow from '../../public/images/arrow.svg'
-
 import { useState } from "react";
-import Link from "next/link";
+import LinkButton from "./linkbtn";
 
 const titles = [
     { id: 1, title: "READY-TO-WORK IN OFFICES" },
@@ -83,10 +81,7 @@ export default function ActiveCard() {
                                 )}
                             </ul>
                         </div>
-                        <Link href="/" className="border border-dark text-dark w-fit hover:bg-primary hover:text-white hover:border-transparent transition-all delay-75 ease-in-out flex items-center gap-2 px-7 py-2">
-                            <span>{item.btn}</span>
-                            <Image src={Arrow} alt="arrow" className="w-3" />
-                        </Link>
+                        <LinkButton title={item.btn} href="" />
                     </div>
                 </div>
             )}

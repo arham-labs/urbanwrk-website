@@ -1,14 +1,13 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
 import Concienge from '../../../public/images/locationInside/locationSpaceCardlogo4.svg'
 import Cafeteria from '../../../public/images/locationInside/locationSpaceCardlogo2.svg';
 import Parking from '../../../public/images/locationInside/locationSpaceCardlogo3.svg'
 import Access from '../../../public/images/locationInside/locationSpaceCardlogo1.svg'
-import Arrow from '../../../public/images/arrow.svg'
 import CardImage from '../../../public/images/location/card.png'
 import Map from '../../../public/images/location/map.png'
 import { useParams } from "next/navigation";
+import LinkButton from "@/common/linkbtn";
 
 export default function ExploreCard() {
     const params = useParams();
@@ -23,7 +22,7 @@ export default function ExploreCard() {
     ]
 
     return (
-        <div className="py-16 flex flex-col lg:flex-row w-full gap-8 xl:gap-5 2xl:gap-8 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]">
+        <div className="py-16 flex flex-col lg:flex-row w-full gap-8 xl:gap-7 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px]">
             <div className="w-full lg:w-[60%] 2xl:w-[55%] flex flex-col bg-bglight1 lg:h-fit lg:flex-row items-center">
                 <div className="w-full xl:w-1/2 2xl:w-[45%]">
                     <Image src={CardImage} alt="cardimage" className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
@@ -36,7 +35,7 @@ export default function ExploreCard() {
                         <span>Best for restaurants, commute-friendly</span>
                     </div>
                     <p className="text-sm mb-5 lg:mb-3 2xl:mb-5">A thriving corporate park in the heart of Mumbai.</p>
-                    <div className="grid gap-5 grid-cols-2 pb-5 border-b border-[#747474]">
+                    <div className="grid gap-5 grid-cols-2 pb-5 border-b border-[#747474] mb-7">
                         {AmentiesData.map((el, i) =>
                             <div className="flex items-center gap-2" key={i}>
                                 <Image src={el.source} className="" alt={el.title} />
@@ -44,10 +43,7 @@ export default function ExploreCard() {
                             </div>
                         )}
                     </div>
-                    <Link href={`${params.location}/peninsula`} className="border border-dark text-dark text-sm 2xl:text-base w-fit flex items-center gap-2 px-4 py-2 mt-7">
-                        <span>Explore</span>
-                        <Image src={Arrow} alt="arrow" className="w-3" />
-                    </Link>
+                    <LinkButton title="Explore" href={`${params.location}/peninsula`} />
                 </div>
             </div>
             <div className="w-full lg:w-[40%] 2xl:w-[45%]">
@@ -63,11 +59,7 @@ export default function ExploreCard() {
                             <div className='flex flex-col justify-center items-center'>
                                 <p className='text-base'>Call us Mon-Fri - 08:30-18:00</p>
                                 <p className='text-base mb-2 font-medium'>+91 98765 43210 or</p>
-                                <div className='border-black border flex px-8 my-2'>
-                                    <button className='text-base bg-transparent  py-1 text-black '>Share your details
-                                    </button>
-                                    <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
-                                </div>
+                                <LinkButton title="Share your details" href="" />
                             </div>
                         </div>
                     </div>

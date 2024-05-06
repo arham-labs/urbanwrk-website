@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
 import Slider from "react-slick";
 import Radha from '../../public/images/radha-shrestha.png'
 import Affinity from '../../public/images/affinity-banner.png'
@@ -9,7 +8,7 @@ import Quote from '../../public/images/quote.svg'
 import CoinDCX from '../../public/images/coindcx.svg'
 import AffinityLogo from '../../public/images/affinity.svg';
 import AONLogo from '../../public/images/aon.svg'
-import Arrow from '../../public/images/arrow.svg'
+import LinkButton from "./linkbtn";
 
 export default function Testimonial({ leftAlign }) {
 
@@ -33,7 +32,7 @@ export default function Testimonial({ leftAlign }) {
         <div className="bg-bglight4 pt-16 pb-24 px-6">
             <Slider {...settings}>
                 {reviewsData.map((el, i) =>
-                    <div className="text-center !flex lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[120px]" key={i}>
+                    <div className="text-center !flex lg:text-left px-0 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px]" key={i}>
                         <div className="flex lg:flex-row flex-col gap-5 lg:gap-20 w-full mb-8 lg:mb-0">
                             <div className="w-full lg:w-[45%]">
                                 <Image src={el.source} alt="image" width={1920} height={1080} className="aspect-[10/8] lg:aspect-[9/7] w-full h-full" />
@@ -44,15 +43,12 @@ export default function Testimonial({ leftAlign }) {
                                     <p className="leading-[21px] !lg:leading-6 text-sm lg:text-base 2xl:text-lg font-medium mt-2 lg:mt-5">{el.desc}</p>
                                 </div>
                                 <div className="flex flex-col lg:items-baseline">
-                                    <div className="flex flex-col items-center lg:items-start gap-1">
+                                    <div className="flex flex-col items-center lg:items-start gap-1 mb-5">
                                         <span className="text-sm lg:text-base font-semibold">{el.name}</span>
                                         <span className="font-kepler text-sm lg:text-base">{el.position}</span>
                                         <Image src={el.logo} alt="logo" className={`${i == 2 ? "w-20" : "w-14"}`} />
                                     </div>
-                                    <Link href="/" className="mt-5 border-black border p-2 flex items-center gap-2 text-sm lg:text-base lg:px-8 font-medium lg:ml-[75px]">
-                                        <span>Discover more</span>
-                                        <Image src={Arrow} alt="arrow" className="w-3" />
-                                    </Link>
+                                    <LinkButton title="Discover more" href="" margin={true}/>
                                 </div>
                             </div>
                         </div>

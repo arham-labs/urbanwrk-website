@@ -7,7 +7,7 @@ export default function Companies() {
     ]
     return (
         <div className="bg-bglight1 py-16 lg:py-20 2xl:py-[100px] text-secondary">
-            <div className="pl-6 lg:pr-0 max-w-[1920px] mx-auto 2xl:pl-40 lg:pl-[120px]">
+            <div className="pl-6 lg:pr-0 max-w-[1920px] mx-auto 2xl:pl-40 lg:pl-[100px]">
                 <h2 className="text-2xl mb-10 uppercase">In Good Comapny with</h2>
                 <div className="flex overflow-hidden space-x-7 items-center lg:space-x-14">
                     {Logos.map((item, i) =>
