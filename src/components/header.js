@@ -13,7 +13,7 @@ export default function Header() {
             name: "Solutions"
         },
         {
-            link: '/location',
+            link: '/mumbai',
             name: "Locations"
         },
         {
@@ -44,7 +44,9 @@ export default function Header() {
                         {headerData.map((item, i) =>
                             <Link key={i} href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item.name}</Link>
                         )}
+                        
                     </div>
+                    
                 </div>
                 <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e]`} onClick={onClose}>
                     <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
@@ -58,6 +60,7 @@ export default function Header() {
                                 )}
 
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -66,4 +69,98 @@ export default function Header() {
 
     )
 }
+// "use client"
+// import Image from "next/image";
+// import Link from "next/link";
+// import { usePathname } from "next/navigation";
+// import { useState } from "react";
+// // import { FaAngleDown } from 'react-icons/fa';
+// export default function Header() {
+//     const [toggle, setToggle] = useState(false);
+//     const pathname = usePathname();
+//     const headerData = [
+//         {
+//             link: '/solutions',
+//             name: "Solutions",
+//             dropdown: [
+//                 { subLink: '/tailormade-office', subName: 'Tailormade Office' },
 
+//             ]
+            
+//         },
+//         {
+//             link: '',
+//             name: "Locations",
+//             dropdown: [
+//                 { subLink: '/mumbai', subName: 'Mumbai' },
+
+//             ]
+//         },
+//         {
+//             link: '/about-us',
+//             name: "About Us",
+//             dropdown: [
+//                 { subLink: '/sustainability', subName: 'Sustainability' },
+
+//             ]
+//         },
+//     ];
+//     const OpenDrawer = () => {
+//         setToggle(!toggle);
+//     };
+//     const onClose = () => {
+//         setToggle(false);
+//     };
+//     const handleSubItemClick = () => {
+//         onClose();
+//     };
+//     return (
+//         <div className="bg-[#FFF]">
+//             <div>
+//                 <div className={`fixed w-full bg-[#FFF] ${pathname === "/" ? "animate-banner-header banner-header " : ""} top-0 z-50 flex justify-between items-center py-3 px-6 md:px-12 md:py-0 lg:px-[100px] 2xl:px-[160px]`}>
+//                     <Link href="/" className="">
+//                         <Image src="/images/logo.svg" priority={true} width={150} height={150} className="w-32  h-12 lg:w-44 lg:h-20" alt="urbanwork-logo" />
+//                     </Link>
+//                     <a title="drawer" className="cursor-pointer md:hidden" onClick={OpenDrawer}>
+//                         <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />
+//                     </a>
+//                     <div className="hidden md:flex md:gap-14 items-center ">
+//                         {headerData.map((item, i) => (
+//                             <div key={i} className="relative">
+//                                 {item.dropdown ? (
+//                                     <div className="relative group">
+//                                         <Link href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item.name}</Link>
+//                                         <div className="absolute top-full left-0 bg-white shadow-md mt-1 py-2 w-52  rounded-md z-10 hidden group-hover:block">
+//                                             {item.dropdown.map((subItem, j) => (
+//                                                 <Link key={j} href={subItem.subLink} className="block px-4  py-2 text-gray-800 hover:bg-gray-200" onClick={handleSubItemClick}>{subItem.subName}</Link>
+//                                             ))}
+//                                         </div>
+//                                         <div className="absolute top-full right-0 h-full flex items-center">
+//                                             {/* <FaAngleDown className="text-gray-600 ml-1" /> */}
+//                                         </div>
+//                                     </div>
+//                                 ) : (
+//                                     <Link href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item.name}</Link>
+//                                 )}
+//                             </div>
+//                         ))}
+//                     </div>
+//                 </div>
+//                 <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e]`} onClick={onClose}>
+//                     <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
+//                         <div className="flex flex-col">
+//                             <Link href="/" className="mb-5">
+//                                 <Image src="/images/logo.svg" width={150} height={150} className="w-32 h-20" alt="logo" />
+//                             </Link>
+//                             <div className="flex flex-col ">
+//                                 {headerData.map((item, i) => (
+//                                     <Link key={i} href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base mb-8`} onClick={onClose}>{item.name}</Link>
+//                                 ))}
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }

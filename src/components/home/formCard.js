@@ -42,8 +42,10 @@ export default function FormCard() {
                             <div className='mb-4'>
                                 <label className='block font-semibold'>City:</label>
                                 <select {...register("city", { required: true })} className="border-black border-solid border w-full h-[38px]">
-                                    <option value="New York">New York</option>
-                                    <option value="Los Angeles">Los Angeles</option>
+                                    <option value="New York">Mumbai</option>
+                                    <option value="Los Angeles">Pune</option>
+                                    <option value="Los Angeles">Kolkata</option>
+                                    <option value="Los Angeles">Hyderabad</option>
                                 </select>
                                 {errors.city && <span className="text-red-500">This field is required</span>}
                             </div>
