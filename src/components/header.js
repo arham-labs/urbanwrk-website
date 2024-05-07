@@ -10,21 +10,44 @@ export default function Header() {
     const headerData = [
         {
             link: '/solutions',
-            name: "Solutions"
+            name: "Solutions",
+            dropdown: [
+                { subLink: '/tailormade-office', subName: 'Tailormade Offices' },
+                { subLink: '/tailormade-office', subName: 'Ready-To-Work In Offices' },
+                { subLink: '/tailormade-office', subName: 'Meeting Rooms' },
+                { subLink: '/tailormade-office', subName: 'Events & Shoots' },
+                { subLink: '/tailormade-office', subName: 'Advertise With Us' },
+            ]
         },
         {
-            link: '/mumbai',
-            name: "Locations"
+            link: '',
+            name: "Locations",
+            dropdown: [
+                { subLink: '/mumbai', subName: 'Mumbai' },
+                { subLink: '/mumbai', subName: 'Pune' },
+                { subLink: '/mumbai', subName: 'Hyderabad' },
+                { subLink: '/mumbai', subName: 'Kolkata' },
+            ]
         },
         {
             link: '/about-us',
-            name: "About Us"
+            name: "About Us",
+            dropdown: [
+                { subLink: '', subName: 'Our Team' },
+                { subLink: '', subName: 'Our Mission' },
+                { subLink: '', subName: 'Our Values' },
+            ]
         },
         {
             link: '/urbanWrk-tech',
-            name: "UrbanWrk Tech"
+            name: "UrbanWrk Tech",
         },
-    ]
+        {
+            link: '',
+            name: "Contact Us",
+        },
+       
+    ];
 
     const OpenDrawer = () => {
         setToggle(!toggle)

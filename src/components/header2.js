@@ -13,10 +13,7 @@ export default function Header2() {
             name: "Solutions",
             dropdown: [
                 { subLink: '/tailormade-office', subName: 'Tailormade Offices' },
-                { subLink: '/tailormade-office', subName: 'Ready-To-Work In Offices' },
-                { subLink: '/tailormade-office', subName: 'Meeting Rooms' },
-                { subLink: '/tailormade-office', subName: 'Events & Shoots' },
-                { subLink: '/tailormade-office', subName: 'Advertise With Us' },
+             
             ]
         },
         {
@@ -24,28 +21,22 @@ export default function Header2() {
             name: "Locations",
             dropdown: [
                 { subLink: '/mumbai', subName: 'Mumbai' },
-                { subLink: '/mumbai', subName: 'Pune' },
-                { subLink: '/mumbai', subName: 'Hyderabad' },
-                { subLink: '/mumbai', subName: 'Kolkata' },
+              
             ]
         },
         {
             link: '/about-us',
             name: "About Us",
             dropdown: [
-                { subLink: '', subName: 'Our Team' },
-                { subLink: '', subName: 'Our Mission' },
-                { subLink: '', subName: 'Our Values' },
+                { subLink: '/sustainability', subName: 'Sustainability' },
+            
             ]
         },
         {
             link: '/urbanWrk-tech',
             name: "UrbanWrk Tech",
         },
-        {
-            link: '',
-            name: "Contact Us",
-        },
+       
        
     ];
 
@@ -87,7 +78,7 @@ export default function Header2() {
                                                 <Image src={"/images/headerDrop.svg"} alt="abc" height={10} width={10} />
                                             </div>
                                         </div>
-                                        <div className="absolute top-full left-0 bg-white shadow-md mt-1 py-2 w-40 rounded-md z-10 hidden group-hover:block">
+                                        <div className="absolute top-full left-0 bg-white shadow-md mt-1 py-2 w-48 rounded-md z-10 hidden group-hover:block">
                                             {item.dropdown.map((subItem, j) => (
                                                 <Link key={j} href={subItem.subLink} className="block px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={handleSubItemClick}>{subItem.subName}</Link>
                                             ))}
@@ -99,14 +90,14 @@ export default function Header2() {
                             </div>
                         ))}
                         {/* Hamburger icon moved here */}
-                        <div className="cursor-pointer" onClick={OpenDrawer}>
+                        {/* <div className="cursor-pointer" onClick={OpenDrawer}>
                             <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
                 <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e]`} onClick={onClose}></div>
-                <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[20%] h-full `}>
+                <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
                     <div className="flex flex-col">
                         <Link href="/" className="mb-5">
                             <Image src="/images/logo.svg" width={150} height={150} className="w-32 h-20" alt="logo" />
