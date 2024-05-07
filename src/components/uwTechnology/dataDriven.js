@@ -35,10 +35,10 @@ export default function DataDriven() {
                 <div className=' flex flex-col lg:flex-row '>
                     <div className='  justify-center lg:w-1/2 flex flex-col'>
                         <div>
-                            <h2 className='text-3xl md:text-5xl lg:text-[56px] text-left leading-tight font-normal  md:max-w-none'>
+                            <h2 className='text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-left leading-tight font-normal  md:max-w-none'>
                                 Data-driven
                             </h2>
-                            <h2 className='font-kepler lg:text-7xl max-md:font-medium md:font-normal'>workspaces</h2>
+                            <h2 className='font-kepler text-[32px] lg:text-[44px] xl:text-[56px] 2xl:text-[68px] leading-[1.2] '>workspaces</h2>
                         </div>
 
                     </div>
