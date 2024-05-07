@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/common/footer";
 import Header from "@/components/header";
+import Header2 from "@/components/header2";
 
 const worksans = Work_Sans({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={worksans.className}>
         <Header />
+        {/* <Header2/> */}
         {children}
         <Footer/>
       </body>

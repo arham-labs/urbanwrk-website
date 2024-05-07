@@ -23,7 +23,7 @@ export default function UrbanTech() {
                                 <Image src="/images/home/explore.svg" height={18} width={18} alt='exploreSvg' className='ml-1' />
                             </div> */}
                             {/* <ExploreBtn btnName={"Know more"}/> */}
-                            <LinkButton href="/uw-technology" title="Know more" />
+                            <LinkButton href="/urbanWrk-tech" title="Know more" />
 
 
                         </>

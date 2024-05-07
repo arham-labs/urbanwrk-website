@@ -20,6 +20,10 @@ export default function Header() {
             link: '/about-us',
             name: "About Us"
         },
+        {
+            link: '/urbanWrk-tech',
+            name: "UrbanWrk Tech"
+        },
     ]
 
     const OpenDrawer = () => {
