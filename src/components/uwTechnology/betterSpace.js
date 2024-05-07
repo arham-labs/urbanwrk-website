@@ -15,9 +15,9 @@ export default function BetterSpace() {
         <div className="py-16 bg-bglight3 lg:py-20">
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col lg:flex-row items-start gap-10 2xl:gap-20">
                 <div className="w-full lg:w-[45%] 2xl:w-[45%]">
-                    <div className="flex flex-col text-2xl lg:text-4xl xl:text-[45px] xl:leading-[49px] gap-1 w-full lg:w-[80%]">
-                        <span className="font-normal">Better spaces that are fully compliant with</span>
-                        <span className="font-kepler ">the highest standards</span>
+                    <div className="flex flex-col text-2xl lg:text-4xl xl:text-[45px] xl:leading-[49px] gap-1 w-full lg:w-[90%]">
+                        <span className="font-normal">Better spaces that are fully compliant with  <span className="font-kepler  text-[32px] lg:text-[44px] xl:text-[53px] leading-[1.2]">the highest standards</span></span>
+                       
                     </div>
                 </div>
                 <div className="w-full lg:w-[60%] 2xl:w-[55%]">
