@@ -6,7 +6,7 @@ export default function SolutionBanner() {
         <div className='bg-[#F6F4EE]'>
             <>
                 <div className='flex flex-col lg:flex-row '>
-                    <div className='max-w-[1920px] max-md:px-6 mx-auto 2xl:px-[160px] lg:pl-[100px] lg:pr-[40px] lg:w-1/2 flex justify-center flex-col md:px-8 py-10 lg:py-20  max-md:pb-10'>
+                    <div className='max-w-[1920px] max-md:px-6 mx-auto 2xl:px-[160px] lg:pl-[100px] lg:pr-[40px] lg:w-1/2 flex justify-center flex-col md:px-8 py-16 lg:py-20  max-lg:pb-10'>
                         <h2 className='text-3xl md:text-5xl lg:text-[56px] text-left leading-tight font-medium  md:max-w-none'>
                             Find the space that <span className='font-kepler lg:text-7xl max-md:font-medium md:font-normal'>feels truly yours</span> 
                         </h2>
