@@ -17,9 +17,9 @@ export default function Solutions() {
     return (
         <div>
             <div className='text-center'>
-                <div className=' text-3xl md:text-6xl  '>
+                <div className=' text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl '>
                     Solutions
-                    <div className='font-kepler text-3xl md:text-7xl text-center'>
+                    <div className='font-kepler text-[32px] lg:text-[44px] xl:text-[56px] 2xl:text-[68px] leading-[1.2] text-center'>
                         for everything you need
                     </div>
                 </div>

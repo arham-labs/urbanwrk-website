@@ -11,8 +11,8 @@ export default function LocationSpace() {
                 </div>
                 <div className='flex items-center '>
                     <div className=''>
-                        <h2 className='text-[45px] '>Find your space </h2>
-                        <h2 className='font-kepler text-[55px]'>in Mumbai</h2>
+                        <h2 className='text-[45px]  '>Find your space </h2>
+                        <h2 className='font-kepler text-[53px] leading-[1.2]'>in Mumbai</h2>
                         <p>Leave your mark in some of the most inspiring locations in the city.</p>
 
                         {/* <div className='border-black border flex px-8 mb-3 mt-8 w-fit'>
@@ -37,8 +37,8 @@ export default function LocationSpace() {
                     </div>
                     <div className='flex items-center px-6 pt-[48px] pb-[64px]'>
                         <div className=''>
-                            <h2 className='text-3xl '>Find your space </h2>
-                            <h2 className='font-kepler text-3xl '>in Mumbai</h2>
+                            <h2 className='text-2xl '>Find your space </h2>
+                            <h2 className='font-kepler text-[32px] leading-[1.2] '>in Mumbai</h2>
                             <p className='mt-3'>Leave your mark in some of the most inspiring locations in the city.</p>
 
                             {/* <div className='border-black border flex px-8 mb-3 mt-4 w-fit'>

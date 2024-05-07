@@ -13,6 +13,7 @@ import Solutions from '@/components/solutionsLanding/solutions';
 import Testimonial from '@/common/testimonial';
 import GoodCompany from '@/components/home/goodCompany';
 import FormCard from '@/components/home/formCard';
+import DataDriven from '@/components/uwTechnology/dataDriven';
 
 export default function page() {
     return (
@@ -23,6 +24,7 @@ export default function page() {
                     <SolutionBanner />
                 </div>
             </div>
+          
             <div className="bg-[#FFFFFF] ">
                 <div className=" px-6 max-w-[1920px] py-20 max-md:py-16 mx-auto 2xl:px-[160px] lg:px-[100px]">
                     <Solutions />
