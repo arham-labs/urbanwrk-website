@@ -27,15 +27,12 @@ export default function BetterSpace() {
                                 <Image src={el.source} alt={el.title} className='w-16' />
                                 <span className='text-base lg:text-lg uppercase'>{el.title}</span>
                             </div>
-                            <div className={`hidden lg:block  pb-7 ${i > 1 ? "border-0 mt-7" : "border-b border-[#7A7A7A]"}`}>
-                                <div className='flex gap-5  justify-start'>
-                                    <span className='text-lg'>{el.subtitle}</span>
-                                </div>
-                            </div>
-                            {/* <div className={`flex gap-5 items-center ${i == 0 ? "mt-0" : "mt-7"} ${i > 1 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-7"}`}>
+                            
+                            <div className={`hidden lg:block   gap-5 items-center ${i == 0 ? "mt-0" : "mt-7"} ${i > 1 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-[56px] pt-[15px] "} `}>
                               
-                                <span className='text-base lg:text-lg uppercase'>{el.title}</span>
-                            </div> */}
+                                <span className='text-base lg:text-lg uppercase pt-2'>{el.subtitle}</span>
+                            </div>
+                         
 
                         </div>
                     )}
@@ -44,6 +41,9 @@ export default function BetterSpace() {
                             <span className='text-base lg:text-lg'>{el.subtitle}</span>
                         </div>
                     )}
+                    <div  className={`pt-7 font-medium lg:hidden ${  "mt-7 border-t pb-7  border-[#7A7A7A]"}`}>
+                            <span className='text-base lg:text-lg'>Interactive TV</span>
+                        </div>
                 </div>
             </div>
         </div>)
