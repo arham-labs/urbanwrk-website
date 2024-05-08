@@ -6,8 +6,7 @@ import { useState,useEffect } from "react";
 
 export default function Header2() {
     const [toggle, setToggle] = useState(false);
-    // const [open,setOpen]=useState(false)
-    const [heading, setHeading] = useState("")
+
     const [showDropdown, setShowDropdown] = useState(false);
     const [selectedHeading, setSelectedHeading] = useState('');
     const [mouseHover,setMouseHover]=useState(false)
@@ -140,7 +139,7 @@ const handleMouseEnter=()=>{
                                         <Link href={item.link}  onClick={() => setSelectedHeading(item.name)} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base `}>
                                             {item.name}
                                         </Link>
-                                        <div onClick={() => setSelectedHeading(item.name)}>
+                                        <div onClick={() =>selectedHeading === item.name ?setSelectedHeading(""): setSelectedHeading(item.name)}>
                                             {item?.subMenu && (
                                                 <div className="mt-2 ml-7">
                                                     <Image src={"/images/headerDrop.svg"} alt="abc" height={12} width={12} />
