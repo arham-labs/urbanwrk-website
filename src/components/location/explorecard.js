@@ -11,7 +11,7 @@ import LinkButton from "@/common/linkbtn";
 
 export default function ExploreCard() {
     const params = useParams();
-    console.log(params, 'params');
+    // console.log(params, 'params');
 
 
     const AmentiesData = [
