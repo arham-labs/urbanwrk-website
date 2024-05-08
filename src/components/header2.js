@@ -148,7 +148,7 @@ const handleMouseEnter=()=>{
                                             )}
                                         </div>
                                     </div>
-                                    <div className={`${selectedHeading === item.name && !showDropdown ? "md:hidden" : "hidden"}`}>
+                                    <div className={`${selectedHeading === item.name && !showDropdown ? "lg:hidden" : "hidden"}`}>
                                         {item?.subMenu && item?.dropdown.map((subItem, subIndex) => (
                                             <div key={subIndex} className="mt-4 ml-3" onClick={()=>onClose()}>
                                                 <Link href={subItem.subLink} className={`text-accent ${pathname === subItem.subLink ? "font-bold" : "font-medium"} text-base `}>{subItem.subName}</Link>
