@@ -8,7 +8,7 @@ export default function SolutionCard({ item }) {
 
 
   return (
-    <div className='w-full md:w-[100%] md:max-w-[430px] relative bg-[#F6F4EE] md:rounded-lg min-h-[540px] max-md:min-h-[500px]'>
+    <div className='w-full md:w-[100%] md:max-w-[100%]   2xl:mx-auto  relative bg-[#F6F4EE] md:rounded-lg min-h-[540px] max-md:min-h-[500px] mx-[10px]'>
 
       <div className='flex flex-col justify-between '>
         <div>
