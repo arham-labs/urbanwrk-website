@@ -22,7 +22,7 @@ export default function GoodCompany() {
 
 
             setCurrentIndex(prevIndex => generateRandomIndex());
-        }, 1500);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -30,7 +30,7 @@ export default function GoodCompany() {
     useEffect(() => {
         const intterval2 = setInterval(() => {
             SetOn((prev) => !prev)
-        }, 50)
+        }, 1000)
 
         return () => clearInterval(intterval2);
     }, [SetOn])
