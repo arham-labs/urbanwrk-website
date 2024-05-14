@@ -9,8 +9,8 @@ export default function BuildCard() {
                 <div className='flex items-center max-lg:hidden '>
                     <div className='w-1/2 flex flex-col justify-center'>
                         <div className='w-[80%]'>
-                            <h2 className='font-normal text-6xl flex flex-wrap '>Build something</h2>
-                            <h2 className='font-normal text-7xl pb-6 font-kepler '> meaningful</h2>
+                            <h2 className='font-normal text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl  flex flex-wrap '>Build something</h2>
+                            <h2 className='font-normal text-[32px] lg:text-[44px] xl:text-[56px] 2xl:text-[68px] pb-6 font-kepler leading-[1.2]  '> meaningful</h2>
                             <div className='flex  items-center gap-[10px]'>
                                 <Image src="images/home/build.svg" alt="build" height={42} width={43} />
                                 <p className='text-base font-medium '>India’s first & only IGBC Platinum rated office spaces.</p>
@@ -31,8 +31,8 @@ export default function BuildCard() {
                     </div>
                     <div className=' flex flex-col justify-center pt-10'>
                         <div className='w-[100%]'>
-                            <h2 className='font-normal text-3xl flex flex-wrap '>Build something</h2>
-                            <h2 className='font-normal text-4xl pb-6 font-kepler '> meaningful</h2>
+                            <h2 className='font-normal text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl  flex flex-wrap '>Build something</h2>
+                            <h2 className='font-normal text-[32px] lg:text-[44px] xl:text-[56px] 2xl:text-[68px] pb-6 font-kepler leading-[1.2]'> meaningful</h2>
                             <div className='flex  items-center gap-[10px]'>
                                 <Image src="images/home/build.svg" alt="build" height={42} width={43} />
                                 <p className='text-base font-medium '>India’s first & only IGBC Platinum rated office spaces.</p>

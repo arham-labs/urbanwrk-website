@@ -13,16 +13,18 @@ import Solutions from '@/components/solutionsLanding/solutions';
 import Testimonial from '@/common/testimonial';
 import GoodCompany from '@/components/home/goodCompany';
 import FormCard from '@/components/home/formCard';
+import DataDriven from '@/components/uwTechnology/dataDriven';
 
 export default function page() {
     return (
         <>
 
-            <div className="bg-bglight1 flex justify-center items-center pt-20 max-md:pt-16">
+            <div className="bg-bglight1 flex justify-center items-center  max-md:pt-16">
                 <div className="max-w-[1920px] ">
                     <SolutionBanner />
                 </div>
             </div>
+          
             <div className="bg-[#FFFFFF] ">
                 <div className=" px-6 max-w-[1920px] py-20 max-md:py-16 mx-auto 2xl:px-[160px] lg:px-[100px]">
                     <Solutions />

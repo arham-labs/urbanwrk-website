@@ -10,17 +10,44 @@ export default function Header() {
     const headerData = [
         {
             link: '/solutions',
-            name: "Solutions"
+            name: "Solutions",
+            dropdown: [
+                { subLink: '/tailormade-office', subName: 'Tailormade Offices' },
+                { subLink: '/tailormade-office', subName: 'Ready-To-Work In Offices' },
+                { subLink: '/tailormade-office', subName: 'Meeting Rooms' },
+                { subLink: '/tailormade-office', subName: 'Events & Shoots' },
+                { subLink: '/tailormade-office', subName: 'Advertise With Us' },
+            ]
         },
         {
-            link: '/location',
-            name: "Locations"
+            link: '',
+            name: "Locations",
+            dropdown: [
+                { subLink: '/mumbai', subName: 'Mumbai' },
+                { subLink: '/mumbai', subName: 'Pune' },
+                { subLink: '/mumbai', subName: 'Hyderabad' },
+                { subLink: '/mumbai', subName: 'Kolkata' },
+            ]
         },
         {
             link: '/about-us',
-            name: "About Us"
+            name: "About Us",
+            dropdown: [
+                { subLink: '', subName: 'Our Team' },
+                { subLink: '', subName: 'Our Mission' },
+                { subLink: '', subName: 'Our Values' },
+            ]
         },
-    ]
+        {
+            link: '/urbanWrk-tech',
+            name: "UrbanWrk Tech",
+        },
+        {
+            link: '',
+            name: "Contact Us",
+        },
+       
+    ];
 
     const OpenDrawer = () => {
         setToggle(!toggle)
@@ -44,7 +71,9 @@ export default function Header() {
                         {headerData.map((item, i) =>
                             <Link key={i} href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item.name}</Link>
                         )}
+                        
                     </div>
+                    
                 </div>
                 <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e]`} onClick={onClose}>
                     <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
@@ -58,6 +87,7 @@ export default function Header() {
                                 )}
 
                             </div>
+
                         </div>
                     </div>
                 </div>

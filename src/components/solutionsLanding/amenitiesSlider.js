@@ -100,7 +100,7 @@ export default function AmenitiesSlider() {
 
     const settings = {
         dots: false,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 3,
         rows: 2,
         infinite: true,
@@ -109,13 +109,13 @@ export default function AmenitiesSlider() {
     };
     return (
         <div className="slider-container">
-            <Slider {...settings} >
+            <Slider {...settings} className="pl-[10%]">
 
                 {data?.map((item, index) => (
-                    <div key={index} className="flex flex-wrap justify-center items-center  p-14">
+                    <div key={index} className="flex flex-wrap  items-center w-[30px] px-6  py-10">
                         <Image src={item?.img} alt={"img"} width={50} height={50}
                         />
-                        <div className="pt-6">{item?.title}</div>
+                        <div className="py-6">{item?.title}</div>
                     </div>))}
             </Slider>
         </div>
