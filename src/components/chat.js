@@ -26,8 +26,8 @@ export default function Chat() {
 
   const InputField = (field, label, type, error, name) => {
     return (
-      <div className="relative z-0 w-full mb-1">
-        <label className="block font-semibold mb-1" htmlFor={name}>
+      <div className="relative z-0 w-full mb-2">
+        <label className="block font-semibold mb-1 max-md:text-[12px] text-[14px]" htmlFor={name}>
           {label} :
         </label>
         <input
@@ -71,9 +71,9 @@ export default function Chat() {
                     <span>HOW CAN WE HELP?</span>
                 </div> */}
         {openchat && (
-          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[640px] lg:right-[50px] right-6 bottom-[26px] lg:bottom-[-30px] ">
-            <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 shadow-md">
-              <p className="pb-2">
+          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[640px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px] ">
+            <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
+              <p className="pb-2 text-[20px]">
                 Fill in the details below or call us at{" "}
                 <span className="font-semibold ">+91 98765 43210</span>
               </p>
@@ -113,7 +113,7 @@ export default function Chat() {
                 render={({ field }) => (
                   <div className="mb-1">
                     <label
-                      className="block font-semibold mb-1"
+                      className="block font-semibold mb-1 max-md:text-[12px] text-[14px]"
                       htmlFor={"city"}
                     >
                       CITY :
@@ -148,7 +148,7 @@ export default function Chat() {
                 </div>
               </div>
 
-              <div className="w-full  pt-2">
+              <div className="w-full  pt-6">
                 <div
                   className={`border-black border flex h-[36px] w-fit transition-all delay-75 ease-in-out hover:bg-primary hover:text-white cursor-pointer`}
                   onMouseEnter={() => setIsHovered(true)}

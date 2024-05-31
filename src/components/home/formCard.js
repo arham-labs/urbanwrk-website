@@ -70,7 +70,7 @@ export default function FormCard() {
             <h2 className="text-3xl font-normal lg:text-5xl font-kepler">
               in the city of your choice.
             </h2>
-            <p className="py-4 max-lg:py-6">
+            <p className="py-4 max-lg:py-6 ">
               Fill in the details below or call us at +91 98765 43210
             </p>
             <form
