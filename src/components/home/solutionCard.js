@@ -30,7 +30,7 @@ export default function SolutionCard({ item }) {
           <div className="px-3">
             <div className="border-black border"></div>
           </div>
-          <p className="text-base px-3 pt-2  max-md:text-sm max-md:pb-1 ">
+          <p className="text-base px-3 pb-10 pt-2  max-md:text-sm max-md:pb-1 ">
             {item.desc}
           </p>
         </div>
