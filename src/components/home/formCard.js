@@ -10,7 +10,7 @@ import BasicSelectDrop from "../select";
 export default function FormCard() {
   const [isHovered, setIsHovered] = useState(false);
   const [ischeck, setIsCheck] = useState(false);
-  const city = ["Mumbai", "Pune", "Nagpur"];
+  const city = ["Mumbai", "Pune", "Kolkata","Hyderabad","NCR"];
   const {
     register,
     handleSubmit,
@@ -112,7 +112,7 @@ export default function FormCard() {
                       className="block font-semibold mb-1"
                       htmlFor={"city"}
                     >
-                      CITYS :
+                      CITY :
                     </label>
                     <BasicSelectDrop
                       list={city}

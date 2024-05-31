@@ -11,7 +11,7 @@ export default function Chat() {
   const [openchat, setOpenChat] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [ischeck, setIsCheck] = useState(false);
-  const city = ["Mumbai", "Pune", "Nagpur"];
+  const city = ["Mumbai", "Pune", "Kolkata","Hyderabad","NCR"];
   const {
     register,
     handleSubmit,
@@ -54,7 +54,7 @@ export default function Chat() {
 
   return (
     <div>
-      <div className="fixed bottom-10 right-7 lg:bottom-5 lg:right-16 z-30">
+      <div className="fixed bottom-10 right-7 lg:bottom-10 lg:right-16 z-30">
         <a
           className="cursor-pointer chat-shadow hover-card"
           onClick={() => setOpenChat(!openchat)}
@@ -71,8 +71,8 @@ export default function Chat() {
                     <span>HOW CAN WE HELP?</span>
                 </div> */}
         {openchat && (
-          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[640px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px]">
-            <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6">
+          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[640px] lg:right-[50px] right-6 bottom-[26px] lg:bottom-[-30px] ">
+            <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 shadow-md">
               <p className="pb-2">
                 Fill in the details below or call us at{" "}
                 <span className="font-semibold ">+91 98765 43210</span>
@@ -116,7 +116,7 @@ export default function Chat() {
                       className="block font-semibold mb-1"
                       htmlFor={"city"}
                     >
-                      CITYS :
+                      CITY :
                     </label>
                     <BasicSelectDrop
                       list={city}
