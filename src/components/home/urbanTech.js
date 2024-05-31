@@ -23,7 +23,7 @@ export default function UrbanTech() {
                                 <Image src="/images/home/explore.svg" height={18} width={18} alt='exploreSvg' className='ml-1' />
                             </div> */}
                             {/* <ExploreBtn btnName={"Know more"}/> */}
-                            <LinkButton href="/urbanWrk-tech" title="Know more" />
+                            {/* <LinkButton href="/urbanWrk-tech" title="Know more" /> */}
 
 
                         </>
@@ -45,7 +45,7 @@ export default function UrbanTech() {
                                 <div className='  text-dark pr-2'>Book a Demo</div>
                                 <Image src="/images/home/explore.svg" height={18} width={18} alt='exploreSvg' className='ml-1' />
                             </div> */}
-                            <CommonBtnKnowMore btnName="Know more" />
+                            {/* <CommonBtnKnowMore btnName="Know more" /> */}
                         </>
                     </div>
                 </div>

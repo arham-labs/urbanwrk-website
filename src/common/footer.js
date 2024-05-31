@@ -53,7 +53,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 lg:gap-6 lg:items-center">
-                        <div className="flex gap-2">
+                        {/* <div className="flex gap-2">
                             <Link href="/">
                                 <Image src={Facebook} alt="facebook" />
                             </Link>
@@ -63,11 +63,11 @@ export default function Footer() {
                             <Link href="/">
                                 <Image src={LinkedIn} alt="linkedin" />
                             </Link>
-                        </div>
+                        </div> */}
                         <div className="flex flex-col text-xs gap-5">
                             <span className="font-semibold ">COPYRIGHT 2020</span>
-                            <Link href="/" className="font-semibold ">TERMS OF USE</Link>
-                            <Link href="/" className="font-semibold ">PRIVACY POLICY </Link>
+                            {/* <Link href="/" className="font-semibold ">TERMS OF USE</Link> */}
+                            {/* <Link href="/" className="font-semibold ">PRIVACY POLICY </Link> */}
                         </div>
                     </div>
                 </div>
