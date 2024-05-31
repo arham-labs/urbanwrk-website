@@ -6,7 +6,7 @@ import LinkButton from '@/common/linkbtn'
 
 export default function UrbanTech() {
     return (
-        <div className='bg-bglight1'>
+        <div className='bg-white'>
             <div className='  max-lg:hidden'>
                 <div className='flex items-center gap-[25px]'>
                     <div className='w-1/2 '>

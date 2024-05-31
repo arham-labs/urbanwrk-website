@@ -5,7 +5,7 @@ import ExploreBtn from './exploreBtn'
 
 export default function BuildCard() {
     return (
-        <div className='bg-white'>
+        <div className='bg-bglight1'>
                 <div className='flex items-center max-lg:hidden '>
                     <div className='w-1/2 flex flex-col justify-center'>
                         <div className='w-[80%]'>
