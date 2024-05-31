@@ -5,7 +5,7 @@ import LinkButton from "@/common/linkbtn";
 
 export default function SolutionCard({ item }) {
   return (
-    <div className="w-full md:w-[100%] md:max-w-[100%]   2xl:mx-auto  relative bg-[#FFFFFF] md:rounded-lg  mx-[10px] min-h-[480px] max-md:min-h-[460px]">
+    <div className="w-full md:w-[100%] md:max-w-[100%]   2xl:mx-auto  relative bg-[#FFFFFF] md:rounded-lg  mx-[10px] min-h-[500px] max-md:min-h-[540px]">
       <div className="flex flex-col justify-between ">
         <div>
           <Image
@@ -30,7 +30,7 @@ export default function SolutionCard({ item }) {
           <div className="px-3">
             <div className="border-black border"></div>
           </div>
-          <p className="text-base px-3 pt-2 pb-10 max-md:text-sm max-md:pb-1 ">
+          <p className="text-base px-3 pt-2  max-md:text-sm max-md:pb-1 ">
             {item.desc}
           </p>
         </div>

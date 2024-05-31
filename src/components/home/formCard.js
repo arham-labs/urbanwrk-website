@@ -5,16 +5,16 @@ import { useForm, Controller } from "react-hook-form";
 import CommonBtnKnowMore from "./commonBtnKnowMore";
 import ExploreBtn from "./exploreBtn";
 import { Checkbox } from "@mui/material";
-// import BasicSelectDrop from "../select";
+import BasicSelectDrop from "../select";
 
 export default function FormCard() {
   const [isHovered, setIsHovered] = useState(false);
   const [ischeck, setIsCheck] = useState(false);
-
+  const city = ["Mumbai", "Pune", "Nagpur"];
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful },setValue,
     control,
     reset,
   } = useForm({ mode: "onChange" });
@@ -45,6 +45,11 @@ export default function FormCard() {
       </div>
     );
   };
+
+  const handleSelectChange = (data) => {
+    setValue("city",data);
+  };
+
   return (
     <div className="bg-white ">
       <div className=" px-6 max-w-[1920px] py-20 max-lg:py-16  mx-auto 2xl:px-[160px] lg:px-[100px]">
@@ -102,10 +107,21 @@ export default function FormCard() {
                 control={control}
                 rules={{ required: "This field is required" }}
                 render={({ field }) => (
-                  <div className="mb-3" {...field}>
-                     <BasicSelectDrop list={city} labelName="City" />
+                  <div className="mb-3">
+                    <label
+                      className="block font-semibold mb-1"
+                      htmlFor={"city"}
+                    >
+                      CITYS :
+                    </label>
+                    <BasicSelectDrop
+                      list={city}
+                      labelName="Select City"
+                      handleSelectChange={handleSelectChange}
+                      {...field}
+                    />
                     {errors.city && (
-                        <span className="text-red-700 text-sm mt-2 block">
+                      <span className="text-red-700 text-sm  block">
                         This field is required
                       </span>
                     )}
@@ -121,7 +137,7 @@ export default function FormCard() {
                   <span>Privacy Policy</span>.
                 </p>
               </div>
-              <div className="flex gap-2  my-4">
+              <div className="flex gap-2  my-4 w-full">
                 <Checkbox
                   sx={{ color: "black", "&.Mui-checked": { color: "black" } }}
                   checked={ischeck}

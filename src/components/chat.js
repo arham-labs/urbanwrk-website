@@ -5,12 +5,13 @@ import { Controller, useForm } from "react-hook-form";
 import Link from "next/link";
 import ExploreBtn from "./home/exploreBtn";
 import { Checkbox } from "@mui/material";
+import BasicSelectDrop from "./select";
 
 export default function Chat() {
   const [openchat, setOpenChat] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [ischeck, setIsCheck] = useState(false);
-
+  const city = ["Mumbai", "Pune", "Nagpur"];
   const {
     register,
     handleSubmit,
@@ -25,7 +26,7 @@ export default function Chat() {
 
   const InputField = (field, label, type, error, name) => {
     return (
-      <div className="relative z-0 w-full mb-2">
+      <div className="relative z-0 w-full mb-1">
         <label className="block font-semibold mb-1" htmlFor={name}>
           {label} :
         </label>
@@ -46,6 +47,11 @@ export default function Chat() {
     );
   };
 
+  const handleSelectChange = (data) => {
+    setValue("city",data);
+  };
+
+
   return (
     <div>
       <div className="fixed bottom-10 right-7 lg:bottom-5 lg:right-16 z-30">
@@ -65,106 +71,108 @@ export default function Chat() {
                     <span>HOW CAN WE HELP?</span>
                 </div> */}
         {openchat && (
-          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[640px] right-0 bottom-[26px] lg:bottom-[34px]">
+          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[640px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px]">
             <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6">
               <p className="pb-2">
                 Fill in the details below or call us at{" "}
                 <span className="font-semibold ">+91 98765 43210</span>
               </p>
               <form
-                onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col md:w-full"
-              >
-                <Controller
-                  name="name"
-                  control={control}
-                  rules={{ required: "This field is mandatory" }}
-                  render={({ field }) =>
-                    InputField(field, "Name", "text", errors.name, "name")
-                  }
-                />
-                <Controller
-                  name="email"
-                  control={control}
-                  rules={{ required: "This field is mandatory" }}
-                  render={({ field }) =>
-                    InputField(
-                      field,
-                      "Email",
-                      "text",
-                      errors.email,
-                      "email"
-                    )
-                  }
-                />
-                <Controller
-                  name="phone"
-                  control={control}
-                  rules={{ required: "This field is mandatory" }}
-                  render={({ field }) =>
-                    InputField(
-                      field,
-                      "Phone",
-                      "text",
-                      errors.phone,
-                      "phone"
-                    )
-                  }
-                />
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col md:w-full"
+            >
+              <Controller
+                name="name"
+                control={control}
+                rules={{ required: "This field is mandatory" }}
+                render={({ field }) =>
+                  InputField(field, "NAME", "text", errors.name, "name")
+                }
+              />
+              <Controller
+                name="email"
+                control={control}
+                rules={{ required: "This field is mandatory" }}
+                render={({ field }) =>
+                  InputField(field, "EMAIL", "text", errors.email, "email")
+                }
+              />
+              <Controller
+                name="phone"
+                control={control}
+                rules={{ required: "This field is mandatory" }}
+                render={({ field }) =>
+                  InputField(field, "PHONE", "text", errors.phone, "phone")
+                }
+              />
 
-                <div className="mb-3">
-                  <label className="block font-semibold">City:</label>
-                  <select
-                    {...register("city", { required: true })}
-                    className="border-black border-solid border w-full h-[38px]"
-                  >
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Pune">Pune</option>
-                    <option value="Kolkata">Kolkata</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                  </select>
-                  {errors.city && (
-                    <span className="text-red-500">This field is required</span>
-                  )}
-                </div>
-
-                <div className="flex gap-2 items-center my-2">
-                  <Checkbox
-                    sx={{ color: "black", "&.Mui-checked": { color: "black" } }}
-                    checked={ischeck}
-                    onChange={(e) => setIsCheck(e.target.checked)}
-                    className="!p-0 !border-black"
-                  />
-                  <div className="text-sm lg:text-base font-medium ">
-                    {`I'd like to receive the latest news and updates from
-                    UrbanWrk.`}
-                  </div>
-                </div>
-                <div className="w-full  pt-2">
-                  <div
-                    className={`border-black border flex h-[36px] w-fit transition-all delay-75 ease-in-out hover:bg-primary hover:text-white cursor-pointer`}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                  >
-                    <button type="submit" className="h-full w-full">
-                      <span className="text-base bg-transparent px-4 max-md:px-4 flex py-1 text-black hover:text-white">
-                        Submit
-                        <Image
-                          src={
-                            isHovered
-                              ? "/images/home/lightArrow.svg"
-                              : "/images/home/btnArrow.svg"
-                          }
-                          height={12}
-                          width={12}
-                          alt="exploreSvg"
-                          className="ml-2"
-                        />
+              <Controller
+                name="city"
+                control={control}
+                rules={{ required: "This field is required" }}
+                render={({ field }) => (
+                  <div className="mb-1">
+                    <label
+                      className="block font-semibold mb-1"
+                      htmlFor={"city"}
+                    >
+                      CITYS :
+                    </label>
+                    <BasicSelectDrop
+                      list={city}
+                      labelName="Select City"
+                      handleSelectChange={handleSelectChange}
+                      {...field}
+                    />
+                    {errors.city && (
+                      <span className="text-red-700 text-sm  block">
+                        This field is required
                       </span>
-                    </button>
+                    )}
                   </div>
+                )}
+              />
+
+             
+              <div className="flex gap-2  my-1 w-full">
+                <Checkbox
+                  sx={{ color: "black", "&.Mui-checked": { color: "black" } }}
+                  checked={ischeck}
+                  onChange={(e) => setIsCheck(e.target.checked)}
+                  className="!p-0 !border-black"
+                />
+
+                <div className="text-sm lg:text-base font-medium ">
+                  {`I'd like to receive the latest news and updates from
+                    UrbanWrk.`}
                 </div>
-              </form>
+              </div>
+
+              <div className="w-full  pt-2">
+                <div
+                  className={`border-black border flex h-[36px] w-fit transition-all delay-75 ease-in-out hover:bg-primary hover:text-white cursor-pointer`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <button type="submit" className="h-full w-full">
+                    <span className="text-base bg-transparent px-4 max-md:px-4 flex py-1 text-black hover:text-white">
+                      Submit
+                      <Image
+                        src={
+                          isHovered
+                            ? "/images/home/lightArrow.svg"
+                            : "/images/home/btnArrow.svg"
+                        }
+                        height={12}
+                        width={12}
+                        alt="exploreSvg"
+                        className="ml-2"
+                      />
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
             </div>
           </div>
         )}

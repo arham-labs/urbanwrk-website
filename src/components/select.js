@@ -13,10 +13,10 @@ const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) =
     marginTop: theme.spacing(3),
   },
   "& .MuiInputBase-input": {
-    borderRadius: 4,
+    // borderRadius: 4,
     position: "relative",
     backgroundColor: theme.palette.background.paper,
-    border: "1px solid #ced4da",
+    border: "1px solid black",
     fontSize: 16,
     width: "100%",
     padding: "5px 36px 5px 12px",
@@ -25,7 +25,7 @@ const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) =
 
     "&:focus": {
       outline: "none",
-      border: "1px solid #ced4da",
+      border: "1px solid black",
       boxShadow: "none",
     },
   },
@@ -36,15 +36,16 @@ const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) =
   },
 }));
 
-export default function CustomizedSelects({ list, labelName }) {
+export default function CustomizedSelects({ list, labelName,handleSelectChange }) {
   const [selectedOption, setSelectedOption] = React.useState("");
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
+    handleSelectChange(event.target.value);
   };
 
   return (
     <div className="w-full h-[50px] ">
-      <FormControl sx={{ m: 1, width:"100%" }} variant="standard">
+      <FormControl sx={{  width:"100%" }} variant="standard">
         <Select
           labelId="demo-customized-select-label"
           id="demo-customized-select"
@@ -56,7 +57,7 @@ export default function CustomizedSelects({ list, labelName }) {
           IconComponent={KeyboardArrowDownIcon}
           renderValue={(selected) => {
             if (selected.length === 0) {
-              return <p className="text-[#A5A5A5]">{labelName}</p>;
+              return <p className="">{labelName}</p>;
             }
             return selected;
           }}
