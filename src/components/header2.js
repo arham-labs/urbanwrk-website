@@ -92,12 +92,12 @@ const handleMouseEnter=()=>{
                     <Link href="/" className="">
                         <Image src="/images/logo.svg" priority={true} width={150} height={150} className="w-32 h-12 lg:w-44 lg:h-20" alt="urbanwork-logo" />
                     </Link>
-                    {/* Hamburger icon for lg screens and below */}
+{/*                   
                     <div title="drawer" className="cursor-pointer lg:hidden" onClick={OpenDrawer}>
                         <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />
-                    </div>
-                    {/* Hidden for lg screens and above */}
-                    <div className="hidden lg:flex lg:gap-14 items-center">
+                    </div> */}
+               
+                    {/* <div className="hidden lg:flex lg:gap-14 items-center">
                         {headerData.map((item, i) => (
                             <div key={i} className="relative" onMouseLeave={handleSubItemMouseLeave} onMouseEnter={handleMouseEnter}>
                                 {item.dropdown ? (
@@ -119,15 +119,12 @@ const handleMouseEnter=()=>{
                                 )}
                             </div>
                         ))}
-                        {/* Hamburger icon moved here */}
-                        {/* <div className="cursor-pointer" onClick={OpenDrawer}>
-                            <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />
-                        </div> */}
-                    </div>
+                      
+                    </div> */}
                 </div>
 
                 <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e] `} onClick={onClose}></div>
-                <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
+                {/* <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
                     <div className="flex flex-col">
                         <Link href="/" className="mb-5" onClick={handleLogoClick}>
                             <Image src="/images/logo.svg" width={150} height={150} className="w-32 h-20" alt="logo" />
@@ -158,7 +155,7 @@ const handleMouseEnter=()=>{
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

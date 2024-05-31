@@ -14,7 +14,7 @@ export default function Footer() {
                 </Link>
                 <div className="flex flex-col lg:flex-row w-full justify-between">
                     <div className="mb-8 grid lg:grid-cols-4 gap-5 lg:gap-10 lg:mb-0">
-                        <div className="flex flex-col gap-2 lg:gap-6">
+                        {/* <div className="flex flex-col gap-2 lg:gap-6">
                             <Link href="/about-us" className="text-lg uppercase">About Us</Link>
                             <div className="flex flex-col gap-2">
                                 {[{ link: "/sustainability", title: "Sustainability" }].map((el, i) =>
@@ -43,9 +43,9 @@ export default function Footer() {
                                     </Link>
                                 )}
                             </div>
-                        </div>
+                        </div> */}
                         <div className="flex flex-col gap-2 lg:gap-6">
-                            <span href="/location" className="text-lg uppercase">Enquiry</span>
+                            <span href="/location" className="text-lg uppercase">CONTACT US</span>
                             <div className="flex flex-col gap-2 text-sm font-light">
                                 <Link href="tel:+91 9876543210">+ 91 9876543210</Link>
                                 <Link href="mailto:hello@urbanwrk.com">hello@urbanwrk.com</Link>
@@ -65,9 +65,9 @@ export default function Footer() {
                             </Link>
                         </div>
                         <div className="flex flex-col text-xs gap-5">
-                            <span>COPYRIGHT 2020</span>
-                            <Link href="/">TERMS OF USE</Link>
-                            <Link href="/">PRIVACY POLICY </Link>
+                            <span className="font-semibold ">COPYRIGHT 2020</span>
+                            <Link href="/" className="font-semibold ">TERMS OF USE</Link>
+                            <Link href="/" className="font-semibold ">PRIVACY POLICY </Link>
                         </div>
                     </div>
                 </div>
