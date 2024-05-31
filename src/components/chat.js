@@ -16,7 +16,7 @@ export default function Chat() {
     register,
     handleSubmit,
     formState: { errors, isSubmitSuccessful },
-    control,
+    control,setValue,
     reset,
   } = useForm({ mode: "onChange" });
 
