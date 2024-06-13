@@ -32,6 +32,9 @@ export default function Header2() {
             subMenu: true,
             dropdown: [
                 { subLink: '/mumbai', subName: 'Mumbai' },
+                { subLink: '/pune', subName: 'Pune' },
+                { subLink: '/kolkata', subName: 'Kolkata ' },
+                { subLink: '/hyderabad', subName: 'Hyderabad' },
 
             ]
         },

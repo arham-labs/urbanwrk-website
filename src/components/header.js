@@ -24,9 +24,9 @@ export default function Header() {
             name: "Locations",
             dropdown: [
                 { subLink: '/mumbai', subName: 'Mumbai' },
-                { subLink: '/mumbai', subName: 'Pune' },
-                { subLink: '/mumbai', subName: 'Hyderabad' },
-                { subLink: '/mumbai', subName: 'Kolkata' },
+                { subLink: '/pune', subName: 'Pune' },
+                { subLink: '/hyderabad', subName: 'Hyderabad' },
+                { subLink: '/kolkata', subName: 'Kolkata' },
             ]
         },
         {
