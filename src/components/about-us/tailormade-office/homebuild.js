@@ -3,7 +3,7 @@
 import ExploreBtn from "@/components/home/exploreBtn";
 import { useForm } from "react-hook-form";
 
-export default function HomeBuild() {
+export default function HomeBuild({data}) {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -21,12 +21,12 @@ export default function HomeBuild() {
             <div className="flex flex-col w-full lg:w-1/2">
                 <div className="w-full lg:w-[88%]">
                     <div className="flex flex-col text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-7">
-                        <span className="font-medium">Build a home</span>
-                        <span className="font-kepler">for your brand</span>
+                        <span className="font-medium">{data.card1_titile1}</span>
+                        <span className="font-kepler">{data.card1_titile2}</span>
                     </div>
-                    <p className="leading-6 text-sm xl:text-base font-normal lg:font-medium mb-7">Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.</p>
+                    <p className="leading-6 text-sm xl:text-base font-normal lg:font-medium mb-7">{data?.card1_titile3}</p>
                     <ul className="text-sm flex flex-col font-medium gap-6 lg:gap-4 w-auto lg:w-[80%] list-disc ml-6 lg:ml-7">
-                        {brandData.map((el, i) =>
+                        {data?.brandData?.map((el, i) =>
                             <li key={i}>{el}</li>
                         )}
                     </ul>

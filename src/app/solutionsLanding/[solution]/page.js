@@ -8,20 +8,25 @@ import Productivity from "@/components/about-us/tailormade-office/productivity";
 import ExploreCard from "@/components/home/ExploreCard";
 import HomeBuild from "@/components/about-us/tailormade-office/homebuild";
 
-export default function Page() {
+import { Jsons } from "./solutionJson";
 
-    return (
-        <>
-            <Herobanner />
-            <HomeBuild />
-            <Choose />
-            <Space />
-            <Productivity />
-            <ExploreCard />
-            <Ways />
-            <Testimonial />
-            <Blog />
-        </>
-    )
+export default function Page({ params }) {
+  const solution = params.solution;
+  console.log("params", solution);
+
+  const solutionFind = Jsons?.SolutionData?.find((a) => a.name === solution);
+  // console.log(solutionFind);
+  return (
+    <>
+      <Herobanner data={solutionFind} />
+      <HomeBuild data={solutionFind} />
+      <Choose data={solutionFind} />
+      <Space data={solutionFind} />
+      <Productivity data={solutionFind} />
+      <ExploreCard />
+      <Ways />
+      <Testimonial />
+      <Blog />
+    </>
+  );
 }
-

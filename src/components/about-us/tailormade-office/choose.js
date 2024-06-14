@@ -3,7 +3,7 @@ import WorkWing1 from '../../../../public/images/about-us/workwing-1.png'
 import WorkWing2 from '../../../../public/images/about-us/workwing-2.png'
 import WorkWing3 from '../../../../public/images/about-us/workwing-3.png'
 
-export default function Choose() {
+export default function Choose({data}) {
 
     const ChooseData = [
         { title: "We match your pace", source: WorkWing1, desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease." },
@@ -15,7 +15,7 @@ export default function Choose() {
         <div className="bg-bglight6 py-16 lg:py-20">
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px]">
                 <span className="text-xl 2xl:text-2xl font-medium block mb-10">WHY CHOOSE US?</span>
-                <CommonCard leftAlign={true} data={ChooseData} />
+                <CommonCard leftAlign={true} data={data?.card2} />
             </div>
         </div>)
 }

@@ -23,7 +23,11 @@ export default function Header2() {
             name: "Solutions",
             subMenu: true,
             dropdown: [
-                { subLink: '/tailormade-office', subName: 'Tailormade Offices' },
+                { subLink: '/solutionsLanding/tailormade-office', subName: 'Tailormade Offices' },
+                { subLink: '/solutionsLanding/ready-to-work-in', subName: 'Ready To Work In ' },
+                { subLink: '/solutionsLanding/virtual-offices', subName: 'Virtual Offices' },
+                { subLink: '/solutionsLanding/events-launches', subName: 'Events & Launches' },
+                { subLink: '/solutionsLanding/advertise-with-us', subName: 'Advertise With Us' },
             ]
         },
         {
