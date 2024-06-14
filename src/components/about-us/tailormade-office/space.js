@@ -15,7 +15,7 @@ export default function Space({data}) {
             <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-0">
                 <div className="w-full lg:w-1/2">
                     <div className="relative h-full">
-                        <Image src={data?.card3_img} alt="space" className="w-full aspect-[8/9] lg:aspect-[7/8]" />
+                        <Image src={SpaceImage} alt="space" className="w-full aspect-[8/9] lg:aspect-[7/8]" />
                         <div className="absolute top-1/2 text-3xl lg:text-5xl 2xl:text-6xl left-1/2 -translate-y-1/2 -translate-x-1/2 flex justify-center flex-col">
                             <span className="block mb-2">{data?.card3_title1}</span>
                             <span className="font-kepler">{data?.card3_title2}</span> 
