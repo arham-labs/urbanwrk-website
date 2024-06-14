@@ -8,14 +8,11 @@ import { Jsons } from "./locationJson";
 export default function Page({ params }) {
   const location = params.location;
 
-  console.log("loca", location);
+
   const locationFind = Jsons.LocationData?.find(
     (p) => p.locationName.toLowerCase() === location
   );
 
-//   console.log("loca", Jsons.LocationData?.find(
-//     (p) => p.locationName.toLowerCase() === location
-//   ));
   if (!locationFind) {
       return notFound()
   }
