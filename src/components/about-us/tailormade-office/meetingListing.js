@@ -21,9 +21,9 @@ export default function MeetingListing({ data, el }) {
 const handleSelectChange=()=>{}
 
   return (
-    <div className="py-16  px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col gap-7 lg:gap-0 lg:flex-row items-center">
+    <div className="pb-16  px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col gap-7 lg:gap-0 lg:flex-row items-center">
       <div className="flex flex-col w-full lg:w-1/2 ">
-        <div className="lg:w-[582px] w-[350px] bg-bglight1 flex justify-center items-center px-2">
+        <div className="lg:w-[582px] w-[350px] bg-bglight1 flex justify-center  px-2">
           <div className="lg:w-[460px] w-[275px] py-10 ">
             <p className="font-bold text-[14px]">LOCATION:</p>
             <CustomizedSelects list={[]}  />
