@@ -20,11 +20,11 @@ export default function Page({ params }) {
   // console.log(solutionFind);
   const el = {
     id: 1,
-    locationName: "Peninsula Park",
-    locationCity: "Lower Parel",
-    location1: "Parel Station - 5 min walk",
-    location2: "Best for restaurants, commute-friendly",
-    location3: "A thriving corporate park in the heart of Mumbai.",
+    locationName: "Athena",
+    locationCity: "4 seater",
+    location1: "Sai Radhe Complex, 5th floor, Raja ",
+    location2: "Bahadur Mill Road, Pune - 411001",
+    location3: "500/Hour",
   };
   return (
     <>

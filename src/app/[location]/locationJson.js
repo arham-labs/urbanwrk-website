@@ -4,7 +4,7 @@ export const Jsons = {
       id: 1,
       locationName: "Mumbai",
       locationDetail:
-        "Mumbai, with its blend of culture, commerce, and connectivity, offers an unparalleled work environment that's as dynamic as the city itself. Find diverse workspaces from vibrant suburbs to business hubs of Nariman Point, all equipped with world-class amenities like on-site fitness centres, cafés, lounges, and state-of-the-art meeting rooms, supported by a dedicated team to make your workday perfect in every way.",
+        "Mumbai, India's financial powerhouse,  is known for its vibrant culture that seamlessly blends tradition with modernity, fostering a unique and inspiring atmosphere. A pivotal hub for global commerce, the city's extensive infrastructure ensures a balance of connectivity and convenience, offering a dynamic and thriving environment perfect for entrepreneurs. Whether you're starting your venture or expanding your business, Mumbai provides the ideal landscape for innovation and growth.",
       locationInfo: [
         {
           id: 1,

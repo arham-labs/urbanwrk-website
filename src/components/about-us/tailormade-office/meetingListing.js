@@ -8,6 +8,7 @@ import Access from "../../../../public/images/locationInside/locationSpaceCardlo
 import CustomizedSelects from "@/components/select";
 import ExploreBtn from "@/components/home/exploreBtn";
 
+
 export default function MeetingListing({ data, el }) {
   const AmentiesData = [
     { source: Concienge, title: "Concierge Team" },
@@ -16,28 +17,31 @@ export default function MeetingListing({ data, el }) {
     { source: Access, title: "24 X 7 Access" },
   ];
 
+  const city=[]
+const handleSelectChange=()=>{}
+
   return (
-    <div className="py-16 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col gap-7 lg:gap-0 lg:flex-row items-center">
+    <div className="py-16  px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] flex flex-col gap-7 lg:gap-0 lg:flex-row items-center">
       <div className="flex flex-col w-full lg:w-1/2 ">
-        <div className="w-[582px] bg-bglight6 flex justify-center items-center">
-          <div className="w-[460px] py-10">
-            <p>Location</p>
-            <CustomizedSelects list={[]} />
-            <div>
-              <div>
-                <p>FROM:</p>
+        <div className="lg:w-[582px] w-[350px] bg-bglight1 flex justify-center items-center px-2">
+          <div className="lg:w-[460px] w-[275px] py-10 ">
+            <p className="font-bold text-[14px]">LOCATION:</p>
+            <CustomizedSelects list={[]}  />
+            <div className="flex gap-5">
+              <div className="w-full">
+                <p className="font-bold text-[14px]">FROM:</p>
                 <CustomizedSelects list={[]} />
               </div>
-              <div>
-                <p>TO:</p>
+              <div className="w-full  ">
+                <p className="font-bold text-[14px]">TO:</p>
                 <CustomizedSelects list={[]} />
               </div>
             </div>
             <div>
-              <p>no. of people:</p>
-              <input className="border-black border-solid border w-full h-[38px]"/>
+              <p className="font-bold text-[14px]">NO OF PEOPLE:</p>
+              <input className="border-black border-solid border w-full h-[38px] bg-bglight1 "/>
             </div>
-            <div className="flex pt-5">
+            <div className="flex pt-5 gap-5">
               <ExploreBtn btnName={"Apply"} />
               <ExploreBtn btnName={"Clear"} />
             </div>
@@ -56,7 +60,7 @@ export default function MeetingListing({ data, el }) {
                 className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]"
               />
             </div>
-            <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%]">
+            <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%] bg-bglight1">
               <span className="text-lg lg:text-xl font-medium">
                 {el.locationName}
               </span>

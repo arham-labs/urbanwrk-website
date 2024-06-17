@@ -15,11 +15,10 @@ const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) =
   "& .MuiInputBase-input": {
     // borderRadius: 4,
     position: "relative",
-    backgroundColor: "#F6F4EE",
+    backgroundColor: theme.palette.background.paper,
     border: "1px solid black",
     fontSize: 16,
     width: "100%",
-    
     padding: "5px 36px 5px 12px",
     transition: theme.transitions.create(["border-color", "box-shadow"]),
     // Use the system font instead of the default Roboto font.
@@ -80,7 +79,6 @@ export default function CustomizedSelects({ list, labelName,handleSelectChange }
               value={item}
               key={i}
               className={selectedOption === item ? "text-primary !bg-white" : "hover:bg-red-300"}
-              // className="bg-bglight1"
             >
               {item}
             </MenuItem>
