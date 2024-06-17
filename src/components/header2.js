@@ -26,6 +26,7 @@ export default function Header2() {
                 { subLink: '/solutionsLanding/tailormade-office', subName: 'Tailormade Offices' },
                 { subLink: '/solutionsLanding/ready-to-work-in', subName: 'Ready To Work In ' },
                 { subLink: '/solutionsLanding/virtual-offices', subName: 'Virtual Offices' },
+                { subLink: '/solutionsLanding/meeting-rooms', subName: 'Meeting Rooms' },
                 { subLink: '/solutionsLanding/events-launches', subName: 'Events & Launches' },
                 { subLink: '/solutionsLanding/advertise-with-us', subName: 'Advertise With Us' },
             ]

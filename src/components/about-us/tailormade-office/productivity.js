@@ -4,8 +4,8 @@ import LinkButton from '@/common/linkbtn'
 
 export default function Productivity({data}) {
     return (
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-0">
-            <div className="px-6 pt-14 lg:p-0 w-full lg:w-1/2">
+        <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-0 ${data.name === "meeting-rooms" && "bg-bglight6"}`}>
+            <div className={`px-6 pt-14 lg:p-0 w-full lg:w-1/2   `}>
                 <div className="flex flex-col w-full lg:w-[67%] mx-auto text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
                     <span className="font-medium">{data?.card4_title1}</span>
                     <span className="font-kepler mt-1">{data?.card4_title2}</span>

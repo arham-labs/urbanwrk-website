@@ -1,13 +1,14 @@
-import WorkWing1 from '../../../../public/images/about-us/workwing-1.png'
-import WorkWing2 from '../../../../public/images/about-us/workwing-2.png'
-import WorkWing3 from '../../../../public/images/about-us/workwing-3.png'
+import WorkWing1 from "../../../../public/images/about-us/workwing-1.png";
+import WorkWing2 from "../../../../public/images/about-us/workwing-2.png";
+import WorkWing3 from "../../../../public/images/about-us/workwing-3.png";
 
 export const Jsons = {
   SolutionData: [
     {
       id: 1,
       name: "tailormade-office",
-      titleImgDesk: "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
       title1: "Tailormade",
       title2: "offices",
@@ -67,7 +68,8 @@ export const Jsons = {
     {
       id: 2,
       name: "ready-to-work-in",
-      titleImgDesk: "/images/solutionsLanding/solutionsImg/desktop-banner-2.png",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-2.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-2.png",
       title1: "Ready-To-Work-In",
       title2: "offices",
@@ -127,7 +129,8 @@ export const Jsons = {
     {
       id: 3,
       name: "virtual-offices",
-      titleImgDesk: "/images/solutionsLanding/solutionsImg/desktop-banner-3.png",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-3.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-3.png",
       title1: "Virtual offices",
       title2: "",
@@ -186,7 +189,8 @@ export const Jsons = {
     {
       id: 4,
       name: "events-launches",
-      titleImgDesk: "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
       title1: "Events",
       title2: "& launches",
@@ -243,7 +247,8 @@ export const Jsons = {
     {
       id: 4,
       name: "advertise-with-us",
-      titleImgDesk: "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
       title1: "Advertise",
       title2: "with us",
@@ -255,7 +260,6 @@ export const Jsons = {
       brandData: [
         "Digital and physical promotional spaces across prime real estate",
         "Eye-catching displays in a network of prestigious location",
-
       ],
       card2: [
         {
@@ -296,6 +300,67 @@ export const Jsons = {
       card4_title2: "opportunity",
       card4_title3:
         "Our holistic approach combines a vibrant, networking-driven culture with top-tier workspace management and design, ensuring you do your best work in an environment tailored to your needs.",
+    },
+    {
+      id: 5,
+      name: "meeting-rooms",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
+      title1: "Meeting rooms",
+      title2: "",
+      title3: "Foster collaboration, creativity and success.",
+      card1_titile1: "Spaces where",
+      card1_titile2: "ideas converge",
+      card1_titile3:
+        "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.",
+      brandData: [
+        "Private, fully-customisable and branded office space ready within 45-60 days",
+        "Designed by experts and WELL and LEED certified",
+        "Flexible lease terms with utility costs included",
+        "Complete administrative management including visitor management and payroll",
+        "Access to co-working spaces, lounges, WellnessWrk Gym and BuzzWrk Café",
+        "Exclusive access to all our events, seminars and industry talks",
+      ],
+      card2: [
+        {
+          title: "We match your pace",
+          source: WorkWing1,
+          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
+        },
+        {
+          title: "We are where work thrives",
+          source: WorkWing2,
+          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
+        },
+        {
+          title: "We take the work out of work",
+          source: WorkWing3,
+          desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
+        },
+      ],
+      card3_img: "",
+      card3_title1: "Your space,",
+      card3_title2: "made easy",
+      card3_content: [
+        {
+          title: "Meet with our team",
+          desc: "Share your requirements so that we can work out the best solution for your organisation size",
+        },
+        {
+          title: "Explore neighbourhoods",
+          desc: "Choose the area that is perfect for the team that you are building",
+        },
+        {
+          title: "Walk into your workspace",
+          desc: "Settle in your customised office",
+        },
+      ],
+      card4_img: "",
+      card4_title1: "Planet-first",
+      card4_title2: "productivity",
+      card4_title3:
+        "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
     },
   ],
 };
