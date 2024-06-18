@@ -56,7 +56,7 @@ export default function ExploreCard() {
 
         <div className="absolute bottom-16  md:bottom-20 inset-x-0  font-medium text-[65px] px-5 max-w-[850px] mx-auto ">
           <div className="px-10 bg-bglight1 max-md:w-full gap-10 flex-wrap py-4 relative flex justify-between   md:items-center items-start max-md:flex-col max-md:px-5 max-md:gap-6 max-md:py-6 lg:flex lg:justify-center ">
-            <div className="basis-[100%] md:basis-[60%] sm:basis-[100%] w-full mx-[-10px] lg:pt-3">
+            <div className="basis-[100%] md:basis-[60%] sm:basis-[100%] w-full mx-[-10px] lg:pt-[15px]">
               <BasicSelectDrop
                 list={city}
                 labelName="City"
