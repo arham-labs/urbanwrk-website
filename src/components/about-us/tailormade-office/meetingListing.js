@@ -49,8 +49,8 @@ export default function MeetingListing({ data, el }) {
       </div>
       <div className="flex flex-col w-full lg:w-1/2 gap-6  lg:px-12">
         {[...Array(4)].map((_, i) => (
-          <>
-            <div>
+          
+            <div key={i}>
               <div className="flex flex-col bg-bglight1 lg:h-fit lg:flex-row items-center">
                 <div className="w-full xl:w-1/2 2xl:w-[45%]">
                   <Image
@@ -93,7 +93,7 @@ export default function MeetingListing({ data, el }) {
                 </div>
               </div>
             </div>
-          </>
+          
         ))}
       </div>
     </div>
