@@ -1,18 +1,37 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Dropdown from "./dropdown";
 import BasicSelect from "./dropdown";
 import LookingImageSlider from "./lookingImageSlider";
 import ExploreBtn from "./exploreBtn";
 import BasicSelectDrop from "../select";
+import LinkButton from "@/common/linkbtn";
 
 export default function ExploreCard() {
-  const city = ["Mumbai", "Pune", "Nagpur"];
+  const [hrefNav, setHrefNav] = useState("/");
+  const city = ["Mumbai", "Pune", "Kolkata", "Hyderabad"];
+
+  const dataCity = [
+    { name: "Mumbai", link: "/mumbai" },
+    { name: "Pune", link: "/pune" },
+    { name: "Kolkata", link: "/kolkata" },
+    { name: "Hyderabad", link: "/hyderabad" },
+  ];
   const solution = [
     "Tailormade Offices",
     "Ready-To-Work In Offices",
     "Meeting Rooms",
   ];
+
+  const handleSelectChange1 = (val) => {
+    // console.log(val)
+    const naviVal = dataCity.find((item) => item.name === val);
+    // console.log(naviVal);
+    setHrefNav(naviVal.link)
+  };
+
+  // console.log(hrefNav)
   return (
     <div>
       <div className="relative h-[800px] md:h-[875px] ">
@@ -36,15 +55,20 @@ export default function ExploreCard() {
         </div>
 
         <div className="absolute bottom-16  md:bottom-20 inset-x-0  font-medium text-[65px] px-5 max-w-[850px] mx-auto ">
-          <div className="px-10 bg-bglight1 max-md:w-full gap-10 flex-wrap py-4 relative flex justify-between   md:items-center items-start max-md:flex-col max-md:px-5 max-md:gap-6 max-md:py-6 ">
-            <div className="basis-[100%] md:basis-[30%] sm:basis-[100%] w-full mx-[-10px]">
-              <BasicSelectDrop list={city} labelName="City" />
+          <div className="px-10 bg-bglight1 max-md:w-full gap-10 flex-wrap py-4 relative flex justify-between   md:items-center items-start max-md:flex-col max-md:px-5 max-md:gap-6 max-md:py-6 lg:flex lg:justify-center ">
+            <div className="basis-[100%] md:basis-[60%] sm:basis-[100%] w-full mx-[-10px] lg:pt-3">
+              <BasicSelectDrop
+                list={city}
+                labelName="City"
+                handleSelectChange={handleSelectChange1}
+              />
             </div>
-            <div className="basis-[100%] md:basis-[30%] sm:basis-[100%] w-full mx-[-10px]">
+            {/* <div className="basis-[100%] md:basis-[30%] sm:basis-[100%] w-full mx-[-10px]">
               <BasicSelectDrop list={solution} labelName="Solution" />
-            </div>
+            </div> */}
             <div className="basis-[100%] md:basis-[15%] sm:basis-[100%] ">
-              <ExploreBtn btnName={"Explore"} />
+              {/* <ExploreBtn btnName={"Explore"} /> */}
+              <LinkButton href={hrefNav} title="Explore" />
             </div>
           </div>
         </div>
