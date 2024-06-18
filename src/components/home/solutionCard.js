@@ -21,7 +21,8 @@ export default function SolutionCard({ item }) {
               <div className='text-[24px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
             </div>
             {/* <ExploreBtn btnName={"Explore"} hrefLink={"/tailormade-office"}/> */}
-            <LinkButton href="/tailormade-office" title="Explore" />
+            {/* {console.log(item)} */}
+            <LinkButton href={item?.link} title="Explore" />
           </div>
           <div className='px-5'>
             <div className='border-black border'></div>
