@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 export default function LinkButton({ title, href, margin, marginspace }) {
     const [isHovered, setIsHovered] = useState(false);
 
-console.log("href",href);
+// console.log("href",href);
 
     return (
         <Link href={href?href:"/"} className={`flex h-[36px] ${margin ? "lg:ml-[75px]" : marginspace ? "ml-[45px] lg:ml-[70px] xl:ml-[90px]" : "ml-0"} px-4 py-1 w-fit transition-all delay-100 ease-in-out border-dark border text-dark hover:bg-primary hover:text-white hover:border-transparent`}
