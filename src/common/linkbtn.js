@@ -6,7 +6,7 @@ import React, { useState } from "react";
 export default function LinkButton({ title, href, margin, marginspace }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  console.log("href", href);
+//   console.log("href", href);
 
   return (
     <Link
