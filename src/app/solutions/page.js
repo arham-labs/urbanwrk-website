@@ -30,12 +30,12 @@ export default function page() {
                     <Solutions />
                 </div>
             </div>
-            <div className='bg-bglight6'>
+            {/* <div className='bg-bglight6'>
                 <div className="max-w-[1920px] mx-auto ">
                     <CompareSolution />
 
                 </div>
-            </div>
+            </div> */}
 
 
 

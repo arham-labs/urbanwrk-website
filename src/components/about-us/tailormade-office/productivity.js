@@ -10,7 +10,7 @@ export default function Productivity({data}) {
                     <span className="font-medium">{data?.card4_title1}</span>
                     <span className="font-kepler mt-1">{data?.card4_title2}</span>
                     <p className="leading-6 mt-5 text-sm xl:text-base font-normal lg:font-medium mb-7">{data?.card4_title3}</p>
-                    <LinkButton title="Know more" href="" />
+                    <LinkButton title="Know more" href="/sustainability" />
                 </div>
             </div>
             <div className="w-full lg:w-1/2">
