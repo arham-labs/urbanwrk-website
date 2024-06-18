@@ -48,7 +48,7 @@ export default function MeetingListing({ data, el }) {
         </div>
       </div>
       <div className="flex flex-col w-full lg:w-1/2 gap-6  lg:px-12">
-        {[...Array(4)].map((_, i) => (
+        {[...Array(1)].map((_, i) => (
           
             <div key={i}>
               <div className="flex flex-col bg-bglight1 lg:h-fit lg:flex-row items-center">

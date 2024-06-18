@@ -313,14 +313,12 @@ export const Jsons = {
       card1_titile1: "Spaces where",
       card1_titile2: "ideas converge",
       card1_titile3:
-        "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.",
+        "Experience a meeting environment that meets your needs and inspires your best work, all set in the heart of dynamic business districts. Our meeting rooms are equipped with the latest technology to ensure seamless presentations and communications. With a range of sizes and configurations available, our meeting rooms can be tailored to suit any event, from intimate brainstorming sessions to large-scale seminars.",
       brandData: [
-        "Private, fully-customisable and branded office space ready within 45-60 days",
-        "Designed by experts and WELL and LEED certified",
-        "Flexible lease terms with utility costs included",
-        "Complete administrative management including visitor management and payroll",
-        "Access to co-working spaces, lounges, WellnessWrk Gym and BuzzWrk Café",
-        "Exclusive access to all our events, seminars and industry talks",
+        "High speed WiFi with video and telephone conferencing technology",
+        "SMART TVs that align with latest OS, and surround sound for immersive projection",
+        "On-call tea and coffee with the option to cater when given a 48-hour notice",
+        "Booking available by the hour, half day or full day"
       ],
       card2: [
         {
@@ -357,10 +355,10 @@ export const Jsons = {
         },
       ],
       card4_img: "",
-      card4_title1: "Planet-first",
-      card4_title2: "productivity",
+      card4_title1: "Powering your",
+      card4_title2: "workspace",
       card4_title3:
-        "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
+        "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on what truly matters—bringing the vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
     },
   ],
 };

@@ -48,7 +48,7 @@ export default function Testimonial({ leftAlign }) {
                                         <span className="font-kepler text-sm lg:text-base">{el.position}</span>
                                         <Image src={el.logo} alt="logo" className={`${i == 2 ? "w-20" : "w-14"}`} />
                                     </div>
-                                    <LinkButton title="Discover more" href="" margin={true}/>
+                                    {/* <LinkButton title="Discover more" href="" margin={true}/> */}
                                 </div>
                             </div>
                         </div>
