@@ -12,7 +12,7 @@ export default function GoodCompanySliderMobile() {
         slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 2000,
-        rows: 3,
+        rows: 2,
         arrows:false
     };
 
