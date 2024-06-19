@@ -44,7 +44,7 @@ export default function GoodCompany() {
           >
             {[...Array(10)].map((_, i) => (
               <div
-                className="w-[150px] mx-10 pb-10 flex flex-col justify-around"
+                className="w-[140px] mx-10 pb-10 flex flex-col justify-around"
                 key={i}
               >
                 <div className="flex opacity-0 fade-in-out justify-center items-center h-[150px] w-[150px]">
@@ -52,8 +52,8 @@ export default function GoodCompany() {
                     src={`/images/home/logoo${
                       ((currentIndex + i) % 10) + 1
                     }.svg`}
-                    height={100}
-                    width={100}
+                    height={80}
+                    width={80}
                     alt="logo"
                     className="w-full"
                   />
