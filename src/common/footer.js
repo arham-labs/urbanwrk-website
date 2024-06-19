@@ -104,8 +104,8 @@ export default function Footer() {
             </div>
             <div className="flex flex-col text-xs gap-5">
               <span>COPYRIGHT 2020</span>
-              <Link href="/">TERMS OF USE</Link>
-              <Link href="/">PRIVACY POLICY </Link>
+              {/* <Link href="/">TERMS OF USE</Link> */}
+              {/* <Link href="/">PRIVACY POLICY </Link> */}
             </div>
           </div>
         </div>
