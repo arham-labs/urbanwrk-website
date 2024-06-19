@@ -44,10 +44,10 @@ export default function GoodCompany() {
                         <h2 className='text-[55px]  font-kepler leading-[1.2]'>company with</h2>
                     </div>
                     <div className=' max-lg:hidden  w-full flex flex-wrap  justify-center items-center' style={{ transition: 'opacity 0.5s ease' }}>
-                        {[...Array(12)].map((_, i) => (
+                        {[...Array(10)].map((_, i) => (
                             <div className='w-[110px]  mx-10 py-10 flex flex-col justify-around' key={i}>
                                 <div className='flex opacity-0 fade-in-out justify-center items-center h-[100px] w-[100px] ' >
-                                    <Image src={`/images/home/logo${(currentIndex + i) % 16 + 1}.svg`} height={50} width={60} alt="logo" className='w-full' />
+                                    <Image src={`/images/home/logoo${(currentIndex + i) % 10 + 1}.svg`} height={50} width={60} alt="logo" className='w-full' />
                                 </div>
                                 <div className='pt-8'>
                                     <div className='border-rgba(116, 116, 116, 0.60) border'></div>
