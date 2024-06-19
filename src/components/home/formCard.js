@@ -4,6 +4,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import CommonBtnKnowMore from './commonBtnKnowMore';
 import ExploreBtn from './exploreBtn';
+import Link from 'next/link';
 
 export default function FormCard() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -22,25 +23,25 @@ export default function FormCard() {
                     <div className=' flex flex-col   order-1 sm:order-2 max-lg:pt-[48px] justify-center '>
                         <h2 className='text-2xl font-normal  lg:text-4xl lg:pb-2'>Always find your space</h2>
                         <h2 className='text-3xl font-normal lg:text-5xl font-kepler'>in the city of your choice.</h2>
-                        <p className='py-4 max-lg:py-6'>Fill in the details below or call us at +91 98765 43210</p>
+                        <p className='py-4 max-lg:py-6'>Fill in the details below or call us at <Link href="tel:+91 8399959996">+91 8399959996</Link></p>
                         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:w-full lg:w-[400px] xl:w-[462px] lg:mt-4">
                             <div className='mb-4'>
-                                <label className='block font-semibold'>Name:</label>
+                                <label className='block font-semibold'>NAME:</label>
                                 <input type="text" {...register("name", { required: true })} className="border-black border-solid border w-full h-[38px]" />
                                 {errors.name && <span className="text-red-500">This field is required</span>}
                             </div>
                             <div className='mb-4'>
-                                <label className='block font-semibold'>Email:</label>
+                                <label className='block font-semibold'>EMAIL:</label>
                                 <input type="text" {...register("email", { required: true })} className="border-black border-solid border w-full h-[38px]" />
                                 {errors.email && <span className="text-red-500">This field is required</span>}
                             </div>
                             <div className='mb-4'>
-                                <label className='block font-semibold'>Phone:</label>
+                                <label className='block font-semibold'>PHONE:</label>
                                 <input type="text" {...register("phone", { required: true })} className="border-black border-solid border w-full h-[38px]" />
                                 {errors.phone && <span className="text-red-500">This field is required</span>}
                             </div>
                             <div className='mb-4'>
-                                <label className='block font-semibold'>City:</label>
+                                <label className='block font-semibold'>CITY:</label>
                                 <select {...register("city", { required: true })} className="border-black border-solid border w-full h-[38px]">
                                     <option value="New York">Mumbai</option>
                                     <option value="Los Angeles">Pune</option>
@@ -64,7 +65,7 @@ export default function FormCard() {
                             </div>
 
                             <div className='w-full pt-2'>
-                                <ExploreBtn btnName={"submit"} />
+                                <ExploreBtn btnName={"Submit"} />
                             </div>
                         </form>
                     </div>

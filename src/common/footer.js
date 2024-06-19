@@ -85,7 +85,7 @@ export default function Footer() {
                 Enquiry
               </span>
               <div className="flex flex-col gap-2 text-sm font-light">
-                <Link href="tel:+91 9876543210">+ 91 9876543210</Link>
+              <Link href="tel:+91 8399959996">+91 8399959996</Link>
                 <Link href="mailto:hello@urbanwrk.com">hello@urbanwrk.com</Link>
               </div>
             </div>
