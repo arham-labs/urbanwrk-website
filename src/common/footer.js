@@ -81,7 +81,7 @@ export default function Footer() {
                 About Us
               </Link>
               <div className="flex flex-col gap-2">
-                {[{ link: "/sustainability", title: "Sustainability" }].map(
+                {[{ link: "/sustainability", title: "Sustainability" },{link:"/urbanWrk-tech",title:"UrbanWrk Tech"}].map(
                   (el, i) => (
                     <Link className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>
