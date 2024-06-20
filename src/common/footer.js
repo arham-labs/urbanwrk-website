@@ -17,18 +17,13 @@ export default function Footer() {
         </Link>
         <div className="flex flex-col lg:flex-row w-full justify-between">
           <div className="mb-8 grid lg:grid-cols-4 gap-5 lg:gap-10 lg:mb-0">
-            <div className="flex flex-col gap-2 lg:gap-6">
-              <Link href="/about-us" className="text-lg uppercase">
-                About Us
-              </Link>
-              <div className="flex flex-col gap-2">
-                {[{ link: "/sustainability", title: "Sustainability" }].map(
-                  (el, i) => (
-                    <Link className="text-sm font-light" href={el.link} key={i}>
-                      <span className="block">{el.title}</span>
-                    </Link>
-                  )
-                )}
+          <div className="flex flex-col gap-2 lg:gap-6">
+              <span href="/location" className="text-lg uppercase">
+              CONTACT US
+              </span>
+              <div className="flex flex-col gap-2 text-sm font-light">
+              <Link href="tel:+91 8399959996">+91 8399959996</Link>
+                <Link href="mailto:hello@urbanwrk.com">hello@urbanwrk.com</Link>
               </div>
             </div>
             <div className="flex flex-col gap-2 lg:gap-6">
@@ -80,18 +75,24 @@ export default function Footer() {
                 ))}
               </div>
             </div>
+            
             <div className="flex flex-col gap-2 lg:gap-6">
-              <span href="/location" className="text-lg uppercase">
-                Enquiry
-              </span>
-              <div className="flex flex-col gap-2 text-sm font-light">
-              <Link href="tel:+91 8399959996">+91 8399959996</Link>
-                <Link href="mailto:hello@urbanwrk.com">hello@urbanwrk.com</Link>
+              <Link href="/about-us" className="text-lg uppercase">
+                About Us
+              </Link>
+              <div className="flex flex-col gap-2">
+                {[{ link: "/sustainability", title: "Sustainability" }].map(
+                  (el, i) => (
+                    <Link className="text-sm font-light" href={el.link} key={i}>
+                      <span className="block">{el.title}</span>
+                    </Link>
+                  )
+                )}
               </div>
             </div>
           </div>
           <div className="flex flex-col gap-4 lg:gap-6 lg:items-center">
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <Link href="/">
                 <Image src={Facebook} alt="facebook" />
               </Link>
@@ -101,7 +102,7 @@ export default function Footer() {
               <Link href="/">
                 <Image src={LinkedIn} alt="linkedin" />
               </Link>
-            </div>
+            </div> */}
             <div className="flex flex-col text-xs gap-5">
               <span>COPYRIGHT 2020</span>
               {/* <Link href="/">TERMS OF USE</Link> */}
