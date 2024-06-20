@@ -17,7 +17,7 @@ const titles = [
 const activeData = [
     {
         id: 1,
-        desc: "Semi-branded offices for a team of up to 1000 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.",
+        desc: "Semi-branded offices for a team of up to 100 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.",
         list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "WELL & LEED Certified, sustainable and eco-conscious offices", "24/7 access to your workspace"],
         source: section2,
         btn: "Contact us"
