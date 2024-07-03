@@ -1,14 +1,15 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FormCard() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset 
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -45,6 +46,7 @@ export default function FormCard() {
 
   const onClose = () => {
     setShowPopup(false);
+    reset(); 
   };
 
   return (
@@ -80,6 +82,7 @@ export default function FormCard() {
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
+                   defaultValue=""
                   className="border-black border-solid border w-full h-[38px]"
                 />
                 {errors.name && (
@@ -97,6 +100,7 @@ export default function FormCard() {
                       message: "Invalid email address",
                     },
                   })}
+                   defaultValue=""
                   className="border-black border-solid border w-full h-[38px]"
                 />
                 {errors.email && (
@@ -114,6 +118,7 @@ export default function FormCard() {
                       message: "Phone number must be 10 digits",
                     },
                   })}
+                   defaultValue=""
                   className="border-black border-solid border w-full h-[38px]"
                 />
                 {errors.phone && (
@@ -207,7 +212,7 @@ export default function FormCard() {
                 Thank You
               </span>
               <p className="text-sm md:text-xl md:w-[400px] text-center text-dark">
-              Your details have been submitted successfully.
+                Your details have been submitted successfully.
               </p>
             </div>
           </div>
