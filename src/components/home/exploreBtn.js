@@ -1,29 +1,25 @@
-"use client"
-import Image from 'next/image';
-import React, { useState } from 'react';
+import Image from "next/image";
+import React from "react";
 
 const ExploreBtn = ({ btnName }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className={`border-black border flex h-[36px] w-fit transition-all delay-75 ease-in-out hover:bg-primary hover:text-white cursor-pointer`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      
-    >
-      <span className='text-base bg-transparent px-4 max-md:px-4 flex py-1 text-black hover:text-white'>
-        {btnName}
-        <Image
-          src={isHovered ? "/images/home/lightArrow.svg" : "/images/home/btnArrow.svg"}
-          height={12}
-          width={12}
-          alt='exploreSvg'
-          className='ml-2'
-        />
-      </span>
-    </div>
+    <div className=" group ">
+                <button
+                  type="submit"
+           
+                  className={`border-black border  group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer `}
+             
+                >
+                  <span className="text-base bg-transparent  max-md:px-4 flex py-1 text-black group-hover:text-white">
+                  { btnName } </span>
+                   <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat ">
+
+                   </div>
+                   
+                 
+                </button>
+              </div>
   );
-}
+};
 
 export default ExploreBtn;

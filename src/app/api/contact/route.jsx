@@ -11,8 +11,14 @@ export async function POST(request) {
     const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
 
     const formData = await request.formData()
+
+   
     const name = formData.get('name')
     const email = formData.get('email')
+    const phone = formData.get('phone')
+    const city = formData.get('city')
+    const newsUpdates = formData.get('newsUpdates')
+
     const message = formData.get('message')
 
 

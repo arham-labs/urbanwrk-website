@@ -20,7 +20,7 @@ export default function SolutionCard({ item }) {
               <div className='text-[24px] max-md:text-lg  leading-[1.2] '>{item.title1}</div>
               <div className='text-[24px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
             </div>
-            {/* <ExploreBtn btnName={"Explore"} hrefLink={"/tailormade-office"}/> */}
+            {/* <ExploreBtn btnName={"Explore"}/> */}
             {/* {console.log(item)} */}
             <LinkButton href={item?.link} title="Explore" />
           </div>
