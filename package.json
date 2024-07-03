@@ -14,6 +14,7 @@
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.17",
     "next": "14.2.2",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
