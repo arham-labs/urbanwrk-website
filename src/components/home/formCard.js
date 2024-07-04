@@ -19,6 +19,7 @@ export default function FormCard() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
+    setIsButtonDisabled(true)
     console.log(data);
 
     const formData = new FormData();
@@ -43,6 +44,7 @@ export default function FormCard() {
       console.log(error);
     } finally {
       setIsLoading(false);
+      setIsButtonDisabled(true)
     }
   };
 
@@ -171,7 +173,7 @@ export default function FormCard() {
                   disabled={isButtonDisabled}
                   className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
                     isButtonDisabled
-                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                       : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
                 >
