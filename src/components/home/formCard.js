@@ -9,10 +9,9 @@ export default function FormCard() {
     register,
     handleSubmit,
     formState: { errors },
-    reset 
+    reset,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
   const onSubmit = async (data) => {
@@ -37,6 +36,7 @@ export default function FormCard() {
       }
       console.log("submit", response);
       setShowPopup(true);
+      reset();
     } catch (error) {
       console.log(error);
     } finally {
@@ -46,7 +46,7 @@ export default function FormCard() {
 
   const onClose = () => {
     setShowPopup(false);
-    reset(); 
+    reset();
   };
 
   return (
@@ -82,7 +82,7 @@ export default function FormCard() {
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
-                   defaultValue=""
+                  defaultValue=""
                   className="border-black border-solid border w-full h-[38px]"
                 />
                 {errors.name && (
@@ -100,7 +100,7 @@ export default function FormCard() {
                       message: "Invalid email address",
                     },
                   })}
-                   defaultValue=""
+                  defaultValue=""
                   className="border-black border-solid border w-full h-[38px]"
                 />
                 {errors.email && (
@@ -118,7 +118,7 @@ export default function FormCard() {
                       message: "Phone number must be 10 digits",
                     },
                   })}
-                   defaultValue=""
+                  defaultValue=""
                   className="border-black border-solid border w-full h-[38px]"
                 />
                 {errors.phone && (
@@ -153,24 +153,22 @@ export default function FormCard() {
                 <input type="checkbox" {...register("newsUpdates")} />
                 <label className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
               </div>
-              <div className="w-full pt-2 group ">
+              <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`border-black border  group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
-                    isLoading ? "bg-gray-300 cursor-not-allowed" : ""
+                  className={`border-black border group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
+                    isLoading ? "bg-gray-300 opacity-50 !cursor-not-allowed pointer-events-none " : ""
                   }`}
-             
                 >
-                  <span className="text-base bg-transparent  max-md:px-4 flex py-1 text-black group-hover:text-white">
-                   Submit </span>
-                   <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat ">
-
-                   </div>
-                   
-                 
+                  <span className="text-base bg-transparent max-md:px-4 flex py-1 text-black group-hover:text-white">
+                    Submit
+                  </span>
+                  <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat"></div>
                 </button>
               </div>
+         
+
             </form>
           </div>
         </div>
@@ -208,7 +206,7 @@ export default function FormCard() {
                 height={150}
                 className="w-9 md:w-16 mb-2 md:mb-8"
               />
-              <span className="text-2xl md:text-3xl block mb-1 text-dark  uppercase md:mb-3">
+              <span className="text-2xl md:text-3xl block mb-1 text-dark uppercase md:mb-3">
                 Thank You
               </span>
               <p className="text-sm md:text-xl md:w-[400px] text-center text-dark">

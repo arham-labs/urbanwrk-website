@@ -41,6 +41,8 @@ export default function Chat() {
       }
       console.log("submit", response);
       setShowPopup(true);
+      setOpenChat(false);
+      reset(); 
     } catch (error) {
       console.log(error);
     } finally {
@@ -164,7 +166,7 @@ export default function Chat() {
                 <input type="checkbox" {...register("newsUpdates")} />
                 <label className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
               </div>
-              <div className="w-full pt-2 group ">
+              <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -193,6 +195,49 @@ export default function Chat() {
           ></div>
         )}
       </div>
+      {showPopup && (
+        <div
+          className="fixed w-full h-full left-0 top-0 z-50 bg-[#0000005e]"
+          onClick={onClose}
+        >
+          <div className="fixed z-50 transition-all ease-in-out duration-500 bg-[#FFFFFF] w-[320px] h-[192px] md:w-[572px] md:h-auto left-1/2 right-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 py-10 px-6 md:p-[60px]">
+            <div className="flex flex-col justify-center items-center text-dark relative">
+              <a
+                className="absolute -top-3 -right-2 md:-right-8 md:-top-8 cursor-pointer"
+                onClick={onClose}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 md:w-8 md:h-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </a>
+              <Image
+                src="/images/thank-you.svg"
+                alt="thank-you"
+                width={150}
+                height={150}
+                className="w-9 md:w-16 mb-2 md:mb-8"
+              />
+              <span className="text-2xl md:text-3xl block mb-1 text-dark uppercase md:mb-3">
+                Thank You
+              </span>
+              <p className="text-sm md:text-xl md:w-[400px] text-center text-dark">
+                Your details have been submitted successfully.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
