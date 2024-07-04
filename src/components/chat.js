@@ -22,6 +22,10 @@ export default function Chat() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
 
+  useEffect(()=>{
+    setIsButtonDisabled(true)
+  },[])
+
   const onSubmit = async (data) => {
     setIsLoading(true);
     setIsButtonDisabled(true)
@@ -66,7 +70,7 @@ export default function Chat() {
     const isFormFilled = Object.values(formValues).every((value) =>
       value
     );
-console.log("hasErrors || !isFormFilled",hasErrors , isFormFilled)
+
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
 
