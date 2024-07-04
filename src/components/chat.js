@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import Link from "next/link";
 import ExploreBtn from "./home/exploreBtn";
@@ -12,12 +12,15 @@ export default function Chat() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
     reset 
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -53,6 +56,17 @@ export default function Chat() {
     reset(); 
   };
 
+  const formValues = watch();
+  useEffect(() => {
+    const hasErrors = Object.keys(errors).length > 0;
+
+    
+    const isFormFilled = Object.values(formValues).every((value) =>
+      value
+    );
+
+    setIsButtonDisabled(hasErrors || !isFormFilled);
+  }, [formValues, errors]);
 
   return (
     <div>
@@ -171,17 +185,29 @@ export default function Chat() {
               <div className="w-full pt-2 group ">
                 <button
                   type="submit"
-                  disabled={isLoading}
-                  className={`border-black border w-full justify-center   group-hover:border-none  max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
-                    isLoading ? "bg-gray-300 cursor-not-allowed" : ""
+                  disabled={isButtonDisabled}
+                  className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${
+                    isButtonDisabled
+                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
              
                 >
-                  <span className="text-base bg-transparent max-lg:px-0  flex py-1 text-black group-hover:text-white ">
+                  <span
+                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
+                      isButtonDisabled
+                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                        : "group-hover:text-white"
+                    } `}
+                  >
                    Submit </span>
-                   <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat ">
-
-                   </div>
+                   <div
+                    className={`${
+                      !isButtonDisabled
+                        ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                        : "bg-[url('/images/home/disableArrow.svg')]"
+                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                  ></div>
                    
                  
                 </button>

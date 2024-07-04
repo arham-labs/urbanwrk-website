@@ -10,7 +10,7 @@ export default function FormCard() {
     handleSubmit,
     watch,
     formState: { errors },
-    reset 
+    reset,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -48,24 +48,19 @@ export default function FormCard() {
 
   const onClose = () => {
     setShowPopup(false);
-    reset(); 
+    reset();
   };
   const formValues = watch();
   useEffect(() => {
-    // console.log(errors)
     const hasErrors = Object.keys(errors).length > 0;
-    // console.log(formValues)
-delete formValues.newsUpdates
-// console.log(formValues,"v")
-    const isFormFilled = Object.values(formValues).every(value => value.toString());
-// console.log(isFormFilled,"isFormFilled")
-// console.log(hasErrors,"hasErrors")
 
-    setIsButtonDisabled(hasErrors || !isFormFilled );
-}, [formValues, errors]);
+    delete formValues.newsUpdates;
+    const isFormFilled = Object.values(formValues).every((value) =>
+      value
+    );
 
-
-console.log(isButtonDisabled,"isButtonDisabled")
+    setIsButtonDisabled(hasErrors || !isFormFilled);
+  }, [formValues, errors]);
 
   return (
     <div className="bg-white">
@@ -89,7 +84,9 @@ console.log(isButtonDisabled,"isButtonDisabled")
             </h2>
             <p className="py-4 max-lg:py-6">
               Fill in the details below or call us at{" "}
-              <Link href="tel:+91 8399959996" className="font-semibold">+91 8399959996</Link>
+              <Link href="tel:+91 8399959996" className="font-semibold">
+                +91 8399959996
+              </Link>
             </p>
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -100,7 +97,6 @@ console.log(isButtonDisabled,"isButtonDisabled")
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
-                   
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.name && (
@@ -118,7 +114,6 @@ console.log(isButtonDisabled,"isButtonDisabled")
                       message: "Invalid email address",
                     },
                   })}
-                 
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.email && (
@@ -136,7 +131,6 @@ console.log(isButtonDisabled,"isButtonDisabled")
                       message: "Phone number must be 10 digits",
                     },
                   })}
-                   
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.phone && (
@@ -176,19 +170,27 @@ console.log(isButtonDisabled,"isButtonDisabled")
                   type="submit"
                   disabled={isButtonDisabled}
                   className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
-                    isButtonDisabled ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed" : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
+                    isButtonDisabled
+                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
-             
                 >
-                  <span className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
-                    isButtonDisabled ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed" : "group-hover:text-white"
-                  } `}>
-                   Submit </span>
-                   <div className={`${!isButtonDisabled?"bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]":"bg-[url('/images/home/disableArrow.svg')]"}   bg-contain w-[14px] h-[14px] bg-no-repeat `}>
-
-                   </div>
-                   
-                 
+                  <span
+                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
+                      isButtonDisabled
+                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                        : "group-hover:text-white"
+                    } `}
+                  >
+                    Submit{" "}
+                  </span>
+                  <div
+                    className={`${
+                      !isButtonDisabled
+                        ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                        : "bg-[url('/images/home/disableArrow.svg')]"
+                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                  ></div>
                 </button>
               </div>
             </form>
