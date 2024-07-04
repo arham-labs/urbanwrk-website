@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,12 +8,14 @@ export default function FormCard() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
     reset 
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -48,6 +50,22 @@ export default function FormCard() {
     setShowPopup(false);
     reset(); 
   };
+  const formValues = watch();
+  useEffect(() => {
+    // console.log(errors)
+    const hasErrors = Object.keys(errors).length > 0;
+    // console.log(formValues)
+delete formValues.newsUpdates
+// console.log(formValues,"v")
+    const isFormFilled = Object.values(formValues).every(value => value.toString());
+// console.log(isFormFilled,"isFormFilled")
+// console.log(hasErrors,"hasErrors")
+
+    setIsButtonDisabled(hasErrors || !isFormFilled );
+}, [formValues, errors]);
+
+
+console.log(isButtonDisabled,"isButtonDisabled")
 
   return (
     <div className="bg-white">
@@ -82,7 +100,7 @@ export default function FormCard() {
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
-                   defaultValue=""
+                   
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.name && (
@@ -100,7 +118,7 @@ export default function FormCard() {
                       message: "Invalid email address",
                     },
                   })}
-                   defaultValue=""
+                 
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.email && (
@@ -118,7 +136,7 @@ export default function FormCard() {
                       message: "Phone number must be 10 digits",
                     },
                   })}
-                   defaultValue=""
+                   
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.phone && (
@@ -156,15 +174,17 @@ export default function FormCard() {
               <div className="w-full pt-2 group ">
                 <button
                   type="submit"
-                  disabled={isLoading}
-                  className={`border-black border  group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
-                    isLoading ? "bg-gray-300 cursor-not-allowed" : ""
+                  disabled={isButtonDisabled}
+                  className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
+                    isButtonDisabled ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed" : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
              
                 >
-                  <span className="text-base bg-transparent  max-md:px-4 flex py-1 text-black group-hover:text-white">
+                  <span className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
+                    isButtonDisabled ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed" : "group-hover:text-white"
+                  } `}>
                    Submit </span>
-                   <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat ">
+                   <div className={`${!isButtonDisabled?"bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]":"bg-[url('/images/home/disableArrow.svg')]"}   bg-contain w-[14px] h-[14px] bg-no-repeat `}>
 
                    </div>
                    
