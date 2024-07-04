@@ -89,7 +89,7 @@ console.log(isButtonDisabled,"isButtonDisabled")
             </h2>
             <p className="py-4 max-lg:py-6">
               Fill in the details below or call us at{" "}
-              <Link href="tel:+91 8399959996">+91 8399959996</Link>
+              <Link href="tel:+91 8399959996" className="font-semibold">+91 8399959996</Link>
             </p>
             <form
               onSubmit={handleSubmit(onSubmit)}
