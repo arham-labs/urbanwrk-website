@@ -24,7 +24,7 @@ export default function Chat() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    setIsButtonDisabled(true)
+    // setIsButtonDisabled(true)
 
     const formData = new FormData();
     for (const key in data) {
@@ -48,7 +48,7 @@ export default function Chat() {
     } catch (error) {
       console.log(error);
     } finally {
-      setIsButtonDisabled(true)
+      // setIsButtonDisabled(true)
       setIsLoading(false);
     }
   };
@@ -60,22 +60,27 @@ export default function Chat() {
 
   const formValues = watch();
   useEffect(() => {
+    
     const hasErrors = Object.keys(errors).length > 0;
 
-    
-    const isFormFilled = Object.values(formValues).every((value) =>
+    // console.log("formValues",Object.keys(formValues) )
+    const isFormFilled =Object.values(formValues).every((value) =>
       value
     );
-
+// console.log(!isFormFilled,"isFormFilled")
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
-
+console.log(isButtonDisabled,"isButtonDisable")
   return (
     <div>
       <div className="fixed bottom-10 right-7 lg:bottom-10 lg:right-16 z-30">
         <a
           className="cursor-pointer chat-shadow hover-card"
-          onClick={() => setOpenChat(!openchat)}
+          onClick={() => {
+            
+            setOpenChat(!openchat) 
+            setIsButtonDisabled((prev)=>!prev)
+          }}
         >
           <Image
             src="/images/chat.svg"

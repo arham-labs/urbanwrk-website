@@ -8,7 +8,7 @@ export async function POST(request) {
 
     const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
     const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-    const myEmail ="nidhivishwakarma@arhamlabs.com"
+    const myEmail ="arjunrajput@arhamlabs.com"
 
     const formData = await request.formData()
 
