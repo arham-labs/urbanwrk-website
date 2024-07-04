@@ -24,7 +24,7 @@ export default function Chat() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    console.log(data);
+    setIsButtonDisabled(true)
 
     const formData = new FormData();
     for (const key in data) {
@@ -48,7 +48,7 @@ export default function Chat() {
     } catch (error) {
       console.log(error);
     } finally {
-      
+      setIsButtonDisabled(true)
       setIsLoading(false);
     }
   };
