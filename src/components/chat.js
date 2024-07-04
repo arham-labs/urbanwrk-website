@@ -19,7 +19,7 @@ export default function Chat() {
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
 
   const onSubmit = async (data) => {
@@ -66,7 +66,7 @@ export default function Chat() {
     const isFormFilled = Object.values(formValues).every((value) =>
       value
     );
-
+console.log("hasErrors || !isFormFilled",hasErrors , isFormFilled)
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
 
