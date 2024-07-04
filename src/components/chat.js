@@ -1,23 +1,30 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import Link from "next/link";
+import ExploreBtn from "./home/exploreBtn";
+import { Checkbox } from "@mui/material";
+import BasicSelectDrop from "./select";
 
 export default function Chat() {
   const [openchat, setOpenChat] = useState(false);
-  const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset 
+  } = useForm();
   const [isLoading, setIsLoading] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  useEffect(() => {
-    setIsButtonDisabled(true);
-  }, []);
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    setIsButtonDisabled(true);
+    setIsButtonDisabled(true)
 
     const formData = new FormData();
     for (const key in data) {
@@ -37,34 +44,39 @@ export default function Chat() {
       }
       console.log("submit", response);
       setShowPopup(true);
-      setOpenChat(false);
+      setOpenChat(false)
     } catch (error) {
       console.log(error);
     } finally {
-      setIsButtonDisabled(true);
+      setIsButtonDisabled(true)
       setIsLoading(false);
     }
   };
 
   const onClose = () => {
     setShowPopup(false);
-    reset();
+    reset(); 
   };
 
   const formValues = watch();
   useEffect(() => {
     const hasErrors = Object.keys(errors).length > 0;
-    const isFormFilled = Object.values(formValues).every((value) => value && value.trim() !== "");
-    // console.log(isFormFilled, "isFormFilled");
 
-    setIsButtonDisabled(hasErrors || !isFormFilled); // Disable button if there are errors or form is not completely filled
+    
+    const isFormFilled = Object.values(formValues).every((value) =>
+      value
+    );
+
+    setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
 
-  // console.log(isButtonDisabled,"isButtonDisabled")
   return (
     <div>
       <div className="fixed bottom-10 right-7 lg:bottom-10 lg:right-16 z-30">
-        <a className="cursor-pointer chat-shadow hover-card" onClick={() => setOpenChat(!openchat)}>
+        <a
+          className="cursor-pointer chat-shadow hover-card"
+          onClick={() => setOpenChat(!openchat)}
+        >
           <Image
             src="/images/chat.svg"
             alt="chat"
@@ -74,118 +86,135 @@ export default function Chat() {
           />
         </a>
         <div className={`bg-primary fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}>
-          <span>HOW CAN WE HELP?</span>
-        </div>
+                    <span>HOW CAN WE HELP?</span>
+                </div>
         {openchat && (
-          <div className="py-8 lg:p-8 bg-accent absolute w-[330px] lg:w-[515px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px]">
-            <div className="flex flex-col order-1 sm:order-2 justify-center bg-white p-6 custom-shadow-top shadow-lg">
+          <div className="py-8  lg:p-8  bg-accent absolute w-[330px]  lg:w-[515px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px] ">
+            <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
               <p className="pb-0 text-base max-lg:text-[16px] max-lg:pb-2">
                 Fill in the details below or call us at{" "}
-                <Link href="tel:+91 8399959996" className="font-semibold lg:hidden">+91 8399959996</Link>
+                <Link href="tel:+91 8399959996"  className="font-semibold lg:hidden ">+91 8399959996</Link>
               </p>
               <p className="pb-2 text-base max-lg:hidden">
-                <Link href="tel:+91 8399959996" className="font-semibold">+91 8399959996</Link>
+              <Link href="tel:+91 8399959996"  className="font-semibold ">+91 8399959996</Link>
+           
               </p>
-              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:w-full lg:w-[400px] lg:mt-0 max-lg:mt-4">
-                <div className="max-lg:mb-2 lg:mb-2">
-                  <label className="block font-semibold lg:text-sm max-lg:text-sm">NAME:</label>
-                  <input
-                    type="text"
-                    {...register("name", { required: "Name is required" })}
-                    className="border-black border-solid border w-full h-[38px] px-2"
-                  />
-                  {errors.name && (
-                    <span className="text-red-500">{errors.name.message}</span>
-                  )}
-                </div>
-                <div className="max-lg:mb-2 lg:mb-2">
-                  <label className="block font-semibold lg:text-sm max-lg:text-sm">EMAIL:</label>
-                  <input
-                    type="text"
-                    {...register("email", {
-                      required: "Email is required",
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "Invalid email address",
-                      },
-                    })}
-                    className="border-black border-solid border w-full h-[38px] px-2"
-                  />
-                  {errors.email && (
-                    <span className="text-red-500">{errors.email.message}</span>
-                  )}
-                </div>
-                <div className="max-lg:mb-2 lg:mb-2">
-                  <label className="block font-semibold lg:text-sm max-lg:text-sm">PHONE:</label>
-                  <input
-                    type="text"
-                    {...register("phone", {
-                      required: "Phone number is required",
-                      pattern: {
-                        value: /^\d{10}$/,
-                        message: "Phone number must be 10 digits",
-                      },
-                    })}
-                    className="border-black border-solid border w-full h-[38px] px-2"
-                  />
-                  {errors.phone && (
-                    <span className="text-red-500">{errors.phone.message}</span>
-                  )}
-                </div>
-                <div className="max-lg:mb-0 lg:mb-2">
-                  <label className="block font-semibold lg:text-sm max-lg:text-sm">CITY:</label>
-                  <select
-                    {...register("city", { required: "City is required" })}
-                    className="border-black border-solid border w-full h-[38px]"
-                  >
-                    <option value="">Select a city</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Pune">Pune</option>
-                    <option value="Kolkata">Kolkata</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                  </select>
-                  {errors.city && (
-                    <span className="text-red-500">{errors.city.message}</span>
-                  )}
-                </div>
-                <div className="max-lg:mb-2 lg:mb-4 flex align-baseline justify-center max-lg:pb-3">
-                  <input type="checkbox" {...register("newsUpdates")} className="lg:!w-6 max-lg:!w-9 max-lg:mb-5" />
-                  <label className="ml-2 text-sm mt-4">
-                    You agree to our Website&nbsp;
-                    <span className="underline">Terms of Service</span>
-                    &nbsp;and acknowledge our&nbsp;
-                    <span className="underline">Privacy Policy</span>.
-                  </label>
-                </div>
-                <div className="w-full pt-2 group">
-                  <button
-                    type="submit"
-                    disabled={isButtonDisabled}
-                    className={`border-black border w-full justify-center max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all ease-in-out ${
+              
+              <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col md:w-full lg:w-[400px] lg:mt-0 max-lg:mt-4"
+            >
+              <div className="max-lg:mb-2 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">NAME:</label>
+                <input
+                  type="text"
+                  {...register("name", { required: "Name is required" })}
+                   defaultValue=""
+                  className="border-black border-solid border w-full h-[38px] px-2"
+                />
+                {errors.name && (
+                  <span className="text-red-500">{errors.name.message}</span>
+                )}
+              </div>
+              <div className="max-lg:mb-2 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">EMAIL:</label>
+                <input
+                  type="text"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Invalid email address",
+                    },
+                  })}
+                   defaultValue=""
+                  className="border-black border-solid border w-full h-[38px] px-2"
+                />
+                {errors.email && (
+                  <span className="text-red-500">{errors.email.message}</span>
+                )}
+              </div>
+              <div className="max-lg:mb-2 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">PHONE:</label>
+                <input
+                  type="text"
+                  {...register("phone", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^\d{10}$/,
+                      message: "Phone number must be 10 digits",
+                    },
+                  })}
+                   defaultValue=""
+                  className="border-black border-solid border w-full h-[38px] px-2"
+                />
+                {errors.phone && (
+                  <span className="text-red-500">{errors.phone.message}</span>
+                )}
+              </div>
+              <div className="max-lg:mb-0 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">CITY:</label>
+                <select
+                  {...register("city", { required: "City is required" })}
+                  className="border-black border-solid border w-full h-[38px]"
+                >
+                  <option value="">Select a city</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                </select>
+                {errors.city && (
+                  <span className="text-red-500">{errors.city.message}</span>
+                )}
+              </div>
+              {/* <div className="max-lg:mb-2 lg:mb-2 mt-3 max-lg:mt-3">
+                <p className="text-sm">
+                  By clicking the button below, you agree to our Website&nbsp;
+                  <span className="underline">Terms of Service</span>
+                  &nbsp;and acknowledge our&nbsp;
+                  <span className="underline">Privacy Policy</span>.
+                </p>
+              </div> */}
+              <div className="max-lg:mb-2 lg:mb-4 flex align-baseline justify-center max-lg:pb-3 ">
+                <input type="checkbox" {...register("newsUpdates")} className="lg:!w-6  max-lg:!w-9 max-lg:mb-5" />
+                <label className="ml-2 text-sm mt-4">You agree to our Website&nbsp;
+                  <span className="underline">Terms of Service</span>
+                  &nbsp;and acknowledge our&nbsp;
+                  <span className="underline">Privacy Policy</span>.</label>
+              </div>
+              
+              <div className="w-full pt-2 group ">
+                <button
+                  type="submit"
+                  disabled={isButtonDisabled}
+                  className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${
+                    isButtonDisabled
+                      ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
+                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
+                  }`}
+             
+                >
+                  <span
+                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
                       isButtonDisabled
-                        ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
-                        : "group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
-                    }`}
+                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                        : "group-hover:text-white"
+                    } `}
                   >
-                    <span
-                      className={`text-base bg-transparent max-md:px-4 flex py-1 text-black ${
-                        isButtonDisabled
-                          ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
-                          : "group-hover:text-white"
-                      }`}
-                    >
-                      Submit
-                    </span>
-                    <div
-                      className={`${
-                        !isButtonDisabled
-                          ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
-                          : "bg-[url('/images/home/disableArrow.svg')]"
-                      } bg-contain w-[14px] h-[14px] bg-no-repeat`}
-                    ></div>
-                  </button>
-                </div>
-              </form>
+                   Submit </span>
+                   <div
+                    className={`${
+                      !isButtonDisabled
+                        ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                        : "bg-[url('/images/home/disableArrow.svg')]"
+                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                  ></div>
+                   
+                 
+                </button>
+              </div>
+            </form>
             </div>
           </div>
         )}
@@ -229,7 +258,7 @@ export default function Chat() {
                 height={150}
                 className="w-9 md:w-16 mb-2 md:mb-8"
               />
-              <span className="text-2xl md:text-3xl block mb-1 text-dark uppercase md:mb-3">
+              <span className="text-2xl md:text-3xl block mb-1 text-dark  uppercase md:mb-3">
                 Thank You
               </span>
               <p className="text-sm md:text-xl md:w-[400px] text-center text-dark">
