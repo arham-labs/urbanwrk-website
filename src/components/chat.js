@@ -25,7 +25,7 @@ export default function Chat() {
   useEffect(()=>{
     setIsButtonDisabled(true)
   },[])
-console.log("f")
+
   const onSubmit = async (data) => {
     setIsLoading(true);
     setIsButtonDisabled(true)
@@ -66,10 +66,11 @@ console.log("f")
   useEffect(() => {
     const hasErrors = Object.keys(errors).length > 0;
 
-    
+    // delete formValues.newsUpdates;
     const isFormFilled = Object.values(formValues).every((value) =>
       value
     );
+    // console.log(hasErrors)
 
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
@@ -116,7 +117,7 @@ console.log("f")
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
-                   defaultValue=""
+                 
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.name && (
@@ -134,7 +135,7 @@ console.log("f")
                       message: "Invalid email address",
                     },
                   })}
-                   defaultValue=""
+                   
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.email && (
@@ -152,7 +153,7 @@ console.log("f")
                       message: "Phone number must be 10 digits",
                     },
                   })}
-                   defaultValue=""
+                  
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.phone && (
