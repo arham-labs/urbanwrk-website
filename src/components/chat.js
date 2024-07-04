@@ -19,13 +19,13 @@ export default function Chat() {
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
 
   useEffect(()=>{
     setIsButtonDisabled(true)
   },[])
-
+console.log("f")
   const onSubmit = async (data) => {
     setIsLoading(true);
     setIsButtonDisabled(true)
