@@ -44,11 +44,11 @@ export default function Chat() {
       }
       console.log("submit", response);
       setShowPopup(true);
-      setOpenChat(false);
-      reset(); 
+      setOpenChat(false)
     } catch (error) {
       console.log(error);
     } finally {
+      
       setIsLoading(false);
     }
   };
@@ -85,11 +85,11 @@ export default function Chat() {
             height={150}
           />
         </a>
-        {/* <div className={`bg-accent fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-primary`}>
+        <div className={`bg-primary fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}>
                     <span>HOW CAN WE HELP?</span>
-                </div> */}
+                </div>
         {openchat && (
-          <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[515px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px] ">
+          <div className="py-8  lg:p-8  bg-accent absolute w-[330px]  lg:w-[515px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px] ">
             <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
               <p className="pb-0 text-base max-lg:text-[16px] max-lg:pb-2">
                 Fill in the details below or call us at{" "}
@@ -190,7 +190,7 @@ export default function Chat() {
                   disabled={isButtonDisabled}
                   className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${
                     isButtonDisabled
-                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                       : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
              
@@ -258,7 +258,7 @@ export default function Chat() {
                 height={150}
                 className="w-9 md:w-16 mb-2 md:mb-8"
               />
-              <span className="text-2xl md:text-3xl block mb-1 text-dark uppercase md:mb-3">
+              <span className="text-2xl md:text-3xl block mb-1 text-dark  uppercase md:mb-3">
                 Thank You
               </span>
               <p className="text-sm md:text-xl md:w-[400px] text-center text-dark">
