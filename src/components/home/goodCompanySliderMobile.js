@@ -18,7 +18,7 @@ export default function GoodCompanySliderMobile() {
 
     return (
         <Slider {...settings}>
-            {[...Array(26)].map((_, i) => (
+            {[...Array(24)].map((_, i) => (
                 <div className='w-[50%] m-4  flex flex-col justify-around' key={i}>
                     <div className='flex justify-center items-center h-[100px] w-[100px] mx-auto'>
                         <Image src={`/images/home/logooo${i + 1}.svg`} height={50} width={60} alt="logo" className='w-full' />
