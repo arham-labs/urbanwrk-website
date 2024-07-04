@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,11 +8,13 @@ export default function FormCard() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
     reset,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -48,6 +50,17 @@ export default function FormCard() {
     setShowPopup(false);
     reset();
   };
+  const formValues = watch();
+  useEffect(() => {
+    const hasErrors = Object.keys(errors).length > 0;
+
+    delete formValues.newsUpdates;
+    const isFormFilled = Object.values(formValues).every((value) =>
+      value
+    );
+
+    setIsButtonDisabled(hasErrors || !isFormFilled);
+  }, [formValues, errors]);
 
   return (
     <div className="bg-white">
@@ -71,7 +84,9 @@ export default function FormCard() {
             </h2>
             <p className="py-4 max-lg:py-6">
               Fill in the details below or call us at{" "}
-              <Link href="tel:+91 8399959996">+91 8399959996</Link>
+              <Link href="tel:+91 8399959996" className="font-semibold">
+                +91 8399959996
+              </Link>
             </p>
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -82,8 +97,7 @@ export default function FormCard() {
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
-                  defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.name && (
                   <span className="text-red-500">{errors.name.message}</span>
@@ -100,8 +114,7 @@ export default function FormCard() {
                       message: "Invalid email address",
                     },
                   })}
-                  defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.email && (
                   <span className="text-red-500">{errors.email.message}</span>
@@ -118,8 +131,7 @@ export default function FormCard() {
                       message: "Phone number must be 10 digits",
                     },
                   })}
-                  defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.phone && (
                   <span className="text-red-500">{errors.phone.message}</span>
@@ -156,15 +168,29 @@ export default function FormCard() {
               <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
                 <button
                   type="submit"
-                  disabled={isLoading}
-                  className={`border-black border group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
-                    isLoading ? "bg-gray-300 opacity-50 !cursor-not-allowed pointer-events-none " : ""
+                  disabled={isButtonDisabled}
+                  className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
+                    isButtonDisabled
+                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
                 >
-                  <span className="text-base bg-transparent max-md:px-4 flex py-1 text-black group-hover:text-white">
-                    Submit
+                  <span
+                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
+                      isButtonDisabled
+                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                        : "group-hover:text-white"
+                    } `}
+                  >
+                    Submit{" "}
                   </span>
-                  <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat"></div>
+                  <div
+                    className={`${
+                      !isButtonDisabled
+                        ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                        : "bg-[url('/images/home/disableArrow.svg')]"
+                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                  ></div>
                 </button>
               </div>
          

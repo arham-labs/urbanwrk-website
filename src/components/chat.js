@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import Link from "next/link";
 import ExploreBtn from "./home/exploreBtn";
@@ -12,12 +12,15 @@ export default function Chat() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
     reset 
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -55,6 +58,17 @@ export default function Chat() {
     reset(); 
   };
 
+  const formValues = watch();
+  useEffect(() => {
+    const hasErrors = Object.keys(errors).length > 0;
+
+    
+    const isFormFilled = Object.values(formValues).every((value) =>
+      value
+    );
+
+    setIsButtonDisabled(hasErrors || !isFormFilled);
+  }, [formValues, errors]);
 
   return (
     <div>
@@ -77,33 +91,33 @@ export default function Chat() {
         {openchat && (
           <div className="py-8  lg:p-8 chat-shadow bg-accent absolute w-[330px]  lg:w-[515px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px] ">
             <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
-              <p className="pb-0 text-[20px] max-lg:text-[16px] max-lg:pb-2">
+              <p className="pb-0 text-base max-lg:text-[16px] max-lg:pb-2">
                 Fill in the details below or call us at{" "}
                 <Link href="tel:+91 8399959996"  className="font-semibold lg:hidden ">+91 8399959996</Link>
               </p>
-              <p className="pb-2 text-[20px] max-lg:hidden">
+              <p className="pb-2 text-base max-lg:hidden">
               <Link href="tel:+91 8399959996"  className="font-semibold ">+91 8399959996</Link>
            
               </p>
               
               <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col md:w-full lg:w-[400px] lg:mt-4 max-lg:mt-4"
+              className="flex flex-col md:w-full lg:w-[400px] lg:mt-0 max-lg:mt-4"
             >
-              <div className="max-lg:mb-2 lg:mb-4">
-                <label className="block font-semibold  lg:text-base max-lg:text-sm">NAME:</label>
+              <div className="max-lg:mb-2 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">NAME:</label>
                 <input
                   type="text"
                   {...register("name", { required: "Name is required" })}
                    defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.name && (
                   <span className="text-red-500">{errors.name.message}</span>
                 )}
               </div>
-              <div className="max-lg:mb-2 lg:mb-4">
-                <label className="block font-semibold  lg:text-base max-lg:text-sm">EMAIL:</label>
+              <div className="max-lg:mb-2 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">EMAIL:</label>
                 <input
                   type="text"
                   {...register("email", {
@@ -114,14 +128,14 @@ export default function Chat() {
                     },
                   })}
                    defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.email && (
                   <span className="text-red-500">{errors.email.message}</span>
                 )}
               </div>
-              <div className="max-lg:mb-2 lg:mb-4">
-                <label className="block font-semibold lg:text-base max-lg:text-sm">PHONE:</label>
+              <div className="max-lg:mb-2 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">PHONE:</label>
                 <input
                   type="text"
                   {...register("phone", {
@@ -132,14 +146,14 @@ export default function Chat() {
                     },
                   })}
                    defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.phone && (
                   <span className="text-red-500">{errors.phone.message}</span>
                 )}
               </div>
-              <div className="max-lg:mb-2 lg:mb-4">
-                <label className="block font-semibold  lg:text-base max-lg:text-sm">CITY:</label>
+              <div className="max-lg:mb-0 lg:mb-2">
+                <label className="block font-semibold  lg:text-sm max-lg:text-sm">CITY:</label>
                 <select
                   {...register("city", { required: "City is required" })}
                   className="border-black border-solid border w-full h-[38px]"
@@ -154,32 +168,48 @@ export default function Chat() {
                   <span className="text-red-500">{errors.city.message}</span>
                 )}
               </div>
-              <div className="max-lg:mb-2 lg:mb-4 mt-1 max-lg:mt-3">
+              {/* <div className="max-lg:mb-2 lg:mb-2 mt-3 max-lg:mt-3">
                 <p className="text-sm">
                   By clicking the button below, you agree to our Website&nbsp;
                   <span className="underline">Terms of Service</span>
                   &nbsp;and acknowledge our&nbsp;
                   <span className="underline">Privacy Policy</span>.
                 </p>
+              </div> */}
+              <div className="max-lg:mb-2 lg:mb-4 flex align-baseline justify-center max-lg:pb-3 ">
+                <input type="checkbox" {...register("newsUpdates")} className="lg:!w-6  max-lg:!w-9 max-lg:mb-5" />
+                <label className="ml-2 text-sm mt-4">You agree to our Website&nbsp;
+                  <span className="underline">Terms of Service</span>
+                  &nbsp;and acknowledge our&nbsp;
+                  <span className="underline">Privacy Policy</span>.</label>
               </div>
-              <div className="max-lg:mb-2 lg:mb-4 lg:flex lg:justify-center max-lg:py-3">
-                <input type="checkbox" {...register("newsUpdates")} />
-                <label className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
-              </div>
-              <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
+              
+              <div className="w-full pt-2 group ">
                 <button
                   type="submit"
-                  disabled={isLoading}
-                  className={`border-black border w-full justify-center   group-hover:border-none  max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
-                    isLoading ? "bg-gray-300 cursor-not-allowed" : ""
+                  disabled={isButtonDisabled}
+                  className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${
+                    isButtonDisabled
+                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
              
                 >
-                  <span className="text-base bg-transparent max-lg:px-0  flex py-1 text-black group-hover:text-white ">
+                  <span
+                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
+                      isButtonDisabled
+                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                        : "group-hover:text-white"
+                    } `}
+                  >
                    Submit </span>
-                   <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat ">
-
-                   </div>
+                   <div
+                    className={`${
+                      !isButtonDisabled
+                        ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                        : "bg-[url('/images/home/disableArrow.svg')]"
+                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                  ></div>
                    
                  
                 </button>

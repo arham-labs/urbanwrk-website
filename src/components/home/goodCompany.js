@@ -10,7 +10,7 @@ export default function GoodCompany() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 8) % 26);
+      setCurrentIndex((prevIndex) => (prevIndex + 8) % 24);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
@@ -44,12 +44,12 @@ export default function GoodCompany() {
                 <div className="flex opacity-0 fade-in-out justify-center items-center h-[150px] w-[150px]">
                   <Image
                     src={`/images/home/logooo${
-                      ((currentIndex + i) % 26) + 1
+                      ((currentIndex + i) % 24) + 1
                     }.svg`}
                     height={80}
                     width={80}
                     alt={`logooo${
-                      ((currentIndex + i) % 26) + 1
+                      ((currentIndex + i) % 24) + 1
                     }`}
                     className="w-full"
                   />
