@@ -83,7 +83,7 @@ export default function FormCard() {
                   type="text"
                   {...register("name", { required: "Name is required" })}
                    defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.name && (
                   <span className="text-red-500">{errors.name.message}</span>
@@ -101,7 +101,7 @@ export default function FormCard() {
                     },
                   })}
                    defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.email && (
                   <span className="text-red-500">{errors.email.message}</span>
@@ -119,7 +119,7 @@ export default function FormCard() {
                     },
                   })}
                    defaultValue=""
-                  className="border-black border-solid border w-full h-[38px]"
+                  className="border-black border-solid border w-full h-[38px] px-2"
                 />
                 {errors.phone && (
                   <span className="text-red-500">{errors.phone.message}</span>
