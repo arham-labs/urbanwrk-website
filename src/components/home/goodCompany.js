@@ -10,7 +10,7 @@ export default function GoodCompany() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % 26);
+      setCurrentIndex((prevIndex) => (prevIndex + 8) % 26);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
