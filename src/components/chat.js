@@ -70,7 +70,7 @@ export default function Chat() {
 // console.log(!isFormFilled,"isFormFilled")
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
-console.log(isButtonDisabled,"isButtonDisable")
+// console.log(isButtonDisabled,"isButtonDisable")
   return (
     <div>
       <div className="fixed bottom-10 right-7 lg:bottom-10 lg:right-16 z-30">
