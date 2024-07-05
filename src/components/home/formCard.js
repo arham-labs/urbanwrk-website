@@ -170,7 +170,7 @@ export default function FormCard() {
               <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
                 <button
                   type="submit"
-                  disabled={isButtonDisabled}
+                  disabled={isButtonDisabled || isLoading}
                   className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
                     isButtonDisabled
                       ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"

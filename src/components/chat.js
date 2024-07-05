@@ -192,7 +192,7 @@ export default function Chat() {
               <div className="w-full pt-2 group ">
                 <button
                   type="submit"
-                  disabled={isButtonDisabled}
+                  disabled={isButtonDisabled || isLoading}
                   className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${
                     isButtonDisabled
                       ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
