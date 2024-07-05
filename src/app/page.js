@@ -1,3 +1,4 @@
+"use client"
 import Solutions from "@/components/home/solutions";
 import AboutCard from "@/components/home/aboutCard";
 import BuildCard from "@/components/home/buildCard";
@@ -13,6 +14,11 @@ import HomeBanner from "@/components/home/homeBanner";
 
 
 export default function Home() {
+  const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
+  const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
+  console.log({username})
+  console.log({password})
+
   return (
     <>
       <div className="md:pt-20 ">
