@@ -43,7 +43,7 @@ export async function POST(request) {
             from: username,
             to: myEmail,
             replyTo: email,
-            subject: `Website activity from ${email}`,
+            subject: `New Enquiry from ${name}`,
             html: `
             <p>Name: ${name} </p>
             <p>Email: ${email} </p>
