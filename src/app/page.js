@@ -17,7 +17,7 @@ export default function Home() {
   const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
   const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
   console.log({username})
-  console.log({password})
+  // console.log({password})
 
   return (
     <>
