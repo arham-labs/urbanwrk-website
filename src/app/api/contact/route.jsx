@@ -24,7 +24,7 @@ export async function POST(request) {
 
     // create transporter object
     const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
+        host: "smtp-mail.outlook.com",
         port: 587,
         tls: {
             ciphers: "SSLv3",
