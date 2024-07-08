@@ -158,9 +158,9 @@ export default function FormCard() {
               <div className="mb-4 max-lg:mt-6">
                 <p className="text-sm">
                   By clicking the button below, you agree to our Website&nbsp;
-                  <span className="underline">Terms of Service</span>
+                  <Link href="/terms-of-use"><span className="underline">Terms of Service</span></Link>
                   &nbsp;and acknowledge our&nbsp;
-                  <span className="underline">Privacy Policy</span>.
+                  <Link href="/privacy-policy"><span className="underline">Privacy Policy</span></Link>
                 </p>
               </div>
               <div className="mb-4 lg:flex lg:justify-center max-lg:py-3">
