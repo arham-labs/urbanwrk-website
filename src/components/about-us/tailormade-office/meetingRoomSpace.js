@@ -22,12 +22,12 @@ export default function MeetingRoomSpace({ data }) {
       </div>
       <div className="w-full lg:w-1/2  p-5 lg:p-12">
         <Image
-          src="/images/solutionsLanding/meetingImg1.png"
+          src="/images/solutionsLanding/solutionsImg/meeting1.png"
           height={300}
           width={300}
           alt="img"
           className="h-full w-full"
-          
+
           unoptimized
         />
       </div>

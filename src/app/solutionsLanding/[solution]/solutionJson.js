@@ -89,21 +89,21 @@ export const Jsons = {
       card2: [
         {
           title: "We deliver future-proof flexibility",
-          source: WorkWing1,
+          source:  "/images/solutionsLanding/solutionsImg/working4.png",
           desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up or down or expand to new locations with complete ease.",
         },
         {
           title: "We bring the global edge",
-          source: WorkWing2,
+          source:  "/images/solutionsLanding/solutionsImg/working5.png",
           desc: "Operate with a world-class standard from day one. Our environments give you a competitive advantage with cutting edge technology and premium amenities.",
         },
         {
           title: "We facilitate zero upfront costs",
-          source: WorkWing3,
+          source:  "/images/solutionsLanding/solutionsImg/working6.png",
           desc: "Establish or expand your business presence without the upfront costs typically associated with setting up a new office with our zero capex model.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your space,",
       card3_title2: "made easy",
       card3_content: [
@@ -120,7 +120,7 @@ export const Jsons = {
           desc: "Start operating immediately with all utilities and services already in place.",
         },
       ],
-      card4_img: "",
+      card4_img:  "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
       card4_title3:
@@ -149,21 +149,21 @@ export const Jsons = {
       card2: [
         {
           title: "We bring cost efficiency ",
-          source: WorkWing1,
+          source:  "/images/solutionsLanding/solutionsImg/working7.png",
           desc: "We eliminate the need for long-term leases, utility payments, and office maintenance expenses, so you can invest more resources into growing your business.",
         },
         {
           title: "We create an elevated presence",
-          source: WorkWing2,
+          source:  "/images/solutionsLanding/solutionsImg/working8.png",
           desc: "Bring credibility and respectability to your operations, and establish a presence in competitive markets without the cost of a physical office.",
         },
         {
           title: "We support your growth",
-          source: WorkWing3,
+          source:  "/images/solutionsLanding/solutionsImg/working9.png",
           desc: "Have your operational needs are seamlessly met, no matter where you are working from. And you can access meeting rooms and event spaces on demand.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your growth,",
       card3_title2: "made easy",
       card3_content: [
@@ -180,7 +180,7 @@ export const Jsons = {
           desc: "Use your new business address on your correspondence.",
         },
       ],
-      card4_img: "",
+      card4_img:  "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
       card4_title2: "productivity",
       card4_title3:
@@ -191,7 +191,7 @@ export const Jsons = {
       name: "events-launches",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-6.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-6.png",
       title1: "Events",
       title2: "& launches",
       title3: "Designed to inspire and impress.",
@@ -249,7 +249,7 @@ export const Jsons = {
       name: "advertise-with-us",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
       title1: "Advertise",
       title2: "with us",
       title3: "Your workspace, tailored to your workstyle.",
@@ -306,7 +306,7 @@ export const Jsons = {
       name: "meeting-rooms",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
       title1: "Meeting rooms",
       title2: "",
       title3: "Foster collaboration, creativity and success.",
