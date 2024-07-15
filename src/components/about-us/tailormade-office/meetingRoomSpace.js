@@ -27,6 +27,7 @@ export default function MeetingRoomSpace({ data }) {
           width={300}
           alt="img"
           className="h-full w-full"
+          
           unoptimized
         />
       </div>

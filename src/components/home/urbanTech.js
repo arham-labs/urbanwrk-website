@@ -10,7 +10,7 @@ export default function UrbanTech() {
             <div className='  max-lg:hidden'>
                 <div className='flex items-center gap-[25px]'>
                     <div className='w-1/2 '>
-                        <Image src="/images/home/urbanTech1.png" height={666} width={683} alt="aboutUs" />
+                        <Image src="/images/home/urbanTechl1.png" height={666} width={683} alt="aboutUs" />
                     </div>
                     <div className='w-1/2 flex flex-col justify-center pl-12'>
                         <>

@@ -70,11 +70,12 @@ export default function FormCard() {
         <div className="flex flex-col lg:flex-row md:gap-14 lg:gap-16 xl:gap-24 2xl:gap-32">
           <div className="lg:w-[640px] 2xl:w-[680px] lg:h-[650px] xl:h-[750px] max-lg:w-full order-1 sm:order-1">
             <Image
-              src="/images/home/form.png"
+              src="/images/home/form1.png"
               height={800}
               width={604}
               alt="formImage"
               className="h-full w-full object-center"
+              unoptimized
             />
           </div>
           <div className="flex flex-col order-1 sm:order-2 max-lg:pt-[48px] justify-center">

@@ -28,21 +28,21 @@ export const Jsons = {
       card2: [
         {
           title: "We match your pace",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working1.png",
           desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
         },
         {
           title: "We are where work thrives",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working2.png",
           desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
         },
         {
           title: "We take the work out of work",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working3.png",
           desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your space,",
       card3_title2: "made easy",
       card3_content: [
@@ -59,7 +59,7 @@ export const Jsons = {
           desc: "Settle in your customised office",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
       card4_title2: "productivity",
       card4_title3:
@@ -186,11 +186,11 @@ export const Jsons = {
       card4_title3:
         "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
     },
-    {
+    { 
       id: 4,
       name: "events-launches",
       titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
+        "/images/solutionsLanding/solutionsImg/desktop-banner-6.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
       title1: "Events",
       title2: "& launches",
@@ -248,7 +248,7 @@ export const Jsons = {
       id: 4,
       name: "advertise-with-us",
       titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
+        "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
       title1: "Advertise",
       title2: "with us",
@@ -305,7 +305,7 @@ export const Jsons = {
       id: 5,
       name: "meeting-rooms",
       titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
+        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
       title1: "Meeting rooms",
       title2: "",

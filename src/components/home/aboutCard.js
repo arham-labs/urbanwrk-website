@@ -7,7 +7,7 @@ export default function AboutCard() {
         <div className='w-full mx-auto '>
             <div className='flex  max-lg:hidden'>
                 <div className='w-[60%] aspect-[16/11]'>
-                    <Image src="/images/home/aboutUs.png" height={666} width={683} className="h-full w-full object-cover" alt="aboutUs" />
+                    <Image src="/images/home/aboutUs1.png" height={666} width={683} className="h-full w-full object-cover" alt="aboutUs" unoptimized/>
                 </div>
                 <div className='w-1/2 flex flex-col justify-center pl-12'>
                     <>
@@ -19,7 +19,7 @@ export default function AboutCard() {
 
             <div className='lg:hidden'>
                 <div className='aspect-[15/16]'>
-                    <Image src="/images/home/aboutUs.png" height={360} width={352}  alt="aboutUs" className='h-full w-full' />
+                    <Image src="/images/home/aboutUs1.png" height={360} width={352}  alt="aboutUs" className='h-full w-full' unoptimized />
                 </div>
                 <div className=' flex flex-col justify-center  pt-6'>
                     <>

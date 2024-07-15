@@ -11,7 +11,7 @@ export default function LookingImageSlider() {
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -22,13 +22,13 @@ export default function LookingImageSlider() {
     return (
         <div>
             <Slider {...settings} >
-                {[...Array(4)].map((_, i) =>
+                {[...Array(1)].map((_, i) =>
                     <div  key={i}>
                         <div className='max-md:hidden '>
-                            <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[875px] w-full object-top' unoptimized />
+                            <Image src={`/images/home/exploreCardl1.png`} alt="location inside page" height={1000} width={1000} className='h-[875px] w-full object-top' unoptimized />
                         </div>
                         <div className='md:hidden '>
-                            <Image src={`/images/home/exploreCard${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-[800px] w-full  object-cover' unoptimized />
+                            <Image src={`/images/home/exploreCardl1.png`} alt="location inside page" height={1000} width={1000} className='h-[800px] w-full  object-cover' unoptimized />
                         </div>
                     </div>
                 )}
