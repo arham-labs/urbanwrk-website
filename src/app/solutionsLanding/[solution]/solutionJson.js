@@ -207,21 +207,21 @@ export const Jsons = {
       card2: [
         {
           title: "We deliver flawless execution",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working10.png",
           desc: "We work closely with you to customise your event, ensuring your vision is brought to life seamlessly and with world-class finesse.",
         },
         {
           title: "We bring the hi-tech edge",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Our robust tech and digital platforms guarantee a hitch-free experience, enabling flawless engagement whether your audience is in-room or joining remotely.",
         },
         {
           title: "We have global standards of hospitality",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "Give your audience an exceptional event experience with valet parking, catering options, and hospitality of the highest calibre.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your event,",
       card3_title2: "made easy",
       card3_content: [
@@ -238,7 +238,7 @@ export const Jsons = {
           desc: "We manage everything from technology operations to catering.",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity3.png",
       card4_title1: "Brimming with",
       card4_title2: "opportunity",
       card4_title3:
@@ -323,17 +323,17 @@ export const Jsons = {
       card2: [
         {
           title: "We match your pace",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working10.png",
           desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
         },
         {
           title: "We are where work thrives",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
         },
         {
           title: "We take the work out of work",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
         },
       ],
@@ -354,7 +354,7 @@ export const Jsons = {
           desc: "Settle in your customised office",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
       card4_title3:
