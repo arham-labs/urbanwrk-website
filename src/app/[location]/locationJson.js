@@ -1,5 +1,8 @@
 import CardImage1 from '../../../public/images/location/card1.png'
 import CardImage2 from '../../../public/images/location/card2.png'
+import CardImage3 from '../../../public/images/location/card3.png'
+import CardImage5 from '../../../public/images/location/card5.png'
+
 
 export const Jsons = {
   LocationData: [
@@ -48,7 +51,7 @@ export const Jsons = {
           id: 1,
           locationName: "AeroMall",
           locationCity: "Viman Nagar",
-          locationImg:CardImage1,
+          locationImg:CardImage5,
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
@@ -66,7 +69,7 @@ export const Jsons = {
           id: 3,
           locationName: "Westport ",
           locationCity: "Baner",
-          locationImg:CardImage1,
+          locationImg:CardImage3,
           location1: "Bus Station - 5 min walk",
           location2: "Best for restaurants and centres of performing arts",
           location3: "The commercial and residential hub of Pune.", 
