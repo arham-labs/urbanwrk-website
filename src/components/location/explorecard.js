@@ -4,7 +4,7 @@ import Concienge from '../../../public/images/locationInside/locationSpaceCardlo
 import Cafeteria from '../../../public/images/locationInside/locationSpaceCardlogo2.svg';
 import Parking from '../../../public/images/locationInside/locationSpaceCardlogo3.svg'
 import Access from '../../../public/images/locationInside/locationSpaceCardlogo1.svg'
-import CardImage from '../../../public/images/location/card.png'
+
 import Map from '../../../public/images/location/map.png'
 import { useParams } from "next/navigation";
 import LinkButton from "@/common/linkbtn";
@@ -26,7 +26,7 @@ export default function ExploreCard({data}) {
             <div className="w-full lg:w-[60%] 2xl:w-[55%]  flex flex-col gap-7">
             {data?.locationInfo?.map((el,i)=><><div className="flex flex-col bg-bglight1 lg:h-fit lg:flex-row items-center">
                 <div className="w-full xl:w-1/2 2xl:w-[45%]">
-                    <Image src={CardImage} alt="cardimage" className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
+                    <Image src={el?.locationImg} alt="cardimage" className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
                 </div>
                 <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%]">
                     <span className="text-lg lg:text-xl font-medium">{el.locationName}</span>
