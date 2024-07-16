@@ -26,11 +26,11 @@ export default function ExploreCard({data}) {
             <div className="w-full lg:w-[60%] 2xl:w-[55%]  flex flex-col gap-7">
             {data?.locationInfo?.map((el,i)=><><div className="flex flex-col bg-bglight1 lg:h-fit lg:flex-row items-center">
                 <div className="w-full xl:w-1/2 2xl:w-[45%]">
-                    <Image src={el?.locationImg} alt="cardimage" className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
+                    <Image src={el?.locationImg} unoptimized alt="cardimage" className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
                 </div>
                 <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%]">
                     <span className="text-lg lg:text-xl font-medium">{el.locationName}</span>
-                    <span className="text-xs lg:text-sm text-[#7D7C7C] font-semibold mb-3 uppercase">{el.locationName}</span>
+                    <span className="text-xs lg:text-sm text-[#7D7C7C] font-semibold mb-3 uppercase">{el.locationCity}</span>
                     <div className="flex flex-col text-sm font-light mb-4">
                         <span>{el.location1}</span>
                         <span>{el.location2}</span>
