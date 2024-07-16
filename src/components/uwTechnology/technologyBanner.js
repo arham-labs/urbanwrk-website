@@ -13,7 +13,7 @@ export default function TechnologyBanner() {
               alt="solution-page"
               height={500}
               width={784}
-              className='h-full w-full lg:object-top max-lg:object-cover'
+              className='h-full w-full object-cover'
             />
           </div>
           <div className='max-w-[1920px] max-md:px-6 mx-auto 2xl:px-[160px] lg:pl-[100px] lg:pr-[40px] lg:w-1/2 flex justify-center flex-col md:px-8  lg:py-20  max-lg:pb-16 max-lg:pt-14 '>

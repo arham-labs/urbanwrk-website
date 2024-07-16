@@ -13,7 +13,7 @@ export default function Blog() {
                     <div className="w-full lg:w-1/2 flex flex-col gap-8">
                         <div className="relative">
                             <span className="absolute top-4 left-5 lg:top-6 lg:left-8 uppercase bg-bglight1 p-2 lg:p-3 text-xs font-semibold lg:text-sm">Workspace Solutions</span>
-                            <Image src={Blog2} alt="blog-1" className="hidden lg:block aspect-[5/4] w-full" />
+                            <Image src={Blog2} alt="blog-1" className="hidden lg:block aspect-[5/4] w-full object-cover" />
                             <Image src={Blog2} alt="blog-1" className="lg:hidden w-full" />
                         </div>
                         <div className="w-full lg:w-[85%] flex flex-col gap-2 lg:gap-4">
@@ -24,7 +24,7 @@ export default function Blog() {
                     <div className="w-full lg:w-1/2 flex flex-col gap-8">
                         <div className="relative">
                             <span className="absolute top-4 left-5 lg:top-6 lg:left-8 uppercase bg-bglight1 p-2 lg:p-3 text-xs font-semibold lg:text-sm">Resources</span>
-                            <Image src={Blog1} alt="blog-2" className="hidden lg:block aspect-[26/35] w-full" />
+                            <Image src={Blog1} alt="blog-2" className="hidden lg:block aspect-[26/35] w-full object-cover" />
                             <Image src={Blog1} alt="blog-2" className="lg:hidden w-full" />
                         </div>
                         <div className="w-full lg:w-[85%] flex flex-col gap-2 lg:gap-4">
