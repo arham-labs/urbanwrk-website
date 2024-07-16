@@ -264,21 +264,21 @@ export const Jsons = {
       card2: [
         {
           title: "We create maximum exposure",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working13.png",
           desc: "Our properties are in prime business hubs across major cities, ensuring your advertisements reach a high-volume, professional audience.",
         },
         {
           title: "We diversify for wide reach",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working14.png",
           desc: "We provide a variety of advertising mediums, from digital displays in common areas to branded spaces within the premises, and even opportunities for sponsored events.",
         },
         {
           title: "We reach a high-value network",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working15.png",
           desc: "Tap into our network of professionals and businesses, potentially opening doors to collaborative opportunities and new markets.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Spreading the",
       card3_title2: "word made easy",
       card3_content: [
@@ -295,7 +295,7 @@ export const Jsons = {
           desc: "Utilise our tools for viewer engagement insights and adjust your strategy.",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity4.png",
       card4_title1: "Brimming with",
       card4_title2: "opportunity",
       card4_title3:
