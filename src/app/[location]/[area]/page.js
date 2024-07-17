@@ -18,21 +18,21 @@ export default function page({ params }) {
 
     const locationFind = locationData?.locationInfo.find((p) => p.url === location);
 
-    
+
     if (!locationFind) {
         return notFound()
     }
 
     return (
         <>
-            <LocationBanner />
+            <LocationBanner data={locationFind}/>
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16 ">
                 <Restaurants data={locationFind} />
             </div>
 
 
             <div className='bg-bglight3 '>
-                <LocationSpecialtiesCard />
+                <LocationSpecialtiesCard data={locationFind} />
                 <div className="px-6  mx-auto 2xl:px-[160px] lg:px-[100px] pb-16 max-md:pb-4   bg-bglight3">
                     <Amenities data={locationFind} noshow={false} />
                 </div>

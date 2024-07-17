@@ -34,6 +34,10 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/pcp-video.mp4",
+          posterImage: "/images/locationInside/technopolis-banner.png",
           locationName: "PCP",
           locationCity: "Lower Parel",
           locationImg: CardImage1,
@@ -47,6 +51,7 @@ export const Jsons = {
             { source: EventSpace, title: "Event spacess" }
           ],
           url: "pcp",
+          amentiesBanner: "/images/locationInside/pcp-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
@@ -77,7 +82,11 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          bannerImage: "/images/locationInside/westport-banner.png",
           locationName: "Westport",
+          videourl: "",
+          video: false,    
+          posterImage: "",
           locationCity: "Viman Nagar",
           locationImg: CardImage1,
           location1: "Bus Station - 5 min walk",
@@ -90,6 +99,7 @@ export const Jsons = {
             { source: Access, title: "24x7 Access" }
           ],
           url: "westport",
+          amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -115,6 +125,10 @@ export const Jsons = {
         {
           id: 2,
           locationName: "Sai radhe",
+          bannerImage: "",
+          videourl: "",
+          video: false,
+          posterImage: "",
           locationCity: "Viman Nagar",
           locationImg: CardImage3,
           location1: "Bus Station - 5 min walk",
@@ -154,6 +168,10 @@ export const Jsons = {
           id: 3,
           locationName: "Koncord",
           locationCity: "Viman Nagar",
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/koncard-video.mp4",
+          posterImage: "/images/locationInside/technopolis-banner.png",
           locationImg: CardImage4,
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
@@ -165,6 +183,7 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" }
           ],
           url: "koncard",
+          amentiesBanner: "/images/locationInside/koncard-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -191,6 +210,10 @@ export const Jsons = {
         {
           id: 4,
           locationName: "AeroMall",
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/aeromall-video.mp4",
+          posterImage: "/images/locationInside/technopolis-banner.png",
           locationCity: "Viman Nagar",
           locationImg: CardImage5,
           location1: "Bus Station - 5 min walk",
@@ -203,6 +226,7 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" }
           ],
           url: "aeromall",
+          amentiesBanner: "/images/locationInside/aeromall-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -229,6 +253,10 @@ export const Jsons = {
         {
           id: 5,
           locationName: "Nandan probiz",
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/nandan-video.mp4",
+          posterImage: "/images/locationInside/technopolis-banner.png",
           locationCity: "Viman Nagar",
           locationImg: CardImageGirl,
           location1: "Bus Station - 5 min walk",
@@ -241,6 +269,7 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" }
           ],
           url: "nandan-probiz",
+          amentiesBanner: "/images/locationInside/nandanprobiz-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -265,7 +294,11 @@ export const Jsons = {
         },
         {
           id: 6,
+          bannerImage: "/images/locationInside/montclaire-banner.png",
           locationName: "Montclaire",
+          videourl: "",
+          video: false,
+          posterImage: "",
           locationCity: "Viman Nagar",
           locationImg: CardImage1,
           location1: "Bus Station - 5 min walk",
@@ -311,7 +344,11 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          bannerImage: "/images/locationInside/technopolis-banner.png",
           locationName: "Technopolis",
+          videourl: "",
+          video: false,
+          posterImage: "",
           locationCity: "Salt Lake",
           locationImg: CardImage1,
           location1: "Metro Station - 8 min walk",
@@ -324,6 +361,7 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" }
           ],
           url: "technopolis",
+          amentiesBanner: "/images/locationInside/technopolis-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -358,6 +396,10 @@ export const Jsons = {
         {
           id: 1,
           locationName: "Raheja Mindspace",
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/hyderabad-video.mp4",  
+          posterImage: "/images/locationInside/technopolis-banner.png",  
           locationCity: "CYBERABAD",
           locationImg: CardImage2,
           location1: "Bus Station - 10 min walk",
@@ -370,6 +412,7 @@ export const Jsons = {
             { source: Access, title: "24x7 Access" },
           ],
           url: "raheja-mindspace",
+          amentiesBanner: "/images/locationInside/rahejamindspace-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -403,6 +446,10 @@ export const Jsons = {
         {
           id: 1,
           locationName: "Baani",
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/baani-video.mp4",
+          posterImage: "/images/locationInside/technopolis-banner.png",
           locationCity: "CYBERABAD",
           locationImg: NcrCard1,
           location1: "Bus Station - 10 min walk",
@@ -414,7 +461,8 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Conference, title: "Outdoor space" },
           ],
-          url: "banni",
+          url: "baani",
+          amentiesBanner: "/images/locationInside/baani-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -442,6 +490,10 @@ export const Jsons = {
         {
           id: 2,
           locationName: "Max House",
+          bannerImage: "",
+          video: true,
+          videourl: "/images/locationInside/maxhouse-video.mp4",
+          posterImage: "/images/locationInside/technopolis-banner.png",
           locationCity: "CYBERABAD",
           locationImg: NcrCard2,
           location1: "Bus Station - 10 min walk",
@@ -454,6 +506,7 @@ export const Jsons = {
             { source: Access, title: "24x7 Access" },
           ],
           url: "max-house",
+          amentiesBanner: "/images/locationInside/maxhouse-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
