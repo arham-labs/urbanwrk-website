@@ -36,7 +36,7 @@ export default function LinkButton({ title, href, margin, marginspace }) {
 
     <div className="group">
       <Link href={href ? href : "/"}> 
-        <div className={`border-black border group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
+        <div className={`border-black border px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:border-primary group-hover:text-white cursor-pointer ${
         margin
           ? "lg:ml-[75px]"
           : marginspace
