@@ -7,11 +7,19 @@ import LocatonPark from "@/components/locationInside/locatonPark";
 import Restaurants from "@/components/locationInside/restaurants";
 import Amenities from "@/components/solutionsLanding/amenities";
 import { notFound } from "next/navigation";
+import { Jsons } from "../locationJson";
 
 export default function page({ params }) {
     const location = params.area
 
-    if (location !== "peninsula") {
+    const locationData = Jsons.LocationData?.find((el) =>
+        el.locationInfo.some((p) => p.url === location)
+    );
+
+    const locationFind = locationData?.locationInfo.find((p) => p.url === location);
+
+    
+    if (!locationFind) {
         return notFound()
     }
 
@@ -19,14 +27,14 @@ export default function page({ params }) {
         <>
             <LocationBanner />
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16 ">
-                <Restaurants />
+                <Restaurants data={locationFind} />
             </div>
 
 
             <div className='bg-bglight3 '>
                 <LocationSpecialtiesCard />
                 <div className="px-6  mx-auto 2xl:px-[160px] lg:px-[100px] pb-16 max-md:pb-4   bg-bglight3">
-                    <Amenities noshow={false} />
+                    <Amenities data={locationFind} noshow={false} />
                 </div>
             </div>
 

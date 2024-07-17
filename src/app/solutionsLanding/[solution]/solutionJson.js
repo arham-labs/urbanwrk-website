@@ -28,21 +28,21 @@ export const Jsons = {
       card2: [
         {
           title: "We match your pace",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working1.png",
           desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
         },
         {
           title: "We are where work thrives",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working2.png",
           desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
         },
         {
           title: "We take the work out of work",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working3.png",
           desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your space,",
       card3_title2: "made easy",
       card3_content: [
@@ -59,7 +59,7 @@ export const Jsons = {
           desc: "Settle in your customised office",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
       card4_title2: "productivity",
       card4_title3:
@@ -89,21 +89,21 @@ export const Jsons = {
       card2: [
         {
           title: "We deliver future-proof flexibility",
-          source: WorkWing1,
+          source:  "/images/solutionsLanding/solutionsImg/working4.png",
           desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up or down or expand to new locations with complete ease.",
         },
         {
           title: "We bring the global edge",
-          source: WorkWing2,
+          source:  "/images/solutionsLanding/solutionsImg/working5.png",
           desc: "Operate with a world-class standard from day one. Our environments give you a competitive advantage with cutting edge technology and premium amenities.",
         },
         {
           title: "We facilitate zero upfront costs",
-          source: WorkWing3,
+          source:  "/images/solutionsLanding/solutionsImg/working6.png",
           desc: "Establish or expand your business presence without the upfront costs typically associated with setting up a new office with our zero capex model.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your space,",
       card3_title2: "made easy",
       card3_content: [
@@ -120,7 +120,7 @@ export const Jsons = {
           desc: "Start operating immediately with all utilities and services already in place.",
         },
       ],
-      card4_img: "",
+      card4_img:  "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
       card4_title3:
@@ -149,21 +149,21 @@ export const Jsons = {
       card2: [
         {
           title: "We bring cost efficiency ",
-          source: WorkWing1,
+          source:  "/images/solutionsLanding/solutionsImg/working7.png",
           desc: "We eliminate the need for long-term leases, utility payments, and office maintenance expenses, so you can invest more resources into growing your business.",
         },
         {
           title: "We create an elevated presence",
-          source: WorkWing2,
+          source:  "/images/solutionsLanding/solutionsImg/working8.png",
           desc: "Bring credibility and respectability to your operations, and establish a presence in competitive markets without the cost of a physical office.",
         },
         {
           title: "We support your growth",
-          source: WorkWing3,
+          source:  "/images/solutionsLanding/solutionsImg/working9.png",
           desc: "Have your operational needs are seamlessly met, no matter where you are working from. And you can access meeting rooms and event spaces on demand.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your growth,",
       card3_title2: "made easy",
       card3_content: [
@@ -180,18 +180,18 @@ export const Jsons = {
           desc: "Use your new business address on your correspondence.",
         },
       ],
-      card4_img: "",
+      card4_img:  "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
       card4_title2: "productivity",
       card4_title3:
         "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
     },
-    {
+    { 
       id: 4,
       name: "events-launches",
       titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
+        "/images/solutionsLanding/solutionsImg/desktop-banner-6.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-6.png",
       title1: "Events",
       title2: "& launches",
       title3: "Designed to inspire and impress.",
@@ -207,21 +207,21 @@ export const Jsons = {
       card2: [
         {
           title: "We deliver flawless execution",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working10.png",
           desc: "We work closely with you to customise your event, ensuring your vision is brought to life seamlessly and with world-class finesse.",
         },
         {
           title: "We bring the hi-tech edge",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Our robust tech and digital platforms guarantee a hitch-free experience, enabling flawless engagement whether your audience is in-room or joining remotely.",
         },
         {
           title: "We have global standards of hospitality",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "Give your audience an exceptional event experience with valet parking, catering options, and hospitality of the highest calibre.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Your event,",
       card3_title2: "made easy",
       card3_content: [
@@ -238,7 +238,7 @@ export const Jsons = {
           desc: "We manage everything from technology operations to catering.",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity3.png",
       card4_title1: "Brimming with",
       card4_title2: "opportunity",
       card4_title3:
@@ -248,8 +248,8 @@ export const Jsons = {
       id: 4,
       name: "advertise-with-us",
       titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
+        "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
       title1: "Advertise",
       title2: "with us",
       title3: "Your workspace, tailored to your workstyle.",
@@ -264,21 +264,21 @@ export const Jsons = {
       card2: [
         {
           title: "We create maximum exposure",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working13.png",
           desc: "Our properties are in prime business hubs across major cities, ensuring your advertisements reach a high-volume, professional audience.",
         },
         {
           title: "We diversify for wide reach",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working14.png",
           desc: "We provide a variety of advertising mediums, from digital displays in common areas to branded spaces within the premises, and even opportunities for sponsored events.",
         },
         {
           title: "We reach a high-value network",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working15.png",
           desc: "Tap into our network of professionals and businesses, potentially opening doors to collaborative opportunities and new markets.",
         },
       ],
-      card3_img: "",
+      card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Spreading the",
       card3_title2: "word made easy",
       card3_content: [
@@ -295,7 +295,7 @@ export const Jsons = {
           desc: "Utilise our tools for viewer engagement insights and adjust your strategy.",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity4.png",
       card4_title1: "Brimming with",
       card4_title2: "opportunity",
       card4_title3:
@@ -305,8 +305,8 @@ export const Jsons = {
       id: 5,
       name: "meeting-rooms",
       titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
+        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
       title1: "Meeting rooms",
       title2: "",
       title3: "Foster collaboration, creativity and success.",
@@ -323,17 +323,17 @@ export const Jsons = {
       card2: [
         {
           title: "We match your pace",
-          source: WorkWing1,
+          source: "/images/solutionsLanding/solutionsImg/working10.png",
           desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
         },
         {
           title: "We are where work thrives",
-          source: WorkWing2,
+          source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
         },
         {
           title: "We take the work out of work",
-          source: WorkWing3,
+          source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
         },
       ],
@@ -354,7 +354,7 @@ export const Jsons = {
           desc: "Settle in your customised office",
         },
       ],
-      card4_img: "",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
       card4_title3:

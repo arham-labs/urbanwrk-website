@@ -13,6 +13,7 @@ import HomeBanner from "@/components/home/homeBanner";
 
 
 export default function Home() {
+  console.log("abc")
   return (
     <>
       <div className="md:pt-20 ">

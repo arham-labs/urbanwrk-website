@@ -3,7 +3,7 @@ import breathe from '../../../public/images/sustainability/breathe.svg'
 import right from '../../../public/images/sustainability/right.svg'
 import load from '../../../public/images/sustainability/load.svg'
 import home from '../../../public/images/sustainability/home.svg'
-import commitmentImage from '../../../public/images/sustainability/commitment.png'
+import commitmentImage from '../../../public/images/sustainability/commitment1.png'
 
 export default function Commitment() {
 

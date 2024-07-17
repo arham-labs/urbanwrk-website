@@ -68,7 +68,7 @@ export default function Footer() {
                 Locations
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/mumbai", title: "Mumbai" },{ link: "/pune", title: "Pune" },{ link: "/kolkata", title: "Kolkata" },{ link: "/hyderabad", title: "Hyderabad" },].map((el, i) => (
+                {[{ link: "/mumbai", title: "Mumbai" },{ link: "/pune", title: "Pune" },{ link: "/kolkata", title: "Kolkata" },{ link: "/hyderabad", title: "Hyderabad" },{ link: "/ncr", title: "NCR" }].map((el, i) => (
                   <Link className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
                   </Link>

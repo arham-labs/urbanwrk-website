@@ -11,13 +11,13 @@ export default function LinkButton({ title, href, margin, marginspace }) {
   return (
     // <Link
     //   href={href ? href : "/"}
-    //   className={`flex h-[36px] ${
-    //     margin
-    //       ? "lg:ml-[75px]"
-    //       : marginspace
-    //       ? "ml-[45px] lg:ml-[70px] xl:ml-[90px]"
-    //       : "ml-0"
-    //   } px-4 py-1 w-fit transition-all delay-100 ease-in-out border-dark border text-dark hover:bg-primary hover:text-white hover:border-transparent`}
+      // className={`flex h-[36px] ${
+      //   margin
+      //     ? "lg:ml-[75px]"
+      //     : marginspace
+      //     ? "ml-[45px] lg:ml-[70px] xl:ml-[90px]"
+      //     : "ml-0"
+      // } px-4 py-1 w-fit transition-all delay-100 ease-in-out border-dark border text-dark hover:bg-primary hover:text-white hover:border-transparent`}
   
     // >
     //   <span className="text-base">{title}</span>
@@ -36,7 +36,13 @@ export default function LinkButton({ title, href, margin, marginspace }) {
 
     <div className="group">
       <Link href={href ? href : "/"}> 
-        <div className="border-black border group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer">
+        <div className={`border-black border group-hover:border-none px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:text-white cursor-pointer ${
+        margin
+          ? "lg:ml-[75px]"
+          : marginspace
+          ? "ml-[45px] lg:ml-[70px] xl:ml-[90px]"
+          : "ml-0"
+      }`}>
           <span className="text-base bg-transparent max-md:px-4 flex py-1 text-black group-hover:text-white">
             {title}
           </span>

@@ -46,7 +46,7 @@ export default function Testimonial({ leftAlign }) {
   };
 
   return (
-    <div className="bg-bglight4 pt-16 pb-24 px-6">
+    <div className="bg-bglight4 pt-16 pb-24 px-6 lg:px-0">
       <Slider {...settings}>
         {reviewsData.map((el, i) => (
           <div
