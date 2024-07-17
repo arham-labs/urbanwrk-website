@@ -27,6 +27,7 @@ export default function Header() {
                 { subLink: '/pune', subName: 'Pune' },
                 { subLink: '/hyderabad', subName: 'Hyderabad' },
                 { subLink: '/kolkata', subName: 'Kolkata' },
+                { subLink: '/ncr', subName: 'NCR' },
             ]
         },
         {

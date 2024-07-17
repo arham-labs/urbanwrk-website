@@ -1,10 +1,5 @@
 'use client'
 import Image from "next/image";
-import Concienge from '../../../public/images/locationInside/locationSpaceCardlogo4.svg'
-import Cafeteria from '../../../public/images/locationInside/locationSpaceCardlogo2.svg';
-import Parking from '../../../public/images/locationInside/locationSpaceCardlogo3.svg'
-import Access from '../../../public/images/locationInside/locationSpaceCardlogo1.svg'
-
 import Map from '../../../public/images/location/map.png'
 import { useParams } from "next/navigation";
 import LinkButton from "@/common/linkbtn";
@@ -12,14 +7,6 @@ import LinkButton from "@/common/linkbtn";
 export default function ExploreCard({data}) {
     const params = useParams();
     // console.log(params, 'params');
-
-
-    const AmentiesData = [
-        { source: Concienge, title: "Concierge Team" },
-        { source: Cafeteria, title: "Cafetria" },
-        { source: Parking, title: "Parking" },
-        { source: Access, title: "24 X 7 Access" }
-    ]
 
     return (
         <div className="py-16 flex flex-col lg:flex-row w-full gap-8 xl:gap-7 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] ">
@@ -37,14 +24,14 @@ export default function ExploreCard({data}) {
                     </div>
                     <p className="text-sm mb-5 lg:mb-3 2xl:mb-5">{el.location3}</p>
                     <div className="grid gap-5 grid-cols-2 pb-5 border-b border-[#747474] mb-7">
-                        {AmentiesData.map((el, i) =>
+                        {el?.AmentiesData?.map((el, i) =>
                             <div className="flex items-center gap-2" key={i}>
-                                <Image src={el.source} className="" alt={el.title} />
+                                <Image src={el.source} className="w-6 h-6" alt={el.title} />
                                 <span className="text-xs lg:text-sm">{el.title}</span>
                             </div>
                         )}
                     </div>
-                    <LinkButton title="Explore" href={`${params.location}/peninsula`} />
+                    <LinkButton title="Explore" href={`${params.location}/${el.url}`} />
                 </div>
             </div></>)}
             </div>

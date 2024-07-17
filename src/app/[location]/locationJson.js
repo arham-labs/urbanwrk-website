@@ -4,11 +4,23 @@ import CardImage3 from '../../../public/images/location/card3.png'
 import CardImage4 from '../../../public/images/location/card4.png'
 import CardImage5 from '../../../public/images/location/card5.png'
 import CardImageGirl from '../../../public/images/location/girlcard.png'
+import NcrCard1 from '../../../public/images/location/ncr-card-1.png'
+import NcrCard2 from '../../../public/images/location/ncr-card-2.png'
 import MumbaiBanner from '../../../public/images/location/mumbai-banner.png'
 import PuneBanner from '../../../public/images/location/pune-banner.png'
 import KolkataBanner from '../../../public/images/location/kolkata-banner.png'
 import HyderabadBanner from '../../../public/images/location/hyderabad-banner.png'
 import NcrBanner from '../../../public/images/location/ncr-banner.png'
+import Access from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN6.svg'
+import Lock from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN2.svg'
+import Conference from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN1.svg'
+import GameRoom from '../../../public/images/locationInside/gameroom.svg'
+import Lounge from '../../../public/images/locationInside/lounge.svg'
+import Gym from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN19.svg'
+import Phonebooth from '../../../public/images/locationInside/phonebooth.svg'
+import EventSpace from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN14.svg'
+import Cafe from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN15.svg'
+import Concierge from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN22.svg'
 
 
 export const Jsons = {
@@ -22,31 +34,20 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
-          locationName: "Peninsula Park",
+          locationName: "PCP",
           locationCity: "Lower Parel",
           locationImg: CardImage1,
           location1: "Parel Station - 5 min walk",
           location2: "Best for restaurants, commute-friendly",
           location3: "A thriving corporate park in the heart of Mumbai.",
-        },
-        {
-          id: 1,
-          locationName: "Peninsula Park",
-          locationCity: "Lower Parel",
-          locationImg: CardImage1,
-          location1: "Parel Station - 5 min walk",
-          location2: "Best for restaurants, commute-friendly",
-          location3: "A thriving corporate park in the heart of Mumbai.",
-        },
-        {
-          id: 1,
-          locationName: "Peninsula Park",
-          locationCity: "Lower Parel",
-          locationImg: CardImage1,
-          location1: "Parel Station - 5 min walk",
-          location2: "Best for restaurants, commute-friendly",
-          location3: "A thriving corporate park in the heart of Mumbai.",
-        },
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms " },
+            { source: Access, title: "24x7 Access" },
+            { source: EventSpace, title: "Event spaces" }
+          ],
+          url: "pcp"
+        }
       ],
     },
     {
@@ -58,12 +59,19 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
-          locationName: "Westport ",
+          locationName: "Westport",
           locationCity: "Viman Nagar",
           locationImg: CardImage1,
           location1: "Bus Station - 5 min walk",
           location2: "Best for restaurants and centres of performing arts",
           location3: "The commercial and residential hub of Pune.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: GameRoom, title: "Game room" },
+            { source: Access, title: "24x7 Access" }
+          ],
+          url: "westport"
         },
         {
           id: 2,
@@ -73,6 +81,13 @@ export const Jsons = {
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: Gym, title: "Gym" },
+            { source: Phonebooth, title: "Phonebooth" }
+          ],
+          url: "sai-radhe"
         },
         {
           id: 3,
@@ -82,6 +97,13 @@ export const Jsons = {
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: Gym, title: "Gym" },
+            { source: Phonebooth, title: "Phonebooth" }
+          ],
+          url: "koncard"
         },
         {
           id: 4,
@@ -91,6 +113,13 @@ export const Jsons = {
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: Gym, title: "Gym" },
+            { source: Phonebooth, title: "Phonebooth" }
+          ],
+          url: "aeromall"
         },
         {
           id: 5,
@@ -100,6 +129,13 @@ export const Jsons = {
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: Gym, title: "Gym" },
+            { source: Phonebooth, title: "Phonebooth" }
+          ],
+          url: "nandan-probiz"
         },
         {
           id: 6,
@@ -109,6 +145,13 @@ export const Jsons = {
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: Phonebooth, title: "Phonebooth" },
+            { source: GameRoom, title: "Game room" }
+          ],
+          url: "montclaire"
         },
       ],
     },
@@ -127,25 +170,14 @@ export const Jsons = {
           location1: "Metro Station - 8 min walk",
           location2: "Best for hotels, restaurants",
           location3: "India’s first LEED certified Green IT Park.",
-        },
-        {
-          id: 1,
-          locationName: "Technopolis",
-          locationCity: "Salt Lake",
-          locationImg: CardImage1,
-          location1: "Metro Station - 8 min walk",
-          location2: "Best for hotels, restaurants",
-          location3: "India’s first LEED certified Green IT Park.",
-        },
-        {
-          id: 1,
-          locationName: "Technopolis",
-          locationCity: "Salt Lake",
-          locationImg: CardImage1,
-          location1: "Metro Station - 8 min walk",
-          location2: "Best for hotels, restaurants",
-          location3: "India’s first LEED certified Green IT Park.",
-        },
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms " },
+            { source: Cafe, title: "Live kitchen" },
+            { source: Phonebooth, title: "Phonebooth" }
+          ],
+          url: "technopolis"
+        }
       ],
     },
     {
@@ -157,31 +189,64 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
-          locationName: "Kohinoor IT Park",
+          locationName: "Raheja Mindspace",
           locationCity: "CYBERABAD",
           locationImg: CardImage2,
           location1: "Bus Station - 10 min walk",
           location2: "Best for convention centres, corporate offices",
           location3: "One of India’s leading tech industry hub.",
-        },
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms " },
+            { source: GameRoom, title: "Game room" },
+            { source: Access, title: "24x7 Access" },
+          ],
+          url: "raheja-mindspace"
+
+        }
+      ],
+    },
+    {
+      id: 4,
+      locationName: "NCR",
+      BannerImage: NcrBanner,
+      locationDetail:
+        "The National Capital Region (NCR) of India, encompassing Delhi, Gurgaon and surrounding districts, is a thriving economic hub with immense opportunities for enterprises and startups. This region, known for its excellent connectivity, hosts a range of industries such as Information Technology, telecommunications, manufacturing, and real estate, making it an attractive destination for businesses to flourish. With its dynamic economy, robust infrastructure and a culture of new-age innovation, NCR is an ideal destination for enterprises seeking growth and success in a competitive market.",
+      locationInfo: [
         {
           id: 1,
-          locationName: "Kohinoor IT Park",
+          locationName: "Baani",
           locationCity: "CYBERABAD",
-          locationImg: CardImage2,
+          locationImg: NcrCard1,
           location1: "Bus Station - 10 min walk",
           location2: "Best for convention centres, corporate offices",
           location3: "One of India’s leading tech industry hub.",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms " },
+            { source: Gym, title: "Gym" },
+            { source: Conference, title: "Outdoor space" },
+          ],
+          url: "banni"
+
         },
         {
-          id: 1,
-          locationName: "Kohinoor IT Park",
+          id: 2,
+          locationName: "Max House",
           locationCity: "CYBERABAD",
-          locationImg: CardImage2,
+          locationImg: NcrCard2,
           location1: "Bus Station - 10 min walk",
           location2: "Best for convention centres, corporate offices",
           location3: "One of India’s leading tech industry hub.",
-        },
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms " },
+            { source: Gym, title: "Gym" },
+            { source: Conference, title: "Outdoor space" },
+          ],
+          url: "max-house"
+
+        }
       ],
     },
   ],

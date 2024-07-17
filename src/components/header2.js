@@ -40,7 +40,7 @@ export default function Header2() {
                 { subLink: '/pune', subName: 'Pune' },
                 { subLink: '/kolkata', subName: 'Kolkata ' },
                 { subLink: '/hyderabad', subName: 'Hyderabad' },
-
+                { subLink: '/ncr', subName: 'NCR' },
             ]
         },
         {

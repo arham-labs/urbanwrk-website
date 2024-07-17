@@ -3,9 +3,9 @@ import React from 'react'
 import CommonBtnKnowMore from '../home/commonBtnKnowMore'
 import ExploreBtn from '../home/exploreBtn'
 
-export default function Restaurants() {
+export default function Restaurants({ data }) {
 
-    const data = [
+    const ImagesData = [
         { img: "/images/locationInside/locationlogo/logo1.svg", title: "WellnessWrk Gym" },
         { img: "/images/locationInside/locationlogo/logo2.svg", title: "BuzzWrk Café" },
         { img: "/images/locationInside/locationlogo/logo3.svg", title: "Visitor Management" },
@@ -20,7 +20,7 @@ export default function Restaurants() {
             <div className='w-full mx-auto  flex max-lg:items-center max-lg:justify-center  justify-between max-lg:flex-col max-lg:gap-10'>
                 <div className='w-[487px] max-lg:w-full'>
 
-                    <div className='text-6xl max-md:text-3xl '>Peninsula Park </div>
+                    <div className='text-6xl max-md:text-3xl '>{data?.locationName}</div>
                     <div className='text-base  my-4 '>
                         <p className='text-[#7D7C7C] text-xs font-semibold'>CONNECTIVITY</p>
                         <p className='pt-4'>Western Line - Lower Parel: 8 minute walk</p>
@@ -28,7 +28,7 @@ export default function Restaurants() {
                         <p>Senapati Bapat Marg: 5 minutes walk</p>
                     </div>
                     <div class='flex flex-wrap max-md:w-[300px] md:w-full gap-4'>
-                        {data.map((item, i) => <div class='flex mt-7  items-center justify-center ' key={i}>
+                        {ImagesData.map((item, i) => <div class='flex mt-7  items-center justify-center ' key={i}>
                             <Image src={item.img} height={40} width={35} alt='exploreSvg' className='mr-2' />
                             <p class='text-xs  px-1 w-[95px]'>{item.title}</p>
                         </div>)}
