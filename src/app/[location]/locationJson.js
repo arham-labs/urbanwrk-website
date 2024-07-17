@@ -44,9 +44,27 @@ export const Jsons = {
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms " },
             { source: Access, title: "24x7 Access" },
-            { source: EventSpace, title: "Event spaces" }
+            { source: EventSpace, title: "Event spacess" }
           ],
-          url: "pcp"
+          url: "pcp",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ]
         }
       ],
     },
@@ -71,7 +89,28 @@ export const Jsons = {
             { source: GameRoom, title: "Game room" },
             { source: Access, title: "24x7 Access" }
           ],
-          url: "westport"
+          url: "westport",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+            { img: Cafe, title: "Cafetaria area" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         },
         {
           id: 2,
@@ -87,7 +126,29 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "sai-radhe"
+          url: "sai-radhe",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: Gym, title: "Gym" },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         },
         {
           id: 3,
@@ -103,7 +164,29 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "koncard"
+          url: "koncard",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: Gym, title: "Gym" },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         },
         {
           id: 4,
@@ -119,7 +202,29 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "aeromall"
+          url: "aeromall",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: Gym, title: "Gym" },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         },
         {
           id: 5,
@@ -135,7 +240,28 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "nandan-probiz"
+          url: "nandan-probiz",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         },
         {
           id: 6,
@@ -151,7 +277,28 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" },
             { source: GameRoom, title: "Game room" }
           ],
-          url: "montclaire"
+          url: "montclaire",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+            { img: Cafe, title: "Cafetaria area" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         },
       ],
     },
@@ -176,7 +323,28 @@ export const Jsons = {
             { source: Cafe, title: "Live kitchen" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "technopolis"
+          url: "technopolis",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Cafe, title: "Live kitchen" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "Live kitchen" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         }
       ],
     },
@@ -201,8 +369,27 @@ export const Jsons = {
             { source: GameRoom, title: "Game room" },
             { source: Access, title: "24x7 Access" },
           ],
-          url: "raheja-mindspace"
-
+          url: "raheja-mindspace",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+            { img: Cafe, title: "Live kitchen" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Cafe, title: "Live kitchen" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         }
       ],
     },
@@ -227,8 +414,30 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Conference, title: "Outdoor space" },
           ],
-          url: "banni"
-
+          url: "banni",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Conference, title: "Outdoor space" },
+            { img: Cafe, title: "Live kitchen" },
+            { img: Phonebooth, title: "Phonebooth" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Cafe, title: "Live kitchen" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: Gym, title: "Gym" },
+            { img: GameRoom, title: "Game room" },
+            { img: Conference, title: "Outdoor space" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+          ],
         },
         {
           id: 2,
@@ -241,11 +450,30 @@ export const Jsons = {
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms " },
-            { source: Gym, title: "Gym" },
-            { source: Conference, title: "Outdoor space" },
+            { source: Phonebooth, title: "Phonebooth" },
+            { source: Access, title: "24x7 Access" },
           ],
-          url: "max-house"
-
+          url: "max-house",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Conference, title: "Outdoor space" },
+            { img: Cafe, title: "Cafetaria" },
+            { img: Lounge, title: "Event spaces" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
         }
       ],
     },

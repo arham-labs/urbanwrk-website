@@ -5,15 +5,6 @@ import ExploreBtn from '../home/exploreBtn'
 
 export default function Restaurants({ data }) {
 
-    const ImagesData = [
-        { img: "/images/locationInside/locationlogo/logo1.svg", title: "WellnessWrk Gym" },
-        { img: "/images/locationInside/locationlogo/logo2.svg", title: "BuzzWrk Café" },
-        { img: "/images/locationInside/locationlogo/logo3.svg", title: "Visitor Management" },
-        { img: "/images/locationInside/locationlogo/logo4.svg", title: "Enterprise grade IT setup" },
-        { img: "/images/locationInside/locationlogo/logo5.svg", title: "Fire safety" },
-        { img: "/images/locationInside/locationlogo/logo6.svg", title: "Parking" },
-
-    ]
     return (
         <div className='bg-[#FFF] flex '>
 
@@ -28,7 +19,7 @@ export default function Restaurants({ data }) {
                         <p>Senapati Bapat Marg: 5 minutes walk</p>
                     </div>
                     <div class='flex flex-wrap max-md:w-[300px] md:w-full gap-4'>
-                        {ImagesData.map((item, i) => <div class='flex mt-7  items-center justify-center ' key={i}>
+                        {data?.connectivityAmenities?.map((item, i) => <div class='flex mt-7  items-center justify-center ' key={i}>
                             <Image src={item.img} height={40} width={35} alt='exploreSvg' className='mr-2' />
                             <p class='text-xs  px-1 w-[95px]'>{item.title}</p>
                         </div>)}
