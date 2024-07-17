@@ -12,7 +12,6 @@ import KolkataBanner from '../../../public/images/location/kolkata-banner.png'
 import HyderabadBanner from '../../../public/images/location/hyderabad-banner.png'
 import NcrBanner from '../../../public/images/location/ncr-banner.png'
 import Access from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN6.svg'
-import Lock from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN2.svg'
 import Conference from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN1.svg'
 import GameRoom from '../../../public/images/locationInside/gameroom.svg'
 import Lounge from '../../../public/images/locationInside/lounge.svg'
@@ -20,8 +19,7 @@ import Gym from '../../../public/images/solutionsLanding/logoAmenities/amenities
 import Phonebooth from '../../../public/images/locationInside/phonebooth.svg'
 import EventSpace from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN14.svg'
 import Cafe from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN15.svg'
-import Concierge from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN22.svg'
-
+import MontClaireCard from '../../../public/images/locationInside/montclaire-card.png'
 
 export const Jsons = {
   LocationData: [
@@ -88,7 +86,7 @@ export const Jsons = {
           video: false,    
           posterImage: "",
           locationCity: "Viman Nagar",
-          locationImg: CardImage1,
+          locationImg: CardImage3,
           location1: "Bus Station - 5 min walk",
           location2: "Best for restaurants and centres of performing arts",
           location3: "The commercial and residential hub of Pune.",
@@ -134,6 +132,7 @@ export const Jsons = {
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms" },
@@ -300,10 +299,11 @@ export const Jsons = {
           video: false,
           posterImage: "",
           locationCity: "Viman Nagar",
-          locationImg: CardImage1,
+          locationImg: MontClaireCard,
           location1: "Bus Station - 5 min walk",
           location2: "Best for hotels, close to airport",
           location3: "A thriving corporate park in the heart of Mumbai.",
+          amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms" },
@@ -327,6 +327,49 @@ export const Jsons = {
             { img: Phonebooth, title: "Phonebooth" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: GameRoom, title: "Game room" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+          ],
+        },
+        {
+          id: 7,
+          bannerImage: "/images/locationInside/montclaire-banner.png",
+          locationName: "Pentagon 5",
+          videourl: "",
+          video: false,
+          posterImage: "",
+          locationCity: "Viman Nagar",
+          locationImg: MontClaireCard,
+          location1: "Bus Station - 5 min walk",
+          location2: "Best for hotels, close to airport",
+          location3: "A thriving corporate park in the heart of Mumbai.",
+          amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms" },
+            { source: Gym, title: "Gym" },
+            { source: GameRoom, title: "Game room" }
+          ],
+          url: "pentagon",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: Conference, title: "Conference rooms" },
+            { img: Gym, title: "Gym" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: GameRoom, title: "Game room" },
+            { img: Access, title: "24x7 Access" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: GameRoom, title: "Game room" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: Gym, title: "Gym" },
+            { img: Cafe, title: "Cafetaria area" },
+            { img: Phonebooth, title: "Phonebooth" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
