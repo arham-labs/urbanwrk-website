@@ -175,7 +175,7 @@ export default function FormCard() {
                   className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
                     isButtonDisabled
                       ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
-                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
+                      : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}
                 >
                   <span
