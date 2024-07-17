@@ -20,6 +20,8 @@ import Phonebooth from '../../../public/images/locationInside/phonebooth.svg'
 import EventSpace from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN14.svg'
 import Cafe from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN15.svg'
 import MontClaireCard from '../../../public/images/locationInside/montclaire-card.png'
+import PcpCard from '../../../public/images/location/pcp-card.png'
+
 
 export const Jsons = {
   LocationData: [
@@ -38,7 +40,7 @@ export const Jsons = {
           posterImage: "/images/locationInside/technopolis-banner.png",
           locationName: "PCP",
           locationCity: "Lower Parel",
-          locationImg: CardImage1,
+          locationImg: PcpCard,
           location1: "Parel Station - 5 min walk",
           location2: "Best for restaurants, commute-friendly",
           location3: "A thriving corporate park in the heart of Mumbai.",
