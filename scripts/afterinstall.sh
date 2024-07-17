@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /var/www/html/urbanwrk-website/
 sudo npm i
 sudo npm run build
 sudo pm2 kill
