@@ -2,14 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header2() {
     const [toggle, setToggle] = useState(false);
 
     const [showDropdown, setShowDropdown] = useState(false);
     const [selectedHeading, setSelectedHeading] = useState('');
-    const [mouseHover,setMouseHover]=useState(false)
+    const [mouseHover, setMouseHover] = useState(false)
 
     const handleLogoClick = () => {
         setShowDropdown(!showDropdown);
@@ -21,39 +21,43 @@ export default function Header2() {
         {
             link: '/solutions',
             name: "Solutions",
+            title: "solutions",
             subMenu: true,
             dropdown: [
-                { subLink: '/solutionsLanding/tailormade-office', subName: 'Tailormade Offices' },
-                { subLink: '/solutionsLanding/ready-to-work-in', subName: 'Ready To Work In ' },
-                { subLink: '/solutionsLanding/virtual-offices', subName: 'Virtual Offices' },
-                { subLink: '/solutionsLanding/meeting-rooms', subName: 'Meeting Rooms' },
-                { subLink: '/solutionsLanding/events-launches', subName: 'Events & Launches' },
-                { subLink: '/solutionsLanding/advertise-with-us', subName: 'Advertise With Us' },
+                { subLink: '/solutions/tailormade-office', subName: 'Tailormade Offices' },
+                { subLink: '/solutions/ready-to-work-in', subName: 'Ready To Work In ' },
+                { subLink: '/solutions/virtual-offices', subName: 'Virtual Offices' },
+                { subLink: '/solutions/meeting-rooms', subName: 'Meeting Rooms' },
+                { subLink: '/solutions/events-launches', subName: 'Events & Launches' },
+                { subLink: '/solutions/advertise-with-us', subName: 'Advertise With Us' },
             ]
         },
         {
             link: '',
+            title: 'city',
             name: "Locations",
             subMenu: true,
             dropdown: [
-                { subLink: '/mumbai', subName: 'Mumbai' },
-                { subLink: '/pune', subName: 'Pune' },
-                { subLink: '/kolkata', subName: 'Kolkata ' },
-                { subLink: '/hyderabad', subName: 'Hyderabad' },
-                { subLink: '/ncr', subName: 'NCR' },
+                { subLink: '/city/mumbai', subName: 'Mumbai' },
+                { subLink: '/city/pune', subName: 'Pune' },
+                { subLink: '/city/kolkata', subName: 'Kolkata ' },
+                { subLink: '/city/hyderabad', subName: 'Hyderabad' },
+                { subLink: '/city/ncr', subName: 'NCR' },
             ]
         },
         {
             link: '/about-us',
             name: "About Us",
+            title: "about-us",
             subMenu: true,
             dropdown: [
-                { subLink: '/sustainability', subName: 'Sustainability' },
+                { subLink: '/about-us/sustainability', subName: 'Sustainability' },
 
             ]
         },
         {
             link: '/urbanWrk-tech',
+            title: "urbanwrk-tech",
             name: "UrbanWrk Tech",
             subMenu: false,
         },
@@ -61,9 +65,9 @@ export default function Header2() {
 
     ];
 
-    useEffect(()=>{
+    useEffect(() => {
         onClose();
-    },[pathname])
+    }, [pathname])
 
     const OpenDrawer = () => {
         setToggle(!toggle);
@@ -83,15 +87,16 @@ export default function Header2() {
     const handleSubItemClick = () => {
 
     }
-const handleMouseEnter=()=>{
-    setMouseHover(true)
-}
+    const handleMouseEnter = () => {
+        setMouseHover(true)
+    }
     // const handleHead=()=>{
     //     setSelectedHeading(item.name)
     //     const a=headerData.find(name)
     //     console.log(a)
     // }
 
+    console.log("pathname", pathname);
 
     return (
         <div className="bg-[#FFF]">
@@ -111,7 +116,7 @@ const handleMouseEnter=()=>{
                                 {item.dropdown ? (
                                     <div className="relative group">
                                         <div className="flex items-center">
-                                            <Link href={item?.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item?.name}</Link>
+                                            <Link href={item?.link} className={`text-accent ${pathname.includes(item.title) ? "font-bold" : "font-medium"} text-base`}>{item?.name}</Link>
                                             <div className="ml-2">
                                                 <Image src={"/images/headerDrop.svg"} alt="abc" height={10} width={10} />
                                             </div>
@@ -144,10 +149,10 @@ const handleMouseEnter=()=>{
                             {headerData.map((item, i) => (
                                 <div key={i} className="flex flex-col mb-8">
                                     <div className="flex">
-                                        <Link href={item.link}  onClick={() => setSelectedHeading(item.name)} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base `}>
+                                        <Link href={item.link} onClick={() => setSelectedHeading(item.name)} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base `}>
                                             {item.name}
                                         </Link>
-                                        <div onClick={() =>selectedHeading === item.name ?setSelectedHeading(""): setSelectedHeading(item.name)}>
+                                        <div onClick={() => selectedHeading === item.name ? setSelectedHeading("") : setSelectedHeading(item.name)}>
                                             {item?.subMenu && (
                                                 <div className="mt-2 ml-7">
                                                     <Image src={"/images/headerDrop.svg"} alt="abc" height={12} width={12} />
@@ -157,7 +162,7 @@ const handleMouseEnter=()=>{
                                     </div>
                                     <div className={`${selectedHeading === item.name && !showDropdown ? "lg:hidden" : "hidden"}`}>
                                         {item?.subMenu && item?.dropdown.map((subItem, subIndex) => (
-                                            <div key={subIndex} className="mt-4 ml-3" onClick={()=>onClose()}>
+                                            <div key={subIndex} className="mt-4 ml-3" onClick={() => onClose()}>
                                                 <Link href={subItem.subLink} className={`text-accent ${pathname === subItem.subLink ? "font-bold" : "font-medium"} text-base `}>{subItem.subName}</Link>
                                             </div>
                                         ))}

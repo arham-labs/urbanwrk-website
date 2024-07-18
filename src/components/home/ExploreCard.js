@@ -13,11 +13,11 @@ export default function ExploreCard() {
   const city = ["Mumbai", "Pune", "Kolkata", "Hyderabad", "NCR"];
 
   const dataCity = [
-    { name: "Mumbai", link: "/mumbai" },
-    { name: "Pune", link: "/pune" },
-    { name: "Kolkata", link: "/kolkata" },
-    { name: "Hyderabad", link: "/hyderabad" },
-    { name: "NCR", link: "/ncr" },
+    { name: "Mumbai", link: "/city/mumbai" },
+    { name: "Pune", link: "/city/pune" },
+    { name: "Kolkata", link: "/city/kolkata" },
+    { name: "Hyderabad", link: "/city/hyderabad" },
+    { name: "NCR", link: "/city/ncr" },
   ];
   const solution = [
     "Tailormade Offices",
