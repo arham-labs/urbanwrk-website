@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import ExploreBtn from '../home/exploreBtn'
+import LinkButton from '@/common/linkbtn'
 
-export default function LocationSpace() {
+export default function LocationSpace({ data,url }) {
     return (
         <div>
             <div className='bg-[#F6F4EE] w-full flex gap-[60px] max-lg:hidden'>
@@ -12,7 +13,7 @@ export default function LocationSpace() {
                 <div className='flex items-center '>
                     <div className=''>
                         <h2 className='text-[45px]  '>Find your space </h2>
-                        <h2 className='font-kepler text-[53px] leading-[1.2]'>in Mumbai</h2>
+                        <h2 className='font-kepler text-[53px] leading-[1.2]'>in {data.locationName}</h2>
                         <p>Leave your mark in some of the most inspiring locations in the city.</p>
 
                         {/* <div className='border-black border flex px-8 mb-3 mt-8 w-fit'>
@@ -21,7 +22,7 @@ export default function LocationSpace() {
                             <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
                         </div> */}
                         <div className=' mb-3 mt-8'>
-                            <ExploreBtn btnName="Submit"/>
+                            <LinkButton href={url} title="Submit" />
                         </div>
                         <p>or call us at <span className='font-semibold'>
                             +91 8399959996
@@ -38,7 +39,7 @@ export default function LocationSpace() {
                     <div className='flex items-center px-6 pt-[48px] pb-[64px]'>
                         <div className=''>
                             <h2 className='text-2xl '>Find your space </h2>
-                            <h2 className='font-kepler text-[32px] leading-[1.2] '>in Mumbai</h2>
+                            <h2 className='font-kepler text-[32px] leading-[1.2] '>in {data.locationName}</h2>
                             <p className='mt-3'>Leave your mark in some of the most inspiring locations in the city.</p>
 
                             {/* <div className='border-black border flex px-8 mb-3 mt-4 w-fit'>
@@ -47,7 +48,7 @@ export default function LocationSpace() {
                             <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
                         </div> */}
                             <div className='mb-3 mt-4'>
-                                <ExploreBtn btnName="Submit" />
+                                <LinkButton href={url} title="Submit" />
                             </div>
                             <p className='pt-3'>or call us at <span className='font-semibold'>
                                 +91 8399959996

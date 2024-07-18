@@ -17,13 +17,14 @@ export default function Footer() {
         </Link>
         <div className="flex flex-col lg:flex-row w-full justify-between">
           <div className="mb-8 grid lg:grid-cols-4 gap-5 lg:gap-10 lg:mb-0">
-          <div className="flex flex-col gap-2 lg:gap-6">
+            <div className="flex flex-col gap-2 lg:gap-6">
               <span href="/location" className="text-lg uppercase">
-              CONTACT US
+                CONTACT US
               </span>
               <div className="flex flex-col gap-2 text-sm font-light">
-              <Link href="tel:+91 8399959996">+91 8399959996</Link>
+                <Link href="tel:+91 8399959996">+91 8399959996</Link>
                 <Link href="mailto:hello@urbanwrk.com">hello@urbanwrk.com</Link>
+                <p className="lg:w-[220px]">504, Tower A, Peninsula Corporate Park, Senapati Bapat Marg, Lower Parel West, Mumbai, Maharashtra 400013</p>
               </div>
             </div>
             <div className="flex flex-col gap-2 lg:gap-6">
@@ -68,20 +69,20 @@ export default function Footer() {
                 Locations
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/city/mumbai", title: "Mumbai" },{ link: "/city/pune", title: "Pune" },{ link: "/city/kolkata", title: "Kolkata" },{ link: "/city/hyderabad", title: "Hyderabad" },{ link: "/city/ncr", title: "NCR" }].map((el, i) => (
+                {[{ link: "/city/mumbai", title: "Mumbai" }, { link: "/city/pune", title: "Pune" }, { link: "/city/kolkata", title: "Kolkata" }, { link: "/city/hyderabad", title: "Hyderabad" }, { link: "/city/ncr", title: "NCR" }].map((el, i) => (
                   <Link className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
                   </Link>
                 ))}
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-2 lg:gap-6">
               <Link href="/about-us" className="text-lg uppercase">
                 About Us
               </Link>
               <div className="flex flex-col gap-2">
-                {[{ link: "/about-us/sustainability", title: "Sustainability" },{link:"/urbanWrk-tech",title:"UrbanWrk Tech"}].map(
+                {[{ link: "/about-us/sustainability", title: "Sustainability" }, { link: "/urbanWrk-tech", title: "UrbanWrk Tech" }].map(
                   (el, i) => (
                     <Link className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>

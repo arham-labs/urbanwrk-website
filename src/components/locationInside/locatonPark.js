@@ -2,14 +2,14 @@ import React from 'react'
 import LocationParkSlider from './locationParkSlider'
 import LocationParkSliderMobile from './locationParkSliderMobile'
 
-export default function LocatonPark() {
+export default function LocatonPark({ location, data }) {
     return (
         <div>
             <div className='max-md:hidden'>
-                <LocationParkSlider />
+                <LocationParkSlider location={location} data={data} />
             </div>
             <div className='md:hidden '>
-                <LocationParkSliderMobile />
+                <LocationParkSliderMobile location={location} data={data} />
             </div>
         </div>
     )
