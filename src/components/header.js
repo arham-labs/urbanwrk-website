@@ -147,24 +147,26 @@ export default function Header() {
                         <div className="flex flex-col ">
                             {headerData.map((item, i) => (
                                 <div key={i} className="flex flex-col">
-                                    <div className="flex justify-between border-b border-[#CCC] pb-5 mb-5">
-                                        <Link href={item.link} onClick={() => setSelectedHeading(item.name)} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base `}>
-                                            {item.name}
-                                        </Link>
-                                        <div onClick={() => selectedHeading === item.name ? setSelectedHeading("") : setSelectedHeading(item.name)}>
-                                            {item?.subMenu && (
-                                                <div className="mt-2 ml-7">
-                                                    <Image src={"/images/headerDrop.svg"} alt="abc" height={12} width={12} />
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <div className={`${selectedHeading === item.name && !showDropdown ? "lg:hidden" : "hidden"}`}>
-                                        {item?.subMenu && item?.dropdown.map((subItem, subIndex) => (
-                                            <div key={subIndex} className="first:mt-0 mt-4 ml-3 last:mb-5" onClick={() => onClose()}>
-                                                <Link href={subItem.subLink} className={`text-accent ${pathname === subItem.subLink ? "font-bold" : "font-medium"} text-base `}>{subItem.subName}</Link>
+                                    <div className="border-b border-[#CCC] pb-5 mb-5">
+                                        <div className="flex justify-between">
+                                            <Link href={item.link} onClick={() => setSelectedHeading(item.name)} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base `}>
+                                                {item.name}
+                                            </Link>
+                                            <div onClick={() => selectedHeading === item.name ? setSelectedHeading("") : setSelectedHeading(item.name)}>
+                                                {item?.subMenu && (
+                                                    <div className="mt-2 ml-7">
+                                                        <Image src={"/images/headerDrop.svg"} alt="abc" height={12} width={12} />
+                                                    </div>
+                                                )}
                                             </div>
-                                        ))}
+                                        </div>
+                                        <div className={`${selectedHeading === item.name && !showDropdown ? "lg:hidden" : "hidden"}`}>
+                                            {item?.subMenu && item?.dropdown.map((subItem, subIndex) => (
+                                                <div key={subIndex} className="mt-4 ml-3" onClick={() => onClose()}>
+                                                    <Link href={subItem.subLink} className={`text-accent ${pathname === subItem.subLink ? "font-bold" : "font-medium"} text-base `}>{subItem.subName}</Link>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             ))}
