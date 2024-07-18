@@ -22,7 +22,7 @@ export default function LocationSpace({ data,url }) {
                             <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
                         </div> */}
                         <div className=' mb-3 mt-8'>
-                            <LinkButton href={url} title="Submit" />
+                            <LinkButton href={url} title="Explore" />
                         </div>
                         <p>or call us at <span className='font-semibold'>
                             +91 8399959996
@@ -48,7 +48,7 @@ export default function LocationSpace({ data,url }) {
                             <Image src="/images/home/btnArrow.svg" height={12} width={12} alt='exploreSvg' className='ml-1' />
                         </div> */}
                             <div className='mb-3 mt-4'>
-                                <LinkButton href={url} title="Submit" />
+                                <LinkButton href={url} title="Explore" />
                             </div>
                             <p className='pt-3'>or call us at <span className='font-semibold'>
                                 +91 8399959996
