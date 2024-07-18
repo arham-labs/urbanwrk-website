@@ -48,8 +48,8 @@ export default function ExploreCard({data}) {
                             </div>
                             <div className='flex flex-col justify-center items-center'>
                                 <p className='text-base'>Call us Mon-Fri - 08:30-18:00</p>
-                                <p className='text-base mb-2 font-medium'>+91 98765 43210 or</p>
-                                <LinkButton title="Share your details" href="" />
+                                <p className='text-base mb-2 font-medium'>+91 8399959996</p>
+                                {/* <LinkButton title="Share your details" href="" /> */}
                             </div>
                         </div>
                     </div>

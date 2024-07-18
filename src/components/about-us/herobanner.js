@@ -9,7 +9,7 @@ export default function Herobanner() {
                 <div className="h-[700px] overflow-hidden md:hidden w-full">
                     <Image sizes="100vw" priority={true} alt="hero-banner" className="w-full" src={mobileBanner} />
                 </div>
-                <div className="hidden md:flex md:h-screen w-full md:justify-center md:items-center">
+                <div className="hidden md:flex md:h-[calc(100vh-98px)] w-full md:justify-center md:items-center">
                     <Image className="h-full w-full object-cover" sizes="100vw" priority={true} alt="hero-banner" src={DesktopBanner} />
                 </div>
                 <div className="absolute text-center bottom-32 lg:bottom-24 w-full">

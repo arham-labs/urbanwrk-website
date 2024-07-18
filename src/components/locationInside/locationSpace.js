@@ -24,7 +24,7 @@ export default function LocationSpace() {
                             <ExploreBtn btnName="Submit"/>
                         </div>
                         <p>or call us at <span className='font-semibold'>
-                            +91 98765 43210
+                            +91 8399959996
                         </span></p>
                     </div>
 
@@ -50,7 +50,7 @@ export default function LocationSpace() {
                                 <ExploreBtn btnName="Submit" />
                             </div>
                             <p className='pt-3'>or call us at <span className='font-semibold'>
-                                +91 98765 43210
+                                +91 8399959996
                             </span></p>
                         </div>
 

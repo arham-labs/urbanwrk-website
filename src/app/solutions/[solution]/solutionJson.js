@@ -212,12 +212,12 @@ export const Jsons = {
         },
         {
           title: "We bring the hi-tech edge",
-          source: "/images/solutionsLanding/solutionsImg/working11.png",
+          source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "Our robust tech and digital platforms guarantee a hitch-free experience, enabling flawless engagement whether your audience is in-room or joining remotely.",
         },
         {
           title: "We have global standards of hospitality",
-          source: "/images/solutionsLanding/solutionsImg/working12.png",
+          source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Give your audience an exceptional event experience with valet parking, catering options, and hospitality of the highest calibre.",
         },
       ],
@@ -280,7 +280,7 @@ export const Jsons = {
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
       card3_title1: "Spreading the",
-      card3_title2: "word made easy",
+      card3_title2: "made easy",
       card3_content: [
         {
           title: "Connect with us",

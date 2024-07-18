@@ -33,9 +33,9 @@ export default function Blog() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-start lg:justify-center w-full">
+                {/* <div className="flex justify-start lg:justify-center w-full">
                     <LinkButton title="Read more" href=""/>
-                </div>
+                </div> */}
             </div>
         </div>)
 }

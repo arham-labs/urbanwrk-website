@@ -33,14 +33,12 @@ export default function Restaurants({ data }) {
                             <div className='w-fit'>
                                 <div className='border border-[#747474] my-5 w-full opacity-45  '></div>
                                 <p className='text-base'>Call us Mon-Fri - 08:30-18:00       </p>
-                                <p className='text-base text-center font-medium'>+91 98765 43210 <span className='font-normal text-base '>
-                                    or
-                                </span></p>
+                                <p className='text-base text-center font-medium'>+91 8399959996</p>
                             </div>
 
-                            <div className="py-8">
+                            {/* <div className="py-8">
                                 <ExploreBtn btnName="Share your details" />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

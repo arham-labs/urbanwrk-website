@@ -97,9 +97,9 @@ export default function HomeBuild({ data }) {
               )}
             </div>
             <div className="w-full mt-2">
-              <ExploreBtn btnName={"submit"} />
+              <ExploreBtn btnName={"Submit"} />
               <span className="font-medium mt-2 block">
-                or call us at +91 98765 43210
+                or call us at +91 8399959996
               </span>
             </div>
           </form>
