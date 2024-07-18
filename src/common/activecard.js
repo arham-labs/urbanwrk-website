@@ -10,7 +10,7 @@ import LinkButton from "./linkbtn";
 const titles = [
     { id: 1, title: "READY-TO-WORK IN OFFICES" },
     { id: 2, title: "MEETING ROOMS" },
-    { id: 3, title: "EVENTS & SHOOTS" },
+    { id: 3, title: "EVENTS & LAUNCHES" },
     { id: 4, title: "ADVERTISE WITH US" }
 ]
 

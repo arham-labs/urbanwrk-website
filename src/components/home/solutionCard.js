@@ -12,7 +12,7 @@ export default function SolutionCard({ item }) {
 
       <div className='flex flex-col justify-between '>
         <div>
-          <Image src={item.img} height={400} width={422} alt='SolutionCard' className='h-full w-full max-md:min-h-[300px] max-md:max-h-[350px] lg:h-[380px]' />
+          <Image src={item.img} height={400} width={422} alt='SolutionCard' className='h-full w-full object-cover max-md:min-h-[300px] max-md:max-h-[350px] lg:h-[380px]' />
         </div>
         <div>
           <div className='flex justify-between  pb-3 pt-3 px-5'>

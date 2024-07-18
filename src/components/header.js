@@ -15,7 +15,7 @@ export default function Header() {
                 { subLink: '/tailormade-office', subName: 'Tailormade Offices' },
                 { subLink: '/tailormade-office', subName: 'Ready-To-Work In Offices' },
                 { subLink: '/tailormade-office', subName: 'Meeting Rooms' },
-                { subLink: '/tailormade-office', subName: 'Events & Shoots' },
+                { subLink: '/tailormade-office', subName: 'Events & Launches' },
                 { subLink: '/tailormade-office', subName: 'Advertise With Us' },
             ]
         },
@@ -23,11 +23,11 @@ export default function Header() {
             link: '',
             name: "Locations",
             dropdown: [
-                { subLink: '/mumbai', subName: 'Mumbai' },
-                { subLink: '/pune', subName: 'Pune' },
-                { subLink: '/hyderabad', subName: 'Hyderabad' },
-                { subLink: '/kolkata', subName: 'Kolkata' },
-                { subLink: '/ncr', subName: 'NCR' },
+                { subLink: '/city/mumbai', subName: 'Mumbai' },
+                { subLink: '/city/pune', subName: 'Pune' },
+                { subLink: '/city/hyderabad', subName: 'Hyderabad' },
+                { subLink: '/city/kolkata', subName: 'Kolkata' },
+                { subLink: '/city/ncr', subName: 'NCR' },
             ]
         },
         {

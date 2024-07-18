@@ -33,27 +33,27 @@ export default function Footer() {
               <div className="flex flex-col gap-2">
                 {[
                   {
-                    link: "/solutionsLanding/tailormade-office",
+                    link: "/solutions/tailormade-office",
                     title: "Tailormade Offices",
                   },
                   {
-                    link: "/solutionsLanding/ready-to-work-in",
+                    link: "/solutions/ready-to-work-in",
                     title: "Ready-To-Work-In Offices",
                   },
                   {
-                    link: "/solutionsLanding/virtual-offices",
+                    link: "/solutions/virtual-offices",
                     title: "Virtual Offices",
                   },
                   {
-                    link: "/solutionsLanding/meeting-rooms",
+                    link: "/solutions/meeting-rooms",
                     title: "Meeting Rooms",
                   },
                   {
-                    link: "/solutionsLanding/events-launches",
+                    link: "/solutions/events-launches",
                     title: "Events & Launches",
                   },
                   {
-                    link: "/solutionsLanding/advertise-with-us",
+                    link: "/solutions/advertise-with-us",
                     title: "Advertise With Us",
                   },
                 ].map((el, i) => (
@@ -68,7 +68,7 @@ export default function Footer() {
                 Locations
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/mumbai", title: "Mumbai" },{ link: "/pune", title: "Pune" },{ link: "/kolkata", title: "Kolkata" },{ link: "/hyderabad", title: "Hyderabad" },{ link: "/ncr", title: "NCR" }].map((el, i) => (
+                {[{ link: "/city/mumbai", title: "Mumbai" },{ link: "/city/pune", title: "Pune" },{ link: "/city/kolkata", title: "Kolkata" },{ link: "/city/hyderabad", title: "Hyderabad" },{ link: "/city/ncr", title: "NCR" }].map((el, i) => (
                   <Link className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
                   </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
                 About Us
               </Link>
               <div className="flex flex-col gap-2">
-                {[{ link: "/sustainability", title: "Sustainability" },{link:"/urbanWrk-tech",title:"UrbanWrk Tech"}].map(
+                {[{ link: "/about-us/sustainability", title: "Sustainability" },{link:"/urbanWrk-tech",title:"UrbanWrk Tech"}].map(
                   (el, i) => (
                     <Link className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>
