@@ -50,7 +50,7 @@ export const Jsons = {
             { source: Access, title: "24x7 Access" },
             { source: EventSpace, title: "Event spacess" }
           ],
-          url: "pcp",
+          url: "/city/mumbai/pcp",
           amentiesBanner: "/images/locationInside/pcp-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -98,7 +98,7 @@ export const Jsons = {
             { source: GameRoom, title: "Game room" },
             { source: Access, title: "24x7 Access" }
           ],
-          url: "westport",
+          url: "/city/pune/westport",
           amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -125,7 +125,7 @@ export const Jsons = {
         {
           id: 2,
           locationName: "Sai radhe",
-          bannerImage: "",
+          bannerImage: "/images/location/sai-radhe-banner.png",
           videourl: "",
           video: false,
           posterImage: "",
@@ -141,7 +141,7 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "sai-radhe",
+          url: "/city/pune/sai-radhe",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -183,7 +183,7 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "koncard",
+          url: "/city/pune/koncard",
           amentiesBanner: "/images/locationInside/koncard-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -213,7 +213,7 @@ export const Jsons = {
           locationName: "AeroMall",
           bannerImage: "",
           video: true,
-          videourl: "/images/locationInside/aeromall-video.mp4",
+          videourl: "/images/locationInside/areomall-video.mp4",
           posterImage: "/images/locationInside/technopolis-banner.png",
           locationCity: "Viman Nagar",
           locationImg: CardImage5,
@@ -226,7 +226,7 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "aeromall",
+          url: "/city/pune/aeromall",
           amentiesBanner: "/images/locationInside/aeromall-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -269,7 +269,7 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "nandan-probiz",
+          url: "/city/pune/nandan-probiz",
           amentiesBanner: "/images/locationInside/nandanprobiz-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -312,7 +312,7 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" },
             { source: GameRoom, title: "Game room" }
           ],
-          url: "montclaire",
+          url: "/city/pune/montclaire",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -354,7 +354,7 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: GameRoom, title: "Game room" }
           ],
-          url: "pentagon",
+          url: "/city/pune/pentagon",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -405,7 +405,7 @@ export const Jsons = {
             { source: Cafe, title: "Live kitchen" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "technopolis",
+          url: "/city/kolkata/technopolis",
           amentiesBanner: "/images/locationInside/technopolis-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -456,7 +456,7 @@ export const Jsons = {
             { source: GameRoom, title: "Game room" },
             { source: Access, title: "24x7 Access" },
           ],
-          url: "raheja-mindspace",
+          url: "/city/hyderabad/raheja-mindspace",
           amentiesBanner: "/images/locationInside/rahejamindspace-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -506,7 +506,7 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Conference, title: "Outdoor space" },
           ],
-          url: "baani",
+          url: "/city/ncr/baani",
           amentiesBanner: "/images/locationInside/baani-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -550,7 +550,7 @@ export const Jsons = {
             { source: Phonebooth, title: "Phonebooth" },
             { source: Access, title: "24x7 Access" },
           ],
-          url: "max-house",
+          url: "/city/ncr/max-house",
           amentiesBanner: "/images/locationInside/maxhouse-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },

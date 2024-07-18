@@ -3,7 +3,7 @@ import React from 'react'
 import Slider from "react-slick";
 import LocationSpaceCardMobile from './locationSpaceCardMobile';
 
-export default function LocationParkSliderMobile() {
+export default function LocationParkSliderMobile({ location, data }) {
     const settings = {
         dots: true,
         infinite: true,
@@ -13,12 +13,15 @@ export default function LocationParkSliderMobile() {
         autoplay: true,
         autoplaySpeed: 1500,
     };
+
+    const newData = data?.filter(el => !el?.url?.includes(location))
+
     return (
         <div className="slider-container relative">
             <Slider {...settings}>
-                {[...Array(3)].map((item, index) => (
+                {newData.map((item, index) => (
                     <div key={index} className="mb-16 p-1">
-                        <LocationSpaceCardMobile />
+                        <LocationSpaceCardMobile el={item} />
                     </div>
                 ))}
             </Slider>

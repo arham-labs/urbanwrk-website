@@ -3,12 +3,12 @@ import React from 'react'
 import LocationSpaceCard from './locationSpaceCard'
 import Slider from "react-slick";
 
-export default function LocationParkSlider() {
+export default function LocationParkSlider({ data, location }) {
 
 
   var settings = {
     dots: false,
-    arrows:false,
+    arrows: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -33,13 +33,14 @@ export default function LocationParkSlider() {
     ]
   }
 
+  const newData = data?.filter(el => !el?.url?.includes(location))
+
+
   return (
     <div className="slider-container">
       <Slider {...settings} >
-        {[...Array(3)].map((_, index) => (
-          <div key={index} className="pl-[20px]" >
-            <LocationSpaceCard />
-          </div>
+        {newData.map((el, index) => (
+            <LocationSpaceCard el={el} key={index} location={location} />
         ))}
       </Slider>
     </div>)

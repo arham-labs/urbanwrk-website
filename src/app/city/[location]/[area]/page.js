@@ -1,3 +1,4 @@
+'use client'
 import Testimonial from "@/common/testimonial";
 import Ways from "@/components/about-us/tailormade-office/ways";
 import LocationBanner from "@/components/locationInside/locationBanner";
@@ -10,7 +11,9 @@ import { notFound } from "next/navigation";
 import { Jsons } from "../locationJson";
 
 export default function page({ params }) {
-    const location = params.area
+    const location = `/city/${params.location}/${params.area}`
+
+    console.log("location",location);
 
     const locationData = Jsons.LocationData?.find((el) =>
         el.locationInfo.some((p) => p.url === location)
@@ -23,9 +26,11 @@ export default function page({ params }) {
         return notFound()
     }
 
+
+
     return (
         <>
-            <LocationBanner data={locationFind}/>
+            <LocationBanner data={locationFind} />
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16 ">
                 <Restaurants data={locationFind} />
             </div>
@@ -47,11 +52,11 @@ export default function page({ params }) {
                     <Testimonial />
                 </div>
             </div>
-            <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:pt-16 max-md:pb-8">
-                <LocatonPark />
-            </div>
+            {locationData?.locationInfo?.length > 1 && <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:pt-16 max-md:pb-8">
+                <LocatonPark location={location} data={locationData?.locationInfo}/>
+            </div>}
 
-            <LocationSpace />
+            <LocationSpace data={locationFind} url={`/city/${params.location}`}/>
 
         </>
     )

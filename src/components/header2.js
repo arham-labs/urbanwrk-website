@@ -96,8 +96,6 @@ export default function Header2() {
     //     console.log(a)
     // }
 
-    console.log("pathname", pathname);
-
     return (
         <div className="bg-[#FFF]">
             <div>
