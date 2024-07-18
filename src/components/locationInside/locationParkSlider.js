@@ -33,13 +33,12 @@ export default function LocationParkSlider({ data, location }) {
     ]
   }
 
-  const newData = data?.filter(el => !el?.url?.includes(location))
 
 
   return (
     <div className="slider-container">
       <Slider {...settings} >
-        {newData.map((el, index) => (
+        {data.map((el, index) => (
             <LocationSpaceCard el={el} key={index} location={location} />
         ))}
       </Slider>

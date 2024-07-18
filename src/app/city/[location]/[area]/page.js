@@ -26,6 +26,7 @@ export default function page({ params }) {
         return notFound()
     }
 
+    const newData = locationData?.locationInfo?.filter(el => !el?.url?.includes(location))
 
 
     return (
@@ -52,8 +53,8 @@ export default function page({ params }) {
                     <Testimonial />
                 </div>
             </div>
-            {locationData?.locationInfo?.length > 1 && <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:pt-16 max-md:pb-8">
-                <LocatonPark location={location} data={locationData?.locationInfo}/>
+            {newData.length > 1 && <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:pt-16 max-md:pb-8">
+                <LocatonPark location={location} data={newData}/>
             </div>}
 
             <LocationSpace data={locationFind} url={`/city/${params.location}`}/>

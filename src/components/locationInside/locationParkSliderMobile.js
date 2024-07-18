@@ -14,12 +14,10 @@ export default function LocationParkSliderMobile({ location, data }) {
         autoplaySpeed: 1500,
     };
 
-    const newData = data?.filter(el => !el?.url?.includes(location))
-
     return (
         <div className="slider-container relative">
             <Slider {...settings}>
-                {newData.map((item, index) => (
+                {data.map((item, index) => (
                     <div key={index} className="mb-16 p-1">
                         <LocationSpaceCardMobile el={item} />
                     </div>
