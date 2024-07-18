@@ -1,64 +1,51 @@
-"use client"
-import React, { useState } from 'react';
+'use client'
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick';
 
-export default function LocationBanner() {
-    const [currentSlide, setCurrentSlide] = useState(0);
+export default function LocationBanner({ data }) {
+    const [showvideo, setShowVideo] = useState(false)
+    const [showIcon, setShowIcon] = useState(true)
+    const [isPlaying, setIsPlaying] = useState(false)
+    const videoRef = useRef(null)
 
-    const settings = {
-        dots: false, 
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1700,
-        arrows: false,
-        afterChange: (current) => setCurrentSlide(current)
-    };
+    useEffect(() => {
+        setTimeout(() => {
+            setShowVideo(true)
+        }, 2000);
+
+    }, [])
+
+    const handlePlay = () => {
+        setIsPlaying(!isPlaying)
+        if (!isPlaying) {
+            videoRef.current.play()
+            setShowIcon(false)
+        }
+        else {
+            videoRef.current.pause();
+            setShowIcon(true)
+        }
+    }
 
     return (
         <div style={{ position: 'relative' }}>
-            <Slider {...settings}>
-                {[...Array(5)].map((_, i) => (
-                    <div key={i}>
-                        <div className='h-[100vh]' style={{ position: 'relative' }}>
-                            <Image src={`/images/locationInside/banner${i + 1}.png`} alt="location inside page" height={1000} width={1000} className='h-full w-full max-md:object-cover md:object-cover' unoptimized />
-                        </div>
-                    </div>
-                ))}
-            </Slider>
-            <div className="dots-container">
-                {[...Array(5)].map((_, i) => (
-                    <div
-                        key={i}
-                        className={`dot ${currentSlide === i ? 'active' : ''}`}
-                        style={{ left: `${i * 20}px` }}
-                    ></div>
-                ))}
-            </div>
-            <style jsx>{`
-                .dots-container {
-                    position: absolute;
-                    bottom: 30px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: flex;
-                }
-                .dot {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background-color: white;
-                    margin-right: 10px;
-                    cursor: pointer;
-                    transition: background-color 0.1s;
-                }
-                .dot.active {
-                    background-color: red;
-                }
-            `}</style>
+            {data.video ?
+                <div className="bg-cover bg-no-repeat relative h-screen cursor-pointer" onClick={handlePlay}>
+                    <video ref={videoRef} loop playsInline poster={data?.posterImage} className="absolute right-0 left-0 top-0 w-full h-full object-cover back-video bottom-0 -z-[1]">
+                        <source src={data?.videourl} type="video/mp4" />
+                    </video>
+                    {showIcon && <div className='absolute top-1/2 left-1/2'>
+                        <Image src="/images/locationInside/play-icon.svg" alt="play" width={100} height={100} className='w-8 lg:w-14' />
+                    </div>}
+                </div> 
+                :
+                <div className='h-[100vh]' style={{ position: 'relative' }}>
+                    <Image src={data?.bannerImage} alt="location inside page"
+                        height={1000} width={1000}
+                        className='h-full w-full max-md:object-cover md:object-cover'
+                        unoptimized />
+                </div>
+            }
         </div>
     );
 }
