@@ -1,100 +1,180 @@
-'use client'
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
     const [toggle, setToggle] = useState(false);
+
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [selectedHeading, setSelectedHeading] = useState('');
+    const [mouseHover, setMouseHover] = useState(false)
+
+    const handleLogoClick = () => {
+        setShowDropdown(!showDropdown);
+        setSelectedHeading('');
+    };
+
     const pathname = usePathname();
     const headerData = [
         {
             link: '/solutions',
             name: "Solutions",
+            title: "solutions",
+            subMenu: true,
             dropdown: [
-                { subLink: '/tailormade-office', subName: 'Tailormade Offices' },
-                { subLink: '/tailormade-office', subName: 'Ready-To-Work In Offices' },
-                { subLink: '/tailormade-office', subName: 'Meeting Rooms' },
-                { subLink: '/tailormade-office', subName: 'Events & Launches' },
-                { subLink: '/tailormade-office', subName: 'Advertise With Us' },
+                { subLink: '/solutions/tailormade-office', subName: 'Tailormade Offices' },
+                { subLink: '/solutions/ready-to-work-in', subName: 'Ready To Work In ' },
+                { subLink: '/solutions/virtual-offices', subName: 'Virtual Offices' },
+                { subLink: '/solutions/meeting-rooms', subName: 'Meeting Rooms' },
+                { subLink: '/solutions/events-launches', subName: 'Events & Launches' },
+                { subLink: '/solutions/advertise-with-us', subName: 'Advertise With Us' },
             ]
         },
         {
             link: '',
+            title: 'city',
             name: "Locations",
+            subMenu: true,
             dropdown: [
                 { subLink: '/city/mumbai', subName: 'Mumbai' },
                 { subLink: '/city/pune', subName: 'Pune' },
+                { subLink: '/city/kolkata', subName: 'Kolkata ' },
                 { subLink: '/city/hyderabad', subName: 'Hyderabad' },
-                { subLink: '/city/kolkata', subName: 'Kolkata' },
                 { subLink: '/city/ncr', subName: 'NCR' },
             ]
         },
         {
             link: '/about-us',
             name: "About Us",
+            title: "about-us",
+            subMenu: true,
             dropdown: [
-                { subLink: '', subName: 'Our Team' },
-                { subLink: '', subName: 'Our Mission' },
-                { subLink: '', subName: 'Our Values' },
+                { subLink: '/about-us/sustainability', subName: 'Sustainability' },
+
             ]
         },
         {
             link: '/urbanWrk-tech',
+            title: "urbanwrk-tech",
             name: "UrbanWrk Tech",
+            subMenu: false,
         },
-        {
-            link: '',
-            name: "Contact Us",
-        },
-       
+
+
     ];
 
+    useEffect(() => {
+        onClose();
+    }, [pathname])
+
     const OpenDrawer = () => {
-        setToggle(!toggle)
-    }
+        setToggle(!toggle);
+    };
 
     const onClose = () => {
-        setToggle(false)
+        setToggle(false);
+        // setSelectedHeading('');
+    };
+
+    const handleSubItemMouseLeave = () => {
+
+        // setHeading()
+        // onClose();
+    };
+
+    const handleSubItemClick = () => {
+
     }
+    const handleMouseEnter = () => {
+        setMouseHover(true)
+    }
+    // const handleHead=()=>{
+    //     setSelectedHeading(item.name)
+    //     const a=headerData.find(name)
+    //     console.log(a)
+    // }
 
     return (
         <div className="bg-[#FFF]">
-            <div >
+            <div>
                 <div className={`fixed w-full bg-[#FFF] ${pathname === "/" ? "animate-banner-header banner-header " : ""} top-0 z-50 flex justify-between items-center py-3 px-6 md:px-12 md:py-0 lg:px-[100px] 2xl:px-[160px]`}>
                     <Link href="/" className="">
-                        <Image src="/images/logo.svg" priority={true} width={150} height={150} className="w-32 h-12 lg:w-44 lg:h-20 " alt="urbanwork-logo" />
+                        <Image src="/images/logo.svg" priority={true} width={150} height={150} className="w-32 h-12 lg:w-44 lg:h-20" alt="urbanwork-logo" />
                     </Link>
-                    <a title="drawer" className="cursor-pointer lg:hidden" onClick={OpenDrawer}>
+                    {/* Hamburger icon for lg screens and below */}
+                    <div title="drawer" className="cursor-pointer lg:hidden" onClick={OpenDrawer}>
                         <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />
-                    </a>
-                    <div className="hidden lg:flex md:gap-14 items-center ">
-                        {headerData.map((item, i) =>
-                            <Link key={i} href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item.name}</Link>
-                        )}
-                        
                     </div>
-                    
-                </div>
-                <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e]`} onClick={onClose}>
-                    <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
-                        <div className="flex flex-col">
-                            <Link href="/" className="mb-5">
-                                <Image src="/images/logo.svg" width={150} height={150} className="w-32 h-20" alt="logo" />
-                            </Link>
-                            <div className="flex flex-col ">
-                                {headerData.map((item, i) =>
-                                    <Link key={i} href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base mb-8`} onClick={onClose}>{item.name}</Link>
+                    {/* Hidden for lg screens and above */}
+                    <div className="hidden lg:flex lg:gap-14 items-center">
+                        {headerData.map((item, i) => (
+                            <div key={i} className="relative" onMouseLeave={handleSubItemMouseLeave} onMouseEnter={handleMouseEnter}>
+                                {item.dropdown ? (
+                                    <div className="relative group">
+                                        <div className="flex items-center">
+                                            <Link href={item?.link} className={`text-accent ${pathname.includes(item.title) ? "font-bold" : "font-medium"} text-base`}>{item?.name}</Link>
+                                            <div className="ml-2">
+                                                <Image src={"/images/headerDrop.svg"} alt="abc" height={10} width={10} />
+                                            </div>
+                                        </div>
+                                        <div className="absolute top-full left-0 bg-white shadow-md mt-0 py-2 w-48 rounded-md z-10 hidden group-hover:block">
+                                            {item?.dropdown?.map((subItem, j) => (
+                                                <Link key={j} href={subItem?.subLink} className="block px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={handleSubItemClick}>{subItem?.subName}</Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <Link href={item.link} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base`}>{item.name}</Link>
                                 )}
-
                             </div>
+                        ))}
+                        {/* Hamburger icon moved here */}
+                        {/* <div className="cursor-pointer" onClick={OpenDrawer}>
+                            <Image src="/images/hamburger.svg" width={150} height={150} alt="hamburger" className="w-7" />
+                        </div> */}
+                    </div>
+                    {/* <Link href="/" className="text-white bg-primary py-[6px] px-5 text-sm hidden lg:block"><span>Book now</span></Link> */}
+                </div>
 
+                <div className={`fixed w-full h-full top-0 z-50 ${toggle ? "right-0" : "-right-full"} bg-[#0000005e] `} onClick={onClose}></div>
+                <div className={`fixed ${toggle ? "right-0" : "-right-full"} z-50 transition-all ease-in-out duration-500 bg-[#FFF] py-8 px-6 w-[80%] h-full `}>
+                    <div className="flex flex-col">
+                        <Link href="/" className="mb-5" onClick={handleLogoClick}>
+                            <Image src="/images/logo.svg" width={150} height={150} className="w-32 h-20" alt="logo" />
+                        </Link>
+                        <div className="flex flex-col ">
+                            {headerData.map((item, i) => (
+                                <div key={i} className="flex flex-col">
+                                    <div className="flex justify-between border-b border-[#CCC] pb-5 mb-5">
+                                        <Link href={item.link} onClick={() => setSelectedHeading(item.name)} className={`text-accent ${pathname === item.link ? "font-bold" : "font-medium"} text-base `}>
+                                            {item.name}
+                                        </Link>
+                                        <div onClick={() => selectedHeading === item.name ? setSelectedHeading("") : setSelectedHeading(item.name)}>
+                                            {item?.subMenu && (
+                                                <div className="mt-2 ml-7">
+                                                    <Image src={"/images/headerDrop.svg"} alt="abc" height={12} width={12} />
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className={`${selectedHeading === item.name && !showDropdown ? "lg:hidden" : "hidden"}`}>
+                                        {item?.subMenu && item?.dropdown.map((subItem, subIndex) => (
+                                            <div key={subIndex} className="first:mt-0 mt-4 ml-3 last:mb-5" onClick={() => onClose()}>
+                                                <Link href={subItem.subLink} className={`text-accent ${pathname === subItem.subLink ? "font-bold" : "font-medium"} text-base `}>{subItem.subName}</Link>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    )
+    );
 }
+
+
 

@@ -5,7 +5,7 @@ import "./globals.css"; // Assuming this is your global CSS file
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/common/footer";
-import Header2 from "@/components/header2";
+import Header from "@/components/header";
 import Chat from "@/components/chat";
 
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={worksans.className}>
 
-        <Header2/>
+        <Header/>
         {children}
         <Chat />
         <Footer/>
