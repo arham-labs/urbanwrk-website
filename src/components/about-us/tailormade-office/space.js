@@ -18,7 +18,7 @@ export default function Space({data}) {
                         <Image src={data?.card3_img} alt="space" className="w-full aspect-[8/9] lg:aspect-[7/8]" height={1000} width={1000}/>
                         <div className="absolute top-1/2 text-3xl lg:text-5xl 2xl:text-6xl left-1/2 -translate-y-1/2 -translate-x-1/2 flex justify-center flex-col">
                             <span className="block mb-2">{data?.card3_title1}</span>
-                            <span className="font-kepler">{data?.card3_title2}</span> 
+                            <span className="font-kepler">{data.name === "advertise-with-us" && <span className="font-sans">word</span>} {data?.card3_title2}</span> 
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export default function Space({data}) {
                                 </div>
                             </div>
                         )}
-                        <LinkButton title="Contact us" href="" marginspace={true}/>
+                        {/* <LinkButton title="Contact us" href="" marginspace={true}/> */}
                     </div>
                 </div>
             </div>

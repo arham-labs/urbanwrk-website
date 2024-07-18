@@ -68,12 +68,12 @@ export default function ActiveCard() {
                 </div>
             </div>
             {showData.map((item, i) =>
-                <div className="flex flex-col lg:flex-row items-end gap-10 lg:gap-24" key={i}>
+                <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-24" key={i}>
                     <div className="w-full lg:w-1/2">
                         <Image src={item.source} className="aspect-[15/13] w-full" alt="image" />
                     </div>
                     <div className="flex flex-col w-full lg:w-1/2">
-                        <div className="border-b border-[#747474] pb-6 lg:pb-10 mb-6 lg:mb-7">
+                        <div className="mb-6 lg:mb-7">
                             <p className="leading-6 w-full lg:w-[85%] text-sm lg:text-base mb-7 font-medium">{item.desc}</p>
                             <ul className="text-sm flex flex-col font-medium gap-6 lg:gap-4 w-auto lg:w-[80%] list-disc ml-6 lg:ml-7">
                                 {item.list.map((el, i) =>
@@ -81,7 +81,7 @@ export default function ActiveCard() {
                                 )}
                             </ul>
                         </div>
-                        <LinkButton title={item.btn} href="" />
+                        {/* <LinkButton title={item.btn} href="" /> */}
                     </div>
                 </div>
             )}

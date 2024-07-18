@@ -19,13 +19,13 @@ export default function Page() {
 
     return (
         <>
-           <Herobanner/>
+            <Herobanner />
             <WorkSpace />
             <WorkSwings />
-            <Speciality data={specilatiesData} title="Why Us"/>
+            <Speciality data={specilatiesData} title="Why Us" />
             <Intro />
             <Vision />
-            <FormCard/>
+            <FormCard />
         </>
     )
 }

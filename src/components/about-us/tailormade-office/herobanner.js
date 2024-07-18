@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function Herobanner({data}) {
     return (
-        <div className="text-white relative">
+        <div className="text-white relative pt-12 lg:pt-20">
             <div className="flex justify-center items-center ">
                 <div className="h-[700px] overflow-hidden md:hidden w-full">
                     <Image sizes="100vw" priority={true} className="w-full" alt="hero-banner" src={data.titleImgMob} width={200} height={200} unoptimized/>
                 </div>
-                <div className="hidden md:flex md:h-screen w-full md:justify-center md:items-center">
+                <div className="hidden md:flex md:h-[calc(100vh-80px)] w-full md:justify-center md:items-center">
                     <Image className="h-full w-full object-cover" sizes="100vw" priority={true} alt="hero-banner" src={data.titleImgDesk} width={200} height={200} unoptimized/>
                 </div>
                 <div className="absolute text-center bottom-32 lg:bottom-24 w-full">
