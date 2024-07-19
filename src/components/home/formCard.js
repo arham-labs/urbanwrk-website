@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import Image from "next/image";
+import BasicSelectDrop from "./dropdown";
 
 export default function FormCard() {
   const {
@@ -15,6 +16,8 @@ export default function FormCard() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const city = ["Mumbai", "Pune", "Kolkata", "Hyderabad", "NCR"];
+
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -142,6 +145,7 @@ export default function FormCard() {
               </div>
               <div className="mb-4">
                 <label className="block font-semibold">CITY:</label>
+                {/* <BasicSelectDrop list={city} labelName="City" /> */}
                 <select
                   {...register("city", { required: "City is required" })}
                   className="border-black border-solid border w-full h-[38px]"
@@ -151,6 +155,7 @@ export default function FormCard() {
                   <option value="Pune">Pune</option>
                   <option value="Kolkata">Kolkata</option>
                   <option value="Hyderabad">Hyderabad</option>
+                  <option value="Los Angeles">NCR</option>
                 </select>
                 {errors.city && (
                   <span className="text-red-500">{errors.city.message}</span>
@@ -172,31 +177,28 @@ export default function FormCard() {
                 <button
                   type="submit"
                   disabled={isButtonDisabled || isLoading}
-                  className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${
-                    isButtonDisabled
+                  className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${isButtonDisabled
                       ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                       : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
-                  }`}
+                    }`}
                 >
                   <span
-                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${
-                      isButtonDisabled
+                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${isButtonDisabled
                         ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
                         : "group-hover:text-white"
-                    } `}
+                      } `}
                   >
                     Submit{" "}
                   </span>
                   <div
-                    className={`${
-                      !isButtonDisabled
+                    className={`${!isButtonDisabled
                         ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
                         : "bg-[url('/images/home/disableArrow.svg')]"
-                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                      }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
                   ></div>
                 </button>
               </div>
-         
+
 
             </form>
           </div>

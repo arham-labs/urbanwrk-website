@@ -5,12 +5,12 @@ export default function Speciality({ data, title }) {
 
     return (
         <div className="bg-bglight3">
-            <div className="px-6 lg:px-0 flex flex-col gap-10 lg:gap-20 lg:flex-row items-center">
+            <div className="px-0 flex flex-col lg:gap-20 lg:flex-row items-center">
                 <div className="w-full lg:w-[45%] aspect-square lg:h-[1035px] xl:h-[880px] 2xl:h-[790px]">
                     <Image src={WorkingSpace} alt="image" className="w-full object-cover h-full" />
                 </div>
-                <div className="w-full lg:w-[65%] py-16 lg:py-20 mx-auto lg:pr-[100px] 2xl:pr-40">
-                    <span className="text-3xl lg:text-4xl block mb-2">{title}</span>
+                <div className="px-6 w-full lg:w-[65%] py-16 lg:pl-0 lg:py-20 mx-auto lg:pr-[100px] 2xl:pr-40">
+                    <span className="text-3xl lg:text-4xl block mb-2 text-nowrap">{title}</span>
                     <span className="text-3xl lg:text-4xl block mb-8 lg:mb-10 font-kepler">work for you.</span>
                     <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 lg:gap-10">
                         {data.map((item, i) =>

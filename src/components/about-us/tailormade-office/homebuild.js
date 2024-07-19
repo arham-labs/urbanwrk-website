@@ -91,6 +91,7 @@ export default function HomeBuild({ data }) {
                 <option value="Los Angeles">Pune</option>
                 <option value="Los Angeles">Kolkata</option>
                 <option value="Los Angeles">Hyderabad</option>
+                <option value="Los Angeles">NCR</option>
               </select>
               {errors.city && (
                 <span className="text-red-500">This field is required</span>

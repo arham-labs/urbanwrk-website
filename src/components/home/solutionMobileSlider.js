@@ -10,14 +10,14 @@ function SolutionMobileSlider({data}) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 1500,
     };
     return (
         <div className="slider-container">
             <Slider {...settings}>
-            {data.map((item, index) => (
-                    <div key={index} className=" mb-6 px-1 ">
+            {data?.map((item, index) => (
+                    <div key={index} className="px-1 mb-6">
                         <SolutionCard item={item} />
                     </div>
                 ))}
