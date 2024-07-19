@@ -234,7 +234,7 @@ export const Jsons = {
           locationCity: "Viman Nagar",
           locationImg: CardImage5,
           locationMobileImg: "/images/location/aeromall-mobile.png",
-          location1: "Metro Station - 1 kilometre",
+          location1: "Metro Station - 1 km",
           location2: "Airport - 10 m",
           location3: "A thriving corporate park in the heart of Pune.",
           AmentiesData: [
@@ -425,7 +425,7 @@ export const Jsons = {
           locationCity: "Salt Lake",
           locationImg: CardImage1,
           locationMobileImg: "/images/location/kolkata-mobile.png",
-          location1: "Metro Station - 1.8km",
+          location1: "Metro Station - 1.8 km",
           location2: "Airport - 9.7 km",
           location3: "India’s first LEED certified Green IT Park.",
           AmentiesData: [
