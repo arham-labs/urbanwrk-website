@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-[#FFFFFF] ">
-        <div className=" px-6 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[100px] max-md:py-16">
+        <div className=" px-5 max-w-[1920px]  mx-auto py-20 2xl:px-[160px] lg:px-[100px] max-md:py-16">
           <Solutions />
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function AmenitiesSliderMobile({ data }) {
                 {data?.locationInsideAmenities?.map((item, index) => (
                     <div key={index} className="flex flex-wrap gap-20 px-4 py-4 justify-center items-center min-h-[170px]">
                         <div className='flex flex-col pb-3 '>
-                            <Image src={item?.img} alt={"img"} width={50} height={50}
+                            <Image src={item?.img} alt={"img"} className='w-9 h-9' width={50} height={50}
                             />
                             <div className="pt-5 flex flex-wrap ">{item?.title}</div>
                         </div>

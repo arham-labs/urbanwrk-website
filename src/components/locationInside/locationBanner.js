@@ -31,18 +31,25 @@ export default function LocationBanner({ data }) {
         <div style={{ position: 'relative' }}>
             {data.video ?
                 <div className="bg-cover bg-no-repeat relative h-screen cursor-pointer" onClick={handlePlay}>
-                    <video ref={videoRef} loop playsInline poster={data?.posterImage} className="absolute right-0 left-0 top-0 w-full h-full object-cover back-video bottom-0 -z-[1]">
+                    <video ref={videoRef} loop playsInline poster={data?.posterImage} className="hidden lg:block absolute right-0 left-0 top-0 w-full h-full object-cover back-video bottom-0 -z-[1]">
+                        <source src={data?.videourl} type="video/mp4" />
+                    </video>
+                    <video ref={videoRef} loop playsInline poster={data?.posterMobileImage} className="lg:hidden absolute right-0 left-0 top-0 w-full h-full object-cover back-video bottom-0 -z-[1]">
                         <source src={data?.videourl} type="video/mp4" />
                     </video>
                     {showIcon && <div className='absolute top-1/2 left-1/2'>
                         <Image src="/images/locationInside/play-icon.svg" alt="play" width={100} height={100} className='w-8 lg:w-14' />
                     </div>}
-                </div> 
+                </div>
                 :
                 <div className='h-[100vh]' style={{ position: 'relative' }}>
                     <Image src={data?.bannerImage} alt="location inside page"
                         height={1000} width={1000}
-                        className='h-full w-full max-md:object-cover md:object-cover'
+                        className='hidden lg:block h-full w-full max-md:object-cover md:object-cover'
+                        unoptimized />
+                    <Image src={data?.mobileBanner} alt="location inside page"
+                        height={1000} width={1000}
+                        className='lg:hidden h-full w-full'
                         unoptimized />
                 </div>
             }
