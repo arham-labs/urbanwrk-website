@@ -32,9 +32,9 @@ export default function Page({ params }) {
       {solutionFind.name === "meeting-rooms" && (
         <MeetingRoomSpace data={solutionFind} />
       )}
-      {solutionFind.name === "meeting-rooms" && (
+      {/* {solutionFind.name === "meeting-rooms" && (
         <MeetingListing data={solutionFind}  el={el}/>
-      )}
+      )} */}
       {solutionFind.name !== "meeting-rooms" && (
         <HomeBuild data={solutionFind} />
       )}

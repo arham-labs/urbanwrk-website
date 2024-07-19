@@ -18,10 +18,10 @@ export default function Restaurants({ data }) {
                         <p>Harbour Line - Parel:  5 minutes walk</p>
                         <p>Senapati Bapat Marg: 5 minutes walk</p>
                     </div>
-                    <div class='flex flex-wrap max-md:w-[300px] md:w-full gap-4'>
-                        {data?.connectivityAmenities?.map((item, i) => <div class='flex mt-7  items-center justify-center ' key={i}>
+                    <div className='flex flex-wrap max-md:w-[300px] md:w-full gap-4'>
+                        {data?.connectivityAmenities?.map((item, i) => <div className='flex mt-7  items-center justify-center ' key={i}>
                             <Image src={item.img} height={40} width={35} alt='exploreSvg' className='mr-2' />
-                            <p class='text-xs  px-1 w-[95px]'>{item.title}</p>
+                            <p className='text-xs  px-1 w-[95px]'>{item.title}</p>
                         </div>)}
                     </div>
                 </div>
