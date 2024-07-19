@@ -11,12 +11,11 @@ export default function Restaurants({ data }) {
             <div className='w-full mx-auto  flex max-lg:items-center max-lg:justify-center  justify-between max-lg:flex-col max-lg:gap-10'>
                 <div className='w-[487px] max-lg:w-full'>
 
-                    <div className='text-6xl max-md:text-3xl '>{data?.locationName}</div>
+                    <div className='text-6xl max-md:text-3xl uppercase'>{data?.locationName}</div>
                     <div className='text-base  my-4 '>
                         <p className='text-[#7D7C7C] text-xs font-semibold'>CONNECTIVITY</p>
-                        <p className='pt-4'>Western Line - Lower Parel: 8 minute walk</p>
-                        <p>Harbour Line - Parel:  5 minutes walk</p>
-                        <p>Senapati Bapat Marg: 5 minutes walk</p>
+                        <p className='pt-4'>{data.location1}</p>
+                        <p>{data.location2}</p>
                     </div>
                     <div className='flex flex-wrap max-md:w-[300px] md:w-full gap-4'>
                         {data?.connectivityAmenities?.map((item, i) => <div className='flex mt-7  items-center justify-center ' key={i}>
