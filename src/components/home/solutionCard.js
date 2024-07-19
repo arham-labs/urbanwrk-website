@@ -27,7 +27,7 @@ export default function SolutionCard({ item }) {
           <div className='px-5'>
             <div className='border-black border'></div>
           </div>
-          <p className='text-base px-5 pt-2 pb-5 max-md:text-sm max-md:pb-1 '>{item.desc}</p>
+          <p className='text-base px-5 pt-2 pb-5 max-md:pb-1 '>{item.desc}</p>
         </div>
       </div>
       <div className='bg-primary h-3 border border-primary mt-1 bottom-0 w-full absolute'></div>

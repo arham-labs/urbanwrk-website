@@ -33,8 +33,8 @@ export default function LocationSpace({ data,url }) {
             </div>
             <div className='lg:hidden'>
                 <div className='bg-[#F6F4EE] w-full flex flex-col '>
-                    <div className='w-full h-[429px]'>
-                        <Image src="/images/locationInside/locationSpace.png" alt='space' height={300} width={300} className='h-full w-full' unoptimized />
+                    <div className='w-full aspect-[25/15]'>
+                        <Image src="/images/locationInside/locationSpaceMobile.png" alt='space' height={300} width={300} className='h-full w-full' unoptimized />
                     </div>
                     <div className='flex items-center px-6 pt-[48px] pb-[64px]'>
                         <div className=''>
