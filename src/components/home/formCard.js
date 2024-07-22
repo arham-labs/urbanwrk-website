@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import Image from "next/image";
-import BasicSelectDrop from "./dropdown";
+import BasicSelectDrop from "../../components/select";
+import { toast } from "react-toastify";
+
 
 export default function FormCard() {
   const {
@@ -17,12 +19,11 @@ export default function FormCard() {
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const city = ["Mumbai", "Pune", "Kolkata", "Hyderabad", "NCR"];
-
+  const [storeCity, setStoreCity] = useState("");
 
   const onSubmit = async (data) => {
     setIsLoading(true);
     setIsButtonDisabled(true)
-    console.log(data);
 
     const formData = new FormData();
     for (const key in data) {
@@ -38,6 +39,7 @@ export default function FormCard() {
       });
 
       if (!response.ok) {
+        toast.error("Something went wrong");
         throw new Error(`Invalid response: ${response.status}`);
       }
       console.log("submit", response);
@@ -145,21 +147,19 @@ export default function FormCard() {
               </div>
               <div className="mb-4">
                 <label className="block font-semibold">CITY:</label>
-                {/* <BasicSelectDrop list={city} labelName="City" /> */}
-                <select
-                  {...register("city", { required: "City is required" })}
-                  className="border-black border-solid border w-full h-[38px]"
-                >
-                  <option value="">Select a city</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Kolkata">Kolkata</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                  <option value="Los Angeles">NCR</option>
-                </select>
-                {errors.city && (
-                  <span className="text-red-500">{errors.city.message}</span>
-                )}
+                <Controller control={control} name="city"
+                  render={({ field }) => (
+                    <>
+                      <BasicSelectDrop list={city} {...field} value={storeCity} labelName="City" handleSelectChange={(val) => {
+                        field.onChange(val)
+                        setStoreCity(val)
+                      }} />
+                      {errors.city && (
+                        <span className="text-red-500">{errors.city.message}</span>
+                      )}
+                    </>
+                  )}
+                />
               </div>
               <div className="mb-4 max-lg:mt-6">
                 <p className="text-sm">
@@ -178,22 +178,22 @@ export default function FormCard() {
                   type="submit"
                   disabled={isButtonDisabled || isLoading}
                   className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${isButtonDisabled
-                      ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
-                      : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
+                    ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
+                    : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
                     }`}
                 >
                   <span
                     className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${isButtonDisabled
-                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
-                        : "group-hover:text-white"
+                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                      : "group-hover:text-white"
                       } `}
                   >
                     Submit{" "}
                   </span>
                   <div
                     className={`${!isButtonDisabled
-                        ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
-                        : "bg-[url('/images/home/disableArrow.svg')]"
+                      ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                      : "bg-[url('/images/home/disableArrow.svg')]"
                       }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
                   ></div>
                 </button>

@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/common/footer";
 import Header from "@/components/header";
 import Chat from "@/components/chat";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const worksans = Work_Sans({ subsets: ["latin"] });
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
         {children}
         <Chat />
         <Footer/>
+        <ToastContainer autoClose={3000} />
       </body>
     </html>
   );

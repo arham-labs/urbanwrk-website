@@ -48,11 +48,11 @@ export default function page({ params }) {
             <div className=" bg-bglight2   mx-auto  ">
                 <Ways />
             </div>
-            <div className="bg-bglight4 ">
+            {/* <div className="bg-bglight4 ">
                 <div className="  max-w-[1920px] mx-auto ">
                     <Testimonial />
                 </div>
-            </div>
+            </div> */}
             {newData.length > 1 && <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:pt-16 max-md:pb-8">
                 <LocatonPark location={location} data={newData}/>
             </div>}

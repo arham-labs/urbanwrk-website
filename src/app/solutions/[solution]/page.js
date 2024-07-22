@@ -43,8 +43,8 @@ export default function Page({ params }) {
       <Productivity data={solutionFind} />
       <ExploreCard />
       <Ways />
-      <Testimonial />
-      <Blog />
+      {/* <Testimonial /> */}
+      {/* <Blog /> */}
     </>
   );
 }

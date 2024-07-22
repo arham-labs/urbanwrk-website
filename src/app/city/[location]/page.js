@@ -21,7 +21,7 @@ export default function Page({ params }) {
     <>
       <Herobanner data={locationFind} />
       <ExploreCard data={locationFind} />
-      <Blog />
+      {/* <Blog /> */}
     </>
   );
 }

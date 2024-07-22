@@ -7,7 +7,7 @@ export default function LocationParkSlider({ data, location }) {
 
 
   var settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     slidesToShow: 2,
@@ -37,10 +37,21 @@ export default function LocationParkSlider({ data, location }) {
 
   return (
     <div className="slider-container">
-      <Slider {...settings} >
-        {data.map((el, index) => (
+      <Slider {...settings} className='mb-8'>
+          {data.map((el, index) => (
             <LocationSpaceCard el={el} key={index} location={location} />
-        ))}
+          ))}
       </Slider>
+      <style jsx global>{`
+        .slick-dots{
+           bottom: -65px !important;
+        }
+        .slick-dots li {
+          display: inline-block;
+          margin: 0 !important;
+      }
+      `}
+
+      </style>
     </div>)
 }
