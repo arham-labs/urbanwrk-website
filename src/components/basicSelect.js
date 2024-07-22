@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) => ({
+const BootstrapInput = styled(InputBase)(({ theme, selectedOption, fullWidth, bgwhite }) => ({
   // {console.log(age)}
   "label + &": {
     marginTop: theme.spacing(3),
@@ -15,7 +15,7 @@ const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) =
   "& .MuiInputBase-input": {
     // borderRadius: 4,
     position: "relative",
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
     border: "1px solid black",
     fontSize: 16,
     width: "100%",
@@ -36,7 +36,7 @@ const BootstrapInput = styled(InputBase)(({ theme, selectedOption,fullWidth }) =
   },
 }));
 
-export default function CustomizedSelects({ list, labelName,handleSelectChange }) {
+export default function CustomizedSelects({ list, labelName, handleSelectChange }) {
   const [selectedOption, setSelectedOption] = React.useState("");
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -45,7 +45,7 @@ export default function CustomizedSelects({ list, labelName,handleSelectChange }
 
   return (
     <div className="w-full h-[50px] ">
-      <FormControl sx={{  width:"100%" }} variant="standard">
+      <FormControl sx={{ width: "100%" }} variant="standard">
         <Select
           labelId="demo-customized-select-label"
           id="demo-customized-select"
@@ -78,7 +78,7 @@ export default function CustomizedSelects({ list, labelName,handleSelectChange }
             <MenuItem
               value={item}
               key={i}
-              className={selectedOption === item ? "text-primary !bg-white" : "hover:bg-red-300"}
+              className="text-primary !bg-white hover:bg-red-300"
             >
               {item}
             </MenuItem>

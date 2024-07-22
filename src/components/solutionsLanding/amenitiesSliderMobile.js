@@ -3,7 +3,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
-export default function AmenitiesSliderMobile({ data }) {
+export default function AmenitiesSliderMobile({ data, align }) {
 
     const settings = {
         dots: true,
@@ -31,7 +31,6 @@ export default function AmenitiesSliderMobile({ data }) {
             </Slider>
             <style>{`
                 .slick-dots {
-                    text-align: left !important;
                     bottom: 0px;
                     width: 100%;
                     padding: 0;

@@ -28,7 +28,7 @@ export default function Solutions() {
             <div className='w-full  max-md:hidden mx-auto pt-20 2xl:max-w-[1560px] '>
                 <SolutionSlider  data={data} />
             </div>
-            <div className='w-full  md:hidden  pt-8   pb-4'>
+            <div className='w-full  md:hidden  pt-8'>
                 <SolutionMobileSlider data={data} />
             </div>
         </div>

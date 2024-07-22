@@ -101,13 +101,13 @@ export default function HomeBuild({ data }) {
       <div className="w-full lg:w-1/2 bg-bglight1 p-5 lg:p-12">
         <div className="flex flex-col justify-center">
           <span className="mb-5 text-xl font-medium">Get in touch</span>
-          <p className="mb-5 w-[300px]">
+          <p className="mb-5">
             Tell us what you need and our team will work out the best space for
             it.
           </p>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col md:w-full lg:w-[400px] xl:w-[462px] lg:mt-4"
+            className="flex flex-col w-full lg:mt-4"
           >
             <div className="mb-4">
               <label className="block font-semibold">NAME:</label>
@@ -179,7 +179,7 @@ export default function HomeBuild({ data }) {
                 <Link href="/privacy-policy"><span className="underline">Privacy Policy</span></Link>
               </p>
             </div>
-            <div className="mb-4 lg:flex lg:justify-center max-lg:py-3">
+            <div className="mb-4 lg:flex max-lg:py-3">
               <input type="checkbox" {...register("newsUpdates")} />
               <label className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
             </div>

@@ -25,7 +25,7 @@ export default function Page() {
             <Speciality data={specilatiesData} title="Make your workspace" />
             <Intro />
             <Vision />
-            <FormCard />
+            <FormCard/>
         </>
     )
 }

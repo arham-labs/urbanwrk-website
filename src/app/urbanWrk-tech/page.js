@@ -12,7 +12,7 @@ export default function page() {
             <DataDriven />
             <BetterSpace />
             {/* <Testimonial /> */}
-            <FormCard />
+            <FormCard/>
         </div>
     )
 }

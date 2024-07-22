@@ -151,7 +151,7 @@ export default function FormCard() {
                 <Controller control={control} name="city"
                   render={({ field }) => (
                     <>
-                      <BasicSelectDrop list={city} {...field} value={storeCity} labelName="City" handleSelectChange={(val) => {
+                      <BasicSelectDrop list={city} {...field} value={storeCity} bgwhite={true} labelName="Select City" handleSelectChange={(val) => {
                         field.onChange(val)
                         setStoreCity(val)
                       }} />

@@ -41,6 +41,11 @@ function SolutionMobileSlider({data}) {
                     color: #C72030 !important;
                     font-size: 8px !important;
                 }
+                @media screen and (min-width: 1024px){
+                    .slick-dots{
+                        bottom: -65px !important;
+                     }
+                }
             `}</style>
         </div>
         

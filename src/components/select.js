@@ -7,37 +7,39 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const BootstrapInput = styled(InputBase)(({ theme, selected,fullWidth }) => ({
-  // {console.log(age)}
-  "label + &": {
-    marginTop: theme.spacing(3),
-  },
-  "& .MuiInputBase-input": {
-    // borderRadius: 4,
-    position: "relative",
-    backgroundColor: "#F6F4EE",
-    border: "1px solid black",
-    fontSize: 16,
-    width: "100%",
-    
-    padding: "5px 36px 5px 12px",
-    transition: theme.transitions.create(["border-color", "box-shadow"]),
-    // Use the system font instead of the default Roboto font.
+export default function CustomizedSelects({ list, labelName, handleSelectChange,bgwhite }) {
+    console.log("bgwhite",bgwhite);
 
-    "&:focus": {
-      outline: "none",
-      border: "1px solid black",
-      boxShadow: "none",
+  const BootstrapInput = styled(InputBase)(({ theme, selected, fullWidth }) => ({
+    // {console.log(age)}
+    "label + &": {
+      marginTop: theme.spacing(3),
     },
-  },
-  "& .MuiSelect-icon": {
-    color: selected ? "#C72030" : "",
-    fontSize: "20px",
-    marginRight: "10px",
-  },
-}));
-
-export default function CustomizedSelects({ list, labelName,handleSelectChange }) {
+    "& .MuiInputBase-input": {
+      // borderRadius: 4,
+      position: "relative",
+      border: "1px solid black",
+      fontSize: 16,
+      width: "100%",
+      // backgroundColor: !bgwhite ? "white" : theme.palette.background.paper,
+      padding: "5px 36px 5px 12px",
+      transition: theme.transitions.create(["border-color", "box-shadow"]),
+      // Use the system font instead of the default Roboto font.
+  
+      "&:focus": {
+        outline: "none",
+        border: "1px solid black",
+        boxShadow: "none",
+      },
+    },
+    "& .MuiSelect-icon": {
+      color: selected ? "#C72030" : "",
+      fontSize: "20px",
+      marginRight: "10px",
+    },
+  }));
+  
+  
   const [selected, setSelectedOption] = React.useState("");
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -46,7 +48,7 @@ export default function CustomizedSelects({ list, labelName,handleSelectChange }
 
   return (
     <div className="w-full h-[50px] ">
-      <FormControl sx={{  width:"100%" }} variant="standard">
+      <FormControl sx={{ width: "100%" }} variant="standard">
         <Select
           labelId="demo-customized-select-label"
           id="demo-customized-select"
@@ -80,7 +82,7 @@ export default function CustomizedSelects({ list, labelName,handleSelectChange }
               value={item}
               key={i}
               className={selected === item ? "text-primary !bg-white" : "hover:bg-red-300"}
-              // className="bg-bglight1"
+            // className="bg-bglight1"
             >
               {item}
             </MenuItem>
