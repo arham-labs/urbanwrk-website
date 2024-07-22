@@ -44,11 +44,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-bglight4 ">
+      {/* <div className="bg-bglight4 ">
         <div className="  max-w-[1920px]   mx-auto ">
           <Testimonial />
         </div>
-      </div>
+      </div> */}
       <FormCard />
     </>
   );

@@ -21,7 +21,7 @@ export default function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center lg:items-end mb-10 lg:mb-32 lg:flex-row-reverse lg:gap-10 xl:gap-0">
+                <div className="flex flex-col items-center lg:items-end lg:flex-row-reverse lg:gap-10 xl:gap-0">
                     <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
                         <Image src={Harsh} alt="image" className="w-full object-cover h-full" />
                     </div>
@@ -33,7 +33,7 @@ export default function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center lg:items-end lg:flex-row lg:gap-10 xl:gap-0">
+                {/* <div className="flex flex-col items-center lg:items-end lg:flex-row lg:gap-10 xl:gap-0">
                     <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
                         <Image src={Abbishek} alt="image" className="w-full object-cover h-full" />
                     </div>
@@ -44,7 +44,7 @@ export default function Vision() {
                             <Image src={LinkedIn} alt="logo" className="w-[30px]" />
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>)
 }

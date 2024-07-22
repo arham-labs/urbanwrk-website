@@ -367,7 +367,7 @@ export const Jsons = {
           video: false,
           posterImage: "",
           posterMobileImage: "",
-          locationCity: "Viman Nagar",
+          locationCity: "Magarpatta",
           locationImg: CardImage7,
           locationMobileImg: "/images/location/pentagon-mobile.png",
           location1: "Metro Station - 5.4 km",

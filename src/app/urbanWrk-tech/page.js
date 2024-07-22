@@ -11,7 +11,7 @@ export default function page() {
             <TechnologyBanner />
             <DataDriven />
             <BetterSpace />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <FormCard />
         </div>
     )

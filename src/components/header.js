@@ -38,11 +38,11 @@ export default function Header() {
             name: "Locations",
             subMenu: true,
             dropdown: [
-                { subLink: '/city/mumbai', subName: 'Mumbai' },
-                { subLink: '/city/pune', subName: 'Pune' },
-                { subLink: '/city/kolkata', subName: 'Kolkata ' },
                 { subLink: '/city/hyderabad', subName: 'Hyderabad' },
+                { subLink: '/city/kolkata', subName: 'Kolkata ' },
+                { subLink: '/city/mumbai', subName: 'Mumbai' },
                 { subLink: '/city/ncr', subName: 'NCR' },
+                { subLink: '/city/pune', subName: 'Pune' },
             ]
         },
         {
