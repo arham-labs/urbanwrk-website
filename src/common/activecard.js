@@ -19,29 +19,33 @@ const activeData = [
         id: 1,
         desc: "Semi-branded offices for a team of up to 1000 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.",
         list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "WELL & LEED Certified, sustainable and eco-conscious offices", "24/7 access to your workspace"],
-        source: section2,
-        btn: "Contact us"
+        source: section1,
+        btn: "Explore",
+        href: "/solutions/ready-to-work-in"
     },
     {
         id: 2,
         desc: "Connect, create and collaborate in our individually designed meeting rooms, all enabled with the latest technology.",
         list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater available when given 48-hour notice", "Booking available by the hour, half day or full day"],
-        source: section1,
-        btn: "Book now"
+        source: section2,
+        btn: "Explore",
+        href: "/solutions/meeting-rooms"
     },
     {
         id: 3,
         desc: "Tailormade event solutions where every detail of your event is meticulously crafted to perfection. Let us take care of the logistics, so you can focus on connecting, celebrating, and inspiring your guests in spaces designed to bring your vision to life.",
         list: ["Capacity to hold up to 250 attendees", "Comprehensive packages with state-of-the-art facilities, sophisticated hospitality, and gourmet catering options", "Booking available by the hour, half day or full day"],
         source: section4,
-        btn: "Contact us"
+        btn: "Explore",
+        href: "/solutions/events-launches"
     },
     {
         id: 4,
         desc: "Make your message stand out. Capitalise on our network of strategic displays to elevate your brand’s presence, connect with your audience on a deeper level, and achieve a lasting impact.",
         list: ["Digital and physical promotional spaces across more than 10 mn sq ft of prime real estate", "Eye-catching digital displays in a network of prestigious location"],
         source: section3,
-        btn: "Book now"
+        btn: "Explore",
+        href: "/solutions/advertise-with-us"
     }
 ]
 
@@ -81,7 +85,7 @@ export default function ActiveCard() {
                                 )}
                             </ul>
                         </div>
-                        {/* <LinkButton title={item.btn} href="" /> */}
+                        <LinkButton title={item.btn} href={item.href} />
                     </div>
                 </div>
             )}

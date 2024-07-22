@@ -84,7 +84,7 @@ export default function page() {
             </div> */}
 
             <GoodCompany />
-            <FormCard />
+            <FormCard/>
 
         </>
     )

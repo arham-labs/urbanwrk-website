@@ -43,7 +43,7 @@ export default function ExploreCard({ data }) {
 
             <div className="w-full lg:w-[40%] 2xl:w-[45%]">
                 <div className="flex flex-col">
-                    <Image src={Map} alt="map" className="w-full mb-7" />
+                    {/* <Image src={Map} alt="map" className="w-full mb-7" /> */}
                     <div className='bg-bglight1 w-full py-10'>
                         <div className='flex flex-col justify-center items-center h-full '>
                             <p className='font-medium text-xl'>Want to find your space?</p>

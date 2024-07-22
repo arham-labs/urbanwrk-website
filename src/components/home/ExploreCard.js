@@ -62,6 +62,7 @@ export default function ExploreCard() {
                 list={city}
                 labelName="City"
                 handleSelectChange={handleSelectChange1}
+                bgwhite={false}
               />
             </div>
             {/* <div className="basis-[100%] md:basis-[30%] sm:basis-[100%] w-full mx-[-10px]">

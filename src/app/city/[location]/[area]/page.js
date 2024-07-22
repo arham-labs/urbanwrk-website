@@ -57,7 +57,7 @@ export default function page({ params }) {
                 <LocatonPark location={location} data={newData}/>
             </div>}
 
-            <LocationSpace data={locationData} url={`/city/${params.location}`}/>
+            {locationData?.locationInfo?.length > 1 && <LocationSpace data={locationData} url={`/city/${params.location}`}/>}
 
         </>
     )
