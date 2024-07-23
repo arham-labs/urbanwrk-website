@@ -29,7 +29,7 @@ export const Jsons = {
         {
           title: "We match your pace",
           source: "/images/solutionsLanding/solutionsImg/working1.png",
-          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
+          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale with complete ease.",
         },
         {
           title: "We are where work thrives",
@@ -39,7 +39,7 @@ export const Jsons = {
         {
           title: "We take the work out of work",
           source: "/images/solutionsLanding/solutionsImg/working3.png",
-          desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
+          desc: "A great reception, smooth visitor management, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
         },
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
@@ -109,22 +109,22 @@ export const Jsons = {
       card3_content: [
         {
           title: "Connect with us",
-          desc: "Share your details to know the spaces  designed for immediate occupancy.",
+          desc: "Share your details to know the spaces  designed for immediate occupancy",
         },
         {
           title: "Optimise to your needs",
-          desc: "Add requirements like branding elements, or additional tech features to finalise.",
+          desc: "Add requirements like branding elements, or additional tech features to finalise",
         },
         {
           title: "Walk into your workspace",
-          desc: "Start operating immediately with all utilities and services already in place.",
+          desc: "Start operating immediately with all utilities and services already in place",
         },
       ],
       card4_img:  "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
       card4_title3:
-        "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on what truly matters—bringing the vision to life. Our proprietary centralized platform and app are designed to make every aspect of your workday smoothe r and more intuitive.",
+        "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on bringing your vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
     },
     {
       id: 3,
@@ -169,15 +169,15 @@ export const Jsons = {
       card3_content: [
         {
           title: "Share your preference",
-          desc: "Connect with us and tell us your chosen city or specific location.",
+          desc: "Connect with us and tell us your chosen city or specific location",
         },
         {
           title: "Choose what you need",
-          desc: "Finalise on services such as registration, mail handling and call answering.",
+          desc: "Finalise on services such as registration, mail handling and call answering",
         },
         {
           title: "Get going",
-          desc: "Use your new business address on your correspondence.",
+          desc: "Use your new business address on your correspondence",
         },
       ],
       card4_img:  "/images/solutionsLanding/solutionsImg/productivity1.png",
@@ -209,7 +209,7 @@ export const Jsons = {
         {
           title: "We match your pace",
           source: "/images/solutionsLanding/solutionsImg/working10.png",
-          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
+          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale with complete ease.",
         },
         {
           title: "We are where work thrives",
@@ -219,7 +219,7 @@ export const Jsons = {
         {
           title: "We take the work out of work",
           source: "/images/solutionsLanding/solutionsImg/working12.png",
-          desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
+          desc: "A great reception, smooth visitor management, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
         },
       ],
       card3_img: "",
@@ -286,15 +286,15 @@ export const Jsons = {
       card3_content: [
         {
           title: "Choose your venue",
-          desc: "Share your details to find the ideal space from our event venues.",
+          desc: "Share your details to find the ideal space from our event venues",
         },
         {
           title: "Customise your experience",
-          desc: "Add requests for advanced tech or special arrangements for guest speakers if needed.",
+          desc: "Add requests for advanced tech or special arrangements for guest speakers if needed",
         },
         {
           title: "Focus on the event",
-          desc: "We manage everything from technology operations to catering.",
+          desc: "We manage everything from technology operations to catering",
         },
       ],
       card4_img: "/images/solutionsLanding/solutionsImg/productivity3.png",
@@ -347,11 +347,11 @@ export const Jsons = {
         },
         {
           title: "Customise your campaign",
-          desc: "Tailor your advertisement to align with your brand identity and our spaces.",
+          desc: "Tailor your advertisement to align with your brand identity and our spaces",
         },
         {
           title: "Launch and monitor",
-          desc: "Utilise our tools for viewer engagement insights and adjust your strategy.",
+          desc: "Utilise our tools for viewer engagement insights and adjust your strategy",
         },
       ],
       card4_img: "/images/solutionsLanding/solutionsImg/productivity4.png",
