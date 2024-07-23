@@ -19,7 +19,7 @@ export default function FormCard() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const city = ["Mumbai", "Pune", "Kolkata", "Hyderabad", "NCR"];
+  const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune"];
   const [storeCity, setStoreCity] = useState("");
 
   const onSubmit = async (data) => {

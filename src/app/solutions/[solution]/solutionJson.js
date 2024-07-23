@@ -186,8 +186,67 @@ export const Jsons = {
       card4_title3:
         "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
     },
-    { 
+    {
       id: 4,
+      name: "meeting-rooms",
+      titleImgDesk:
+        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
+      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
+      title1: "Meeting rooms",
+      title2: "",
+      title3: "Foster collaboration, creativity and success.",
+      card1_titile1: "Spaces where",
+      card1_titile2: "ideas converge",
+      card1_titile3:
+        "Experience a meeting environment that meets your needs and inspires your best work, all set in the heart of dynamic business districts. Our meeting rooms are equipped with the latest technology to ensure seamless presentations and communications. With a range of sizes and configurations available, our meeting rooms can be tailored to suit any event, from intimate brainstorming sessions to large-scale seminars.",
+      brandData: [
+        "High speed WiFi with video and telephone conferencing technology",
+        "SMART TVs that align with latest OS, and surround sound for immersive projection",
+        "On-call tea and coffee with the option to cater when given a 48-hour notice",
+        "Booking available by the hour, half day or full day"
+      ],
+      card2: [
+        {
+          title: "We match your pace",
+          source: "/images/solutionsLanding/solutionsImg/working10.png",
+          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
+        },
+        {
+          title: "We are where work thrives",
+          source: "/images/solutionsLanding/solutionsImg/working11.png",
+          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
+        },
+        {
+          title: "We take the work out of work",
+          source: "/images/solutionsLanding/solutionsImg/working12.png",
+          desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
+        },
+      ],
+      card3_img: "",
+      card3_title1: "Your space,",
+      card3_title2: "made easy",
+      card3_content: [
+        {
+          title: "Meet with our team",
+          desc: "Share your requirements so that we can work out the best solution for your organisation size",
+        },
+        {
+          title: "Explore neighbourhoods",
+          desc: "Choose the area that is perfect for the team that you are building",
+        },
+        {
+          title: "Walk into your workspace",
+          desc: "Settle in your customised office",
+        },
+      ],
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
+      card4_title1: "Powering your",
+      card4_title2: "workspace",
+      card4_title3:
+        "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on what truly matters—bringing the vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
+    },
+    { 
+      id: 5,
       name: "events-launches",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-6.png",
@@ -245,14 +304,14 @@ export const Jsons = {
         "Our holistic approach combines a vibrant, networking-driven culture with top-tier workspace management and design, ensuring you do your best work in an environment tailored to your needs.",
     },
     {
-      id: 4,
+      id: 6,
       name: "advertise-with-us",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-4.png",
       title1: "Advertise",
       title2: "with us",
-      title3: "Your workspace, tailored to your workstyle.",
+      title3: "Messaging that stands out.",
       card1_titile1: "Amplify",
       card1_titile2: "your voice",
       card1_titile3:
@@ -300,65 +359,6 @@ export const Jsons = {
       card4_title2: "opportunity",
       card4_title3:
         "Our holistic approach combines a vibrant, networking-driven culture with top-tier workspace management and design, ensuring you do your best work in an environment tailored to your needs.",
-    },
-    {
-      id: 5,
-      name: "meeting-rooms",
-      titleImgDesk:
-        "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
-      titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-5.png",
-      title1: "Meeting rooms",
-      title2: "",
-      title3: "Foster collaboration, creativity and success.",
-      card1_titile1: "Spaces where",
-      card1_titile2: "ideas converge",
-      card1_titile3:
-        "Experience a meeting environment that meets your needs and inspires your best work, all set in the heart of dynamic business districts. Our meeting rooms are equipped with the latest technology to ensure seamless presentations and communications. With a range of sizes and configurations available, our meeting rooms can be tailored to suit any event, from intimate brainstorming sessions to large-scale seminars.",
-      brandData: [
-        "High speed WiFi with video and telephone conferencing technology",
-        "SMART TVs that align with latest OS, and surround sound for immersive projection",
-        "On-call tea and coffee with the option to cater when given a 48-hour notice",
-        "Booking available by the hour, half day or full day"
-      ],
-      card2: [
-        {
-          title: "We match your pace",
-          source: "/images/solutionsLanding/solutionsImg/working10.png",
-          desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale up or down with complete ease.",
-        },
-        {
-          title: "We are where work thrives",
-          source: "/images/solutionsLanding/solutionsImg/working11.png",
-          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
-        },
-        {
-          title: "We take the work out of work",
-          source: "/images/solutionsLanding/solutionsImg/working12.png",
-          desc: "A great reception, smooth employee management and payroll, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
-        },
-      ],
-      card3_img: "",
-      card3_title1: "Your space,",
-      card3_title2: "made easy",
-      card3_content: [
-        {
-          title: "Meet with our team",
-          desc: "Share your requirements so that we can work out the best solution for your organisation size",
-        },
-        {
-          title: "Explore neighbourhoods",
-          desc: "Choose the area that is perfect for the team that you are building",
-        },
-        {
-          title: "Walk into your workspace",
-          desc: "Settle in your customised office",
-        },
-      ],
-      card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
-      card4_title1: "Powering your",
-      card4_title2: "workspace",
-      card4_title3:
-        "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on what truly matters—bringing the vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
     },
   ],
 };

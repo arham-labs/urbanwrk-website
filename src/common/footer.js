@@ -35,7 +35,7 @@ export default function Footer() {
                 {[
                   {
                     link: "/solutions/tailormade-office",
-                    title: "Tailormade Offices",
+                    title: "Tailor-made Offices",
                   },
                   {
                     link: "/solutions/ready-to-work-in",
@@ -105,7 +105,7 @@ export default function Footer() {
               </Link>
             </div> */}
             <div className="flex flex-col text-xs gap-5">
-              <span>COPYRIGHT 2020</span>
+              <span>COPYRIGHT 2024</span>
               <Link href="/terms-of-use">TERMS OF USE</Link>
               <Link href="/privacy-policy">PRIVACY POLICY </Link>
             </div>
