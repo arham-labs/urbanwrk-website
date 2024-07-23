@@ -10,7 +10,7 @@ export default function LocationSpaceCard({ el,location }) {
                 <Image src={el?.locationImg} unoptimized alt="cardimage" className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
             </div>
             <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%]">
-                <span className="text-lg lg:text-xl font-medium">{el.locationName}</span>
+                <span className="text-lg lg:text-xl font-medium capitalize">{el.locationName}</span>
                 <span className="text-xs lg:text-sm text-[#7D7C7C] font-semibold mb-3 uppercase">{el.locationCity}</span>
                 <div className="flex flex-col text-sm font-light mb-4">
                     <span>{el.location1}</span>
