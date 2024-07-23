@@ -1,12 +1,13 @@
 import IGBC from '../../../public/images/sustainability/igbc.svg';
 import BIS from '../../../public/images/sustainability/bis.svg';
 import ASHRAE from '../../../public/images/sustainability/ashrae.svg'
+import Platinum from '../../../public/images/sustainability/platinum.svg';
 import Image from 'next/image';
 
 export default function Grade() {
 
     const GradeData = [
-        { source: IGBC, title: "Green Interiors Certification by IGBC", subtitle: "Energy Conservation & Building Codes (2017)" },
+        { source: Platinum, title: "Green Interiors Certification by IGBC", subtitle: "Energy Conservation & Building Codes (2017)" },
         { source: BIS, title: "BIS certified products", subtitle: "National Building Code (2016)" },
         { source: IGBC, title: "Health & Wellbeing (WELL) Certification by IGBC", subtitle: "" },
         { source: ASHRAE, title: "Ashrae (2012) for HVAC & Indoor Air Quality", subtitle: "" }

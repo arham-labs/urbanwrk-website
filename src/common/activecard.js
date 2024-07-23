@@ -53,7 +53,7 @@ const activeData = [
     {
         id: 5,
         desc: "Make your message stand out. Capitalise on our network of strategic displays to elevate your brand’s presence, connect with your audience on a deeper level, and achieve a lasting impact.",
-        list: ["Digital and physical promotional spaces across more than '10 mn sq ft' of prime real estate", "Eye-catching digital displays in a network of prestigious location"],
+        list: ["Digital and physical promotional spaces across more than of prime real estate", "Eye-catching digital displays in a network of prestigious location"],
         source: section3,
         btn: "Explore",
         href: "/solutions/advertise-with-us"

@@ -13,7 +13,7 @@ export default function Solutions() {
         { img: "/images/home/solutionCardl3.png", title1: `Virtual`, title2: "Offices", desc: "Premium business address with mail handling and registration services for your venture.  ",link:"/solutions/virtual-offices" },
         { img: "/images/home/solutionCardl4.png", title1: "Meeting", title2: "Rooms", desc: "State-of-the-art conference rooms for up to 25 people to make every meeting a milestone.",link:"/solutions/meeting-rooms" },
         { img: "/images/home/solutionCardl5.png", title1: `Events &`, title2: "Launches", desc: "Tailormade event solutions with hospitality and catering for up to 250 people.",link:"/solutions/events-launches" },
-        { img: "/images/home/solutionCardl6.png", title1: "Advertise", title2: "With Us", desc: "Promotional spaces across '10mn sq ft' of prime real estate to put your brand on top of minds.",link:"/solutions/advertise-with-us" }
+        { img: "/images/home/solutionCardl6.png", title1: "Advertise", title2: "With Us", desc: "Promotional spaces across of prime real estate to put your brand on top of minds.",link:"/solutions/advertise-with-us" }
     ]
     return (
         <div>
