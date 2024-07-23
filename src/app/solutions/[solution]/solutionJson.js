@@ -16,7 +16,7 @@ export const Jsons = {
       card1_titile1: "Build a home",
       card1_titile2: "for your brand",
       card1_titile3:
-        "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.",
+        "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive - at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.",
       brandData: [
         "Private, fully-customisable and branded office space ready within 45-60 days",
         "Designed by experts and WELL and LEED certified",
@@ -77,7 +77,7 @@ export const Jsons = {
       card1_titile1: "Walk in",
       card1_titile2: "Work on",
       card1_titile3:
-        "Step into a workspace that's ready when you are. Our ready-to-work-in spaces come with zero capex and full access to the same high-end amenities that global giants enjoy. Whether you need to scale up, down, or pivot your operations, our flexible spaces adapt seamlessly to your business needs.",
+        "Step into a workspace that's ready when you are. Our ready-to-work-in spaces come with zero capex and full access to the same high-end amenities that global giants enjoy. Whether you need to scale up or are just starting out, or pivot your operations, our flexible spaces adapt seamlessly to your business needs.",
       brandData: [
         "Ready office spaces with short term lease that are expandable as your business grows",
         "Option to tailor your space with for branding and layout adjustments",

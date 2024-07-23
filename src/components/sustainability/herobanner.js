@@ -1,6 +1,8 @@
 import Image from "next/image";
 import IGBC from '../../../public/images/sustainability/igbc.svg'
 import Banner from '../../../public/images/sustainability/banner.png'
+import Platinum from '../../../public/images/sustainability/platinum.svg';
+
 
 export default function Herobanner() {
     const sustainData = ["GREEN INTERIORS", "PLATINUM RATING BY IGBC", "HEALTH & WELLBEING (WELL) RATING"]
@@ -14,7 +16,10 @@ export default function Herobanner() {
                             <span className="font-kepler mt-[3.2px] block text-[28px] lg:text-4xl xl:text-5xl 2xl:text-6xl">integrity</span>
                         </div>
                         <p className="text-sm xl:text-base font-medium">With the first and only IGBC Platinum rated office spaces in India</p>
-                        <Image src={IGBC} alt="igbc" className="w-16 lg:w-20 2xl:w-24 my-3 lg:my-0" />
+                        <div className="flex gap-6">
+                            <Image src={Platinum} alt="platinum" className="w-16 lg:w-20 2xl:w-24 my-3 lg:my-0" />
+                            <Image src={IGBC} alt="igbc" className="w-16 lg:w-20 2xl:w-24 my-3 lg:my-0" />
+                        </div>
                         <ul className="leading-6 text-base xl:text-lg font-medium">
                             {sustainData.map((el, i) =>
                                 <li key={i}>{el}</li>
