@@ -132,7 +132,8 @@ export default function FormCard() {
               <div className="mb-4">
                 <label className="block font-semibold">PHONE:</label>
                 <input
-                  type="text"
+                  type="number"
+                  maxLength={10}
                   {...register("phone", {
                     required: "Phone number is required",
                     pattern: {
