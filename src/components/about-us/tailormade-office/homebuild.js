@@ -18,7 +18,7 @@ export default function HomeBuild({ data }) {
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const city = ["Mumbai", "Pune", "Kolkata", "Hyderabad", "NCR"];
+  const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune",];
   const [storeCity, setStoreCity] = useState("");
 
   const onSubmit = async (data) => {
@@ -161,8 +161,8 @@ export default function HomeBuild({ data }) {
                 render={({ field }) => (
                   <>
                     <BasicSelectDrop list={city} {...field} value={storeCity} labelName="City" handleSelectChange={(val) => {
-                       field.onChange(val)
-                       setStoreCity(val)                  
+                      field.onChange(val)
+                      setStoreCity(val)
                     }} />
                     {errors.city && (
                       <span className="text-red-500">{errors.city.message}</span>
