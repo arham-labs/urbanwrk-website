@@ -132,7 +132,8 @@ export default function FormCard() {
               <div className="mb-4">
                 <label className="block font-semibold">PHONE:</label>
                 <input
-                  type="text"
+                  type="number"
+                  maxLength={10}
                   {...register("phone", {
                     required: "Phone number is required",
                     pattern: {
@@ -151,7 +152,7 @@ export default function FormCard() {
                 <Controller control={control} name="city"
                   render={({ field }) => (
                     <>
-                      <BasicSelectDrop list={city} {...field} value={storeCity} bgwhite={true} labelName="Select City" handleSelectChange={(val) => {
+                      <BasicSelectDrop list={city} {...field} value={storeCity} labelName="Select City" handleSelectChange={(val) => {
                         field.onChange(val)
                         setStoreCity(val)
                       }} />
