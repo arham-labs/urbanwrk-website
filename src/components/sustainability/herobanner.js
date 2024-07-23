@@ -3,7 +3,7 @@ import IGBC from '../../../public/images/sustainability/igbc.svg'
 import Banner from '../../../public/images/sustainability/banner.png'
 
 export default function Herobanner() {
-    const sustainData = ["GREEN INTERIORS", "PLATINUM RATING BY IGBC", "HEALTH & WELLBEING (WELL) RATING", "PLATINUM RATING BY IGBC"]
+    const sustainData = ["GREEN INTERIORS", "PLATINUM RATING BY IGBC", "HEALTH & WELLBEING (WELL) RATING"]
     return (
         <div className="pt-40 lg:pt-20 2xl:pt-14 bg-bglight1">
             <div className="flex flex-col lg:flex-row items-center">

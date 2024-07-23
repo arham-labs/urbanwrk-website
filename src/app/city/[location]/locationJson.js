@@ -529,7 +529,7 @@ export const Jsons = {
           videourl: "/images/locationInside/baani-video.mp4",
           posterImage: "/images/locationInside/baani-poster.png",
           posterMobileImage: "/images/locationInside/technopolis-mobile-banner.png",
-          locationCity: "Gurgoan",
+          locationCity: "Gurgaon",
           locationImg: NcrCard1,
           locationMobileImg: "/images/location/baani-mobile.png",
           location1: "Metro Station - 500 m",
