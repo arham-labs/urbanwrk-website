@@ -7,8 +7,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-export default function CustomizedSelects({ list, labelName, handleSelectChange,bgwhite }) {
-    console.log("bgwhite",bgwhite);
+export default function CustomizedSelects({ list, labelName, handleSelectChange }) {
 
   const BootstrapInput = styled(InputBase)(({ theme, selected, fullWidth }) => ({
     // {console.log(age)}
@@ -21,11 +20,10 @@ export default function CustomizedSelects({ list, labelName, handleSelectChange,
       border: "1px solid black",
       fontSize: 16,
       width: "100%",
-      // backgroundColor: !bgwhite ? "white" : theme.palette.background.paper,
       padding: "5px 36px 5px 12px",
       transition: theme.transitions.create(["border-color", "box-shadow"]),
       // Use the system font instead of the default Roboto font.
-  
+
       "&:focus": {
         outline: "none",
         border: "1px solid black",
@@ -38,8 +36,8 @@ export default function CustomizedSelects({ list, labelName, handleSelectChange,
       marginRight: "10px",
     },
   }));
-  
-  
+
+
   const [selected, setSelectedOption] = React.useState("");
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
