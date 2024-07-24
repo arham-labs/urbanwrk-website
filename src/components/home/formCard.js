@@ -102,9 +102,10 @@ export default function FormCard() {
               className="flex flex-col md:w-full lg:w-[400px] xl:w-[462px] lg:mt-4"
             >
               <div className="mb-4">
-                <label className="block font-semibold">NAME:</label>
+                <label className="block font-semibold" htmlFor="name">NAME:</label>
                 <input
                   type="text"
+                  id="name"
                   {...register("name", { required: "Name is required" })}
                   className="border-black border-solid border w-full h-[38px] px-2"
                 />
@@ -113,9 +114,10 @@ export default function FormCard() {
                 )}
               </div>
               <div className="mb-4">
-                <label className="block font-semibold">EMAIL:</label>
+                <label className="block font-semibold" htmlFor="email">EMAIL:</label>
                 <input
                   type="text"
+                  id="email"
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -130,9 +132,10 @@ export default function FormCard() {
                 )}
               </div>
               <div className="mb-4">
-                <label className="block font-semibold">PHONE:</label>
+                <label className="block font-semibold" htmlFor="phone-number">PHONE:</label>
                 <input
                   type="number"
+                  id="phone-number"
                   maxLength={10}
                   {...register("phone", {
                     required: "Phone number is required",
@@ -148,7 +151,7 @@ export default function FormCard() {
                 )}
               </div>
               <div className="mb-4">
-                <label className="block font-semibold">CITY:</label>
+                <label className="block font-semibold" htmlFor="city">CITY:</label>
                 <Controller control={control} name="city"
                   render={({ field }) => (
                     <>
@@ -172,8 +175,8 @@ export default function FormCard() {
                 </p>
               </div>
               <div className="mb-4 lg:flex lg:justify-center max-lg:py-3">
-                <input type="checkbox" {...register("newsUpdates")} />
-                <label className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
+                <input type="checkbox" id="news" {...register("newsUpdates")} />
+                <label htmlFor="news" className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
               </div>
               <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
                 <button
@@ -182,16 +185,7 @@ export default function FormCard() {
                   className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${isButtonDisabled
                     ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                     : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
-                    }`}
-                >
-                  <span
-                    className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${isButtonDisabled
-                      ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
-                      : "group-hover:text-white"
-                      } `}
-                  >
-                    Submit{" "}
-                  </span>
+                    }`}>Submit
                   <div
                     className={`${!isButtonDisabled
                       ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"

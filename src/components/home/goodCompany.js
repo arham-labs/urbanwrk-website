@@ -1,12 +1,10 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import GoodCompanySliderMobile from "./goodCompanySliderMobile";
 
 export default function GoodCompany() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [on, SetOn] = useState(false);
-  const prevIndexRef = useRef(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,13 +12,6 @@ export default function GoodCompany() {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    const interval2 = setInterval(() => {
-      SetOn((prev) => !prev);
-    }, 1000);
-    return () => clearInterval(interval2);
-  }, [SetOn]);
 
   return (
     <div className="bg-bglight1">

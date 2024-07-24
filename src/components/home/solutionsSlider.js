@@ -47,8 +47,11 @@ export default function SolutionSlider({ data }) {
             }
         .slick-dots li {
           display: inline-block;
-          margin: 0 !important;
+          margin: 0 2px !important;
       }
+      .slick-dots li button {
+        width: 44px;
+    }
       `}
 
             </style>

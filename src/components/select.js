@@ -7,23 +7,19 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-export default function CustomizedSelects({ list, labelName, handleSelectChange }) {
-
+// Wrapping the component with React.forwardRef
+const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChange }, ref) => {
   const BootstrapInput = styled(InputBase)(({ theme, selected, fullWidth }) => ({
-    // {console.log(age)}
     "label + &": {
       marginTop: theme.spacing(3),
     },
     "& .MuiInputBase-input": {
-      // borderRadius: 4,
       position: "relative",
       border: "1px solid black",
       fontSize: 16,
       width: "100%",
       padding: "5px 36px 5px 12px",
       transition: theme.transitions.create(["border-color", "box-shadow"]),
-      // Use the system font instead of the default Roboto font.
-
       "&:focus": {
         outline: "none",
         border: "1px solid black",
@@ -36,7 +32,6 @@ export default function CustomizedSelects({ list, labelName, handleSelectChange 
       marginRight: "10px",
     },
   }));
-
 
   const [selected, setSelectedOption] = React.useState("");
   const handleChange = (event) => {
@@ -72,15 +67,14 @@ export default function CustomizedSelects({ list, labelName, handleSelectChange 
               vertical: "top",
               horizontal: "left",
             },
-            getContentAnchorEl: null,
           }}
+          ref={ref} // Forwarding ref to Select component
         >
           {list.map((item, i) => (
             <MenuItem
               value={item}
               key={i}
               className={selected === item ? "text-primary !bg-white" : "hover:bg-red-300"}
-            // className="bg-bglight1"
             >
               {item}
             </MenuItem>
@@ -89,4 +83,9 @@ export default function CustomizedSelects({ list, labelName, handleSelectChange 
       </FormControl>
     </div>
   );
-}
+});
+
+// Naming the display name of the forwardRef component (for better debugging)
+CustomizedSelects.displayName = 'CustomizedSelects';
+
+export default CustomizedSelects;

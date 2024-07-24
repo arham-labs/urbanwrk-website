@@ -19,27 +19,16 @@ export default function ExploreCard() {
     { name: "NCR", link: "/city/ncr" },
     { name: "Pune", link: "/city/pune" },
   ];
-  const solution = [
-    "Tailormade Offices",
-    "Ready-To-Work In Offices",
-    "Meeting Rooms",
-  ];
 
   const handleSelectChange1 = (val) => {
-    // console.log(val)
     const naviVal = dataCity.find((item) => item.name === val);
-    // console.log(naviVal);
     setHrefNav(naviVal.link)
   };
 
-  // console.log(hrefNav)
   return (
     <div>
-      <div className="relative h-[800px] md:h-[875px] ">
-        <div>
-          {/* <Image src="/images/home/exploreCard3.png" height={836} width={422} alt="exploreCard" className='h-[100vh] w-full object-top' unoptimized /> */}
-          <LookingImageSlider />
-        </div>
+      <div className="relative h-[800px] md:h-[875px]">
+        <LookingImageSlider />
         <div className="absolute  top-14   md:top-20 inset-x-0 flex justify-center items-center font-medium text-6xl max-md:text-[28px] max-md:tracking-[-0.56px]">
           <div>
             What are you{" "}
@@ -64,11 +53,7 @@ export default function ExploreCard() {
                 handleSelectChange={handleSelectChange1}
               />
             </div>
-            {/* <div className="basis-[100%] md:basis-[30%] sm:basis-[100%] w-full mx-[-10px]">
-              <BasicSelectDrop list={solution} labelName="Solution" />
-            </div> */}
             <div className="basis-[100%] md:basis-[15%] sm:basis-[100%] ">
-              {/* <ExploreBtn btnName={"Explore"} /> */}
               <LinkButton disabled={hrefNav !== "/" ? "pointer-events-auto" : "pointer-events-none"} href={hrefNav} title="Explore" />
             </div>
           </div>

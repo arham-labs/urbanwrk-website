@@ -31,7 +31,6 @@ function SolutionMobileSlider({data}) {
                 }
                 .slick-dots li {
                     display: inline-block;
-                    margin: 0 5px;
                 }
                 .slick-dots li button:before {
                     color: #7D7C7C !important;
