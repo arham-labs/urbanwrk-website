@@ -93,6 +93,7 @@ export default function Chat() {
             className="w-[55px] lg:w-[70px] h-auto"
             width={150}
             height={150}
+            loading="eager"
           />
         </div>
         <div className={`bg-primary fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}>
