@@ -48,7 +48,7 @@ export default function ExploreCard({ data }) {
                         <div className='flex flex-col justify-center items-center h-full '>
                             <p className='font-medium text-xl'>Want to find your space?</p>
                             <p className='mt-1'>Get in touch with us to know more.</p>
-                            <div className='w-[360px]'>
+                            <div className='w-[88%] lg:w-[360px]'>
                                 <div className='border border-[#747474] my-5 w-full'></div>
                             </div>
                             <div className='flex flex-col justify-center items-center'>

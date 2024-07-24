@@ -3,18 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 export default function LocationBanner({ data }) {
-    const [showvideo, setShowVideo] = useState(false)
     const [showIcon, setShowIcon] = useState(true)
     const [isPlaying, setIsPlaying] = useState(false)
     const videoRef = useRef(null)
     const mobileRef = useRef(null)
-
-    useEffect(() => {
-        setTimeout(() => {
-            setShowVideo(true)
-        }, 2000);
-
-    }, [])
 
     const handlePlay = () => {
         setIsPlaying(!isPlaying)

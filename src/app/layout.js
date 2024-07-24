@@ -16,6 +16,7 @@ const worksans = Work_Sans({ subsets: ["latin"] });
 export const metadata = {
   title: "UrbanWrk",
   icons: '/images/favicon.svg',
+  description: "UrbanWrk"
 };
 
 
@@ -23,7 +24,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={worksans.className}>
-
         <Header/>
         {children}
         <Chat />

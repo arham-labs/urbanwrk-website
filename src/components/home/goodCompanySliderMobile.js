@@ -10,7 +10,6 @@ export default function GoodCompanySliderMobile() {
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 2,
-        // autoplay: true,
         autoplaySpeed: 2000,
         rows: 2,
         arrows:false
@@ -28,6 +27,14 @@ export default function GoodCompanySliderMobile() {
                     </div>
                 </div>
             ))}
+            <style>{`
+            .slick-dots li.slick-active button:before {
+                color: #C72030 !important;
+            }
+            .slick-dots li button:before{
+                font-size: 8px !important;
+            }
+            `}</style>
         </Slider>
     );
 }

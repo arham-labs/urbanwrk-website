@@ -79,8 +79,8 @@ export default function Chat() {
   return (
     <div>
       <div className="fixed bottom-10 right-7 lg:bottom-10 lg:right-16 z-30">
-        <a
-          className="cursor-pointer chat-shadow hover-card"
+        <div
+          className="cursor-pointer hover-card"
           onClick={() => {
 
             setOpenChat(!openchat)
@@ -94,7 +94,7 @@ export default function Chat() {
             width={150}
             height={150}
           />
-        </a>
+        </div>
         <div className={`bg-primary fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}>
           <span>HOW CAN WE HELP?</span>
         </div>
@@ -115,8 +115,9 @@ export default function Chat() {
                 className="flex flex-col md:w-full lg:w-[400px] lg:mt-0 max-lg:mt-4"
               >
                 <div className="max-lg:mb-2 lg:mb-2">
-                  <label className="block font-semibold  lg:text-sm max-lg:text-sm">NAME:</label>
+                  <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="name">NAME:</label>
                   <input
+                    id="name"
                     type="text"
                     {...register("name", { required: "Name is required" })}
                     defaultValue=""
@@ -127,9 +128,10 @@ export default function Chat() {
                   )}
                 </div>
                 <div className="max-lg:mb-2 lg:mb-2">
-                  <label className="block font-semibold  lg:text-sm max-lg:text-sm">EMAIL:</label>
+                  <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="email">EMAIL:</label>
                   <input
                     type="text"
+                    id="email"
                     {...register("email", {
                       required: "Email is required",
                       pattern: {
@@ -145,9 +147,10 @@ export default function Chat() {
                   )}
                 </div>
                 <div className="max-lg:mb-2 lg:mb-2">
-                  <label className="block font-semibold  lg:text-sm max-lg:text-sm">PHONE:</label>
+                  <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="phone-number">PHONE:</label>
                   <input
                     type="number"
+                    id="phone-number"
                     maxLength={10}
                     {...register("phone", {
                       required: "Phone number is required",
@@ -164,7 +167,7 @@ export default function Chat() {
                   )}
                 </div>
                 <div className="max-lg:mb-0 lg:mb-2">
-                  <label className="block font-semibold  lg:text-sm max-lg:text-sm">CITY:</label>
+                  <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="city">CITY:</label>
                   <Controller control={control} name="city"
                     render={({ field }) => (
                       <>
@@ -179,47 +182,31 @@ export default function Chat() {
                     )}
                   />
                 </div>
-                {/* <div className="max-lg:mb-2 lg:mb-2 mt-3 max-lg:mt-3">
-                <p className="text-sm">
-                  By clicking the button below, you agree to our Website&nbsp;
-                  <span className="underline">Terms of Service</span>
-                  &nbsp;and acknowledge our&nbsp;
-                  <span className="underline">Privacy Policy</span>.
-                </p>
-              </div> */}
                 <div className="max-lg:mb-2 lg:mb-4 flex align-baseline justify-center max-lg:pb-3 ">
-                  <input type="checkbox" {...register("newsUpdates")} className="lg:!w-6  max-lg:!w-9 max-lg:mb-5" />
+                  <input type="checkbox" id="news"
+                    {...register("newsUpdates")} className="lg:!w-6  max-lg:!w-9 max-lg:mb-5" htmlFor="news" />
                   <label className="ml-2 text-sm mt-4">You agree to our Website&nbsp;
-                    <span className="underline">Terms of Service</span>
+                    <Link href="/terms-of-use"><span className="underline">Terms of Service</span></Link>
                     &nbsp;and acknowledge our&nbsp;
-                    <span className="underline">Privacy Policy</span>.</label>
+                    <Link href="/privacy-policy"><span className="underline">Privacy Policy</span></Link>
+                  </label>
                 </div>
 
-                <div className="w-full pt-2 group ">
+                <div className="w-full pt-2 group">
                   <button
                     type="submit"
                     disabled={isButtonDisabled || isLoading}
                     className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${isButtonDisabled
                       ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                       : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
-                      }`}
-
-                  >
-                    <span
-                      className={`text-base bg-transparent  max-md:px-4 flex py-1 text-black  ${isButtonDisabled
-                        ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
-                        : "group-hover:text-white"
-                        } `}
-                    >
-                      Submit </span>
+                      }`}>
+                    Submit
                     <div
                       className={`${!isButtonDisabled
                         ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
                         : "bg-[url('/images/home/disableArrow.svg')]"
                         }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
                     ></div>
-
-
                   </button>
                 </div>
               </form>

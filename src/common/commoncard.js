@@ -41,7 +41,7 @@ export default function CommonCard({ data, leftAlign }) {
              .slick-dots li { margin: 0 !important; }
              .slick-dots li button:before { 
                 color: #C72030 !important; 
-                font-size: 10px !important;
+                font-size: 8px !important;
             }
             `}
             </style>
