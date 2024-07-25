@@ -8,11 +8,11 @@ export async function POST(request) {
 
     const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
     const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-    const myEmail ="hello@urbanwrk.com"
+    const myEmail = "hello@urbanwrk.com"
 
     const formData = await request.formData()
 
-   
+
     const name = formData.get('name')
     const email = formData.get('email')
     const phone = formData.get('phone')
@@ -20,7 +20,6 @@ export async function POST(request) {
     const newsUpdates = formData.get('newsUpdates')
 
     const message = formData.get('message')
-
 
     // create transporter object
     const transporter = nodemailer.createTransport({
@@ -57,8 +56,8 @@ export async function POST(request) {
 
     } catch (error) {
         console.log(error?.message)
-        NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" })
-        NextResponse.status(400).json({ message: "COULD NOT SEND MESSAGE" })
+        return NextResponse.json({ error: "COULD NOT SEND MESSAGE" }, { status: 400 });
     }
 
 }
+
