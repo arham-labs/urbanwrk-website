@@ -1,4 +1,4 @@
-import betterSpace1 from '../../../public/images/uwTechnology/betterSpace1.svg'
+import betterSpace1 from '../../../public/images/uwTechnology/betterSpace4.svg'
 import betterSpace2 from '../../../public/images/uwTechnology/betterSpace2.svg'
 import betterSpace3 from '../../../public/images/uwTechnology/betterSpace3.svg'
 import Image from 'next/image';
@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function BetterSpace() {
 
     const GradeData = [
-        { source: betterSpace1, title: "HID Access Control System", subtitle: "Dual Internet Service Providers" },
+        { source: betterSpace1, title: "Access Control System", subtitle: "Dual Internet Service Providers" },
         { source: betterSpace2, title: "Palo Alto Firewall", subtitle: "Wireless Presentations" },
         { source: betterSpace3, title: "CISCO MERAKI Networking Switches CISCO MERAKI Wi-Fi", subtitle: "Interactive TV" }
     ]
@@ -24,7 +24,7 @@ export default function BetterSpace() {
                     {GradeData.map((el, i) =>
                         <div key={i} className='grid grid-cols-1 lg:grid-cols-2 font-medium lg:gap-14 2xl:gap-24 items-center'>
                             <div className={`flex gap-5 items-center ${i == 0 ? "mt-0" : "mt-7"} ${i > 1 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-7"}`}>
-                                <Image src={el.source} alt={el.title} className='w-16' />
+                                <Image src={el.source} alt={el.title} className={`${i == 1 ? "w-20" : i == 2 ? "w-28" : "w-14"}`} />
                                 <span className='text-base lg:text-lg uppercase'>{el.title}</span>
                             </div>
                             
