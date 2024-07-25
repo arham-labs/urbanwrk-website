@@ -24,7 +24,7 @@ export default function BetterSpace() {
                     {GradeData.map((el, i) =>
                         <div key={i} className='grid grid-cols-1 lg:grid-cols-2 font-medium lg:gap-14 2xl:gap-24 items-center'>
                             <div className={`flex gap-5 items-center ${i == 0 ? "mt-0" : "mt-7"} ${i > 1 ? "border-0 pb-0 mb-0" : "border-b border-[#7A7A7A] pb-7"}`}>
-                                <Image src={el.source} alt={el.title} className={`${i == 1 ? "w-20" : i == 2 ? "w-28" : "w-14"}`} />
+                                <Image src={el.source} alt={el.title} className="w-[60px]" />
                                 <span className='text-base lg:text-lg uppercase'>{el.title}</span>
                             </div>
                             
