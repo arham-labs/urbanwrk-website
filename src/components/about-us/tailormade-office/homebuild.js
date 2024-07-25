@@ -24,7 +24,6 @@ export default function HomeBuild({ data }) {
   const onSubmit = async (data) => {
     setIsLoading(true);
     setIsButtonDisabled(true)
-    console.log(data);
 
     const formData = new FormData();
     for (const key in data) {
@@ -33,26 +32,53 @@ export default function HomeBuild({ data }) {
       }
     }
 
+    let ZohoFormData = {
+      First_Name: data.name,
+      Last_Name: data.name,
+      Email: data.email,
+      Cities: data.city,
+      phone: data.phone,
+    }
+
+    fetchZohoData(ZohoFormData)
+
     try {
+
       const response = await fetch("/api/contact", {
         method: "POST",
         body: formData,
       });
 
       if (!response.ok) {
-        toast.error("Something went wrong");
         throw new Error(`Invalid response: ${response.status}`);
       }
-      console.log("submit", response);
       setShowPopup(true);
       reset();
+      setStoreCity("")
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(true)
+      setIsButtonDisabled(false);
     }
   };
+
+  const fetchZohoData = async (response) => {
+    let data = [{ ...response }]
+    const res = await fetch("/api/zoho", {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    if (!res.ok) {
+      toast.error("Something went wrong");
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    setShowPopup(true);
+    reset();
+    setStoreCity("")
+
+  }
+
 
   const onClose = () => {
     setShowPopup(false);
