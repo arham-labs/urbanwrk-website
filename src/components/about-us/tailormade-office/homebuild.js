@@ -33,11 +33,13 @@ export default function HomeBuild({ data }) {
     }
 
     let ZohoFormData = {
-      First_Name: data.name,
       Last_Name: data.name,
       Email: data.email,
+      "Lead_Source": "Website",
+      "Lead_Status": "Not Contacted",
       Cities: data.city,
-      phone: data.phone,
+      Phone: data.phone,
+      Mobile: data.phone
     }
 
     fetchZohoData(ZohoFormData)
