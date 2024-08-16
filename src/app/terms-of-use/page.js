@@ -51,7 +51,7 @@ export default function Page() {
                                 Website.
                             </p>
                             <p>
-                                7. “Urbanwrk P Limited”, “Urbanwrk”, “We” & “Us” refers to
+                                7. “Urbanwrk Private Limited”, “Urbanwrk”, “We” & “Us” refers to
                                 the website at the below mentioned address https://urbanwrk.com/
                             </p>
                         </div>
@@ -62,7 +62,7 @@ export default function Page() {
                             <p className="pb-2 leading-[24px] md:leading-[30px]">
                                 These Terms of Use set forth a legally binding “Terms of Use” for Your use of our
                                 Website. For the avoidance of doubt, the terms related to the Services shall be governed
-                                by the service contract entere en you and Urbanwrk. Your continued use
+                                by the service contract entered between you and Urbanwrk. Your continued use
                                 of the Website and/or our Services, or any part thereof, shall be deemed to be Your
                                 unconditional and irrevocable acceptance of the Terms of Use, Privacy Policy and such
                                 other policies, guidelines and terms and conditions that maybe brought in from time to
