@@ -7,11 +7,11 @@ export default function Page() {
             <div className="py-32 xl:py-36 w-[88%] m-auto xl:w-[75%]">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl mb-8 text-secondary xl:mb-20 text-center font-medium">Privacy Policy</h1>
                 <p className="pb-5 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">
-                    We, URB Homes Collection Private Limited, incorporated under the Companies Act, 2013,
+                    We, Urbanwrk Private Limited, incorporated under the Companies Act, 2013,
                     (hereinafter referred to as “we”, “our” or “us”) having its registered office at 504, 5th Floor,
                     Tower A, Peninsula Corporate Park, Lower Parel, Mumbai 400013 provides a platform for fractional
                     ownership of vacation homes and other support services and facilities (the “Service”) at
-                    https://urbanwrk.in/ (the “Website”) The term Website shall also mean to include
+                    https://urbanwrk.com/ (the “Website”) The term Website shall also mean to include
                     our mobile application.
                 </p>
                 <p className="pb-5 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">
@@ -40,7 +40,7 @@ export default function Page() {
                 </p>
                 <p className="pb-5 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">
                     If you have any questions or concerns regarding this Privacy Policy, you should contact us at
-                    anuj@thehomescollection.com
+                    anuj@urbanwrk.com
                 </p>
                 <p className="pb-5 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">
                     We reserve the right to change the terms and conditions of this Privacy Policy from time to time
@@ -123,7 +123,7 @@ export default function Page() {
                             e-mails, from the Company or its service partners from time to time. You may opt out of
                             such communication either by unsubscribing on the Services itself, or by contacting the
                             customer services team and placing a request for unsubscribing by sending an email to
-                            [newsletter@thehomescollection.com].
+                            [newsletter@urbanwrk.com].
                         </li>
                     </ol>
                 </div>
@@ -364,8 +364,8 @@ export default function Page() {
                         <p className="pb-2">
                             If you have any questions or concerns regarding this privacy policy, you should contact
                             us by sending an e-mail to <br />
-                            <Link href={`mailto:anuj@thehomescollection.com`} className="underline">
-                                anuj@thehomescollection.com
+                            <Link href={`mailto:anuj@urbanwrk.com`} className="underline">
+                                anuj@urbanwrk.com
                             </Link>
                         </p>
                         <p className="pb-2">Grievance officer: Anuj Munot</p>
