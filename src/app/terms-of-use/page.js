@@ -8,9 +8,8 @@ export default function Page() {
                 <div className="py-32 xl:py-36 w-[88%] m-auto xl:w-[75%]">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl mb-8 text-secondary xl:mb-20 text-center font-medium">Terms Of Use</h1>
                     <p className="pb-5 text-sm md:text-base leading-[24px] md:leading-[30px]">
-                        These Terms of Use govern your usage of the Website accessible at https://urbanwrk.in/ and
-                        across mobile platforms (herein after referred to “URB Homes Collection Private Limited”, “The
-                        Homes Collection”, “We” & “Us”) and the user (hereinafter referred to as “You”).
+                        These Terms of Use govern your usage of the Website accessible at https://urbanwrk.com/ and
+                        across mobile platforms (herein after referred to “Urbanwrk Private Limited”, “Urbanwrk”, “We” & “Us”) and the user (hereinafter referred to as “You”).
                     </p>
                     <div className="mb-5 text-sm md:text-base">
                         <span className="text-base pb-2 text-primary font-semibold uppercase md:text-lg block">1. Definitions:</span>
@@ -39,21 +38,21 @@ export default function Page() {
                             </p>
                             <p>
                                 4. “Privacy Policy” shall mean the policy accessible at the following weblink
-                                https://urbanwrk.in/
+                                https://urbanwrk.com/
                             </p>
                             <p>
                                 5. “Services” means and includes provision of premises and integrated systems of
                                 communication.
                             </p>
                             <p>
-                                6. “Website” refers to https://urbanwrk.in/ located at the given domain name and
+                                6. “Website” refers to https://urbanwrk.com/ located at the given domain name and
                                 operating on the world wide web and various mobile platforms. The use of the Website
                                 shall be bound by these Terms of Use and Privacy Policy as mentioned separately on the
                                 Website.
                             </p>
                             <p>
-                                7. “URB Homes Collection Private Limited”, “The Homes Collection”, “We” & “Us” refers to
-                                the website at the below mentioned address https://urbanwrk.in/
+                                7. “Urbanwrk P Limited”, “Urbanwrk”, “We” & “Us” refers to
+                                the website at the below mentioned address https://urbanwrk.com/
                             </p>
                         </div>
                     </div>
@@ -63,7 +62,7 @@ export default function Page() {
                             <p className="pb-2 leading-[24px] md:leading-[30px]">
                                 These Terms of Use set forth a legally binding “Terms of Use” for Your use of our
                                 Website. For the avoidance of doubt, the terms related to the Services shall be governed
-                                by the service contract entered between you and The Homes Collection. Your continued use
+                                by the service contract entere en you and Urbanwrk. Your continued use
                                 of the Website and/or our Services, or any part thereof, shall be deemed to be Your
                                 unconditional and irrevocable acceptance of the Terms of Use, Privacy Policy and such
                                 other policies, guidelines and terms and conditions that maybe brought in from time to
@@ -363,13 +362,13 @@ export default function Page() {
                                 In case of any grievance arising from the use of the Website or Services provided,
                                 please contact us at:
                                 <br />
-                                <p>anuj@thehomescollection.com</p>
+                                <p>anuj@urbanwrk.com</p>
                             </p>
                             <p>
                                 If you have any questions or concerns regarding this privacy policy, you should contact
                                 us by sending an e-mail to <br />
-                                <Link href={`mailto:anuj@thehomescollection.com`} className="underline">
-                                    anuj@thehomescollection.com
+                                <Link href={`mailto:anuj@urbanwrk.com`} className="underline">
+                                    anuj@urbanwrk.com
                                 </Link>
                             </p>
                         </div>
