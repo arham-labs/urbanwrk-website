@@ -1,19 +1,16 @@
 import ExploreCard from '@/components/home/ExploreCard'
-import Partners from '@/components/home/partners'
 import Amenities from '@/components/solutionsLanding/amenities'
-
-
-import Reviews from "@/components/home/reviews";
-
-
-import React from 'react'
 import SolutionBanner from '@/components/solutionsLanding/solutionBanner'
-import CompareSolution from '@/components/solutionsLanding/compareSolution';
 import Solutions from '@/components/solutionsLanding/solutions';
-import Testimonial from '@/common/testimonial';
 import GoodCompany from '@/components/home/goodCompany';
 import FormCard from '@/components/home/formCard';
-import DataDriven from '@/components/uwTechnology/dataDriven';
+
+export const metadata = {
+    alternates: {
+        canonical: "/solutions",
+    },
+};
+
 
 export default function page() {
 

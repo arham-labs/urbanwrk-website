@@ -11,7 +11,7 @@ export default function Restaurants({ data }) {
             <div className='w-full mx-auto  flex max-lg:items-center max-lg:justify-center  justify-between max-lg:flex-col max-lg:gap-10'>
                 <div className='w-[487px] max-lg:w-full'>
 
-                    <div className='text-6xl max-md:text-3xl uppercase'>{data?.locationName}</div>
+                    <h1 className='text-6xl max-md:text-3xl uppercase'>{data?.locationName}</h1>
                     <div className='text-base  my-4 '>
                         <p className='text-[#7D7C7C] text-xs font-semibold'>CONNECTIVITY</p>
                         <p className='pt-4'>{data.location1}</p>

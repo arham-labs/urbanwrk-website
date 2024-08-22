@@ -13,11 +13,11 @@ export default function ExploreCard() {
   const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune",];
 
   const dataCity = [
-    { name: "Hyderabad", link: "/city/hyderabad" },
-    { name: "Kolkata", link: "/city/kolkata" },
-    { name: "Mumbai", link: "/city/mumbai" },
-    { name: "NCR", link: "/city/ncr" },
-    { name: "Pune", link: "/city/pune" },
+    { name: "Hyderabad", link: "/hyderabad" },
+    { name: "Kolkata", link: "/kolkata" },
+    { name: "Mumbai", link: "/mumbai" },
+    { name: "NCR", link: "/ncr" },
+    { name: "Pune", link: "/pune" },
   ];
 
   const handleSelectChange1 = (val) => {
