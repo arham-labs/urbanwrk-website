@@ -13,11 +13,11 @@
 }
 
 body {
-    color: #1A1A1A;
+  color: #1A1A1A;
 }
 
-.scrollbar-hide{
-    scrollbar-width: none;
+.scrollbar-hide {
+  scrollbar-width: none;
 }
 
 .fade-in-out {
@@ -29,17 +29,35 @@ body {
   0% {
     opacity: 0.8;
   }
- 
-  
+
+
   100% {
     opacity: 1;
   }
 }
 
 
-.chat-shadow{
+.chat-shadow {
   box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
 }
-.hover-card:hover + .card{
+
+.hover-card:hover+.card {
   opacity: 1;
+}
+
+li {
+  margin-left: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+li::marker {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 901px) {
+  li {
+    margin-left: 28px;
+    line-height: 30px;
+  }
 }

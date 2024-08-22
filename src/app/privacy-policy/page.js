@@ -1,4 +1,3 @@
-'use client'
 import Link from "next/link"
 
 export const metadata = {
@@ -383,14 +382,6 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <style jsx>{`
-            li{ margin-left: 16px; font-weight: 400; line-height: 24px; }
-            li::marker { font-size: 14px;}
-            
-            @media screen and (min-width: 901px){
-              li{ margin-left: 28px; line-height: 30px; }
-            }
-            `}</style>
         </div>
     )
 }
