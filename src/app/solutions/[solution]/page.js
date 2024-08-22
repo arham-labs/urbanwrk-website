@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
 
   return {
     alternates: {
-      canonical: `/${solution}`,
+      canonical: `/solutions/${solution}`,
     },
   }
 }
