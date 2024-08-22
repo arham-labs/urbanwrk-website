@@ -121,7 +121,7 @@ export default function HomeBuild({ data }) {
           </p>
           <ul className="text-sm flex flex-col font-medium gap-6 lg:gap-4 w-auto lg:w-[80%] list-disc ml-6 lg:ml-7">
             {data?.brandData?.map((el, i) => (
-              <li key={i}>{el}</li>
+              <li className="!ml-0" key={i}>{el}</li>
             ))}
           </ul>
         </div>

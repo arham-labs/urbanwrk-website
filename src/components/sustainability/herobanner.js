@@ -22,7 +22,7 @@ export default function Herobanner() {
                         </div>
                         <ul className="leading-6 text-base xl:text-lg font-medium">
                             {sustainData.map((el, i) =>
-                                <li key={i}>{el}</li>
+                                <li className="!ml-0" key={i}>{el}</li>
                             )}
                         </ul>
                     </div>

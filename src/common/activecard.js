@@ -116,7 +116,7 @@ export default function ActiveCard() {
                         <p className="leading-6 w-full lg:w-[85%] text-sm lg:text-base mb-7 font-medium">{showData?.desc}</p>
                         <ul className="text-sm flex flex-col font-medium gap-6 lg:gap-4 w-auto lg:w-[80%] list-disc ml-6 lg:ml-7">
                             {showData?.list?.map((el, i) =>
-                                <li key={i}>{el}</li>
+                                <li className="!ml-0" key={i}>{el}</li>
                             )}
                         </ul>
                     </div>
