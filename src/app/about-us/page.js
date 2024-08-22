@@ -6,6 +6,13 @@ import WorkSpace from "@/components/about-us/workspace";
 import WorkSwings from "@/components/about-us/workswings";
 import FormCard from "@/components/home/formCard";
 
+export const metadata = {
+    alternates: {
+        canonical: "/about-us",
+    },
+};
+
+
 export default function Page() {
 
     const specilatiesData = [
@@ -25,7 +32,7 @@ export default function Page() {
             <Speciality data={specilatiesData} title="Make your workspace" />
             <Intro />
             <Vision />
-            <FormCard/>
+            <FormCard />
         </>
     )
 }

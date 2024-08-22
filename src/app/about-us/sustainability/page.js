@@ -5,6 +5,13 @@ import Commitment from "@/components/sustainability/commitment";
 import Grade from "@/components/sustainability/grade";
 import Herobanner from "@/components/sustainability/herobanner";
 
+export const metadata = {
+    alternates: {
+        canonical: "/about-us/sustainability",
+    },
+};
+
+
 export default function Page() {
     return (
         <>

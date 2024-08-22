@@ -1,6 +1,13 @@
 'use client'
 import Link from "next/link"
 
+export const metadata = {
+    alternates: {
+        canonical: "/terms-of-use",
+    },
+};
+
+
 export default function Page() {
     return (
         <>
@@ -38,21 +45,21 @@ export default function Page() {
                             </p>
                             <p>
                                 4. “Privacy Policy” shall mean the policy accessible at the following weblink
-                                https://urbanwrk.com/
+                                https://www.urbanwrk.com/
                             </p>
                             <p>
                                 5. “Services” means and includes provision of premises and integrated systems of
                                 communication.
                             </p>
                             <p>
-                                6. “Website” refers to https://urbanwrk.com/ located at the given domain name and
+                                6. “Website” refers to https://www.urbanwrk.com/ located at the given domain name and
                                 operating on the world wide web and various mobile platforms. The use of the Website
                                 shall be bound by these Terms of Use and Privacy Policy as mentioned separately on the
                                 Website.
                             </p>
                             <p>
                                 7. “Urbanwrk Private Limited”, “Urbanwrk”, “We” & “Us” refers to
-                                the website at the below mentioned address https://urbanwrk.com/
+                                the website at the below mentioned address https://www.urbanwrk.com/
                             </p>
                         </div>
                     </div>

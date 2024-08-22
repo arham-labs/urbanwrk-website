@@ -1,6 +1,13 @@
 'use client'
 import Link from "next/link"
 
+export const metadata = {
+    alternates: {
+        canonical: "/privacy-policy",
+    },
+};
+
+
 export default function Page() {
     return (
         <div className="bg-white">
@@ -11,7 +18,7 @@ export default function Page() {
                     (hereinafter referred to as “we”, “our” or “us”) having its registered office at 504, 5th Floor,
                     Tower A, Peninsula Corporate Park, Lower Parel, Mumbai 400013 provides a platform for fractional
                     ownership of vacation homes and other support services and facilities (the “Service”) at
-                    https://urbanwrk.com/ (the “Website”) The term Website shall also mean to include
+                    https://www.urbanwrk.com/ (the “Website”) The term Website shall also mean to include
                     our mobile application.
                 </p>
                 <p className="pb-5 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">

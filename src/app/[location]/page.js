@@ -5,6 +5,17 @@ import { notFound } from "next/navigation";
 
 import { Jsons } from "./locationJson";
 
+
+export async function generateMetadata({ params }) {
+  const location = params.location;
+
+  return {
+    alternates: {
+      canonical: `/${location}`,
+    },
+  }
+}
+
 export default function Page({ params }) {
   const location = params.location;
 
@@ -14,7 +25,7 @@ export default function Page({ params }) {
   );
 
   if (!locationFind) {
-      return notFound()
+    return notFound()
   }
 
   return (

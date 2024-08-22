@@ -1,5 +1,3 @@
-'use client'
-import Testimonial from "@/common/testimonial";
 import Ways from "@/components/about-us/tailormade-office/ways";
 import LocationBanner from "@/components/locationInside/locationBanner";
 import LocationSpace from "@/components/locationInside/locationSpace";
@@ -10,11 +8,20 @@ import Amenities from "@/components/solutionsLanding/amenities";
 import { notFound } from "next/navigation";
 import { Jsons } from "../locationJson";
 
+export async function generateMetadata({ params }) {
+    const location = `/${params.location}/${params.area}`
+  
+    return {
+      alternates: {
+        canonical: `/${location}`,
+      },
+    }
+  }
+  
+
 export default function page({ params }) {
-    const location = `/city/${params.location}/${params.area}`
-
-    console.log("location",location);
-
+    const location = `/${params.location}/${params.area}`
+    
     const locationData = Jsons.LocationData?.find((el) =>
         el.locationInfo.some((p) => p.url === location)
     );
@@ -57,7 +64,7 @@ export default function page({ params }) {
                 <LocatonPark location={location} data={newData}/>
             </div>}
 
-            {locationData?.locationInfo?.length > 1 && <LocationSpace data={locationData} url={`/city/${params.location}`}/>}
+            {locationData?.locationInfo?.length > 1 && <LocationSpace data={locationData} url={`/${params.location}`}/>}
 
         </>
     )
