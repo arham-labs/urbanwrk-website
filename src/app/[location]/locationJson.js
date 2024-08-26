@@ -479,7 +479,7 @@ export const Jsons = {
           locationCity: "Htec city",
           locationImg: CardImage2,
           locationMobileImg: "/images/location/hyderabad-mobile.png",
-          location1: "Metro Station - 2.5 km",
+          location1: "Metro Station - 500 m",
           location2: "Airport - 33 km",
           location3: "One of India’s leading tech industry hub.",
           AmentiesData: [
@@ -522,7 +522,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
-          locationName: "Baani",
+          locationName: "Baani, The Statement",
           bannerImage: "",
           mobileBanner: "",
           video: true,
