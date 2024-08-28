@@ -13,6 +13,8 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.17",
+    "axios": "^1.7.4",
+    "dayjs": "^1.11.13",
     "next": "14.2.2",
     "nodemailer": "^6.9.14",
     "react": "^18",

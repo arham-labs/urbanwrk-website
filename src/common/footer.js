@@ -16,7 +16,7 @@ export default function Footer() {
           <Image src={UrbanWRKLogo} className="" alt="urbanwrk-logo" />
         </Link>
         <div className="flex flex-col lg:flex-row w-full justify-between">
-          <div className="mb-8 grid lg:grid-cols-4 gap-5 lg:gap-10 lg:mb-0">
+          <div className="mb-8 grid lg:grid-cols-6 gap-5 lg:gap-8 2xl:gap:12 lg:mb-0">
             <div className="flex flex-col gap-2 lg:gap-6">
               <span href="/location" className="text-lg uppercase">
                 CONTACT US
@@ -24,7 +24,7 @@ export default function Footer() {
               <div className="flex flex-col gap-2 text-sm font-light">
                 <Link href="tel:+91 8399959996">+91 8399959996</Link>
                 <Link href="mailto:hello@urbanwrk.com">hello@urbanwrk.com</Link>
-                <p className="lg:w-[220px]">504, Tower A, Peninsula Corporate Park, Senapati Bapat Marg, Lower Parel West, Mumbai, Maharashtra 400013</p>
+                <p className="lg:w-[90%]">504, Tower A, Peninsula Corporate Park, Senapati Bapat Marg, Lower Parel West, Mumbai, Maharashtra 400013</p>
               </div>
             </div>
             <div className="flex flex-col gap-2 lg:gap-6">
@@ -91,8 +91,22 @@ export default function Footer() {
                 )}
               </div>
             </div>
+            <div className="flex flex-col gap-2 lg:gap-6">
+              <span className="text-lg uppercase">
+                Know More
+              </span>
+              <div className="flex flex-col gap-2">
+                {[{ link: "/blogs", title: "Blog" },{ link: "/careers", title: "Careers" }].map(
+                  (el, i) => (
+                    <Link className="text-sm font-light" href={el.link} key={i}>
+                      <span className="block">{el.title}</span>
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col gap-4 lg:gap-6 lg:items-center">
+          <div className="flex flex-col gap-4 lg:gap-6 lg:items-end lg:w-full">
             {/* <div className="flex gap-2">
               <Link href="/">
                 <Image src={Facebook} alt="facebook" />
