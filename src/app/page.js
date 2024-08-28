@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div className="md:pt-20">
-        {/* <HomeBanner /> */}
+        <HomeBanner />
       </div>
       <div className="bg-bglight1">
         <div className=" px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16">
