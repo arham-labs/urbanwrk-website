@@ -8,6 +8,7 @@ import FormCard from "@/components/home/formCard";
 import HomeBanner from "@/components/home/homeBanner";
 
 export default function Home() {
+  alert("JK")
   return (
     <>
       <div className="md:pt-20">
