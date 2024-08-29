@@ -1,6 +1,5 @@
 import BlogsList from "@/components/blogs/blogslist";
 import HeroBanner from "@/components/blogs/herobanner";
-import FormCard from "@/components/home/formCard";
 import axiosInstance from "@/libs/axiosConfigAdmin";
 
 export const getListOfBlogs = async () => {
@@ -24,7 +23,6 @@ export default async function Page() {
     <>
       <HeroBanner />
       {data ? <BlogsList data={data} /> : <span className="text-center block py-16 text-base lg:text-3xl">No Blogs Found</span>}
-      <FormCard />
     </>
   )
 }

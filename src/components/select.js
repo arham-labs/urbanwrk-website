@@ -8,7 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 // Wrapping the component with React.forwardRef
-const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChange }, ref) => {
+const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChange, date }, ref) => {
   const BootstrapInput = styled(InputBase)(({ theme, selected, fullWidth }) => ({
     "label + &": {
       marginTop: theme.spacing(3),
@@ -19,13 +19,20 @@ const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChang
       fontSize: 16,
       width: "100%",
       padding: "5px 36px 5px 12px",
+      color: date ? "#A5A5A5" : "black",
+      fontWeight: date ? "400 !important" : "500",
+      fontFamily: date ? "'__Work_Sans_1fc36d', '__Work_Sans_Fallback_1fc36d'" : "",
       transition: theme.transitions.create(["border-color", "box-shadow"]),
       "&:focus": {
         outline: "none",
         border: "1px solid black",
         boxShadow: "none",
       },
+      "& .MuiMenuItem" : {
+        color: date ? "#A5A5A5" : "black",
+      },
     },
+    
     "& .MuiSelect-icon": {
       color: selected ? "#C72030" : "",
       fontSize: "20px",
@@ -74,7 +81,7 @@ const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChang
             <MenuItem
               value={item}
               key={i}
-              className={selected === item ? "text-primary !bg-white" : "hover:bg-red-300"}
+              className={selected === item ? "text-primary !bg-white" :  "hover:bg-red-300"}
             >
               {item}
             </MenuItem>

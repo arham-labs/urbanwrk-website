@@ -9,7 +9,7 @@ export default function CareerCard() {
                     we&apos;re looking for passionate, creative, and driven individuals
                     to join our journey in leaving a mark in the industry.</p>
             </div>
-            <Image src="/images/careers/card.png" width={1200} height={1000} alt="card" className="aspect-[10/11] lg:aspect-[14/11] w-full lg:w-1/2 object-cover" />
+            <Image src="/images/careers/card.png" width={1200} height={1000} alt="card" className="aspect-[12/14] lg:aspect-[14/11] w-full lg:w-1/2 object-cover" />
         </div>
     )
 }
