@@ -1,13 +1,13 @@
 import CareerCard from "@/components/careers/careercard";
+import CareerFormCard from "@/components/careers/careerform";
 import HeroBanner from "@/components/careers/herobanner";
-import FormCard from "@/components/home/formCard";
 
 export default function page() {
     return (
         <>
             <HeroBanner />
             <CareerCard/>
-            <FormCard />
+            <CareerFormCard />
         </>
     )
 }

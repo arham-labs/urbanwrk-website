@@ -1,4 +1,5 @@
 import BlogDetails from '@/components/blogs/blogdetails'
+import BlogSolutionCard from '@/components/blogs/blogssolutionscard';
 import axiosInstance from '@/libs/axiosConfigAdmin';
 import { notFound } from 'next/navigation';
 
@@ -16,6 +17,9 @@ export default async function page({ params }) {
     const data = await getBlogById(params?.id);
     
     return (
+        <>
         <BlogDetails blog={data} />
+        <BlogSolutionCard/>
+        </>
     )
 }

@@ -55,9 +55,37 @@ li::marker {
   font-size: 14px;
 }
 
+.scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  left: 100px;
+}
+
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: white;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #DDDDDD;
+  border-radius: 100vh;
+  border: 3px solid white;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #DDDDDD;
+}
+
 @media screen and (min-width: 901px) {
   li {
     margin-left: 28px;
     line-height: 30px;
   }
+  .scrollbar-custom {
+    padding-right: 30px; /* Add extra space on the right to offset content */
+    margin-right: -30px; /* Pull the scrollbar track left by 100px */
+    overflow-y: scroll; /* Ensure the scrollbar appears */
+  }  
 }
