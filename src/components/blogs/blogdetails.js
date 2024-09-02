@@ -93,27 +93,28 @@ export default function BlogDetails({ blog }) {
 
     return (
         <>
-            <div className="h-screen hidden lg:block">
-                <Image
-                    src="/images/blogs/desktop-banner.png"
-                    alt="home banner"
-                    className="h-full w-full object-cover"
-                    priority
-                    layout="fill"
-                    unoptimized
-                />
-            </div>
-            <div className="lg:hidden h-screen">
-                <Image
-                    src="/images/blogs/mobile-banner.png"
-                    alt="home banner"
-                    height={375}
-                    width={720}
-                    className="h-full w-full object-cover"
-                    priority
-                    unoptimized
-                />
-            </div>
+            {blog?.data?.attributes?.Banner?.data?.attributes?.url && <>
+                <div className="h-screen hidden lg:block">
+                    <Image
+                        src={"https://urbanwrk.com/cms" + blog?.data?.attributes?.Banner?.data?.attributes?.url}
+                        alt="home banner"
+                        className="h-full w-full object-cover"
+                        priority
+                        layout="fill"
+                        unoptimized
+                    />
+                </div>
+                <div className="lg:hidden h-screen">
+                    <Image
+                        src={"https://urbanwrk.com/cms" + blog?.data?.attributes?.Banner?.data?.attributes?.url}
+                        alt="home banner"
+                        height={375}
+                        width={720}
+                        className="h-full w-full object-cover"
+                        priority
+                        unoptimized
+                    />
+                </div> </>}
             <div className="max-w-[1920px] text-secondary mx-auto relative">
                 <div className="w-full bg-bglight1 py-16 text-left px-6 lg:px-[160px]">
                     <h2 className="text-2xl md:text-3xl font-medium mb-2 text-dark">

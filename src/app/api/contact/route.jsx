@@ -5,7 +5,7 @@ import { Readable } from 'stream';
 export async function POST(request) {
     const username = "hello@urbanwrk.com";
     const password = "URB@2024";
-    const myEmail = "jaykrishnanandagiri@arhamlabs.com";
+    const myEmail = "hello@urbanwrk.com";
 
     try {
         const formData = await request.formData();
