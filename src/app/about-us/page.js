@@ -16,7 +16,7 @@ export const metadata = {
 export default function Page() {
 
     const specilatiesData = [
-        { title: "Real estate partner of your choice", desc: "With prime real estate in all major Indian metro cities, you can unlock fast growth in a cost-efficient manner that saves up to 20% over the tenure of engagement." },
+        { title: "Real estate partner of your choice", desc: "With prime real estate in all major Indian metro cities, you can unlock fast growth in a cost-efficient manner." },
         { title: "Single-point management", desc: "We are your single-stop shop—customising, building, and managing your workspace needs all under one roof, saving you time, energy, and resources." },
         { title: "Ultra-swift delivery", desc: "From one desk to a dedicated floor, we customise the space and furnish it as per your business needs." },
         { title: "Cutting-edge technology", desc: "Streamline everyday tasks and enhance your workflow with our UrbanWrk Mobile and Healthwrk Engine apps. Get facial recognition, visitor management system, and many more real-time insights for total workspace management." },

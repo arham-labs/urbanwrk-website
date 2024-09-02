@@ -201,9 +201,17 @@ export default function CareerFormCard() {
                                     render={({ field }) => (
                                         <>
                                             <input
-                                                {...register("resume", { required: "Resume is required" })}
+                                                {...register("resume", {
+                                                    required: "Resume is required",
+                                                    validate: {
+                                                        acceptedFormats: files =>
+                                                            files[0]?.type === "application/pdf" || "Only PDF files are allowed",
+                                                        fileSize: files =>
+                                                            files[0]?.size <= 2 * 1024 * 1024 || "File size must be less than 2MB",
+                                                    }
+                                                })}
                                                 type="file"
-                                                accept=".pdf,.doc,.docx"
+                                                accept=".pdf"
                                                 onChange={(e) => {
                                                     field.onChange(e.target.files);
                                                     setFileName(e.target.files[0]?.name || '');

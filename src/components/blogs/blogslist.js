@@ -62,8 +62,8 @@ export default function BlogsList({ data }) {
                 <div className="w-full lg:w-1/2 mb-7 lg:mb-0">
                     <Link href={`/blogs/${blogData[0]?.id}`} className="flex flex-col gap-3 justify-start items-start">
                         <Image src={"https://urbanwrk.com/cms" + blogData[0]?.attributes?.Banner?.data?.attributes?.url} width={1200} height={1000} className="aspect-[16/17] object-cover w-full" alt="Image" />
-                        <span className="text-base text-dark font-semibold">{blogData[0]?.attributes?.Title}</span>
-                        <p className="text-xs text-[#6D6D6D] lg:w-[95%]">{renderFirstParagraph(blogData[0]?.attributes?.Content, "heading")}</p>
+                        <span className="text-base text-dark font-semibold lg:text-xl">{blogData[0]?.attributes?.Title}</span>
+                        <p className="text-xs text-[#6D6D6D] lg:w-[95%] lg:text-sm">{renderFirstParagraph(blogData[0]?.attributes?.Content, "heading")}</p>
                         {/* <Link href={`/blogs/${blogData[0]?.id}`} className="bg-primary text-white py-2 px-3 text-sm w-fit mb-7 lg:mb-10">Read More</Link> */}
                     </Link>
                 </div>
