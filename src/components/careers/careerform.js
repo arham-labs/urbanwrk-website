@@ -138,7 +138,7 @@ export default function CareerFormCard() {
                             className="flex flex-col md:w-full lg:w-[400px] xl:w-[462px] lg:mt-4"
                         >
                             <div className="mb-4">
-                                <label className="block font-semibold" htmlFor="firstname">FIRST Name:</label>
+                                <label className="block font-semibold" htmlFor="firstname">FIRST NAME:</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -179,12 +179,12 @@ export default function CareerFormCard() {
                                     <span className="text-red-500">{errors.email.message}</span>
                                 )}
                             </div>
-                            <div className="mb-4">
+                            <div className="mb-2">
                                 <label className="block font-semibold" htmlFor="areas">AREA OF INTEREST:</label>
                                 <Controller control={control} name="field_domain_of_interest"
                                     render={({ field }) => (
                                         <>
-                                            <BasicSelectDrop list={city} {...field} value={storeInterest} labelName="Select Area of Interest" handleSelectChange={(val) => {
+                                            <BasicSelectDrop list={city} date={true} {...field} value={storeInterest} labelName="Select Area of Interest" handleSelectChange={(val) => {
                                                 field.onChange(val)
                                                 setStoreInterest(val)
                                             }} />
@@ -309,6 +309,6 @@ const uploadBoxStyle = {
     border: '1px solid black',
     textAlign: 'left',
     cursor: 'pointer',
-    color: '#000',
-    fontWeight: "500"
+    color: '#747474',
+    fontWeight: "400"
 };
