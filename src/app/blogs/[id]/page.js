@@ -18,8 +18,8 @@ export default async function page({ params }) {
     
     return (
         <>
-        {/* <BlogDetails blog={data} />
-        <BlogSolutionCard/> */}
+        <BlogDetails blog={data} />
+        <BlogSolutionCard/>
         </>
     )
 }
