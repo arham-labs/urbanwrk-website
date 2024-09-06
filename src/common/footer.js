@@ -16,7 +16,7 @@ export default function Footer() {
           <Image src={UrbanWRKLogo} className="" alt="urbanwrk-logo" />
         </Link>
         <div className="flex flex-col lg:flex-row w-full justify-between">
-          <div className="mb-8 grid lg:grid-cols-5 gap-5 lg:gap-8 2xl:gap:12 lg:mb-0">
+          <div className="mb-8 grid lg:grid-cols-6 gap-5 lg:gap-8 2xl:gap:12 lg:mb-0">
             <div className="flex flex-col gap-2 lg:gap-6">
               <span href="/location" className="text-lg uppercase">
                 CONTACT US
@@ -91,7 +91,7 @@ export default function Footer() {
                 )}
               </div>
             </div>
-            {/* <div className="flex flex-col gap-2 lg:gap-6">
+            <div className="flex flex-col gap-2 lg:gap-6">
               <span className="text-lg uppercase">
                 Know More
               </span>
@@ -104,7 +104,7 @@ export default function Footer() {
                   )
                 )}
               </div>
-            </div> */}
+            </div>
           </div>
           <div className="flex flex-col gap-4 lg:gap-6 lg:items-end lg:w-full">
             {/* <div className="flex gap-2">
