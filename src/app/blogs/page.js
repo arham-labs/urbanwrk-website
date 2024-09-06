@@ -21,8 +21,8 @@ export default async function Page() {
 
   return (
     <>
-      <HeroBanner />
-      {data ? <BlogsList data={data} /> : <span className="text-center block py-16 text-base lg:text-3xl">No Blogs Found</span>}
+      {/* <HeroBanner />
+      {data ? <BlogsList data={data} /> : <span className="text-center block py-16 text-base lg:text-3xl">No Blogs Found</span>} */}
     </>
   )
 }

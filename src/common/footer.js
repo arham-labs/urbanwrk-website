@@ -91,7 +91,7 @@ export default function Footer() {
                 )}
               </div>
             </div>
-            <div className="flex flex-col gap-2 lg:gap-6">
+            {/* <div className="flex flex-col gap-2 lg:gap-6">
               <span className="text-lg uppercase">
                 Know More
               </span>
@@ -104,7 +104,7 @@ export default function Footer() {
                   )
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col gap-4 lg:gap-6 lg:items-end lg:w-full">
             {/* <div className="flex gap-2">
