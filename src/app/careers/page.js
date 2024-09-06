@@ -5,9 +5,9 @@ import HeroBanner from "@/components/careers/herobanner";
 export default function page() {
     return (
         <>
-            <HeroBanner />
+            {/* <HeroBanner />
             <CareerCard/>
-            <CareerFormCard />
+            <CareerFormCard /> */}
         </>
     )
 }
