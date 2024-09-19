@@ -129,7 +129,14 @@ export default function Chat() {
           <span>HOW CAN WE HELP?</span>
         </div>
         {openchat && (
-          <div className="py-8  lg:p-8  bg-accent absolute w-[330px]  lg:w-[515px] lg:right-[50px] right-0 bottom-[26px] lg:bottom-[-30px] ">
+          <div
+            className="fixed w-full h-full left-0 top-0 bg-transparent -z-10"
+            onClick={() => setOpenChat(false)}
+          ></div>
+        )}
+      </div>
+      {openchat && (
+          <div className="py-8 lg:p-8  bg-accent fixed w-[92%] lg:w-[515px] lg:right-28 right-[15px] bottom-0 lg:bottom-2">
             <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
               <p className="pb-0 text-base max-lg:text-[16px] max-lg:pb-2">
                 Fill in the details below or call us at{" "}
@@ -243,13 +250,6 @@ export default function Chat() {
             </div>
           </div>
         )}
-        {openchat && (
-          <div
-            className="fixed w-full h-full left-0 top-0 bg-transparent -z-10"
-            onClick={() => setOpenChat(false)}
-          ></div>
-        )}
-      </div>
       {showPopup && (
         <div
           className="fixed w-full h-full left-0 top-0 z-50 bg-[#0000005e]"
