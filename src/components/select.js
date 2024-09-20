@@ -18,7 +18,7 @@ const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChang
       border: "1px solid black",
       fontSize: 16,
       width: "100%",
-      padding: "5px 36px 5px 12px",
+      padding: "6.5px 36px 6.5px 12px",
       color: date ? "#A5A5A5" : "black",
       fontWeight: date ? "400 !important" : "500",
       fontFamily: date ? "'__Work_Sans_1fc36d', '__Work_Sans_Fallback_1fc36d'" : "",
@@ -47,7 +47,7 @@ const CustomizedSelects = React.forwardRef(({ list, labelName, handleSelectChang
   };
 
   return (
-    <div className="w-full h-[50px] ">
+    <div className="w-full h-[50px]">
       <FormControl sx={{ width: "100%" }} variant="standard">
         <Select
           labelId="demo-customized-select-label"

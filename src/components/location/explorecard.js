@@ -3,6 +3,7 @@ import Image from "next/image";
 import Map from '../../../public/images/location/map.png'
 import { useParams } from "next/navigation";
 import LinkButton from "@/common/linkbtn";
+import LocationFormCard from "@/common/locationformcard";
 
 export default function ExploreCard({ data }) {
     const params = useParams();
@@ -40,25 +41,8 @@ export default function ExploreCard({ data }) {
                     </div>
                 )}
             </div>
-
-            <div className="w-full lg:w-[40%] 2xl:w-[45%]">
-                <div className="flex flex-col">
-                    {/* <Image src={Map} alt="map" className="w-full mb-7" /> */}
-                    <div className='bg-bglight1 w-full py-10'>
-                        <div className='flex flex-col justify-center items-center h-full '>
-                            <p className='font-medium text-xl'>Want to find your space?</p>
-                            <p className='mt-1'>Get in touch with us to know more.</p>
-                            <div className='w-[88%] lg:w-[360px]'>
-                                <div className='border border-[#747474] my-5 w-full'></div>
-                            </div>
-                            <div className='flex flex-col justify-center items-center'>
-                                <p className='text-base'>Call us Mon-Fri - 08:30-18:00</p>
-                                <p className='text-base mb-2 font-medium'>+91 8399959996</p>
-                                {/* <LinkButton title="Share your details" href="" /> */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="flex flex-col order-1 sm:order-2 bg-bglight1 p-6 md:p-12 h-fit lg:w-[40%] justify-center">
+                <LocationFormCard />
             </div>
         </div>)
 }

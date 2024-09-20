@@ -1,14 +1,12 @@
-import Image from 'next/image'
-import React from 'react'
-import CommonBtnKnowMore from '../home/commonBtnKnowMore'
-import ExploreBtn from '../home/exploreBtn'
+import LocationFormCard from "@/common/locationformcard";
+import Image from "next/image";
 
 export default function Restaurants({ data }) {
 
+
     return (
         <div className='bg-[#FFF] flex '>
-
-            <div className='w-full mx-auto  flex max-lg:items-center max-lg:justify-center  justify-between max-lg:flex-col max-lg:gap-10'>
+            <div className='w-full mx-auto  flex max-lg:items-center max-lg:justify-center  justify-between max-lg:flex-col max-lg:gap-7'>
                 <div className='w-[487px] max-lg:w-full'>
 
                     <h1 className='text-6xl max-md:text-3xl uppercase'>{data?.locationName}</h1>
@@ -24,26 +22,10 @@ export default function Restaurants({ data }) {
                         </div>)}
                     </div>
                 </div>
-                <div className='bg-[#F6F4EE] w-1/2 max-lg:w-full max-lg:py-10 '>
-                    <div className='flex flex-col justify-center items-center h-full '>
-                        <p className='font-medium text-xl'>Want to find your space?</p>
-                        <p className='mt-3'>Get in touch with us to know more.</p>
-                        <div className='flex flex-col justify-center items-center'>
-                            <div className='w-fit'>
-                                <div className='border border-[#747474] my-5 w-full opacity-45  '></div>
-                                <p className='text-base'>Call us Mon-Fri - 08:30-18:00       </p>
-                                <p className='text-base text-center font-medium'>+91 8399959996</p>
-                            </div>
-
-                            {/* <div className="py-8">
-                                <ExploreBtn btnName="Share your details" />
-                            </div> */}
-                        </div>
-                    </div>
-                </div>
-
+                {(data?.locationName === "Westport" || data?.locationName === "Sai radhe") ? null : <div className="flex flex-col order-1 h-fit sm:order-2 bg-bglight1 p-6 md:p-12 lg:w-1/2 justify-center">
+                    <LocationFormCard />
+                </div>}
             </div>
-
         </div>
     )
 }

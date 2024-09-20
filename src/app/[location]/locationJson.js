@@ -178,7 +178,7 @@ export const Jsons = {
         },
         {
           id: 3,
-          locationName: "Koncord",
+          locationName: "Koncord 1",
           locationCity: "Bund Garden",
           bannerImage: "",
           mobileBanner: "",
@@ -476,7 +476,7 @@ export const Jsons = {
           videourl: "/images/locationInside/hyderabad-video.mp4",
           posterImage: "/images/locationInside/raheja-poster.png",
           posterMobileImage: "/images/locationInside/maxhouse-mobile-poster.png",
-          locationCity: "Htec city",
+          locationCity: "Hitec city",
           locationImg: CardImage2,
           locationMobileImg: "/images/location/hyderabad-mobile.png",
           location1: "Metro Station - 500 m",
