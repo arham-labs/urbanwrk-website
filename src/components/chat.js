@@ -136,7 +136,7 @@ export default function Chat() {
         )}
       </div>
       {openchat && (
-          <div className="py-8 lg:p-8  bg-accent fixed w-[92%] lg:w-[515px] lg:right-28 right-[15px] bottom-0 lg:bottom-2">
+          <div className="lg:p-8  bg-accent fixed w-[92%] lg:w-[515px] lg:right-28 right-[15px] top-20 lg:top-auto lg:bottom-2">
             <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
               <p className="pb-0 text-base max-lg:text-[16px] max-lg:pb-2">
                 Fill in the details below or call us at{" "}

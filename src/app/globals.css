@@ -89,3 +89,30 @@ li::marker {
     overflow-y: scroll; /* Ensure the scrollbar appears */
   }  
 }
+
+.react-international-phone-input-container{
+  width: 100%;
+}
+
+.react-international-phone-country-selector{
+  width: 80px;
+}
+
+.react-international-phone-country-selector-button{
+  padding-left: 7px;
+  padding-right: 3px;
+  height: 38px !important;
+  background-color: #F6F4EE !important;
+  border: 1px solid #000 !important;
+  border-right: 0 !important;
+  width: 100% !important;
+  border-radius:  0 !important;
+}
+.react-international-phone-input-container .react-international-phone-input{
+  width: 100%;
+  height: 38px !important;
+  background-color: #F6F4EE !important;
+  font-size: 16px !important;
+  border: 1px solid #000 !important;
+  border-radius:  0 !important;
+}
