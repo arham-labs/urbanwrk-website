@@ -4,7 +4,7 @@ import DesktopBanner from '../../../public/images/about-us/desktop-banner.png'
 
 export default function Herobanner() {
     return (
-        <div className="text-white relative pt-4 lg:pt-[100px]">
+        <div className="text-white relative">
             <div className="flex justify-center items-center w-full">
                 <div className="h-[700px] overflow-hidden md:hidden w-full">
                     <Image sizes="100vw" priority={true} alt="hero-banner" className="w-full" src={mobileBanner} />

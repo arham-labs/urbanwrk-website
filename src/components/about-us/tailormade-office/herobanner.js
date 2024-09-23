@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Herobanner({data}) {
     return (
-        <div className="text-white relative pt-12 lg:pt-20">
+        <div className="text-white relative">
             <div className="flex justify-center items-center ">
                 <div className="h-[700px] overflow-hidden md:hidden w-full">
                     <Image sizes="100vw" priority={true} className="w-full" alt="hero-banner" src={data.titleImgMob} width={200} height={200} unoptimized/>

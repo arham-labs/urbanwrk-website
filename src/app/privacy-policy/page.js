@@ -1,3 +1,4 @@
+import BreadCrumbs from "@/common/breadcrumbs";
 import Link from "next/link"
 
 export const metadata = {
@@ -10,7 +11,8 @@ export const metadata = {
 export default function Page() {
     return (
         <div className="bg-white">
-            <div className="py-32 xl:py-36 w-[88%] m-auto xl:w-[75%]">
+            <BreadCrumbs subtitle="Privacy Policy" subpathname="/privacy-policy" />
+            <div className="pb-32 pt-10 xl:pb-36 w-[88%] m-auto xl:w-[75%]">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl mb-8 text-secondary xl:mb-20 text-center font-medium">Privacy Policy</h1>
                 <p className="pb-5 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">
                     We, Urbanwrk Private Limited, incorporated under the Companies Act, 2013,

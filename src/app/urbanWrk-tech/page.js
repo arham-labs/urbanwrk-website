@@ -1,3 +1,4 @@
+import BreadCrumbs from '@/common/breadcrumbs';
 import FormCard from '@/components/home/formCard'
 import BetterSpace from '@/components/uwTechnology/betterSpace'
 import DataDriven from '@/components/uwTechnology/dataDriven'
@@ -13,11 +14,12 @@ export const metadata = {
 export default function page() {
     return (
         <div>
+            <BreadCrumbs subtitle="urbanWrk tech" subpathname="/urbanWrk-tech" />
             <TechnologyBanner />
             <DataDriven />
             <BetterSpace />
             {/* <Testimonial /> */}
-            <FormCard/>
+            <FormCard />
         </div>
     )
 }

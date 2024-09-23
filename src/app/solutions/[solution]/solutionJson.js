@@ -10,6 +10,7 @@ export const Jsons = {
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
+      breadcrumbsTitle: "Tailor Made Offices",
       title1: "Tailormade",
       title2: "offices",
       title3: "Your workspace, tailored to your workstyle.",
@@ -67,6 +68,7 @@ export const Jsons = {
     },
     {
       id: 2,
+      breadcrumbsTitle: "Ready To Work In Offices",
       name: "ready-to-work-in",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-2.png",
@@ -89,17 +91,17 @@ export const Jsons = {
       card2: [
         {
           title: "We deliver future-proof flexibility",
-          source:  "/images/solutionsLanding/solutionsImg/working4.png",
+          source: "/images/solutionsLanding/solutionsImg/working4.png",
           desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up or down or expand to new locations with complete ease.",
         },
         {
           title: "We bring the global edge",
-          source:  "/images/solutionsLanding/solutionsImg/working5.png",
+          source: "/images/solutionsLanding/solutionsImg/working5.png",
           desc: "Operate with a world-class standard from day one. Our environments give you a competitive advantage with cutting edge technology and premium amenities.",
         },
         {
           title: "We facilitate zero upfront costs",
-          source:  "/images/solutionsLanding/solutionsImg/working6.png",
+          source: "/images/solutionsLanding/solutionsImg/working6.png",
           desc: "Establish or expand your business presence without the upfront costs typically associated with setting up a new office with our zero capex model.",
         },
       ],
@@ -120,7 +122,7 @@ export const Jsons = {
           desc: "Start operating immediately with all utilities and services already in place",
         },
       ],
-      card4_img:  "/images/solutionsLanding/solutionsImg/productivity2.png",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
       card4_title3:
@@ -128,6 +130,7 @@ export const Jsons = {
     },
     {
       id: 3,
+      breadcrumbsTitle: "Virtual Offices",
       name: "virtual-offices",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-3.png",
@@ -149,17 +152,17 @@ export const Jsons = {
       card2: [
         {
           title: "We bring cost efficiency ",
-          source:  "/images/solutionsLanding/solutionsImg/working7.png",
+          source: "/images/solutionsLanding/solutionsImg/working7.png",
           desc: "We eliminate the need for long-term leases, utility payments, and office maintenance expenses, so you can invest more resources into growing your business.",
         },
         {
           title: "We create an elevated presence",
-          source:  "/images/solutionsLanding/solutionsImg/working8.png",
+          source: "/images/solutionsLanding/solutionsImg/working8.png",
           desc: "Bring credibility and respectability to your operations, and establish a presence in competitive markets without the cost of a physical office.",
         },
         {
           title: "We support your growth",
-          source:  "/images/solutionsLanding/solutionsImg/working9.png",
+          source: "/images/solutionsLanding/solutionsImg/working9.png",
           desc: "Have your operational needs are seamlessly met, no matter where you are working from. And you can access meeting rooms and event spaces on demand.",
         },
       ],
@@ -180,7 +183,7 @@ export const Jsons = {
           desc: "Use your new business address on your correspondence",
         },
       ],
-      card4_img:  "/images/solutionsLanding/solutionsImg/productivity1.png",
+      card4_img: "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
       card4_title2: "productivity",
       card4_title3:
@@ -188,6 +191,7 @@ export const Jsons = {
     },
     {
       id: 4,
+      breadcrumbsTitle: "Meeting Rooms",
       name: "meeting-rooms",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-5.png",
@@ -245,8 +249,9 @@ export const Jsons = {
       card4_title3:
         "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on what truly matters—bringing the vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
     },
-    { 
+    {
       id: 5,
+      breadcrumbsTitle: "Events Launches",
       name: "events-launches",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-6.png",
@@ -305,6 +310,7 @@ export const Jsons = {
     },
     {
       id: 6,
+      breadcrumbsTitle: "Advertise With Us",
       name: "advertise-with-us",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-4.png",

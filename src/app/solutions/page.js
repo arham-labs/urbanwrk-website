@@ -4,6 +4,7 @@ import SolutionBanner from '@/components/solutionsLanding/solutionBanner'
 import Solutions from '@/components/solutionsLanding/solutions';
 import GoodCompany from '@/components/home/goodCompany';
 import FormCard from '@/components/home/formCard';
+import BreadCrumbs from '@/common/breadcrumbs';
 
 export const metadata = {
     alternates: {
@@ -41,7 +42,7 @@ export default function page() {
 
     return (
         <>
-
+            <BreadCrumbs subtitle="Solutions" subpathname="/solutions" />
             <div className="bg-bglight1 flex justify-center items-center  max-md:pt-16">
                 <div className="max-w-[1920px] ">
                     <SolutionBanner />
@@ -81,7 +82,7 @@ export default function page() {
             </div> */}
 
             <GoodCompany />
-            <FormCard/>
+            <FormCard />
 
         </>
     )

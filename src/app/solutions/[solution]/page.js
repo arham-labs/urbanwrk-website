@@ -7,6 +7,7 @@ import ExploreCard from "@/components/home/ExploreCard";
 import HomeBuild from "@/components/about-us/tailormade-office/homebuild";
 import { Jsons } from "./solutionJson";
 import MeetingRoomSpace from "@/components/about-us/tailormade-office/meetingRoomSpace";
+import BreadCrumbs from "@/common/breadcrumbs";
 
 
 export async function generateMetadata({ params }) {
@@ -34,6 +35,7 @@ export default function Page({ params }) {
   };
   return (
     <>
+      <BreadCrumbs subtitle="Solutions" subpathname="/solutions" nestedpage={true} nestedtitle={solutionFind?.breadcrumbsTitle} nestedpathname={`/solutions/${solution}`} />
       <Herobanner data={solutionFind} />
       {solutionFind.name === "meeting-rooms" && (
         <MeetingRoomSpace data={solutionFind} />
