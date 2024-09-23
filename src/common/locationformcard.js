@@ -120,11 +120,10 @@ export default function LocationFormCard() {
                 Want to find your space?
             </h2>
             <p className="text-sm lg:text-base pt-4 max-lg:pt-6 text-center">
-                Get in touch with us to know more. Call us Mon-Fri - 08:30-18:00
+                Get in touch with us to know more. Call us Mon-Fri - 08:30-18:00 at <Link href="tel:+91 8399959996" className="font-semibold text-center">
+                    +91 8399959996
+                </Link>
             </p>
-            <Link href="tel:+91 8399959996" className="font-semibold text-center">
-                +91 8399959996
-            </Link>
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:w-full lg:mt-4">
                 <div className="mb-4">
                     <label className="block font-semibold" htmlFor="name">NAME:</label>
