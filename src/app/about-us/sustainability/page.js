@@ -1,4 +1,5 @@
 import Blog from "@/common/blog";
+import BreadCrumbs from "@/common/breadcrumbs";
 import FormCard from "@/components/home/formCard";
 import GoodCompany from "@/components/home/goodCompany";
 import Commitment from "@/components/sustainability/commitment";
@@ -15,12 +16,13 @@ export const metadata = {
 export default function Page() {
     return (
         <>
-           <Herobanner/>
-            <Commitment/>
-            <Grade/>
+            <BreadCrumbs subtitle="About Us" subpathname="/about-us" nestedpage={true} nestedpathname="/about-us/sustainability" nestedtitle="Sustainability" />
+            <Herobanner />
+            <Commitment />
+            <Grade />
             <GoodCompany />
             {/* <Blog /> */}
-            <FormCard/>
+            <FormCard />
         </>
     )
 }

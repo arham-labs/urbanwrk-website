@@ -5,6 +5,7 @@ import Vision from "@/components/about-us/vision";
 import WorkSpace from "@/components/about-us/workspace";
 import WorkSwings from "@/components/about-us/workswings";
 import FormCard from "@/components/home/formCard";
+import BreadCrumbs from "@/common/breadcrumbs";
 
 export const metadata = {
     alternates: {
@@ -26,6 +27,7 @@ export default function Page() {
 
     return (
         <>
+            <BreadCrumbs subtitle="About Us" subpathname="/about-us" />
             <Herobanner />
             <WorkSpace />
             <WorkSwings />

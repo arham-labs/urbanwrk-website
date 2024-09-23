@@ -1,3 +1,4 @@
+import BreadCrumbs from "@/common/breadcrumbs";
 import Link from "next/link"
 
 export const metadata = {
@@ -11,7 +12,8 @@ export default function Page() {
     return (
         <>
             <div className="bg-white text-[#000]">
-                <div className="py-32 xl:py-36 w-[88%] m-auto xl:w-[75%]">
+                <BreadCrumbs subtitle="Terms Of Use" subpathname="/terms-of-use" />
+                <div className="pb-32 pt-10 xl:pb-36 w-[88%] m-auto xl:w-[75%]">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl mb-8 text-secondary xl:mb-20 text-center font-medium">Terms Of Use</h1>
                     <p className="pb-5 text-sm md:text-base leading-[24px] md:leading-[30px]">
                         These Terms of Use govern your usage of the Website accessible at https://urbanwrk.com/ and

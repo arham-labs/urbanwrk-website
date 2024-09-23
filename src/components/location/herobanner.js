@@ -3,7 +3,7 @@ import Mumbai from '../../../public/images/location/mumbai.png'
 
 export default function Herobanner({data}) {
     return (
-        <div className="pt-32   lg:pt-20 bg-bglight1">
+        <div className="bg-bglight1">
             <div className="max-w-[1920px] lg:pr-0 mx-auto 2xl:pl-40 lg:pl-[100px] flex flex-col lg:flex-row items-center">
                 <div className="px-6 lg:px-0 flex flex-col gap-3 lg:gap-5 w-full lg:w-1/2 mb-10 lg:mb-0">
                     <div className="w-full lg:w-[60%] xl:w-[82%]">

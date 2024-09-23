@@ -7,21 +7,22 @@ import Restaurants from "@/components/locationInside/restaurants";
 import Amenities from "@/components/solutionsLanding/amenities";
 import { notFound } from "next/navigation";
 import { Jsons } from "../locationJson";
+import BreadCrumbs from "@/common/breadcrumbs";
 
 export async function generateMetadata({ params }) {
     const location = `/${params.location}/${params.area}`
-  
+
     return {
-      alternates: {
-        canonical: `/${location}`,
-      },
+        alternates: {
+            canonical: `/${location}`,
+        },
     }
-  }
-  
+}
+
 
 export default function page({ params }) {
     const location = `/${params.location}/${params.area}`
-    
+
     const locationData = Jsons.LocationData?.find((el) =>
         el.locationInfo.some((p) => p.url === location)
     );
@@ -35,9 +36,12 @@ export default function page({ params }) {
 
     const newData = locationData?.locationInfo?.filter(el => !el?.url?.includes(location))
 
+    console.log("locationFind",locationFind);
+
 
     return (
         <>
+            <BreadCrumbs subtitle={locationData.locationName} subpathname={`/${params.location}`} nestedpage={true} nestedpathname={`/${params.location}/${params.area}`} nestedtitle={locationFind.breadcrumbsTitle} />
             <LocationBanner data={locationFind} />
             <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:py-16 ">
                 <Restaurants data={locationFind} />
@@ -61,10 +65,10 @@ export default function page({ params }) {
                 </div>
             </div> */}
             {newData.length > 1 && <div className="px-6 max-w-[1920px] mx-auto 2xl:px-[160px] lg:px-[100px] py-20 max-md:pt-16 max-md:pb-8">
-                <LocatonPark location={location} data={newData}/>
+                <LocatonPark location={location} data={newData} />
             </div>}
 
-            {locationData?.locationInfo?.length > 1 && <LocationSpace data={locationData} url={`/${params.location}`}/>}
+            {locationData?.locationInfo?.length > 1 && <LocationSpace data={locationData} url={`/${params.location}`} />}
 
         </>
     )

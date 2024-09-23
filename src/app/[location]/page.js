@@ -4,6 +4,7 @@ import Herobanner from "@/components/location/herobanner";
 import { notFound } from "next/navigation";
 
 import { Jsons } from "./locationJson";
+import BreadCrumbs from "@/common/breadcrumbs";
 
 
 export async function generateMetadata({ params }) {
@@ -30,6 +31,7 @@ export default function Page({ params }) {
 
   return (
     <>
+      <BreadCrumbs subtitle={locationFind?.locationName} subpathname={`/${location}`} />
       <Herobanner data={locationFind} />
       <ExploreCard data={locationFind} />
       {/* <Blog /> */}

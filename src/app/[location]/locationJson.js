@@ -36,6 +36,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          breadcrumbsTitle: "PCP",
           bannerImage: "",
           mobileBanner: "",
           video: true,
@@ -87,6 +88,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          breadcrumbsTitle: "Westport",
           bannerImage: "/images/locationInside/westport-banner.png",
           mobileBanner: "/images/locationInside/westport-mobile-banner.png",
           locationName: "Westport",
@@ -132,6 +134,7 @@ export const Jsons = {
         },
         {
           id: 2,
+          breadcrumbsTitle: "Sai Radhe",
           locationName: "Sai radhe",
           bannerImage: "/images/location/sai-radhe-banner.png",
           mobileBanner: "/images/locationInside/sairadhe-mobile-banner.png",
@@ -178,6 +181,7 @@ export const Jsons = {
         },
         {
           id: 3,
+          breadcrumbsTitle: "Koncord",
           locationName: "Koncord 1",
           locationCity: "Bund Garden",
           bannerImage: "",
@@ -224,6 +228,7 @@ export const Jsons = {
         },
         {
           id: 4,
+          breadcrumbsTitle: "Aeromall",
           locationName: "AeroMall",
           bannerImage: "",
           mobileBanner: "",
@@ -270,6 +275,7 @@ export const Jsons = {
         },
         {
           id: 5,
+          breadcrumbsTitle: "Nandan Probiz",
           locationName: "Nandan probiz",
           bannerImage: "",
           mobileBanner: "",
@@ -315,6 +321,7 @@ export const Jsons = {
         },
         {
           id: 6,
+          breadcrumbsTitle: "MontClaire",
           bannerImage: "/images/locationInside/montclaire-banner.png",
           mobileBanner: "/images/locationInside/montclaire-mobile-banner.png",
           locationName: "Montclaire",
@@ -360,6 +367,7 @@ export const Jsons = {
         },
         {
           id: 7,
+          breadcrumbsTitle: "Pentagon",
           bannerImage: "/images/location/pentagon-banner.png",
           mobileBanner: "/images/locationInside/pentagon-mobile-banner.png",
           locationName: "Pentagon 5",
@@ -415,6 +423,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          breadcrumbsTitle: "Technopolis",
           bannerImage: "/images/locationInside/technopolis-banner.png",
           mobileBanner: "/images/locationInside/baani-mobile-poster.png",
           locationName: "Technopolis",
@@ -469,6 +478,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          breadcrumbsTitle: "Raheja Mindspace",
           locationName: "Raheja Mindspace",
           bannerImage: "",
           mobileBanner: "",
@@ -522,6 +532,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
+          breadcrumbsTitle: "Baani",
           locationName: "Baani, The Statement",
           bannerImage: "",
           mobileBanner: "",
@@ -569,6 +580,7 @@ export const Jsons = {
         },
         {
           id: 2,
+          breadcrumbsTitle: "Max House",
           locationName: "Max House",
           bannerImage: "",
           mobileBanner: "",
