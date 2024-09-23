@@ -36,9 +36,6 @@ export default function page({ params }) {
 
     const newData = locationData?.locationInfo?.filter(el => !el?.url?.includes(location))
 
-    console.log("locationFind",locationFind);
-
-
     return (
         <>
             <BreadCrumbs subtitle={locationData.locationName} subpathname={`/${params.location}`} nestedpage={true} nestedpathname={`/${params.location}/${params.area}`} nestedtitle={locationFind.breadcrumbsTitle} />
