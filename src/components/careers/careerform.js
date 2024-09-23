@@ -34,7 +34,6 @@ export default function CareerFormCard() {
                 if (key === "resume") {
                     // Append the file directly
                     for (const file of data.resume) {
-                        console.log(file, 'file');
                         formData.append('resume', file);
                     }
                 } else {
@@ -59,7 +58,6 @@ export default function CareerFormCard() {
                 method: "POST",
                 body: formData,
             });
-            console.log(response, 'res');
             if (!response.ok) {
                 throw new Error(`Invalid response: ${response.status}`);
             }
