@@ -25,8 +25,8 @@ export default function Header() {
             subMenu: true,
             dropdown: [
                 { subLink: '/solutions/tailormade-office', subName: 'Tailormade Offices' },
-                { subLink: '/solutions/ready-to-work-in', subName: 'Ready To Work In ' },
-                { subLink: '/solutions/virtual-offices', subName: 'Virtual Offices' },
+                { subLink: '/solutions/ready-to-work-in', subName: 'Ready-To-Work-In ' },
+                { subLink: '/solutions/virtual-offices', subName: 'Virtual Office' },
                 { subLink: '/solutions/meeting-rooms', subName: 'Meeting Rooms' },
                 { subLink: '/solutions/events-launches', subName: 'Events & Launches' },
                 { subLink: '/solutions/advertise-with-us', subName: 'Advertise With Us' },

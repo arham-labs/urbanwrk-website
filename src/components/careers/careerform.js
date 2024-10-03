@@ -54,7 +54,7 @@ export default function CareerFormCard() {
 
         try {
 
-            const response = await fetch("/api/contact", {
+            const response = await fetch("/api/career", {
                 method: "POST",
                 body: formData,
             });
@@ -243,12 +243,12 @@ export default function CareerFormCard() {
                                     ></div>
                                 </button>
                             </div>
-                            <p className="py-4 max-lg:py-6">
+                            {/* <p className="py-4 max-lg:py-6">
                                 or call us at{" "}
                                 <Link href="tel:+91 8399959996" className="font-semibold">
                                     +91 8399959996
                                 </Link>
-                            </p>
+                            </p> */}
                         </form>
                     </div>
                 </div>
