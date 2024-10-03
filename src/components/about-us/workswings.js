@@ -17,7 +17,7 @@ export default function WorkSwings() {
                 <div className="w-full lg:w-[500px] mb-10 lg:mb-[10%]">
                     <div className="flex items-start gap-0 lg:gap-3 flex-col text-2xl lg:text-4xl xl:text-5xl mb-4 lg:mb-7">
                         <span className="font-medium">Where work</span>
-                        <span className="font-kepler">find wings</span>
+                        <span className="font-kepler">finds wings</span>
                     </div>
                     <p className="leading-6 text-sm xl:text-base font-medium">In a world that moves fast, where ideas burst into life every day, we are a space for the dreamers, the doers, the makers
                         and the innovators. We are here to help you create something meaningful- through our signature hospitality,

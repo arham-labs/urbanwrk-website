@@ -36,14 +36,14 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
-          breadcrumbsTitle: "PCP",
+          breadcrumbsTitle: "Peninsula Corporate Park",
           bannerImage: "",
           mobileBanner: "",
           video: true,
           videourl: "/images/locationInside/pcp-video.mp4",
           posterImage: "/images/locationInside/pcp-poster.png",
           posterMobileImage: "/images/locationInside/pcp-mobile-poster.png",
-          locationName: "PCP",
+          locationName: "Peninsula Corporate Park",
           locationCity: "Lower Parel",
           locationImg: PcpCard,
           locationMobileImg: "/images/location/pcp-mobile.png",
@@ -54,9 +54,9 @@ export const Jsons = {
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms " },
             { source: Access, title: "24x7 Access" },
-            { source: EventSpace, title: "Event spacess" }
+            { source: EventSpace, title: "Event spaces" }
           ],
-          url: "/mumbai/pcp",
+          url: "/mumbai/peninsula-corporate-park",
           amentiesBanner: "/images/locationInside/pcp-amenities-banner.png",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
@@ -74,7 +74,7 @@ export const Jsons = {
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ]
         }
       ],
@@ -129,7 +129,7 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
         {
@@ -146,7 +146,7 @@ export const Jsons = {
           locationImg: CardImage6,
           locationMobileImg: "/images/location/sairadhe-mobile.png",
           location1: "Metro Station - 100 m",
-          location2: "Airport - 6km",
+          location2: "Airport - 6 km",
           location3: "A thriving corporate park in the heart of Pune.",
           amentiesBanner: "/images/locationInside/sairadhe-amenities-banner.png",
           AmentiesData: [
@@ -176,13 +176,13 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
         {
           id: 3,
           breadcrumbsTitle: "Koncord",
-          locationName: "Koncord 1",
+          locationName: "Koncord",
           locationCity: "Bund Garden",
           bannerImage: "",
           mobileBanner: "",
@@ -192,7 +192,7 @@ export const Jsons = {
           posterMobileImage: "/images/locationInside/koncard-mobile-poster.png",
           locationImg: CardImage4,
           locationMobileImg: "/images/location/koncard-mobile.png",
-          location1: "Metro Station - 10 m",
+          location1: "Metro Station - Right next door",
           location2: "Airport - 5.7 km",
           location3: "A thriving corporate park in the heart of Pune.",
           AmentiesData: [
@@ -223,13 +223,13 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
         {
           id: 4,
           breadcrumbsTitle: "Aeromall",
-          locationName: "AeroMall",
+          locationName: "Aeromall",
           bannerImage: "",
           mobileBanner: "",
           video: true,
@@ -270,7 +270,7 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
         {
@@ -316,7 +316,7 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
         {
@@ -324,7 +324,7 @@ export const Jsons = {
           breadcrumbsTitle: "MontClaire",
           bannerImage: "/images/locationInside/montclaire-banner.png",
           mobileBanner: "/images/locationInside/montclaire-mobile-banner.png",
-          locationName: "Montclaire",
+          locationName: "MontClaire",
           videourl: "",
           video: false,
           posterImage: "",
@@ -362,7 +362,7 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
         {
@@ -370,7 +370,7 @@ export const Jsons = {
           breadcrumbsTitle: "Pentagon",
           bannerImage: "/images/location/pentagon-banner.png",
           mobileBanner: "/images/locationInside/pentagon-mobile-banner.png",
-          locationName: "Pentagon 5",
+          locationName: "Pentagon",
           videourl: "",
           video: false,
           posterImage: "",
@@ -409,7 +409,7 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         },
       ],
@@ -464,7 +464,7 @@ export const Jsons = {
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         }
       ],
@@ -518,7 +518,7 @@ export const Jsons = {
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         }
       ],
@@ -532,7 +532,7 @@ export const Jsons = {
       locationInfo: [
         {
           id: 1,
-          breadcrumbsTitle: "Baani",
+          breadcrumbsTitle: "Baani, The Statement",
           locationName: "Baani, The Statement",
           bannerImage: "",
           mobileBanner: "",
@@ -572,7 +572,7 @@ export const Jsons = {
             { img: Conference, title: "Outdoor space" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
             { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
@@ -620,7 +620,7 @@ export const Jsons = {
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 security" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
           ],
         }
       ],

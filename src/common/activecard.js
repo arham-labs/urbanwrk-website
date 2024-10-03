@@ -10,7 +10,7 @@ import LinkButton from "./linkbtn";
 import { useParams } from "next/navigation";
 
 const titles = [
-    { id: 1, title: "TAILOR-MADE OFFICES", href: "/solutions/tailormade-office" },
+    { id: 1, title: "TAILORMADE OFFICES", href: "/solutions/tailormade-office" },
     { id: 2, title: "READY-TO-WORK IN OFFICES", href: "/solutions/ready-to-work-in" },
     { id: 3, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
     { id: 4, title: "EVENTS & LAUNCHES", href: "/solutions/events-launches" },
@@ -37,7 +37,7 @@ const activeData = [
     {
         id: 3,
         desc: "Connect, create and collaborate in our individually designed meeting rooms, all enabled with the latest technology.",
-        list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater available when given 48-hour notice", "Booking available by the hour, half day or full day"],
+        list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater; available when given a 48-hour notice", "Booking available by the hour, half day or full day"],
         source: section2,
         btn: "Explore",
         href: "/solutions/meeting-rooms"
@@ -53,7 +53,7 @@ const activeData = [
     {
         id: 5,
         desc: "Make your message stand out. Capitalise on our network of strategic displays to elevate your brand’s presence, connect with your audience on a deeper level, and achieve a lasting impact.",
-        list: ["Digital and physical promotional spaces across prime real estate", "Eye-catching digital displays in a network of prestigious location"],
+        list: ["Digital and physical promotional spaces across prime real estate", "Eye-catching digital displays in a network of prestigious locations"],
         source: section3,
         btn: "Explore",
         href: "/solutions/advertise-with-us"

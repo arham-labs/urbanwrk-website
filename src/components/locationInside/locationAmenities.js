@@ -5,12 +5,12 @@ export default function LocationAmenities() {
   const data1 = [
     {
       title: "Your modern, tailormade office",
-      desc: "From one desk to a dedicated floor, you can  create your space the way you want."
+      desc: "From one desk to a dedicated floor, you can  create your space the way you want"
     },
 
     {
       title: "Made with your blueprint",
-      desc: "From one desk to a dedicated floor, you can  create your space the way you want."
+      desc: "From one desk to a dedicated floor, you can  create your space the way you want"
     },
 
   ]
@@ -19,12 +19,12 @@ export default function LocationAmenities() {
   const data2 = [
     {
       title: "With 5-Star hospitality",
-      desc: "From one desk to a dedicated floor, you can  create your space the way you want."
+      desc: "From one desk to a dedicated floor, you can  create your space the way you want"
     },
 
     {
       title: "Uplifting spaces",
-      desc: "From one desk to a dedicated floor, you can  create your space the way you want."
+      desc: "From one desk to a dedicated floor, you can  create your space the way you want"
     },]
   return (
 

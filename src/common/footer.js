@@ -35,7 +35,7 @@ export default function Footer() {
                 {[
                   {
                     link: "/solutions/tailormade-office",
-                    title: "Tailor-made Offices",
+                    title: "Tailormade Offices",
                   },
                   {
                     link: "/solutions/ready-to-work-in",

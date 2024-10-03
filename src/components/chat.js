@@ -126,7 +126,7 @@ export default function Chat() {
           />
         </div>
         <div className={`bg-primary fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}>
-          <span>HOW CAN WE HELP?</span>
+          <span>How can we help?</span>
         </div>
         {openchat && (
           <div

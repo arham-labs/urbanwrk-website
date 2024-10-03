@@ -10,7 +10,7 @@ export const Jsons = {
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
-      breadcrumbsTitle: "Tailor Made Offices",
+      breadcrumbsTitle: "Tailormade Offices",
       title1: "Tailormade",
       title2: "offices",
       title3: "Your workspace, tailored to your workstyle.",
@@ -20,9 +20,9 @@ export const Jsons = {
         "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive - at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.",
       brandData: [
         "Private, fully-customisable and branded office space ready within 45-60 days",
-        "Designed by experts and WELL and LEED certified",
+        "Designed by experts, and IGBC and LEED certified",
         "Flexible lease terms with utility costs included",
-        "Complete administrative management including visitor management and payroll",
+        "Complete administrative management including visitor management",
         "Access to co-working spaces, lounges, WellnessWrk Gym and BuzzWrk Café",
         "Exclusive access to all our events, seminars and industry talks",
       ],
@@ -68,7 +68,7 @@ export const Jsons = {
     },
     {
       id: 2,
-      breadcrumbsTitle: "Ready To Work In Offices",
+      breadcrumbsTitle: "Ready-To-Work-In",
       name: "ready-to-work-in",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-2.png",
@@ -82,17 +82,17 @@ export const Jsons = {
         "Step into a workspace that's ready when you are. Our ready-to-work-in spaces come with zero capex and full access to the same high-end amenities that global giants enjoy. Whether you need to scale up or are just starting out, or pivot your operations, our flexible spaces adapt seamlessly to your business needs.",
       brandData: [
         "Ready office spaces with short term lease that are expandable as your business grows",
-        "Option to tailor your space with for branding and layout adjustments",
-        "Designed by experts and IGBC and LEED certified",
+        "Option to tailor your space for branding and layout adjustments",
+        "Designed by experts, and IGBC and LEED certified",
         "Flexible lease terms with utility costs included",
-        "Complete administrative management including visitor management and payroll",
+        "Complete administrative management including visitor management",
         "Access to co-working spaces, lounges, gym and café",
       ],
       card2: [
         {
           title: "We deliver future-proof flexibility",
           source: "/images/solutionsLanding/solutionsImg/working4.png",
-          desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up or down or expand to new locations with complete ease.",
+          desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up with complete ease.",
         },
         {
           title: "We bring the global edge",
@@ -251,7 +251,7 @@ export const Jsons = {
     },
     {
       id: 5,
-      breadcrumbsTitle: "Events Launches",
+      breadcrumbsTitle: "Events and Launches",
       name: "events-launches",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-6.png",
@@ -324,7 +324,7 @@ export const Jsons = {
         "Get access to digital and physical promotional spaces across strategically located prime real estate to capture the attention of a diverse and dynamic audience. Choose from eye-catching digital displays that engage viewers, to strategically placed physical branding opportunities that place your message top of mind.",
       brandData: [
         "Digital and physical promotional spaces across prime real estate",
-        "Eye-catching displays in a network of prestigious location",
+        "Eye-catching displays in a network of prestigious locations",
       ],
       card2: [
         {
