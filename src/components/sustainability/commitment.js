@@ -21,7 +21,7 @@ export default function Commitment() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {commitmentData.map((item, i) =>
                             <div key={i} className="flex flex-col border-b border-[#747474] pb-4 2xl:pb-7 gap-2 2xl:gap-3">
-                                <Image src={item.source} alt="image" className="w-10 mb-2 2xl:w-14" />
+                                <Image src={item.source} alt="comfortable workspaces" className="w-10 mb-2 2xl:w-14" />
                                 <span className="font-semibold text-lg xl:text-xl">{item.title}</span>
                                 <p className="leading-6 text-sm">{item.desc}</p>
                             </div>

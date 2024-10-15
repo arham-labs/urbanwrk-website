@@ -16,7 +16,7 @@ export default function UrbanTechFeat({item}) {
           </div>
           <div className='lg:w-1/2 max-lg:w-full'>
             <div>
-              <Image src={item.img} alt="urban spce" height={200} width={300} className='h-full w-full' unoptimized />
+              <Image src={item.img} alt={item.alt} height={200} width={300} className='h-full w-full' unoptimized />
             </div>
           </div>
         </div>

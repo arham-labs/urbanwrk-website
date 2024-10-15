@@ -2,6 +2,8 @@ import BreadCrumbs from "@/common/breadcrumbs";
 import Link from "next/link"
 
 export const metadata = {
+    title: "UrbanWrk Terms of Use | Service Policies",
+    description: "Review the terms of use for UrbanWrk services. Learn about the conditions and guidelines for accessing our workspace solutions.",
     alternates: {
         canonical: "/terms-of-use",
     },

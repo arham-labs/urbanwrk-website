@@ -20,12 +20,12 @@ export default function BuildCard() {
                     </div>
                 </div>
                 <div className='w-1/2'>
-                    <Image src="/images/home/buildCard1.webp" unoptimized height={650} width={685} alt="aboutUs" />
+                    <Image src="/images/home/buildCard1.webp" unoptimized height={650} width={685} alt="Platinum office spaces" />
                 </div>
             </div>
             <div className='flex items-center flex-col lg:hidden'>
                 <div className='w-full'>
-                    <Image src="/images/home/buildCard1.webp" unoptimized height={650} width={685} alt="aboutUs" />
+                    <Image src="/images/home/buildCard1.webp" unoptimized height={650} width={685} alt="Platinum office spaces" />
                 </div>
                 <div className=' flex flex-col justify-center pt-10'>
                     <div className='w-[100%]'>

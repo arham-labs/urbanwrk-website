@@ -28,7 +28,7 @@ export default function Herobanner() {
                     </div>
                 </div>
                 <div className="aspect-[6/5] lg:aspect-[16/14] w-full lg:w-1/2">
-                    <Image src={Banner} className="w-full h-full" alt="banner" />
+                    <Image src={Banner} className="w-full h-full" alt="UrbanWrk office spaces interiors" />
                 </div>
             </div>
         </div>)

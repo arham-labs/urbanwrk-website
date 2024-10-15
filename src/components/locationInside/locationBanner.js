@@ -55,11 +55,11 @@ export default function LocationBanner({ data }) {
                 </>
                 :
                 <div className='h-[100vh]' style={{ position: 'relative' }}>
-                    <Image src={data?.bannerImage} alt="location inside page"
+                    <Image src={data?.bannerImage} alt={data?.bannerAlt}
                         height={1000} width={1000}
                         className='hidden lg:block h-full w-full max-md:object-cover md:object-cover'
                         unoptimized />
-                    <Image src={data?.mobileBanner} alt="location inside page"
+                    <Image src={data?.mobileBanner} alt={data?.bannerAlt}
                         height={1000} width={1000}
                         className='lg:hidden h-full w-full max-md:object-cover md:object-cover'
                         unoptimized />

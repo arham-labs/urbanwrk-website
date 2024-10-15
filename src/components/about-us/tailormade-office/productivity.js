@@ -14,7 +14,7 @@ export default function Productivity({data}) {
                 </div>
             </div>
             <div className="w-full lg:w-1/2">
-                <Image src={data.card4_img} alt="productivity" className="w-full aspect-[16/18] object-cover lg:aspect-[13/11]" height={1000} width={1000}/>
+                <Image src={data.card4_img} alt={data.card4_alt} className="w-full aspect-[16/18] object-cover lg:aspect-[13/11]" height={1000} width={1000}/>
             </div>
         </div>)
 }

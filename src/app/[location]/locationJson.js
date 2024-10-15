@@ -29,13 +29,19 @@ export const Jsons = {
   LocationData: [
     {
       id: 1,
+      bannerAlt: "commercial property in Mumbai",
       locationName: "Mumbai",
       BannerImage: MumbaiBanner,
+      metaTitle: " Ready-To-Work-In Office Space in Mumbai | UrbanWrk",
+      metaDescription: "Get your ideal workspace at UrbanWrk, ready-to-work-in/ready to move office spaces in Mumbai with fully equipped meeting rooms for streamlined business operations.",
       locationDetail:
         "Mumbai, India's financial powerhouse,  is known for its vibrant culture that seamlessly blends tradition with modernity, fostering a unique and inspiring atmosphere. A pivotal hub for global commerce, the city's extensive infrastructure ensures a balance of connectivity and convenience, offering a dynamic and thriving environment perfect for entrepreneurs. Whether you're starting your venture or expanding your business, Mumbai provides the ideal landscape for innovation and growth.",
       locationInfo: [
         {
           id: 1,
+          cardAlt: "office space in PCP Lower Parel",
+          metaTitle: "Custom Workspaces at Peninsula Corporate Park, Mumbai  | UrbanWrk",
+          metaDescription: "Explore UrbanWrk's modern workspaces at Peninsula Corporate Park, Mumbai, with meeting rooms, event spaces, and top amenities. Tailor your ideal office with expert design solutions.",
           breadcrumbsTitle: "Peninsula Corporate Park",
           bannerImage: "",
           mobileBanner: "",
@@ -58,6 +64,7 @@ export const Jsons = {
           ],
           url: "/mumbai/peninsula-corporate-park",
           amentiesBanner: "/images/locationInside/pcp-amenities-banner.png",
+          amentiesBannerAlt: "tailor-made office in Lower Parel",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
@@ -81,16 +88,24 @@ export const Jsons = {
     },
     {
       id: 2,
+      bannerAlt: "UrbanWrk Pune",
       locationName: "Pune",
       BannerImage: PuneBanner,
+      metaTitle: "Premium Managed Office Space in Pune | UrbanWrk",
+      metaDescription: "UrbanWrk offers premium managed office spaces in Pune. Explore our flexible workspaces designed for sustainability and innovation, perfect for modern entrepreneurs.",
       locationDetail:
         "Celebrated for its blend of education and innovation, Pune is a magnet for corporates and professionals alike. This city merges world-class business facilities with a vibrant cultural scene where you enjoy state-of-the-art office amenities, lush parks, and bustling cafes, all under the backdrop of its inviting climate—making it perfect for those who thrive in a dynamic and supportive work environment.",
       locationInfo: [
         {
           id: 1,
+          cardAlt: "UrbanWrk - Westport Baner",
+          locationCardAlt: "UrbanWrk - Westport Baner",
+          metaTitle: "State-of-the-Art Workspaces in Pune, Westport | UrbanWrk",
+          metaDescription: "Transform your work experience at Westport Pune with UrbanWrk. Discover personalized office spaces, premium amenities, & a dynamic community for growth & collaboration.",
           breadcrumbsTitle: "Westport",
           bannerImage: "/images/locationInside/westport-banner.png",
           mobileBanner: "/images/locationInside/westport-mobile-banner.png",
+          bannerAlt: "UrbanWrk - Westport Pune",
           locationName: "Westport",
           videourl: "",
           video: false,
@@ -110,6 +125,7 @@ export const Jsons = {
           ],
           url: "/pune/westport",
           amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
+          amentiesBannerAlt: "modern office space amenities",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -134,10 +150,15 @@ export const Jsons = {
         },
         {
           id: 2,
+          cardAlt: "UrbanWrk - Sai Radhe Bund Garden",
+          locationCardAlt: "office space in Sai Radhe Bund Garden Pune",
+          metaTitle: "Premium Commercial Office Space in Pune, Sai Radhe | UrbanWrk",
+          metaDescription: "Experience Sai Radhe's contemporary office spaces in Pune with UrbanWrk . Find flexible work solutions with stunning design and biophilic features for your business.",
           breadcrumbsTitle: "Sai Radhe",
           locationName: "Sai radhe",
           bannerImage: "/images/location/sai-radhe-banner.png",
           mobileBanner: "/images/locationInside/sairadhe-mobile-banner.png",
+          bannerAlt: "Sai Radhe office space in Pune",
           videourl: "",
           video: false,
           posterImage: "",
@@ -149,6 +170,7 @@ export const Jsons = {
           location2: "Airport - 6 km",
           location3: "A thriving corporate park in the heart of Pune.",
           amentiesBanner: "/images/locationInside/sairadhe-amenities-banner.png",
+          amentiesBannerAlt: "Sai Radhe office amenities",
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms" },
@@ -181,6 +203,10 @@ export const Jsons = {
         },
         {
           id: 3,
+          cardAlt: "UrbanWrk - Koncord Bund Garden",
+          locationCardAlt: "commercial office space in Koncord Pune",
+          metaTitle: "Managed Offices with Biophilic Design at Koncord | UrbanWrk",
+          metaDescription: "Experience the future of work at Koncord in Pune with UrbanWrk, offering managed offices that prioritize biophilic design and sustainable solutions.",
           breadcrumbsTitle: "Koncord",
           locationName: "Koncord",
           locationCity: "Bund Garden",
@@ -203,6 +229,7 @@ export const Jsons = {
           ],
           url: "/pune/koncard",
           amentiesBanner: "/images/locationInside/koncard-amenities-banner.png",
+          amentiesBannerAlt: "modern office amenities at koncard Pune",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -228,6 +255,10 @@ export const Jsons = {
         },
         {
           id: 4,
+          cardAlt: "UrbanWrk - AeroMall Viman Nagar",
+          locationCardAlt: "office space in aero mall Pune",
+          metaTitle: "Sustainable Commercial Spaces at Aeromall Pune | UrbanWrk",
+          metaDescription: "Explore Aeromall in Pune with UrbanWrk, offering flexible commercial spaces that blend  sustainability with exceptional design, for both entrepreneurs and businesses.",
           breadcrumbsTitle: "Aeromall",
           locationName: "Aeromall",
           bannerImage: "",
@@ -275,6 +306,10 @@ export const Jsons = {
         },
         {
           id: 5,
+          cardAlt: "UrbanWrk - Nandan Probiz Balewadi",
+          locationCardAlt: "managed office space in Nandan Probiz Pune",
+          metaTitle: "Best Managed Office Space in Pune, Nandan Probiz | UrbanWrk",
+          metaDescription: "Explore Nandan Probiz in Pune with UrbanWrk, offering flexible commercial spaces that blend sustainability with exceptional design for both entrepreneurs and businesses.",
           breadcrumbsTitle: "Nandan Probiz",
           locationName: "Nandan probiz",
           bannerImage: "",
@@ -321,6 +356,10 @@ export const Jsons = {
         },
         {
           id: 6,
+          cardAlt: "UrbanWrk - Montclaire Baner",
+          locationCardAlt: "commercial workplace Montclaire Baner",
+          metaTitle: "Ready-to-Work-In Office Spaces in MontClaire Pune | UrbanWrk",
+          metaDescription: "Discover MontClaire in Pune—your perfect ready-to-work-in office spaces with UrbanWrk. We offer fully furnished, ready to use workspaces.",
           breadcrumbsTitle: "MontClaire",
           bannerImage: "/images/locationInside/montclaire-banner.png",
           mobileBanner: "/images/locationInside/montclaire-mobile-banner.png",
@@ -367,6 +406,10 @@ export const Jsons = {
         },
         {
           id: 7,
+          cardAlt: "UrbanWrk - Pentagon Magarpatta",
+          locationCardAlt: "office space in Pentagon Magarpatta Pune",
+          metaTitle: "Modern Office Solutions with Biophilic Design in Pune, Pentagon | UrbanWrk",
+          metaDescription: "Experience the future of work at Pentagon in Pune with UrbanWrk, offering managed offices that prioritize biophilic design and sustainable solutions.",
           breadcrumbsTitle: "Pentagon",
           bannerImage: "/images/location/pentagon-banner.png",
           mobileBanner: "/images/locationInside/pentagon-mobile-banner.png",
@@ -416,16 +459,23 @@ export const Jsons = {
     },
     {
       id: 3,
+      bannerAlt: "commercial office space in Kolkata",
+      cardAlt: "UrbanWrk Technopolis Kolkata",
       locationName: "Kolkata",
+      metaTitle: "Customised & Ready-To-Move-In Offices in Kolkata | UrbanWrk",
+      metaDescription: "Find your ideal customised office at Technopolis, Kolkata. UrbanWrk offers bespoke private offices with tailored designs, furnishings, and dedicated meeting rooms.",
       BannerImage: KolkataBanner,
       locationDetail:
         "As a major economic and commercial hub in Eastern India, Kolkata offers a dynamic blend of old-world charm and modern business opportunities. Kolkata's strong literary and artistic traditions continue to thrive alongside its burgeoning sectors in technology and finance. With its sprawling gardens, historic colleges, and iconic Howrah Bridge, Kolkata remains a city that beautifully marries its past with a progressive present.",
       locationInfo: [
         {
           id: 1,
+          metaTitle: " Customised Corporate Office Space at Technopolis, Kolkata | UrbanWrk",
+          metaDescription: "Find your ideal customised office at Technopolis, Kolkata. UrbanWrk offers bespoke private offices with tailored designs, furnishings, and dedicated meeting rooms.",
           breadcrumbsTitle: "Technopolis",
           bannerImage: "/images/locationInside/technopolis-banner.png",
           mobileBanner: "/images/locationInside/baani-mobile-poster.png",
+          bannerAlt: "workplace in Kolkata",
           locationName: "Technopolis",
           videourl: "",
           video: false,
@@ -445,6 +495,7 @@ export const Jsons = {
           ],
           url: "/kolkata/technopolis",
           amentiesBanner: "/images/locationInside/technopolis-amenities-banner.png",
+          amentiesBannerAlt: "managed office space in Kolkata",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -471,13 +522,19 @@ export const Jsons = {
     },
     {
       id: 4,
+      bannerAlt: "UrbanWrk Hyderabad",
       locationName: "Hyderabad",
+      metaTitle: "Premium & Commercial Office Space in Hyderabad | UrbanWrk",
+      metaDescription: "Discover premium office spaces in Hyderabad with UrbanWrk. Explore our commercial spaces designed for productivity and innovation. Visit us for more information! Turn on screen reader support",
       BannerImage: HyderabadBanner,
       locationDetail:
         "Hyderabad blends its rich heritage with a strong technological footprint. Renowned for its historic sites, the city is equally celebrated for its thriving IT industry and biotechnology research. Hyderabad's vibrant culture is mirrored in its diverse cuisine, bustling markets, and the warmth of its people. With extensive development in modern business parks and residential areas, it offers a unique mix of tradition and modernity, making it a compelling city for professionals and tourists alike.",
       locationInfo: [
         {
           id: 1,
+          cardAlt: "UrbanWrk Raheja Mindspace",
+          metaTitle: "Customised Office at Raheja Mindspace Hyderabad | UrbanWrk",
+          metaDescription: "Find your ideal customised office at Raheja Mindspace, Hyderabad. UrbanWrk offers exclusive amenities such as breakaway spaces and conference rooms to boost productivity.",
           breadcrumbsTitle: "Raheja Mindspace",
           locationName: "Raheja Mindspace",
           bannerImage: "",
@@ -500,6 +557,7 @@ export const Jsons = {
           ],
           url: "/hyderabad/raheja-mindspace",
           amentiesBanner: "/images/locationInside/rahejamindspace-amenities-banner.png",
+          amentiesBannerAlt: "commercial space in Hyderabad",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -525,13 +583,19 @@ export const Jsons = {
     },
     {
       id: 4,
+      bannerAlt: "workspace in Delhi NCR",
       locationName: "NCR",
+      metaTitle: "Premium Ready-To-Work-In Office Spaces in NCR | UrbanWrk",
+      metaDescription: "UrbanWrk offers fully furnished, ready-to-work-in office spaces in the NCR. Find your ideal workspace and transform your work environment with our premium offerings.",
       BannerImage: NcrBanner,
       locationDetail:
         "The National Capital Region (NCR) of India, encompassing Delhi, Gurgaon and surrounding districts, is a thriving economic hub with immense opportunities for enterprises and startups. This region, known for its excellent connectivity, hosts a range of industries such as Information Technology, telecommunications, manufacturing, and real estate, making it an attractive destination for businesses to flourish. With its dynamic economy, robust infrastructure and a culture of new-age innovation, NCR is an ideal destination for enterprises seeking growth and success in a competitive market.",
       locationInfo: [
         {
           id: 1,
+          cardAlt: "commercial office space - Baani, The Statement, Gurgaon",
+          metaTitle: "Premium Commercial Office Space in Gurgaon, Golf Course Road | UrbanWrk",
+          metaDescription: "Experience Baani, The Statement's contemporary office spaces in Gurgaon with UrbanWrk. Find flexible work solutions with stunning design and biophilic features for your business.",
           breadcrumbsTitle: "Baani, The Statement",
           locationName: "Baani, The Statement",
           bannerImage: "",
@@ -554,6 +618,7 @@ export const Jsons = {
           ],
           url: "/ncr/baani",
           amentiesBanner: "/images/locationInside/baani-amenities-banner.png",
+          amentiesBannerAlt: "modern workplace",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -580,6 +645,9 @@ export const Jsons = {
         },
         {
           id: 2,
+          cardAlt: "modern office space in Max House Okhla",
+          metaTitle: "Flexible & Managed Offices in Gurgaon, Max House | UrbanWrk",
+          metaDescription: "UrbanWrk provides flexible office spaces in Gurgaon at Max House, ideal for solopreneurs and established businesses. Elevate your work experience with us.",
           breadcrumbsTitle: "Max House",
           locationName: "Max House",
           bannerImage: "",
@@ -602,6 +670,7 @@ export const Jsons = {
           ],
           url: "/ncr/max-house",
           amentiesBanner: "/images/locationInside/maxhouse-amenities-banner.png",
+          amentiesBannerAlt: "office space in Max House NCR",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
