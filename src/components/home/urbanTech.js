@@ -7,7 +7,7 @@ export default function UrbanTech() {
             <div className='max-lg:hidden'>
                 <div className='flex items-center gap-[25px]'>
                     <div className='w-1/2'>
-                        <Image src="/images/home/urbanTechl1.webp" unoptimized height={666} width={683} alt="aboutUs" />
+                        <Image src="/images/home/urbanTechl1.webp" unoptimized height={666} width={683} alt="conference room" />
                     </div>
                     <div className='w-1/2 flex flex-col justify-center pl-12'>
                         <>
@@ -22,7 +22,7 @@ export default function UrbanTech() {
             <div className='lg:hidden'>
                 <div className='flex flex-col items-center'>
                     <div className='w-full'>
-                        <Image src="/images/home/urbanTech1.webp" unoptimized height={666} width={683} alt="aboutUs" className='w-full'/>
+                        <Image src="/images/home/urbanTech1.webp" unoptimized height={666} width={683} alt="conference room" className='w-full'/>
                     </div>
                     <div className=' flex flex-col justify-center pt-10 '>
                         <>

@@ -10,7 +10,7 @@ export default function TechnologyBanner() {
           <div className='lg:w-1/2 max-lg:h-[419px] '>
             <Image
               src="/images/uwTechnology/uwBanner.png"
-              alt="solution-page"
+              alt="team work"
               height={500}
               width={784}
               className='h-full w-full object-cover'

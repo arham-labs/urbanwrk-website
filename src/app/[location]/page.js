@@ -9,8 +9,14 @@ import BreadCrumbs from "@/common/breadcrumbs";
 
 export async function generateMetadata({ params }) {
   const location = params.location;
+  const locationFind = Jsons.LocationData?.find(
+    (p) => p.locationName.toLowerCase() === location
+  );
+
 
   return {
+    title: locationFind?.metaTitle,
+    description: locationFind?.metaDescription,
     alternates: {
       canonical: `/${location}`,
     },

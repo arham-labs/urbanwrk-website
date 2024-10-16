@@ -24,7 +24,8 @@ const activeData = [
         list: ["Your customised private office with bespoke design and furnishings", "Flexible lease starting from a 6-month contract", "Full floor occupancy with option to scale", "Sustainable and eco-conscious materials used across", "24/7 access to your workspace", "Priority booking of meeting rooms and access to exclusive events"],
         source: section5,
         btn: "Explore",
-        href: "/solutions/tailormade-office"
+        href: "/solutions/tailormade-office",
+        bannerAlt: "tailor-made offices",
     },
     {
         id: 2,
@@ -32,7 +33,8 @@ const activeData = [
         list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "WELL & LEED Certified, sustainable and eco-conscious offices", "24/7 access to your workspace"],
         source: section1,
         btn: "Explore",
-        href: "/solutions/ready-to-work-in"
+        href: "/solutions/ready-to-work-in",
+        bannerAlt: "ready-to-work office",
     },
     {
         id: 3,
@@ -40,7 +42,8 @@ const activeData = [
         list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater; available when given a 48-hour notice", "Booking available by the hour, half day or full day"],
         source: section2,
         btn: "Explore",
-        href: "/solutions/meeting-rooms"
+        href: "/solutions/meeting-rooms",
+        bannerAlt: "meeting rooms",
     },
     {
         id: 4,
@@ -48,7 +51,8 @@ const activeData = [
         list: ["Capacity to hold up to 250 attendees", "Comprehensive packages with state-of-the-art facilities, sophisticated hospitality, and gourmet catering options", "Booking available by the hour, half day or full day"],
         source: section4,
         btn: "Explore",
-        href: "/solutions/events-launches"
+        href: "/solutions/events-launches",
+        bannerAlt: "event & launches",
     },
     {
         id: 5,
@@ -56,7 +60,8 @@ const activeData = [
         list: ["Digital and physical promotional spaces across prime real estate", "Eye-catching digital displays in a network of prestigious locations"],
         source: section3,
         btn: "Explore",
-        href: "/solutions/advertise-with-us"
+        href: "/solutions/advertise-with-us",
+        bannerAlt: "advertise with us",
     }
 ]
 
@@ -109,7 +114,7 @@ export default function ActiveCard() {
             </div>
             <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-24">
                 <div className="w-full lg:w-1/2">
-                    <Image src={showData?.source} className="aspect-[15/13] w-full" alt="image" />
+                    <Image src={showData?.source} className="aspect-[15/13] w-full" alt={showData?.bannerAlt} />
                 </div>
                 <div className="flex flex-col w-full lg:w-1/2">
                     <div className="mb-6 lg:mb-7">

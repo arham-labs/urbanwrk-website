@@ -7,6 +7,8 @@ import FormCard from '@/components/home/formCard';
 import BreadCrumbs from '@/common/breadcrumbs';
 
 export const metadata = {
+    title: "Flexible Workspaces with Premium Amenities for Every Workstyle | UrbanWrk",
+    description: "Find your perfect workspace with UrbanWrk. Choose from private offices to dynamic workspaces, all designed to enhance your productivity and comfort.",
     alternates: {
         canonical: "/solutions",
     },

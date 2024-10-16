@@ -19,7 +19,7 @@ export default function SolutionBanner() {
                     <div className='lg:w-1/2'>
                         <Image
                             src="/images/solutionsLanding/banner.png"
-                            alt="solution-page"
+                            alt="workspaces"
                             height={500} 
                             width={784}
                             className='h-full w-full object-bottom'

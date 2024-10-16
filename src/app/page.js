@@ -7,6 +7,12 @@ import GoodCompany from "@/components/home/goodCompany";
 import FormCard from "@/components/home/formCard";
 import HomeBanner from "@/components/home/homeBanner";
 
+
+export const metadata = {
+  title: "Next Gen Sustainable Workspaces for Your Business | UrbanWrk",
+  description: 'Find flexible, fully furnished office spaces and meeting rooms at UrbanWrk. Ideal for entrepreneurs and businesses seeking a dynamic, ready-to-work environment.',
+}
+
 export default function Home() {
   return (
     <>

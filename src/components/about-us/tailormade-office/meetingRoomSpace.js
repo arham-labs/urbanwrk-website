@@ -25,7 +25,7 @@ export default function MeetingRoomSpace({ data }) {
           src="/images/solutionsLanding/solutionsImg/meeting1.png"
           height={300}
           width={300}
-          alt="img"
+          alt="conference room with modern facilities"
           className="h-full w-full"
 
           unoptimized
