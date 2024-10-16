@@ -23,7 +23,7 @@ export default function LocationBanner({ data }) {
         // Update poster on window resize
         window.addEventListener('resize', updatePoster);
 
-        // Cleanup event listener on component unmount
+        // Cleanup event listener on component unmounts
         return () => {
             window.removeEventListener('resize', updatePoster);
         };
