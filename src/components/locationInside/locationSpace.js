@@ -8,7 +8,7 @@ export default function LocationSpace({ data,url }) {
         <div>
             <div className='bg-[#F6F4EE] w-full flex gap-[60px] max-lg:hidden'>
                 <div className='w-[60%] h-[429px]'>
-                    <Image src="/images/locationInside/locationSpace.png" alt='space' height={300} width={300} className='h-full w-full object-cover' unoptimized />
+                    <Image src="/images/locationInside/locationSpace.png" alt='reception area of UrbanWrk' height={300} width={300} className='h-full w-full object-cover' unoptimized />
                 </div>
                 <div className='flex items-center '>
                     <div className=''>
@@ -34,7 +34,7 @@ export default function LocationSpace({ data,url }) {
             <div className='lg:hidden'>
                 <div className='bg-[#F6F4EE] w-full flex flex-col '>
                     <div className='w-full aspect-[25/15]'>
-                        <Image src="/images/locationInside/locationSpaceMobile.png" alt='space' height={300} width={300} className='h-full w-full' unoptimized />
+                        <Image src="/images/locationInside/locationSpaceMobile.png" alt='reception area of UrbanWrk' height={300} width={300} className='h-full w-full' unoptimized />
                     </div>
                     <div className='flex items-center px-6 pt-[48px] pb-[64px]'>
                         <div className=''>

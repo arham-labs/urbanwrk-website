@@ -6,27 +6,29 @@ export default function DataDriven() {
         img: "/images/uwTechnology/urbanTechFeat1.png",
         title1: "THE URBANWRK MOBILE APP",
         title2: "Get actionable insights",
-        desc: "Explore a consolidated view of your busiest days, occupancy trends, headcount and low footfall spaces to maximise efficiency."
+        desc: "Explore a consolidated view of your busiest days, occupancy trends, headcount and low footfall spaces to maximise efficiency.",
+        alt: "UrbanWrk mobile app"
     },
     {
         img: "/images/uwTechnology/urbanTechFeat3.png",
         title1: "THE HEALTHWRK ENGINE",
         title2: "Keep work running smoothly",
-        desc: "Check your workspace's operational health with our smart solution that connects every aspect of your space to enable better asset and facility management."
+        desc: "Check your workspace's operational health with our smart solution that connects every aspect of your space to enable better asset and facility management.",
+        alt: "best work place"
     },
-    // {
-    //     img: "/images/uwTechnology/urbanTechFeat3.png",
-    //     title1: "THE PEOPLEWRK APP",
-    //     title2: "Elevate every day",
-    //     desc: "Deploy an end-to-end solution including face recognition, guest management to helpdesk and revolutionise your team's workday."
-    // },
-    // {
-    //     img: "/images/uwTechnology/urbanTechFeat4.png",
-    //     title1: "DESIGN STUDIO",
-    //     title2: "Blend creativity and compliance",
-    //     desc: "Our proprietary technology platform offers instant, customisable design solutions that align with the highest aesthetics and adhere to all regulations."
-    // },
-    ] 
+        // {
+        //     img: "/images/uwTechnology/urbanTechFeat3.png",
+        //     title1: "THE PEOPLEWRK APP",
+        //     title2: "Elevate every day",
+        //     desc: "Deploy an end-to-end solution including face recognition, guest management to helpdesk and revolutionise your team's workday."
+        // },
+        // {
+        //     img: "/images/uwTechnology/urbanTechFeat4.png",
+        //     title1: "DESIGN STUDIO",
+        //     title2: "Blend creativity and compliance",
+        //     desc: "Our proprietary technology platform offers instant, customisable design solutions that align with the highest aesthetics and adhere to all regulations."
+        // },
+    ]
     return (
 
         <div className="bg-[#FFF] ">

@@ -17,7 +17,7 @@ export default function CommonCard({ data, leftAlign }) {
                 {data.map((el, i) =>
                     <div className="flex flex-col" key={i}>
                         <div className="border-b-[10px] border-primary mb-7">
-                            <Image src={el.source} className="aspect-[17/19] w-full" alt="card" height={1000} width={1000}/>
+                            <Image src={el.source} className="aspect-[17/19] w-full" alt={el.alt} height={1000} width={1000}/>
                         </div>
                         <span className="text-2xl font-medium block mb-3">{el.title}</span>
                         <p className="leading-[21px] text-sm lg:text-base font-medium">{el.desc}</p>
@@ -29,7 +29,7 @@ export default function CommonCard({ data, leftAlign }) {
                     {data.map((el, i) =>
                         <div className="flex flex-col relative" key={i}>
                             <div className="border-b-[10px] border-primary mb-7 lg:mb-10">
-                                <Image src={el.source} className="aspect-[17/19] w-full" alt="card" height={1000} width={1000} />
+                                <Image src={el.source} className="aspect-[17/19] w-full" alt={el.alt} height={1000} width={1000} />
                             </div>
                             <span className="text-2xl font-medium block mb-3 lg:mb-5">{el.title}</span>
                             <p className="leading-[21px] text-sm font-medium mb-5">{el.desc}</p>

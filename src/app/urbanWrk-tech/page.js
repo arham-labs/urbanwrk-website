@@ -5,6 +5,8 @@ import DataDriven from '@/components/uwTechnology/dataDriven'
 import TechnologyBanner from '@/components/uwTechnology/technologyBanner'
 
 export const metadata = {
+    title: "Smart Workspace Solutions & Facility Management | UrbanWrk Tech",
+    description: "UrbanWrk Tech offers innovative workspace solutions focusing on employee wellness, community areas, and advanced IT infrastructure to create a brighter work environment.",
     alternates: {
         canonical: "/urbanWrk-tech",
     },

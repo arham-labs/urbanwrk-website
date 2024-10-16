@@ -8,7 +8,7 @@ export default function WorkSpace() {
             <div className="px-6 max-w-[1920px] mx-auto 2xl:pr-40 2xl:pl-52 lg:pl-40 lg:pr-[100px] lg:w-auto flex flex-col">
                 <div className="flex flex-col lg:flex-row gap-7 lg:gap-0 items-center mb-10 lg:mb-0">
                     <div className="aspect-square w-full lg:w-1/2 flex items-center lg:justify-center">
-                        <Image src={Space} className="w-full lg:w-[65%]" alt="space-image" />
+                        <Image src={Space} className="w-full lg:w-[65%]" alt="comfortable deck at workspace" />
                     </div>
                     <div className="flex flex-col w-full lg:w-1/2">
                         <div className="w-full lg:w-[78%]">
@@ -26,7 +26,7 @@ export default function WorkSpace() {
                         </div>
                     </div>
                     <div className="aspect-square lg:aspect-[9/10] w-full lg:w-1/2 relative lg:absolute lg:top-0 xl:-top-[80px] lg:right-0">
-                        <Image src={LeaveMark} alt="leave-mark-image" className="aspect-square lg:aspect-[9/10] w-full"/>
+                        <Image src={LeaveMark} alt="conference room" className="aspect-square lg:aspect-[9/10] w-full"/>
                     </div>
                 </div>
             </div>

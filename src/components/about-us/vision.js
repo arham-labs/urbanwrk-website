@@ -12,7 +12,7 @@ export default function Vision() {
                 <h2 className="text-xl lg:text-2xl mb-12 text-center lg:text-left lg:mb-20 uppercase">The Team Behind the vision</h2>
                 <div className="flex flex-col items-center lg:items-end mb-10 lg:mb-32 lg:flex-row lg:gap-10 xl:gap-0">
                     <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
-                        <Image src={Anuj} alt="image" className="w-full object-cover h-full" />
+                        <Image src={Anuj} alt="ANUJ MUNOT" className="w-full object-cover h-full" />
                     </div>
                     <div className="w-full lg:w-[60%]">
                         <div className="w-full lg:w-[75%] m-auto">
@@ -26,7 +26,7 @@ export default function Vision() {
                 </div>
                 <div className="flex flex-col items-center lg:items-end lg:flex-row-reverse lg:gap-10 xl:gap-0">
                     <div className="aspect-[13/16] w-full mb-7 lg:w-[45%] lg:aspect-square lg:mb-0">
-                        <Image src={Harsh} alt="image" className="w-full object-cover h-full" />
+                        <Image src={Harsh} alt="HARSH MEHTA" className="w-full object-cover h-full" />
                     </div>
                     <div className="w-full lg:w-[60%]">
                         <div className="w-full lg:w-[75%] 2xl:w-[60%]">

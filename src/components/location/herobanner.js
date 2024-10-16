@@ -15,7 +15,7 @@ export default function Herobanner({data}) {
                     </div>
                 </div>
                 <div className="aspect-[6/5] lg:aspect-[16/14] w-full lg:w-1/2">
-                    <Image src={data.BannerImage} width={1200} height={1000} className="w-full h-full" alt="banner" />
+                    <Image src={data.BannerImage} width={1200} height={1000} className="w-full h-full" alt={data.bannerAlt} />
                 </div>
             </div>
         </div>)

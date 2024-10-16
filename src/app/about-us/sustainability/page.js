@@ -9,6 +9,8 @@ import Herobanner from "@/components/sustainability/herobanner";
 export const metadata = {
     alternates: {
         canonical: "/about-us/sustainability",
+        title: "Green Workspace Solutions & IGBC Platinum Offices | UrbanWrk's Sustainability",
+        description: "Discover UrbanWrk's commitment to sustainability. Learn about our eco-friendly practices and how we're contributing to greener future workspaces."
     },
 };
 

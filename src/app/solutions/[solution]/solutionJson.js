@@ -6,7 +6,10 @@ export const Jsons = {
   SolutionData: [
     {
       id: 1,
+      metaTitle: "Find Custom & Tailor-Made Office Spaces at UrbanWrk",
+      metaDescription: "Design your ideal office with UrbanWrk’s tailor-made solutions. Customised spaces that fit your business needs and preferences.",
       name: "tailormade-office",
+      bannerAlt: "Tailormade offices",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
@@ -31,16 +34,19 @@ export const Jsons = {
           title: "We match your pace",
           source: "/images/solutionsLanding/solutionsImg/working1.png",
           desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale with complete ease.",
+          alt: "UrbanWrk",
         },
         {
           title: "We are where work thrives",
           source: "/images/solutionsLanding/solutionsImg/working2.png",
           desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
+          alt: "make connection in workplace",
         },
         {
           title: "We take the work out of work",
           source: "/images/solutionsLanding/solutionsImg/working3.png",
           desc: "A great reception, smooth visitor management, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
+          alt: "sustainable office space",
         },
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
@@ -62,12 +68,16 @@ export const Jsons = {
       ],
       card4_img: "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
+      card4_alt: "managed office space",
       card4_title2: "productivity",
       card4_title3:
         "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
     },
     {
       id: 2,
+      bannerAlt: "Ready-To-Work-In offices",
+      metaTitle: "Ready-to-Work-in/Ready-to-Move Office Spaces | UrbanWrk",
+      metaDescription: "UrbanWrk's ready-to-work-in office spaces are equipped with cutting-edge facilities for seamless, unforgettable events. Secure your venue today!",
       breadcrumbsTitle: "Ready-To-Work-In",
       name: "ready-to-work-in",
       titleImgDesk:
@@ -93,16 +103,19 @@ export const Jsons = {
           title: "We deliver future-proof flexibility",
           source: "/images/solutionsLanding/solutionsImg/working4.png",
           desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up with complete ease.",
+          alt: "adaptable office solutions"
         },
         {
           title: "We bring the global edge",
           source: "/images/solutionsLanding/solutionsImg/working5.png",
           desc: "Operate with a world-class standard from day one. Our environments give you a competitive advantage with cutting edge technology and premium amenities.",
+          alt: "world-class standard office space"
         },
         {
           title: "We facilitate zero upfront costs",
           source: "/images/solutionsLanding/solutionsImg/working6.png",
           desc: "Establish or expand your business presence without the upfront costs typically associated with setting up a new office with our zero capex model.",
+          alt: "new office space"
         },
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
@@ -125,11 +138,15 @@ export const Jsons = {
       card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
+      card4_alt: "UrbanWrk workspace",
       card4_title3:
         "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on bringing your vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
     },
     {
       id: 3,
+      bannerAlt: "commercial office space",
+      metaTitle: "Virtual Office Solutions for Professional Growth | UrbanWrk",
+      metaDescription: "Discover UrbanWrk's virtual office solutions, offering professional addresses and essential support to enhance your business presence. Elevate your business today.",
       breadcrumbsTitle: "Virtual Offices",
       name: "virtual-offices",
       titleImgDesk:
@@ -154,16 +171,19 @@ export const Jsons = {
           title: "We bring cost efficiency ",
           source: "/images/solutionsLanding/solutionsImg/working7.png",
           desc: "We eliminate the need for long-term leases, utility payments, and office maintenance expenses, so you can invest more resources into growing your business.",
+          alt: "personal cabin"
         },
         {
           title: "We create an elevated presence",
           source: "/images/solutionsLanding/solutionsImg/working8.png",
           desc: "Bring credibility and respectability to your operations, and establish a presence in competitive markets without the cost of a physical office.",
+          alt: "conference room"
         },
         {
           title: "We support your growth",
           source: "/images/solutionsLanding/solutionsImg/working9.png",
           desc: "Have your operational needs are seamlessly met, no matter where you are working from. And you can access meeting rooms and event spaces on demand.",
+          alt: "meeting room"
         },
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
@@ -186,11 +206,15 @@ export const Jsons = {
       card4_img: "/images/solutionsLanding/solutionsImg/productivity1.png",
       card4_title1: "Planet-first",
       card4_title2: "productivity",
+      card4_alt: "managed office space",
       card4_title3:
         "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
     },
     {
       id: 4,
+      bannerAlt: "corporate meeting room",
+      metaTitle: "Best Meeting Rooms with Integrated Office Spaces | UrbanWrk",
+      metaDescription: "Experience the ideal blend of meeting rooms and office spaces at UrbanWrk, designed to elevate your team's collaboration and productivity.",
       breadcrumbsTitle: "Meeting Rooms",
       name: "meeting-rooms",
       titleImgDesk:
@@ -214,16 +238,19 @@ export const Jsons = {
           title: "We match your pace",
           source: "/images/solutionsLanding/solutionsImg/working10.png",
           desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale with complete ease.",
+          alt: ""
         },
         {
           title: "We are where work thrives",
           source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
+          alt: ""
         },
         {
           title: "We take the work out of work",
           source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "A great reception, smooth visitor management, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?",
+          alt: ""
         },
       ],
       card3_img: "",
@@ -246,11 +273,15 @@ export const Jsons = {
       card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
       card4_title1: "Powering your",
       card4_title2: "workspace",
+      card4_alt: "UrbanWrk app",
       card4_title3:
         "Embrace a workday redefined by speed, smart solutions, and security, ensuring that your team can focus on what truly matters—bringing the vision to life. Our proprietary platform and app are designed to make every aspect of your workday smoother and more intuitive.",
     },
     {
       id: 5,
+      bannerAlt: "Events & launches",
+      metaTitle: "Host Events and Product Launches at UrbanWrk",
+      metaDescription: "Plan your events & product launches with UrbanWrk. Experience premium venues with tech-driven setups, upscale hospitality, and custom packages for seamless events.",
       breadcrumbsTitle: "Events and Launches",
       name: "events-launches",
       titleImgDesk:
@@ -273,16 +304,19 @@ export const Jsons = {
           title: "We deliver flawless execution",
           source: "/images/solutionsLanding/solutionsImg/working10.png",
           desc: "We work closely with you to customise your event, ensuring your vision is brought to life seamlessly and with world-class finesse.",
+          alt: "group discussion at office space"
         },
         {
           title: "We bring the hi-tech edge",
           source: "/images/solutionsLanding/solutionsImg/working12.png",
           desc: "Our robust tech and digital platforms guarantee a hitch-free experience, enabling flawless engagement whether your audience is in-room or joining remotely.",
+          alt: "high-tech commercial space"
         },
         {
           title: "We have global standards of hospitality",
           source: "/images/solutionsLanding/solutionsImg/working11.png",
           desc: "Give your audience an exceptional event experience with valet parking, catering options, and hospitality of the highest calibre.",
+          alt: "hospitality at workplace"
         },
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
@@ -305,11 +339,15 @@ export const Jsons = {
       card4_img: "/images/solutionsLanding/solutionsImg/productivity3.png",
       card4_title1: "Brimming with",
       card4_title2: "opportunity",
+      card4_alt: "group discussions in conference room",
       card4_title3:
         "Our holistic approach combines a vibrant, networking-driven culture with top-tier workspace management and design, ensuring you do your best work in an environment tailored to your needs.",
     },
     {
       id: 6,
+      bannerAlt: "cafeteria at commercial office space",
+      metaTitle: "Advertising Opportunities at Prime Business Hubs | UrbanWrk",
+      metaDescription: "Promote your brand with UrbanWrk's digital and physical advertising spaces, offering personalized campaigns to elevate your brand to a high-value network of professionals.",
       breadcrumbsTitle: "Advertise With Us",
       name: "advertise-with-us",
       titleImgDesk:
@@ -331,16 +369,19 @@ export const Jsons = {
           title: "We create maximum exposure",
           source: "/images/solutionsLanding/solutionsImg/working13.png",
           desc: "Our properties are in prime business hubs across major cities, ensuring your advertisements reach a high-volume, professional audience.",
+          alt:"work station"
         },
         {
           title: "We diversify for wide reach",
           source: "/images/solutionsLanding/solutionsImg/working14.png",
           desc: "We provide a variety of advertising mediums, from digital displays in common areas to branded spaces within the premises, and even opportunities for sponsored events.",
+          alt:"bonding with teammates"
         },
         {
           title: "We reach a high-value network",
           source: "/images/solutionsLanding/solutionsImg/working15.png",
           desc: "Tap into our network of professionals and businesses, potentially opening doors to collaborative opportunities and new markets.",
+          alt:"professional networking"
         },
       ],
       card3_img: "/images/solutionsLanding/solutionsImg/space1.png",
@@ -363,6 +404,7 @@ export const Jsons = {
       card4_img: "/images/solutionsLanding/solutionsImg/productivity4.png",
       card4_title1: "Brimming with",
       card4_title2: "opportunity",
+      card4_alt: "group discussions in conference room",
       card4_title3:
         "Our holistic approach combines a vibrant, networking-driven culture with top-tier workspace management and design, ensuring you do your best work in an environment tailored to your needs.",
     },

@@ -2,6 +2,8 @@ import BreadCrumbs from "@/common/breadcrumbs";
 import Link from "next/link"
 
 export const metadata = {
+    title: "Privacy Policy | UrbanWrk",
+    description: "Read UrbanWrk's privacy policy and learn how we collect, store, and protect your data. We prioritize your security and data privacy.",
     alternates: {
         canonical: "/privacy-policy",
     },

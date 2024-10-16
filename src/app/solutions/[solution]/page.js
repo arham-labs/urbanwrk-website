@@ -13,7 +13,11 @@ import BreadCrumbs from "@/common/breadcrumbs";
 export async function generateMetadata({ params }) {
   const solution = params.solution;
 
+  const solutionFind = Jsons?.SolutionData?.find((a) => a.name === solution);
+
   return {
+    title: solutionFind?.metaTitle,
+    description: solutionFind?.metaDescription,
     alternates: {
       canonical: `/solutions/${solution}`,
     },

@@ -8,6 +8,8 @@ import FormCard from "@/components/home/formCard";
 import BreadCrumbs from "@/common/breadcrumbs";
 
 export const metadata = {
+    title: "Modern Office Spaces for Every Business Requirement | UrbanWrk",
+    description: 'UrbanWrk provides next-gen, fully managed office spaces with cutting-edge technology and sustainable design, fostering dynamic, collaborative work environments.',
     alternates: {
         canonical: "/about-us",
     },
