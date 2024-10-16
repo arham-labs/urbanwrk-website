@@ -463,7 +463,7 @@ export const Jsons = {
       cardAlt: "UrbanWrk Technopolis Kolkata",
       locationName: "Kolkata",
       metaTitle: "Customised & Ready-To-Move-In Offices in Kolkata | UrbanWrk",
-      metaDescription: "Find your ideal customised office at Technopolis, Kolkata. UrbanWrk offers bespoke private offices with tailored designs, furnishings, and dedicated meeting rooms.",
+      metaDescription: "UrbanWrk offers flexible office spaces in Kolkata for diverse business needs & enhanced convenience. Explore our tailor-made solutions for all your needs.",
       BannerImage: KolkataBanner,
       locationDetail:
         "As a major economic and commercial hub in Eastern India, Kolkata offers a dynamic blend of old-world charm and modern business opportunities. Kolkata's strong literary and artistic traditions continue to thrive alongside its burgeoning sectors in technology and finance. With its sprawling gardens, historic colleges, and iconic Howrah Bridge, Kolkata remains a city that beautifully marries its past with a progressive present.",
