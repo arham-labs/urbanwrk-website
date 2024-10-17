@@ -7,7 +7,7 @@ export default function LocationSpaceCard({ el,location }) {
     return (
         <div className="flex flex-col bg-bglight1 lg:h-fit lg:flex-row items-center w-[calc(100%-20px)]">
             <div className="w-full xl:w-1/2 2xl:w-[45%]">
-                <Image src={el?.locationImg} unoptimized alt={el.locationCardAlt} className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
+                <Image src={el?.locationImg} unoptimized alt={el.cardAlt} className="w-full h-full lg:h-[405px] object-cover aspect-[19/14] lg:aspect-[14/16]" />
             </div>
             <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%]">
                 <span className="text-lg lg:text-xl font-medium capitalize">{el.locationName}</span>

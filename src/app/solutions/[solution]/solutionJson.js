@@ -9,7 +9,7 @@ export const Jsons = {
       metaTitle: "Find Custom & Tailor-Made Office Spaces at UrbanWrk",
       metaDescription: "Design your ideal office with UrbanWrk’s tailor-made solutions. Customised spaces that fit your business needs and preferences.",
       name: "tailormade-office",
-      bannerAlt: "Tailormade offices",
+      bannerAlt: "Tailor-made workspace",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
       titleImgMob: "/images/solutionsLanding/solutionsImg/mobile-banner-1.png",
