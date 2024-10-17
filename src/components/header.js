@@ -103,20 +103,31 @@ export default function Header() {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Organization",
-                            name: "Urban wrk",
-                            url: "https://www.urbanwrk.com/",
-                            logo: "",
+                            "@context": "http://www.schema.org",
+                            "@type": "Corporation",
+                            name: "UrbanWrk",
+                            url: "https://urbanwrk.com/",
+                            logo: "https://urbanwrk.com/_next/image?url=%2Fimages%2Flogo.webp&w=256&q=75",
+                            description: "We are UrbanWrk. Where your vision and creativity find their shape and reality. Where you can build your office space, your way, as the foundation of your legacy.",
+                            address: {
+                                "@type": "PostalAddress",
+                                streetAddress: "504, Tower A, Peninsula Corporate Park, Senapati Bapat Marg, Lower Parel West",
+                                addressLocality: "Mumbai",
+                                addressRegion: "Maharashtra",
+                                postalCode: "400013",
+                                addressCountry: "India",
+                                availableLanguage: "en"
+                            },
                             contactPoint: {
                                 "@type": "ContactPoint",
-                                "telephone": "",
-                                "contactType": "Customer service",
+                                "telephone": "+91 8399959996",
+                                "contactType": "customer service",
                             },
                             sameAs: [
-                                "",
-                                ""
-                            ],
+                                "https://www.facebook.com/Urbanwrk.official",
+                                "https://www.instagram.com/urbanwrk/",
+                                "https://www.linkedin.com/company/urbanwrk/"
+                              ]
                         }),
                     }}
                 />
