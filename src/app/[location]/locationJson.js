@@ -227,9 +227,9 @@ export const Jsons = {
             { source: Gym, title: "Gym" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
-          url: "/pune/koncard",
+          url: "/pune/koncord",
           amentiesBanner: "/images/locationInside/koncard-amenities-banner.png",
-          amentiesBannerAlt: "modern office amenities at koncard Pune",
+          amentiesBannerAlt: "modern office amenities at koncord Pune",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
