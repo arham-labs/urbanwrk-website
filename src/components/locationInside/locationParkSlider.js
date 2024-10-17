@@ -44,11 +44,16 @@ export default function LocationParkSlider({ data, location }) {
       </Slider>
       <style jsx global>{`
         .slick-dots{
-           bottom: -65px !important;
+           bottom: 20px !important;
         }
         .slick-dots li {
           display: inline-block;
           margin: 0 !important;
+      }
+      @media screen and (min-width: 1024px){
+        .slick-dots{
+          bottom: -65px !important;
+       }
       }
       `}
 

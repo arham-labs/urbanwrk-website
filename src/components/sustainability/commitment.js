@@ -30,7 +30,7 @@ export default function Commitment() {
                 </div>
             </div>
             <div className="w-full lg:w-[35%] mt-10 lg:mt-0 lg:h-[675px]">
-                <Image src="/images/sustainability/commitment1.png" width={800} height={900} alt="commitment" className="w-full object-cover h-full aspect-[10/11] lg:aspect-[7/9]" />
+                <Image src="/images/sustainability/commitment1.png" width={800} height={900} alt="comfortable workspaces" className="w-full object-cover h-full aspect-[10/11] lg:aspect-[7/9]" />
             </div>
         </div>)
 }

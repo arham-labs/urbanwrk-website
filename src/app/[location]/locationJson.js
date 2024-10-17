@@ -281,6 +281,7 @@ export const Jsons = {
           ],
           url: "/pune/aeromall",
           amentiesBanner: "/images/locationInside/aeromall-amenities-banner.png",
+          amentiesBannerAlt: "modern amenities at a workplace",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -332,6 +333,7 @@ export const Jsons = {
           ],
           url: "/pune/nandan-probiz",
           amentiesBanner: "/images/locationInside/nandanprobiz-amenities-banner.png",
+          amentiesBannerAlt: "Amenities at Nandan Probiz Pune UrbanWrk office",
           connectivityAmenities: [
             { img: Lounge, title: "Lounge area" },
             { img: Conference, title: "Conference rooms" },
@@ -363,6 +365,7 @@ export const Jsons = {
           breadcrumbsTitle: "MontClaire",
           bannerImage: "/images/locationInside/montclaire-banner.png",
           mobileBanner: "/images/locationInside/montclaire-mobile-banner.png",
+          bannerAlt: "Montclaire office Pune",
           locationName: "MontClaire",
           videourl: "",
           video: false,
@@ -375,6 +378,7 @@ export const Jsons = {
           location2: "Airport - 16.5 km",
           location3: "A thriving corporate park in the heart of Pune.",
           amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
+          amentiesBannerAlt: "modern office space amenities",
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms" },
@@ -413,6 +417,7 @@ export const Jsons = {
           breadcrumbsTitle: "Pentagon",
           bannerImage: "/images/location/pentagon-banner.png",
           mobileBanner: "/images/locationInside/pentagon-mobile-banner.png",
+          bannerAlt: "UrbanWrk pentagon office cafeteria",
           locationName: "Pentagon",
           videourl: "",
           video: false,
@@ -425,6 +430,7 @@ export const Jsons = {
           location2: "Airport - 9 km",
           location3: "A thriving corporate park in the heart of Pune.",
           amentiesBanner: "/images/locationInside/pentagon-amenities-banner.png",
+          amentiesBannerAlt: "luxury office and its amenities",
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
             { source: Conference, title: "Conference rooms" },
@@ -460,7 +466,6 @@ export const Jsons = {
     {
       id: 3,
       bannerAlt: "commercial office space in Kolkata",
-      cardAlt: "UrbanWrk Technopolis Kolkata",
       locationName: "Kolkata",
       metaTitle: "Customised & Ready-To-Move-In Offices in Kolkata | UrbanWrk",
       metaDescription: "UrbanWrk offers flexible office spaces in Kolkata for diverse business needs & enhanced convenience. Explore our tailor-made solutions for all your needs.",
@@ -476,6 +481,7 @@ export const Jsons = {
           bannerImage: "/images/locationInside/technopolis-banner.png",
           mobileBanner: "/images/locationInside/baani-mobile-poster.png",
           bannerAlt: "workplace in Kolkata",
+          cardAlt: "UrbanWrk Technopolis Kolkata",
           locationName: "Technopolis",
           videourl: "",
           video: false,
