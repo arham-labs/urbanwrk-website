@@ -90,11 +90,6 @@ export default function Header() {
     const handleMouseEnter = () => {
         setMouseHover(true)
     }
-    // const handleHead=()=>{
-    //     setSelectedHeading(item.name)
-    //     const a=headerData.find(name)
-    //     console.log(a)
-    // }
 
     return (
         <>
