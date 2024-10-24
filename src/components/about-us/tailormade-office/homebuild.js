@@ -206,9 +206,9 @@ export default function HomeBuild({ data }) {
             <div className="mb-4 max-lg:mt-6">
               <p className="text-sm">
                 By clicking the button below, you agree to our Website&nbsp;
-                <Link href="/terms-of-use"><span className="underline">Terms of Service</span></Link>
+                <a href="/terms-of-use"><span className="underline">Terms of Service</span></a>
                 &nbsp;and acknowledge our&nbsp;
-                <Link href="/privacy-policy"><span className="underline">Privacy Policy</span></Link>
+                <a href="/privacy-policy"><span className="underline">Privacy Policy</span></a>
               </p>
             </div>
             <div className="mb-4 lg:flex max-lg:py-3">

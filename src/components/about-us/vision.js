@@ -18,9 +18,9 @@ export default function Vision() {
                         <div className="w-full lg:w-[75%] m-auto">
                             <span className="uppercase text-xl block mb-2 lg:mb-4 lg:text-2xl font-medium border-b border-primary pb-5 w-[200px]">ANUJ MUNOT</span>
                             <p className="!leading-6 text-sm xl:text-base font-medium mb-3">With two decades of experience in the luxury real estate sector with Kalpataru, Anuj has led the development of nearly 40 million sq ft of premium real estate with exceptional design, flawless execution, and business excellence.His visionary response to the shift to a shared economy has led to the creation of UrbanWrk transforming enterprise-managed workspaces with a blend of design and sustainability. Guided by the ethos &#39;Find your space, leave your mark,&#39; Anuj offers a unique proposition for today&#39;s entrepreneurs- office spaces that meet their every need and give them the headspace to focus on their vision.</p>
-                            <Link target="_blank" href="https://www.linkedin.com/in/anujmunot/">
+                            <a target="_blank" href="https://www.linkedin.com/in/anujmunot/">
                                 <Image src={LinkedIn} alt="logo" className="w-[30px]" />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -32,9 +32,9 @@ export default function Vision() {
                         <div className="w-full lg:w-[75%] 2xl:w-[60%]">
                             <span className="uppercase text-xl block mb-2 lg:mb-4 lg:text-2xl font-medium border-b border-primary pb-5 w-[200px]">HARSH MEHTA</span>
                             <p className="!leading-6 text-sm xl:text-base font-medium mb-3">Harsh&#39;s journey with Honeywell Automation and Havells as well as his entrepreneurial ventures have honed his skill in building strategic relationships. At the helm of UrbanWrk, his approach involves nurturing long-term customer relationships, managing stakeholders like brokers and landlords to foster a mutually beneficial ecosystem, and focusing on strategic business development and growth. Harsh&#39;s unique blend of industry insight and operational prowess positions him as a key player in shaping future working environments.</p>
-                            <Link target="_blank" href="https://www.linkedin.com/in/harsh-mehta-1b138b28/">
+                            <a target="_blank" href="https://www.linkedin.com/in/harsh-mehta-1b138b28/">
                                 <Image src={LinkedIn} alt="logo" className="w-[30px]" />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

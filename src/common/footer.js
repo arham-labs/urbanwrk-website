@@ -9,12 +9,12 @@ export default function Footer() {
   return (
     <section id="footer" className="bg-black text-white py-16 lg:py-20">
       <div className="px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px]">
-        <Link
+        <a
           href="/"
           className="flex flex-col justify-between items-start mb-10 lg:mb-16"
         >
           <Image src={UrbanWRKLogo} className="" alt="urbanwrk-logo" />
-        </Link>
+        </a>
         <div className="flex flex-col lg:flex-row w-full justify-between">
           <div className="mb-8 grid lg:grid-cols-6 gap-5 lg:gap-8 2xl:gap:12 lg:mb-0">
             <div className="flex flex-col gap-2 lg:gap-6">
@@ -28,9 +28,9 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-2 lg:gap-6">
-              <Link href="/solutions" className="text-lg uppercase">
+              <a href="/solutions" className="text-lg uppercase">
                 Solutions
-              </Link>
+              </a>
               <div className="flex flex-col gap-2">
                 {[
                   {
@@ -58,9 +58,9 @@ export default function Footer() {
                     title: "Advertise With Us",
                   },
                 ].map((el, i) => (
-                  <Link className="text-sm font-light" href={el.link} key={i}>
+                  <a className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -70,23 +70,23 @@ export default function Footer() {
               </span>
               <div className="flex flex-col gap-2">
                 {[{ link: "/hyderabad", title: "Hyderabad" },{ link: "/kolkata", title: "Kolkata" },{ link: "/mumbai", title: "Mumbai" }, { link: "/ncr", title: "NCR" },{ link: "/pune", title: "Pune" }].map((el, i) => (
-                  <Link className="text-sm font-light" href={el.link} key={i}>
+                  <a className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
 
             <div className="flex flex-col gap-2 lg:gap-6">
-              <Link href="/about-us" className="text-lg uppercase">
+              <a href="/about-us" className="text-lg uppercase">
                 About Us
-              </Link>
+              </a>
               <div className="flex flex-col gap-2">
                 {[{ link: "/about-us/sustainability", title: "Sustainability" }, { link: "/urbanWrk-tech", title: "UrbanWrk Tech" }].map(
                   (el, i) => (
-                    <Link className="text-sm font-light" href={el.link} key={i}>
+                    <a className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>
-                    </Link>
+                    </a>
                   )
                 )}
               </div>
@@ -98,9 +98,9 @@ export default function Footer() {
               <div className="flex flex-col gap-2">
                 {[{ link: "/blogs", title: "Blog" },{ link: "/careers", title: "Careers" }].map(
                   (el, i) => (
-                    <Link className="text-sm font-light" href={el.link} key={i}>
+                    <a className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>
-                    </Link>
+                    </a>
                   )
                 )}
               </div>
@@ -120,8 +120,8 @@ export default function Footer() {
             </div> */}
             <div className="flex flex-col text-xs gap-5">
               <span>COPYRIGHT 2024</span>
-              <Link href="/terms-of-use">TERMS OF USE</Link>
-              <Link href="/privacy-policy">PRIVACY POLICY </Link>
+              <a href="/terms-of-use">TERMS OF USE</a>
+              <a href="/privacy-policy">PRIVACY POLICY </a>
             </div>
           </div>
         </div>

@@ -220,9 +220,9 @@ export default function Chat() {
                   <input type="checkbox" id="news"
                     {...register("newsUpdates")} className="lg:!w-6  max-lg:!w-9 max-lg:mb-5" htmlFor="news" />
                   <label className="ml-2 text-sm mt-4">You agree to our Website&nbsp;
-                    <Link href="/terms-of-use"><span className="underline">Terms of Service</span></Link>
+                    <a href="/terms-of-use"><span className="underline">Terms of Service</span></a>
                     &nbsp;and acknowledge our&nbsp;
-                    <Link href="/privacy-policy"><span className="underline">Privacy Policy</span></Link>
+                    <a href="/privacy-policy"><span className="underline">Privacy Policy</span></a>
                   </label>
                 </div>
 
