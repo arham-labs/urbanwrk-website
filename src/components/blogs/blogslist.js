@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
 import BasicSelectDrop from "../select";
 import React, { useState } from 'react'
 
@@ -57,7 +56,7 @@ export default function BlogsList({ data }) {
             <div className="flex flex-col lg:flex-row gap-0 lg:gap-10 items-start">
                 <div className="w-full lg:w-[46.5%] lg:hidden flex items-end">
                     <BasicSelectDrop list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
-                        handleSelectChange={handleSortChange} labelName="Date (Newest - Oldest)" date={true}/>
+                        handleSelectChange={handleSortChange} labelName="Date (Newest - Oldest)" date={true} />
                 </div>
                 <div className="w-full lg:w-1/2 mb-7 lg:mb-0">
                     <a href={`/blogs/${blogData[0]?.id}`} className="flex flex-col gap-3 justify-start items-start">
@@ -76,7 +75,7 @@ export default function BlogsList({ data }) {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 h-auto lg:h-[800px] xl:h-[850px] lg:overflow-y-scroll scrollbar scrollbar-custom items-start lg:gap-x-10">
                         <div className="flex flex-col gap-7">
-                            {wholeData.slice(0, Math.floor(wholeData.length / 2)).map((item, index) =>
+                            {wholeData.slice(0, Math.floor(wholeData.length)).map((item, index) =>
                                 <a href={`/blogs/${item.id}`} className="flex flex-col gap-2" key={item.id}>
                                     <Image
                                         src={"https://urbanwrk.com/cms" + item.attributes?.Banner?.data?.attributes?.url}
@@ -94,7 +93,7 @@ export default function BlogsList({ data }) {
                             )}
                         </div>
                         <div className="flex flex-col gap-7">
-                            {wholeData.slice(Math.round(wholeData.length / 2), wholeData.length).map((item, index) =>
+                            {wholeData.slice(Math.round(wholeData.length), wholeData.length).map((item, index) =>
                                 <a href={`/blogs/${item.id}`} className="flex flex-col gap-2" key={item.id}>
                                     <Image
                                         src={"https://urbanwrk.com/cms" + item.attributes?.Banner?.data?.attributes?.url}
