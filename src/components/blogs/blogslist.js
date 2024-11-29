@@ -70,7 +70,7 @@ export default function BlogsList({ data }) {
                 <div className="w-full lg:w-1/2 relative">
                     <div className="mb-3 hidden lg:flex justify-end w-full absolute -top-16 right-3">
                         <div className="w-full lg:w-[46.5%]">
-                            <BasicSelectDrop list={["te (Oldest - Newest)", "Date (Newest - Oldest)"]}
+                            <BasicSelectDrop list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
                                 handleSelectChange={handleSortChange} labelName="Date (Newest - Oldest)" date={true} />
                         </div>
                     </div>
