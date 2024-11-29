@@ -11,7 +11,7 @@ import { useParams } from "next/navigation";
 
 const titles = [
     { id: 1, title: "TAILORMADE OFFICES", href: "/solutions/tailormade-office" },
-    { id: 2, title: "READY-TO-WORK IN OFFICES", href: "/solutions/ready-to-work-in" },
+    { id: 2, title: "READY-TO-WORK-IN OFFICES", href: "/solutions/ready-to-work-in" },
     { id: 3, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
     { id: 4, title: "EVENTS & LAUNCHES", href: "/solutions/events-launches" },
     { id: 5, title: "ADVERTISE WITH US", href: "/solutions/advertise-with-us" }
@@ -34,7 +34,7 @@ const activeData = [
         source: section1,
         btn: "Explore",
         href: "/solutions/ready-to-work-in",
-        bannerAlt: "ready-to-work office",
+        bannerAlt: "ready-to-work-in office",
     },
     {
         id: 3,
