@@ -20,8 +20,12 @@ export default function LocationFormCard() {
     const utm_source = searchParams.get("utm_source");
     const utm_medium = searchParams.get("utm_medium");
     const utm_campaign = searchParams.get("utm_campaign");
-    const utm_term = searchParams.get("utm_term");
-    const utm_content = searchParams.get("utm_content");
+    const utm_adgroupname = searchParams.get('utm_adgroupname')
+    const utm_term = searchParams.get('utm_term')
+    const utm_device = searchParams.get('utm_device')
+    const utm_adname = searchParams.get('utm_adname')
+    const utm_matchtype = searchParams.get('utm_matchtype')
+    const utm_network = searchParams.get('utm_network')
     const [phone, setPhone] = useState("");
     const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
     const phoneUtil = PhoneNumberUtil.getInstance();
@@ -47,14 +51,17 @@ export default function LocationFormCard() {
             }
         }
 
-        let locationWithUTM = "";
+        formData.append("location", window.location.host + window.location.pathname);
+        formData.append("utm_source", utm_source)
+        formData.append("utm_medium", utm_medium)
+        formData.append("utm_campaign", utm_campaign)
+        formData.append("utm_adgroupname", utm_adgroupname)
+        formData.append("utm_term", utm_term)
+        formData.append("utm_device", utm_device)
+        formData.append("utm_adname", utm_adname)
+        formData.append("utm_matchtype", utm_matchtype)
+        formData.append("utm_network", utm_network)
 
-        // Ensure the window object is available before accessing it
-        if (typeof window !== "undefined") {
-            locationWithUTM = `${window.location.host}${window.location.pathname}?utm_source=${utm_source}&utm_medium=${utm_medium}&utm_campaign=${utm_campaign}&utm_term=${utm_term}&utm_content=${utm_content}`;
-        }
-
-        formData.append("location", locationWithUTM);
 
         let ZohoFormData = {
             Last_Name: data.name,

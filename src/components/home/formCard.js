@@ -6,16 +6,8 @@ import Image from "next/image";
 import BasicSelectDrop from "../../components/select";
 import { toast } from "react-toastify";
 
-
 export default function FormCard() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-    reset,
-    control
-  } = useForm();
+  const { register, handleSubmit, watch, formState: { errors }, reset, control } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -46,7 +38,6 @@ export default function FormCard() {
     fetchZohoData(ZohoFormData)
 
     try {
-
       const response = await fetch("/api/contact", {
         method: "POST",
         body: formData,

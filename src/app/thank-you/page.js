@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Page() {
     return (
-        <div>
+        <>
+            <head>
+                <Script>{`gtag('event', 'conversion', {'send_to': 'AW-16544436289/YgPkCKm-n90ZEMGggNE9'});`}</Script>
+            </head>
             <div className="bg-[#FFFFFF] h-screen">
                 <div className="flex flex-col justify-center h-full items-center text-dark relative">
                     <Image
@@ -20,6 +24,6 @@ export default function Page() {
                     </p>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
