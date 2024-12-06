@@ -8,6 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { PhoneNumberUtil } from "google-libphonenumber";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { LoadingButton } from '@mui/lab';
 
 export default function LocationFormCard() {
     const { register, handleSubmit, watch, formState: { errors }, reset, control } = useForm({ mode: "onChange" });
@@ -85,6 +86,7 @@ export default function LocationFormCard() {
                 throw new Error(`Invalid response: ${response.status}`);
             }
             reset();
+            router.push("/thank-you");
             setStoreCity("");
         } catch (error) {
             console.log(error);
@@ -104,7 +106,6 @@ export default function LocationFormCard() {
             toast.error("Something went wrong");
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
-        router.push("/thank-you");
         reset();
         setStoreCity("")
 
@@ -222,21 +223,26 @@ export default function LocationFormCard() {
                     </label>
                 </div>
                 <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
-                    <button
+                    <LoadingButton
                         type="submit"
                         disabled={isButtonDisabled || isLoading}
-                        className={`border-black border px-4 gap-2 flex items-center h-[36px] w-fit transition-all ease-in-out  ${isButtonDisabled
-                            ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
-                            : "group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
-                            }`}>
-                        Submit
-                        <div
-                            className={`${!isButtonDisabled
-                                ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
-                                : "bg-[url('/images/home/disableArrow.svg')]"
-                                } bg-contain w-[14px] h-[14px] bg-no-repeat`}
-                        ></div>
-                    </button>
+                        loading={isLoading}
+                        className={`px-4 gap-2 flex items-center h-[36px] !font-inherit w-[112px] !rounded-none !transition-all !ease-in-out 
+                                ${isButtonDisabled
+                                ? "bg-transparent !text-[#999999] border-[#999999] cursor-not-allowed"
+                                : "!border border-black text-black  group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
+                            }`}
+                    >
+                        {!isLoading ? "Submit" : ""}
+                        {!isLoading && <div
+                            className={`bg-contain w-[14px] h-[14px] bg-no-repeat 
+                                  ${!isButtonDisabled
+                                    ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                                    : "bg-[url('/images/home/disableArrow.svg')]"
+                                }`}
+                        ></div>}
+                    </LoadingButton>
+
                 </div>
             </form>
         </>

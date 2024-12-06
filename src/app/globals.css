@@ -116,3 +116,23 @@ li::marker {
   border: 1px solid #000 !important;
   border-radius:  0 !important;
 }
+
+.MuiLoadingButton-root {
+  /* background: none !important; */
+  border: 1px solid #999999;
+  box-shadow: none !important;
+  font-family: inherit;
+  color: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border-radius: inherit;
+}
+
+.MuiLoadingButton-root:disabled{
+  cursor: not-allowed;
+  pointer-events: inherit;
+}
+.MuiLoadingButton-root:disabled:hover{
+  background: none;
+}

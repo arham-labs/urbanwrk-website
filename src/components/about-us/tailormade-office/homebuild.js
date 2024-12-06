@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import BasicSelectDrop from '../../../components/select';
 import { toast } from "react-toastify";
+import { LoadingButton } from "@mui/lab";
+import { useSearchParams } from "next/navigation";
 
 export default function HomeBuild({ data }) {
   const {
@@ -20,6 +22,17 @@ export default function HomeBuild({ data }) {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune",];
   const [storeCity, setStoreCity] = useState("");
+  const searchParams = useSearchParams();
+  const utm_source = searchParams.get("utm_source");
+  const utm_medium = searchParams.get("utm_medium");
+  const utm_campaign = searchParams.get("utm_campaign");
+  const utm_adgroupname = searchParams.get('utm_adgroupname')
+  const utm_term = searchParams.get('utm_term')
+  const utm_device = searchParams.get('utm_device')
+  const utm_adname = searchParams.get('utm_adname')
+  const utm_matchtype = searchParams.get('utm_matchtype')
+  const utm_network = searchParams.get('utm_network')
+
 
   const onSubmit = async (data) => {
     setIsLoading(true);
@@ -31,6 +44,19 @@ export default function HomeBuild({ data }) {
         formData.append(key, data[key]);
       }
     }
+
+    formData.append("location", window.location.host + window.location.pathname);
+    formData.append("utm_source", utm_source)
+    formData.append("utm_medium", utm_medium)
+    formData.append("utm_campaign", utm_campaign)
+    formData.append("utm_adgroupname", utm_adgroupname)
+    formData.append("utm_term", utm_term)
+    formData.append("utm_device", utm_device)
+    formData.append("utm_adname", utm_adname)
+    formData.append("utm_matchtype", utm_matchtype)
+    formData.append("utm_network", utm_network)
+
+
 
     let ZohoFormData = {
       Last_Name: data.name,
@@ -75,7 +101,6 @@ export default function HomeBuild({ data }) {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    setShowPopup(true);
     reset();
     setStoreCity("")
 
@@ -216,19 +241,22 @@ export default function HomeBuild({ data }) {
               <label htmlFor="news" className="ml-2 text-sm">{`I'd like to receive the latest news and updates from UrbanWrk.`}</label>
             </div>
             <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
-              <button
+              <LoadingButton
                 type="submit"
+                loading={isLoading}
                 disabled={isButtonDisabled || isLoading}
-                className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${isButtonDisabled
+                className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-[112px] transition-all  ease-in-out  ${isButtonDisabled
                   ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                   : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
-                  }`}>Submit
-                <div className={`${!isButtonDisabled
-                  ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
-                  : "bg-[url('/images/home/disableArrow.svg')]"
-                  }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
-                ></div>
-              </button>
+                  }`}>
+                  {!isLoading ? "Submit" : ""}
+                {!isLoading && <div
+                  className={`${!isButtonDisabled
+                    ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                    : "bg-[url('/images/home/disableArrow.svg')]"
+                    }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                ></div>}
+              </LoadingButton>
             </div>
           </form>
         </div>

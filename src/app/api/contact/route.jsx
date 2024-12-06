@@ -1,14 +1,22 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import * as XLSX from 'xlsx';
-import fs from 'fs';
-import path from 'path';
+import dayjs from "dayjs";
+import { google } from "googleapis";
+import { NextResponse } from "next/server";
+import path from "path";
+import nodemailer from "nodemailer"; // Make sure this import is added
 
-XLSX.set_fs(fs);
 
-const filePath = path.join(process.cwd(), 'Leads.xlsx');
+const SHEET_ID = "1Cc68EysDTfhAmcr8ie7-rTLXpZZq1ft1IQhV6a5YzMs"; // Spreadsheet ID
+const SHEET_NAME = "Leads"; // Sheet name
+const CREDENTIALS = path.join(process.cwd(), "urbanwrk.json"); // Path to credentials.json
+
+
+const auth = new google.auth.GoogleAuth({
+    keyFile: CREDENTIALS,
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+});
 
 export async function POST(request) {
+
     const username = "hello@urbanwrk.com";
     const password = "URB@2024";
     const myEmail = "jaykrishnanandagiri@arhamlabs.com";
@@ -20,7 +28,6 @@ export async function POST(request) {
         const phone = formData.get('phone');
         const city = formData.get('city');
         const newsUpdates = formData.get('newsUpdates');
-        const field_domain_of_interest = formData.get("field_domain_of_interest");
         const location = formData.get('location');
         const utm_source = formData.get('utm_source')
         const utm_medium = formData.get('utm_medium')
@@ -31,106 +38,88 @@ export async function POST(request) {
         const utm_adname = formData.get('utm_adname')
         const utm_matchtype = formData.get('utm_matchtype')
         const utm_network = formData.get('utm_network')
+        const timestamp = dayjs().format("M/D/YYYY h:mm A");
 
-        const newSheetData = [{
-            Name: name,
-            Email: email,
-            City: city,
-            Mobile: phone,
-            Newsletter: newsUpdates,
-            Interest: field_domain_of_interest,
-            locationUrl: location,
-            utm_source: utm_source,
-            utm_medium: utm_medium,
-            utm_campaign: utm_campaign,
-            utm_adgroupname: utm_adgroupname,
-            utm_term: utm_term,
-            utm_device: utm_device,
-            utm_adname: utm_adname,
-            utm_matchtype: utm_matchtype,
-            utm_network: utm_network
-        }];
+        // Prepare data to be appended
+        const newSheetData = [[
+            name,
+            email,
+            phone,
+            city,
+            newsUpdates,
+            timestamp,
+            location || "NA",
+            utm_source || "NA",
+            utm_medium || "NA",
+            utm_campaign || "NA",
+            utm_adgroupname || "NA",
+            utm_term || "NA",
+            utm_device || "NA",
+            utm_adname || "NA",
+            utm_matchtype || "NA",
+            utm_network || "NA",
+        ]];
 
-        let workbook;
-        if (fs.existsSync(filePath)) {
-            const fileBuffer = fs.readFileSync(filePath);
-            workbook = XLSX.read(fileBuffer, { type: 'buffer' });
-        }
-        else {
-            workbook = XLSX.utils.book_new();
-        }
+        const sheets = google.sheets({ version: "v4", auth });
 
-        if (!workbook.Sheets['Sheet1']) {
-            const worksheet = XLSX.utils.json_to_sheet(newSheetData);
-            XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
-        } else {
-            const worksheet = workbook.Sheets['Sheet1'];
-            const existingData = XLSX.utils.sheet_to_json(worksheet);
-            const combinedData = existingData.concat(newSheetData);
-            const updatedWorksheet = XLSX.utils.json_to_sheet(combinedData);
-            workbook.Sheets['Sheet1'] = updatedWorksheet;
-        }
-
-        // Debugging: Output buffer data
-        const updatedExcelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
-
-        fs.writeFileSync(filePath, updatedExcelBuffer);
-
-        // Send email
-        const transporter = nodemailer.createTransport({
-            host: "smtp-mail.outlook.com",
-            port: 587,
-            tls: {
-                ciphers: "SSLv3",
-                rejectUnauthorized: false,
-            },
-            auth: {
-                user: username,
-                pass: password,
+        // Append data to Google Sheet
+        const response = await sheets.spreadsheets.values.append({
+            spreadsheetId: SHEET_ID,
+            range: `${SHEET_NAME}!A1`,
+            valueInputOption: "RAW",
+            insertDataOption: "INSERT_ROWS",
+            resource: {
+                values: newSheetData,
             },
         });
 
-        const mailOptions = {
-            from: username,
-            to: myEmail,
-            replyTo: email,
-            subject: `New Enquiry from ${name}`,
-            // html: `
-            //     <p>Name: ${name}</p>
-            //     <p>Email: ${email}</p>
-            //     <p>Phone: ${phone || ''}</p>
-            //     <p>City: ${city || ''}</p>
-            //     <p>Area of Interest: ${field_domain_of_interest || ''}</p>
-            //     <p>Subscribed to Newsletter: ${newsUpdates || ''}</p>
-            // `,
-            attachments: [
-                {
-                    filename: 'Leads.xlsx',
-                    content: updatedExcelBuffer,
-                },
-            ],
-        };
-        if (resume) {
-            // Convert the resume to a buffer
-            const resumeBuffer = Buffer.from(await resume.arrayBuffer());
-            
-            // Get the original file name from formData
-            const resumeFilename = resume.name;
 
-            // Add resume as an attachment
-            mailOptions.attachments = [
-                {
-                    filename: resumeFilename,
-                    content: resumeBuffer,
+        if (response.data.updates) {
+            const transporter = nodemailer.createTransport({
+                host: "smtp-mail.outlook.com",
+                port: 587,
+                tls: {
+                    ciphers: "SSLv3",
+                    rejectUnauthorized: false,
                 },
-            ];
+                auth: {
+                    user: username,
+                    pass: password,
+                },
+            });
+
+            const mailOptions = {
+                from: username,
+                to: myEmail,
+                replyTo: email,
+                subject: `New Enquiry from ${name}`,
+                html: `
+                    <p>Name: ${name}</p>
+                    <p>Email: ${email}</p>
+                    <p>Phone: ${phone || ''}</p>
+                    <p>City: ${city || ''}</p>
+                    <p>Subscribed to Newsletter: ${newsUpdates || ''}</p>
+                `,
+            };
+            // Data appended successfully
+            await transporter.sendMail(mailOptions);
+            return NextResponse.json(
+                { message: "Data successfully added to Google Sheet", data: newSheetData },
+                { status: 200 }
+            );
+        } else {
+            // Failed to append data
+            console.error("Error appending data to Google Sheet:", response.statusText);
+            return NextResponse.json(
+                { message: "Failed to append data to Google Sheet", error: response.statusText },
+                { status: 500 }
+            );
         }
-
-        await transporter.sendMail(mailOptions);
-        return NextResponse.json({ message: "Success: email was sent" });
-
     } catch (error) {
-        console.error('Error:', error.message, error.stack);
-        return NextResponse.json({ error: "COULD NOT SEND MESSAGE" }, { status: 400 });
+        console.error("Error appending data to Google Sheet:", error);
+        return NextResponse.json(
+            { message: "An error occurred", error: error.message },
+            { status: 500 }
+        );
     }
 }
