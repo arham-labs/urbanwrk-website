@@ -52,7 +52,7 @@ export default function LocationFormCard() {
             }
         }
 
-        formData.append("location", window.location.host + window.location.pathname);
+        // formData.append("location", window.location.host + window.location.pathname);
         formData.append("utm_source", utm_source)
         formData.append("utm_medium", utm_medium)
         formData.append("utm_campaign", utm_campaign)
