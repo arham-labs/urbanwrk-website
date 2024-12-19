@@ -5,7 +5,7 @@ import path from "path";
 import nodemailer from "nodemailer"; // Make sure this import is added
 
 
-const SHEET_ID = "1Cc68EysDTfhAmcr8ie7-rTLXpZZq1ft1IQhV6a5YzMs"; // Spreadsheet ID
+const SHEET_ID = "1Q7VnDFsMQLMjqvENIKe_DKqDLSIpKaNpXosTQSbtIj0"; // Spreadsheet ID
 const SHEET_NAME = "Leads"; // Sheet name
 const CREDENTIALS = path.join(process.cwd(), "urbanwrk.json"); // Path to credentials.json
 
@@ -19,7 +19,7 @@ export async function POST(request) {
 
     const username = "hello@urbanwrk.com";
     const password = "URB@2024";
-    const myEmail = "jaykrishnanandagiri@arhamlabs.com";
+    const myEmail = "hello@urbanwrk.com";
 
     try {
         const formData = await request.formData();
@@ -48,7 +48,6 @@ export async function POST(request) {
             city,
             newsUpdates,
             timestamp,
-            location || "NA",
             utm_source || "NA",
             utm_medium || "NA",
             utm_campaign || "NA",

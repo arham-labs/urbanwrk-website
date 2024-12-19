@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "urbanwrk-443906",
+  "private_key_id": "225ba0d330d2e4faf89d42936d0e234d0da74b84",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCluQV3HTLYniDi\nVMjIVNxtQh+RlZhTdqiZZVptdAHG2rHOOsZ4nEcVVtnAUtTkWrlrCKE7huND+gKP\npZJSQeSPmbTgqWi2J82bQLSxihT1bvuAZ88afIk6wwML+lLFh9ntAHgSCAJUiWyh\nZ1uafcWKkjsb+0vegGHtrZT8W8W0MAsNBCJ4ch23YDsCU+PMqVrNs7s0RHoWuhVO\nGSdUdkNbHFLAiH3Pvnv754RLFTIooilMCp212XyzBTZZQIxRvsAWcY7wpqF2m30G\nb1GTc20u7rOPMA1qtbuI7IGMf4lfzMw0aG4hP3RwsEYq+WJ4MRUR/dg1s7ai4SPH\nkIWItvAHAgMBAAECggEAG3KaB6Dz53HFQ4dEW/3GJmhxvxSWTpiUExf40rEIjE1z\nbpNIhPhpQ40HcrWlYg7ur94VijzsjjktzGnhYrNcLjaIgT89wxGzmZetdcxHbWEM\n0bcf06S1u+BJtGWo6ON3wiu2N1JRRHwgXFk4kE1tduaCWL+V0MvVrF54ExYGGDIq\nIjNdhLtmM816M5iyTtTiVtLHu0EFyNm1yDAskidm6AMnJLe9qqIefNTMaWv3EtYd\nkbEzi7i6lkfIj5SMkDafAPjHK4TZSBTF1b3g9yrXjXdh849mg5UVcHKTg4yVviaM\nAtwj3HwIok4M3CFAojqtZsjz13pG2tvIp20yg+DZGQKBgQDoMClXcvaH6czQuDjT\nPRDaqGWTi8eB7qdly4XfprAFaiewds2ZPmdvUJqRQDFcMvpStRATZAaAr+EMti6e\njdwP4iLRh9k9aAbXKgQUz6SoU/7oM8iCPR1Ir8HOyapuk6PyqcB8Sn+kdgzbJe5u\nl74MJ6C0b/V0BaSdUkm7ZWOvTwKBgQC2t+K8ZYiI4rohHcHSjl1hq16gpZTM/+KC\nv6wn3ftsi+3fjWKtUtV47I17r+EruuDMKHdbTiyBLtjEIbebmgq638wHusI3ZqgJ\nV0Q5MNIW1xIBgkOELIIgDbOJnVedjqfZeRr/U4zU0VZT3fjbYm3U0VsPsRSJdZxi\niJ6VwS5FyQKBgCMmD0wWsi1W/lNmX+vSZbfEIERat6P6vcqSKbz2ndTkAggbo/ob\n0UqvmAZ/Ajnj2bMlh753uOhIN7hV5+7GqNaatAymFQPPuKFf0ehYmqOEu6TpGeRl\nXgZ/3MXyD2PX48y7V9E48eOynzWZo2OIgxOR+Cj4fd7Hb+kE6PZ+Xb3PAoGBAKmO\nWsmZLupX+4Ffq81Ibz+DV3ycK0lQ61GJrKgSRo6kC0m4WimdBJwCaAivXbTG5nSN\n2LTSBlqarmzTHR84A10G8L77f98JVEXWxWiM9WhcjEj6KM0uwFIeZMz/RZ7gEsKs\nr3Dgh3+2AvYwtg5feKxU2rvlB7nHeie1v/QYIGiBAoGBAMEKkpSxEHM5dDbHqzGj\nNmQL6NlHMTU7rfzPh6SJiwKxd4ZxZFwULdENdMEkiHhOjo8w224fYGMN6dT738cs\ne0uoL0sIaI5MKExWezRETpZ02o3783l30ewF81Kpku6L/BrEu17mCaa+63ON8fga\nhrq4Iznx2urNSEDaO0qp1Jd0\n-----END PRIVATE KEY-----\n",
+  "client_email": "urbanwrk@urbanwrk-443906.iam.gserviceaccount.com",
+  "client_id": "117490069193012097159",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/urbanwrk%40urbanwrk-443906.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
