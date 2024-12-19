@@ -121,18 +121,18 @@ li::marker {
   /* background: none !important; */
   border: 1px solid #999999;
   box-shadow: none !important;
-  font-family: inherit;
+  font-family: inherit !important;
   color: inherit;
-  text-transform: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  border-radius: inherit;
+  text-transform: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  border-radius: inherit !important;
 }
 
 .MuiLoadingButton-root:disabled{
-  cursor: not-allowed;
-  pointer-events: inherit;
+  cursor: not-allowed !important;
+  pointer-events: inherit !important;
 }
 .MuiLoadingButton-root:disabled:hover{
-  background: none;
+  background: none !important;
 }
