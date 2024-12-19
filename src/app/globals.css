@@ -129,6 +129,10 @@ li::marker {
   border-radius: inherit !important;
 }
 
+.MuiLoadingButton-root:hover {
+  color: white !important;
+}
+
 .MuiLoadingButton-root:disabled{
   cursor: not-allowed !important;
   pointer-events: inherit !important;
