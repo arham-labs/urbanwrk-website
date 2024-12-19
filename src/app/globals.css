@@ -139,4 +139,5 @@ li::marker {
 }
 .MuiLoadingButton-root:disabled:hover{
   background: none !important;
+  color: inherit !important;
 }
