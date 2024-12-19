@@ -122,7 +122,7 @@ li::marker {
   border: 1px solid #999999 !important;
   box-shadow: none !important;
   font-family: inherit !important;
-  color: inherit;
+  color: inherit !important;
   text-transform: inherit !important;
   font-size: inherit !important;
   font-weight: inherit !important;
