@@ -1,13 +1,30 @@
-import dayjs from "dayjs";
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
 import path from "path";
 import nodemailer from "nodemailer"; // Make sure this import is added
 
-
 const SHEET_ID = "1Q7VnDFsMQLMjqvENIKe_DKqDLSIpKaNpXosTQSbtIj0"; // Spreadsheet ID
 const SHEET_NAME = "Leads"; // Sheet name
 const CREDENTIALS = path.join(process.cwd(), "urbanwrk.json"); // Path to credentials.json
+
+const formatDate = (date, timeZone) => {
+    const options = {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+        timeZone,
+    };
+
+    const formattedDate = new Intl.DateTimeFormat("en-US", options).formatToParts(date);
+
+    const parts = Object.fromEntries(formattedDate.map(({ type, value }) => [type, value]));
+    const { month, day, year, hour, minute, dayPeriod } = parts;
+
+    return `${month}/${day}/${year} ${hour}:${minute} ${dayPeriod}`;
+};
 
 
 const auth = new google.auth.GoogleAuth({
@@ -38,7 +55,7 @@ export async function POST(request) {
         const utm_adname = formData.get('utm_adname')
         const utm_matchtype = formData.get('utm_matchtype')
         const utm_network = formData.get('utm_network')
-        const timestamp = dayjs().format("M/D/YYYY h:mm A");
+        const timestamp = formatDate(new Date(), "Asia/Kolkata");
 
         // Prepare data to be appended
         const newSheetData = [[
