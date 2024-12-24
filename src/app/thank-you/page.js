@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <>
             <head>
-                <Script id="google-tag-manager">{`gtag('event', 'conversion', {'send_to': 'AW-16544436289/YgPkCKm-n90ZEMGggNE9'});`}</Script>
+                <Script id="google-tag-manager">{`gtag('event', 'conversion', {'send_to': 'AW-16544436289/F4rnCN-cl_sZEMGggNE9'});`}</Script>
             </head>
             <div className="bg-[#FFFFFF] h-screen">
                 <div className="flex flex-col justify-center h-full items-center text-dark relative">
