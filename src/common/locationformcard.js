@@ -159,6 +159,7 @@ export default function LocationFormCard() {
                     />
                     {errors.email && <span className="text-red-500">{errors.email.message}</span>}
                 </div>
+                {console.log("errpr", errors)}
                 <div className="mb-4">
                     <label className="block font-semibold" htmlFor="phone-number">PHONE:</label>
                     <Controller
@@ -167,7 +168,7 @@ export default function LocationFormCard() {
                         defaultValue={phone} // Set default value to ensure it's not undefined
                         rules={{
                             required: "Phone number is required",
-                            validate: (value) => (phoneTouched && !isPhoneValid(value)) ? "Enter a valid phone number" : undefined,
+                            validate: (value) => (phoneTouched && !isPhoneValid(value) || value  === "") ? "Enter a valid phone number" : undefined,
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
