@@ -159,7 +159,6 @@ export default function LocationFormCard() {
                     />
                     {errors.email && <span className="text-red-500">{errors.email.message}</span>}
                 </div>
-                {console.log("errpr", errors)}
                 <div className="mb-4">
                     <label className="block font-semibold" htmlFor="phone-number">PHONE:</label>
                     <Controller
