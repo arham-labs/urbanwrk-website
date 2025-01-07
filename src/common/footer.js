@@ -69,7 +69,7 @@ export default function Footer() {
                 Locations
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/hyderabad", title: "Hyderabad" },{ link: "/kolkata", title: "Kolkata" },{ link: "/mumbai", title: "Mumbai" }, { link: "/ncr", title: "NCR" },{ link: "/pune", title: "Pune" }].map((el, i) => (
+                {[{ link: "/hyderabad", title: "Hyderabad" }, { link: "/kolkata", title: "Kolkata" }, { link: "/mumbai", title: "Mumbai" }, { link: "/ncr", title: "NCR" }, { link: "/pune", title: "Pune" }].map((el, i) => (
                   <a className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
                   </a>
@@ -96,7 +96,7 @@ export default function Footer() {
                 Know More
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/careers", title: "Careers" }].map(
+                {[{ link: "/blogs", title: "Blog" }, { link: "/careers", title: "Careers" }].map(
                   (el, i) => (
                     <a className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>

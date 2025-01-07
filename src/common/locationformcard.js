@@ -167,7 +167,7 @@ export default function LocationFormCard() {
                         defaultValue={phone} // Set default value to ensure it's not undefined
                         rules={{
                             required: "Phone number is required",
-                            validate: (value) => (phoneTouched && !isPhoneValid(value) || value  === "") ? "Enter a valid phone number" : undefined,
+                            validate: (value) => (phoneTouched && !isPhoneValid(value)) || value == "" ? "Enter a valid phone number" : undefined,
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
@@ -181,7 +181,7 @@ export default function LocationFormCard() {
                                     }}
                                     forceDialCode
                                 />
-                                {phoneTouched && errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
+                                {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
                             </>
                         )}
                     />
