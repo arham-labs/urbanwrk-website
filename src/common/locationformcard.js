@@ -11,7 +11,7 @@ import "react-international-phone/style.css";
 import { LoadingButton } from '@mui/lab';
 
 export default function LocationFormCard() {
-    const { register, handleSubmit, watch, formState: { errors }, reset, control } = useForm({ mode: "onChange" });
+    const { register, handleSubmit, watch, formState: { errors }, reset, control } = useForm();
     const [isLoading, setIsLoading] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune"];
@@ -34,7 +34,8 @@ export default function LocationFormCard() {
     // Function to validate phone number
     const isPhoneValid = (phone) => {
         try {
-            const number = phoneUtil.parseAndKeepRawInput(phone, "IN"); // Assume default country code is India (IN)
+            if (!phone || phone.trim() === "") return false; // Empty check
+            const number = phoneUtil.parseAndKeepRawInput(phone, "IN");
             return phoneUtil.isValidNumber(number);
         } catch (error) {
             return false;
@@ -88,6 +89,7 @@ export default function LocationFormCard() {
             reset();
             router.push("/thank-you");
             setStoreCity("");
+            setPhone("")
         } catch (error) {
             console.log(error);
         } finally {
@@ -108,6 +110,7 @@ export default function LocationFormCard() {
         }
         reset();
         setStoreCity("")
+        setPhone("")
 
     }
 
@@ -164,17 +167,20 @@ export default function LocationFormCard() {
                     <Controller
                         control={control}
                         name="phone"
-                        defaultValue={phone} // Set default value to ensure it's not undefined
+                        defaultValue={phone}
                         rules={{
                             required: "Phone number is required",
-                            validate: (value) => (phoneTouched && !isPhoneValid(value)) || value == "" ? "Enter a valid phone number" : undefined,
+                            validate: (value) => {
+                                // Show error for invalid phone or empty number
+                                if (!value || !isPhoneValid(value)) return "Enter a valid phone number";
+                            },
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
                                 <PhoneInput
                                     defaultCountry="in"
-                                    value={value || phone} // Use value from form or fallback to state
-                                    onFocus={() => setPhoneTouched(true)} // Set phoneTouched on focus
+                                    value={value || phone}
+                                    onFocus={() => setPhoneTouched(true)}
                                     onChange={(phoneValue) => {
                                         setPhone(phoneValue); // Update state
                                         onChange(phoneValue); // Update Controller field value

@@ -2,11 +2,11 @@ import Image from "next/image";
 import SpaceImage from '../../../../public/images/about-us/bespoke-office/space.png'
 import LinkButton from "@/common/linkbtn";
 
-export default function Space({data}) {
+export default function Space({ data }) {
 
     const MeetData = [
         { title: "Meet with our team", desc: "Share your requirements so that we can work out the best solution for your organisation size" },
-        { title: "Explore neighbourhoods", desc: "Choose the area that is perfect for the team that you are building" },
+        { title: "Create your blueprint", desc: "Choose the area, and work with our design experts to bring your vision to life." },
         { title: "Walk into your workspace", desc: "Settle in your customised office" }
     ]
 
@@ -15,10 +15,10 @@ export default function Space({data}) {
             <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-0">
                 <div className="w-full lg:w-1/2">
                     <div className="relative h-full">
-                        <Image src={data?.card3_img} alt="customised office" className="w-full aspect-[8/9] object-cover lg:aspect-[7/8]" height={1000} width={1000}/>
+                        <Image src={data?.card3_img} alt="customised office" className="w-full aspect-[8/9] object-cover lg:aspect-[7/8]" height={1000} width={1000} />
                         <div className="absolute top-1/2 text-3xl lg:text-5xl 2xl:text-6xl left-1/2 -translate-y-1/2 -translate-x-1/2 flex justify-center flex-col">
                             <span className="block mb-2 text-nowrap">{data?.card3_title1}</span>
-                            <span className="font-kepler block">{data.name === "advertise-with-us" && <span className="font-sans">word</span>} {data?.card3_title2}</span> 
+                            <span className="font-kepler block">{data.name === "advertise-with-us" && <span className="font-sans">word</span>} {data?.card3_title2}</span>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,13 @@ export default function Space({data}) {
                                 </div>
                             </div>
                         )}
-                        {/* <LinkButton title="Contact us" href="" marginspace={true}/> */}
+                        <div className="group">
+                            <a href="/" className="text-base border-black border px-4 gap-2 flex text-black items-center h-[36px] w-fit transition-all ease-in-out group-hover:bg-primary group-hover:border-primary group-hover:text-white cursor-pointer
+                                ml-[45px] lg:ml-[70px] xl:ml-[90px]">
+                                Contact us
+                                <div className="bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')] bg-contain w-[14px] h-[14px] bg-no-repeat"></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

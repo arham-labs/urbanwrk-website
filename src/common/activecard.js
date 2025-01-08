@@ -5,6 +5,8 @@ import section2 from '../../public/images/about-us/bespoke-office/section-2.png'
 import section3 from '../../public/images/about-us/bespoke-office/section-3.png'
 import section4 from '../../public/images/about-us/bespoke-office/section-4.png'
 import section5 from '../../public/images/about-us/bespoke-office/section-5.png'
+import section6 from '../../public/images/about-us/bespoke-office/section-6.png'
+
 import { useEffect, useState } from "react";
 import LinkButton from "./linkbtn";
 import { useParams } from "next/navigation";
@@ -12,9 +14,10 @@ import { useParams } from "next/navigation";
 const titles = [
     { id: 1, title: "TAILORMADE OFFICES", href: "/solutions/tailormade-office" },
     { id: 2, title: "READY-TO-WORK-IN OFFICES", href: "/solutions/ready-to-work-in" },
-    { id: 3, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
-    { id: 4, title: "EVENTS & LAUNCHES", href: "/solutions/events-launches" },
-    { id: 5, title: "ADVERTISE WITH US", href: "/solutions/advertise-with-us" }
+    { id: 3, title: "VIRTUAL OFFICES", href: "/solutions/virtual-offices" },
+    { id: 4, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
+    { id: 5, title: "EVENTS & LAUNCHES", href: "/solutions/events-launches" },
+    { id: 6, title: "ADVERTISE WITH US", href: "/solutions/advertise-with-us" }
 ]
 
 const activeData = [
@@ -29,8 +32,8 @@ const activeData = [
     },
     {
         id: 2,
-        desc: "Semi-branded offices for a team of up to 1000 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.",
-        list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "WELL & LEED Certified, sustainable and eco-conscious offices", "24/7 access to your workspace"],
+        desc: "Offices for a team of up to 100 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.",
+        list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "IGBC & LEED Certified, sustainable offices", "24/7 access to your workspace"],
         source: section1,
         btn: "Explore",
         href: "/solutions/ready-to-work-in",
@@ -38,6 +41,15 @@ const activeData = [
     },
     {
         id: 3,
+        desc: "A comprehensive package tailored for those who need the credibility and infrastructure of a permanent office without the physical space. Get a premium address for business registration, professional mail handling and forwarding services.",
+        list: ["Get a premium business address", "Easy business registration", "Mail handling and forwarding services", "Priority booking of meeting rooms and access to exclusive events"],
+        source: section6,
+        btn: "Explore",
+        href: "/solutions/virtual-offices",
+        bannerAlt: "virtual offices",
+    },
+    {
+        id: 4,
         desc: "Connect, create and collaborate in our individually designed meeting rooms, all enabled with the latest technology.",
         list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater; available when given a 48-hour notice", "Booking available by the hour, half day or full day"],
         source: section2,
@@ -46,16 +58,16 @@ const activeData = [
         bannerAlt: "meeting rooms",
     },
     {
-        id: 4,
-        desc: "Tailormade event solutions where every detail of your event is meticulously crafted to perfection. Let us take care of the logistics, so you can focus on connecting, celebrating, and inspiring your guests in spaces designed to bring your vision to life.",
-        list: ["Capacity to hold up to 250 attendees", "Comprehensive packages with state-of-the-art facilities, sophisticated hospitality, and gourmet catering options", "Booking available by the hour, half day or full day"],
+        id: 5,
+        desc: "Customised event solutions where every detail of your event is meticulously crafted to perfection. Let us take care of the logistics, so you can focus on connecting, celebrating, and inspiring your guests in spaces designed to bring your vision to life.",
+        list: ["Capacity to hold up to 250 attendees", "Comprehensive packages with state-of-the-art facilities, sophisticated hospitality, and catering options", "Booking available by the hour, half day or full day"],
         source: section4,
         btn: "Explore",
         href: "/solutions/events-launches",
         bannerAlt: "event & launches",
     },
     {
-        id: 5,
+        id: 6,
         desc: "Make your message stand out. Capitalise on our network of strategic displays to elevate your brand’s presence, connect with your audience on a deeper level, and achieve a lasting impact.",
         list: ["Digital and physical promotional spaces across prime real estate", "Eye-catching digital displays in a network of prestigious locations"],
         source: section3,

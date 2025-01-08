@@ -1,15 +1,6 @@
 import CommonCard from "@/common/commoncard";
-import WorkWing1 from '../../../../public/images/about-us/workwing-1.png'
-import WorkWing2 from '../../../../public/images/about-us/workwing-2.png'
-import WorkWing3 from '../../../../public/images/about-us/workwing-3.png'
 
 export default function Choose({data}) {
-
-    const ChooseData = [
-        { title: "We match your pace", source: WorkWing1, desc: "At whatever stage your journey, we support you with flexible contracts, and the ability to scale with complete ease." },
-        { title: "We are where work thrives", source: WorkWing2, desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer." },
-        { title: "We take the work out of work", source: WorkWing3, desc: "A great reception, smooth visitor management, a certified sustainable office, world-class infrastructure and an ability to open offices in new cities. Need anything else?" }
-    ]
 
     return (
         <div className="bg-bglight6 py-16 lg:py-20">

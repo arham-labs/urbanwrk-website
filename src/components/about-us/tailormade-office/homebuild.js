@@ -7,6 +7,10 @@ import BasicSelectDrop from '../../../components/select';
 import { toast } from "react-toastify";
 import { LoadingButton } from "@mui/lab";
 import { useSearchParams } from "next/navigation";
+import { PhoneNumberUtil } from "google-libphonenumber";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+
 
 export default function HomeBuild({ data }) {
   const {
@@ -32,6 +36,19 @@ export default function HomeBuild({ data }) {
   const utm_adname = searchParams.get('utm_adname')
   const utm_matchtype = searchParams.get('utm_matchtype')
   const utm_network = searchParams.get('utm_network')
+  const [phone, setPhone] = useState("");
+  const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
+  const phoneUtil = PhoneNumberUtil.getInstance();
+
+  const isPhoneValid = (phone) => {
+    try {
+      if (!phone || phone.trim() === "") return false; // Empty check
+      const number = phoneUtil.parseAndKeepRawInput(phone, "IN");
+      return phoneUtil.isValidNumber(number);
+    } catch (error) {
+      return false;
+    }
+  };
 
 
   const onSubmit = async (data) => {
@@ -83,6 +100,7 @@ export default function HomeBuild({ data }) {
       setShowPopup(true);
       reset();
       setStoreCity("")
+      setPhone("")
     } catch (error) {
       console.log(error);
     } finally {
@@ -103,6 +121,7 @@ export default function HomeBuild({ data }) {
     }
     reset();
     setStoreCity("")
+    setPhone("")
 
   }
 
@@ -195,22 +214,33 @@ export default function HomeBuild({ data }) {
             <div className="mb-4">
               <label className="block font-semibold" htmlFor="phone-number"
               >PHONE:</label>
-              <input
-                type="number"
-                id="phone-number"
-                maxLength={10}
-                {...register("phone", {
+              <Controller
+                control={control}
+                name="phone"
+                defaultValue={phone}
+                rules={{
                   required: "Phone number is required",
-                  pattern: {
-                    value: /^\d{10}$/,
-                    message: "Phone number must be 10 digits",
+                  validate: (value) => {
+                    // Show error for invalid phone or empty number
+                    if (!value || !isPhoneValid(value)) return "Enter a valid phone number";
                   },
-                })}
-                className="border-black border-solid border bg-bglight1 w-full h-[38px] px-3"
+                }}
+                render={({ field: { onChange, value } }) => (
+                  <>
+                    <PhoneInput
+                      defaultCountry="in"
+                      value={value || phone}
+                      onFocus={() => setPhoneTouched(true)}
+                      onChange={(phoneValue) => {
+                        setPhone(phoneValue); // Update state
+                        onChange(phoneValue); // Update Controller field value
+                      }}
+                      forceDialCode
+                    />
+                    {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
+                  </>
+                )}
               />
-              {errors.phone && (
-                <span className="text-red-500">{errors.phone.message}</span>
-              )}
             </div>
             <div className="mb-4">
               <label className="block font-semibold" htmlFor="city">CITY:</label>
@@ -249,7 +279,7 @@ export default function HomeBuild({ data }) {
                   ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                   : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
                   }`}>
-                  {!isLoading ? "Submit" : ""}
+                {!isLoading ? "Submit" : ""}
                 {!isLoading && <div
                   className={`${!isButtonDisabled
                     ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"

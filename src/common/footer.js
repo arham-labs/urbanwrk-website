@@ -107,17 +107,17 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col gap-4 lg:gap-6 lg:items-end lg:w-full">
-            {/* <div className="flex gap-2">
-              <Link href="/">
+            <div className="flex gap-2">
+              <Link target="_blank" href="https://www.facebook.com/Urbanwrk.official">
                 <Image src={Facebook} alt="facebook" />
               </Link>
-              <Link href="/">
+              <Link target="_blank" href="https://www.instagram.com/urbanwrk/">
                 <Image src={Instagram} alt="instagram" />
               </Link>
-              <Link href="/">
+              <Link target="_blank" href="https://www.linkedin.com/company/urbanwrk/">
                 <Image src={LinkedIn} alt="linkedin" />
               </Link>
-            </div> */}
+            </div>
             <div className="flex flex-col text-xs gap-5">
               <span>COPYRIGHT 2024</span>
               <a href="/terms-of-use">TERMS OF USE</a>

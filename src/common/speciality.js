@@ -11,7 +11,7 @@ export default function Speciality({ data, title }) {
                 </div>
                 <div className="px-6 w-full lg:w-[65%] py-16 lg:pl-0 lg:py-20 mx-auto lg:pr-[100px] 2xl:pr-40">
                     <span className="text-3xl lg:text-4xl block mb-2 text-nowrap">{title}</span>
-                    <span className="text-3xl lg:text-4xl block mb-8 lg:mb-10 font-kepler">work for you</span>
+                    <span className="text-3xl lg:text-4xl block mb-8 lg:mb-10 font-kepler">work for you.</span>
                     <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 lg:gap-10">
                         {data.map((item, i) =>
                             <div className="flex flex-col gap-1 border-b border-dark  last:border-0 last:pb-0 pb-4 lg:pb-7" key={i}>

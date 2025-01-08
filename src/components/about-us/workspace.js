@@ -13,8 +13,7 @@ export default function WorkSpace() {
                     <div className="flex flex-col w-full lg:w-1/2">
                         <div className="w-full lg:w-[78%]">
                             <span className="text-2xl lg:text-4xl xl:text-5xl text-primary block mb-3 lg:mb-6">Find your space</span>
-                            <p className="leading-6 text-sm xl:text-base font-medium">is about more than locating a desk or an office. It’s about finding your purpose, your community, your battlefield, and your sanctuary. It’s about uncovering that unique intersection where your talent meets your passions,
-                                where work morphs into play, and where every challenge is a stepping stone to greatness.</p>
+                            <p className="leading-6 text-sm xl:text-base font-medium">is about more than locating a desk or an office. It’s about finding your purpose, your community and your sanctuary. It’s about uncovering that unique intersection where your talent meets your passion, where work morphs into play, and where every step forward leads to greatness.</p>
                         </div>
                     </div>
                 </div>
@@ -22,7 +21,7 @@ export default function WorkSpace() {
                     <div className="flex flex-col w-full lg:w-1/2">
                         <div className="w-full lg:w-[78%]">
                             <span className="text-2xl lg:text-4xl xl:text-5xl text-primary block mb-3 lg:mb-6 font-kepler">Leave your mark</span>
-                            <p className="leading-6 text-sm xl:text-base font-medium">is the battle cry for action. It’s an acknowledgement that while ideas may be limitless, their true value only manifests through execution. Leaving your mark means imparting a piece of yourself into everything you do, turning every endeavour into a legend. It’s about creating your legacy through your work.</p>
+                            <p className="leading-6 text-sm xl:text-base font-medium">is a call to action. It’s an acknowledgement that while ideas may be limitless, their true value only manifests through execution. Leaving your mark means imparting a piece of yourself into everything you do, turning every endeavour into a legend. It’s about creating your legacy through your work.</p>
                         </div>
                     </div>
                     <div className="aspect-square lg:aspect-[9/10] w-full lg:w-1/2 relative lg:absolute lg:top-0 xl:-top-[80px] lg:right-0">

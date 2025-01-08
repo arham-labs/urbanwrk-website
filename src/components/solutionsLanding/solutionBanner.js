@@ -12,7 +12,7 @@ export default function SolutionBanner() {
                         </h1>
                         <div className='pt-6 max-md:pt-4 lg:pr-[20px] xl:pr-[40px]'>
                             <p className='text-base md:text-lg text-left'>
-                                Explore workspaces that speak to your workstyle. From private floors to personal desks in vibrant coworking spaces with the best facilities, we have everything you need to build your dream. Super flexible, with minimum three-month contracts, now there’s nothing stopping you from working towards your dream.
+                            Explore workspaces that speak to your workstyle. From private floors to personal desks in vibrant office spaces with the best facilities, we have everything you need to build your dream. Super flexible, with contracts to suit your evolving needs, now there’s nothing stopping you from working towards your dream. 
                             </p>
                         </div>
                     </div>

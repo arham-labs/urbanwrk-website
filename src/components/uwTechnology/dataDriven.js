@@ -4,18 +4,18 @@ import UrbanTechFeat from './urbanTechFeat'
 export default function DataDriven() {
     const data = [{
         img: "/images/uwTechnology/urbanTechFeat1.png",
-        title1: "THE URBANWRK MOBILE APP",
+        title1: "THE URBANWRK APP",
         title2: "Get actionable insights",
-        desc: "Explore a consolidated view of your busiest days, occupancy trends, headcount and low footfall spaces to maximise efficiency.",
-        alt: "UrbanWrk mobile app"
+        desc: "Find a consolidated view of your visitor management, meeting room bookings, ticketing system, member engagement and café solutions with the UrbanWrk App.",
+        alt: "UrbanWrk app"
     },
-    {
-        img: "/images/uwTechnology/urbanTechFeat3.png",
-        title1: "THE HEALTHWRK ENGINE",
-        title2: "Keep work running smoothly",
-        desc: "Check your workspace's operational health with our smart solution that connects every aspect of your space to enable better asset and facility management.",
-        alt: "best work place"
-    },
+    // {
+    //     img: "/images/uwTechnology/urbanTechFeat3.png",
+    //     title1: "THE HEALTHWRK ENGINE",
+    //     title2: "Keep work running smoothly",
+    //     desc: "Check your workspace's operational health with our smart solution that connects every aspect of your space to enable better asset and facility management.",
+    //     alt: "best work place"
+    // },
         // {
         //     img: "/images/uwTechnology/urbanTechFeat3.png",
         //     title1: "THE PEOPLEWRK APP",
@@ -47,7 +47,7 @@ export default function DataDriven() {
                     <div className='lg:w-1/2 flex items-center '>
                         <div className='pt-6 max-md:pt-4 lg:pr-[20px] xl:pr-[40px] w-[477px]'>
                             <p className='text-base md:text-xl text-left'>
-                                Make everything from your morning coffee to your big presentation smooth with our advanced set of proprietary tools. From real-time insights and peak performance monitoring, do it all faster, smarter and with more control than ever before.
+                            From visitor management, meeting room booking to raising tickets do it all faster, smarter and with more control than ever before.
                             </p>
                         </div>
                     </div>

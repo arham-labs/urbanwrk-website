@@ -6,9 +6,9 @@ import WorkWing3 from '../../../public/images/about-us/workwing-3.png'
 export default function WorkSwings() {
 
     const workwingsData = [
-        { title: "Progressive", alt: "workspace with privacy", source: WorkWing1, desc: "We're always moving ahead, pushing the envelope with sustainable innovations for a world that never stands still. Find your place in a workspace that mirrors your commitment to making a daily difference. We are here to be champions of your values that fuel positive change." },
-        { title: "Characterful", alt: "good workspace environment", source: WorkWing2, desc: "Have an inspiring backstory that you want canonised? Or want to give your team the benefits of standing desks? Our greenery-filled environments are designed to be molded according to your distinctive tastes and personality. Our dedicated design experts are aided by our proprietary software to bring your vision to life." },
-        { title: "Futuristic", alt: "future ready workspaces", source: WorkWing3, desc: "UrbanWrk is redefining the future of workspaces with its cutting-edge IT infrastructure and seamless office management. We're sculpting environments where motivation, productivity, and happiness take root for everyone, whether you’re freelancing or a global giant. This is where the future of work is shaped, in a world where every detail is designed to propel you forward." }
+        { title: "Futuristic", alt: "workspace with privacy", source: WorkWing1, desc: "UrbanWrk is redefining the future of workspaces with its cutting-edge IT infrastructure and seamless office management. Here motivation, productivity, and happiness take root for everyone, whether you’re freelancing or a global giant. We make sure every detail is designed to propel you forward." },
+        { title: "Characterful", alt: "good workspace environment", source: WorkWing2, desc: "Have an inspiring backstory that you want to integrate in your space design? Or want to give your team the benefits of standing desks? Our dedicated design experts bring your vision to life according to your distinctive tastes and personality." },
+        { title: "Progressive", alt: "future ready workspaces", source: WorkWing3, desc: "We're always moving ahead, pushing the envelope with sustainable innovations for a world that never stands still. Find your place in a workspace that mirrors your commitment to making a daily difference. We are here to be champions of your values that fuel positive change." }
     ]
 
     return (

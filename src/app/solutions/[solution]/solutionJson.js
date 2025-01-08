@@ -20,13 +20,13 @@ export const Jsons = {
       card1_titile1: "Build a home",
       card1_titile2: "for your brand",
       card1_titile3:
-        "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive - at every step. Build the office you always dreamt of, sustainable, eco-conscious and aesthetically superior, which you, your team and your client would love to visit again and again.",
+        "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of that is aesthetically superior, sustainable and eco-conscious, where you, your team and your client would love to visit again and again.",
       brandData: [
-        "Private, fully-customisable and branded office space ready within 45-60 days",
-        "Designed by experts, and IGBC and LEED certified",
+        "Private, fully customisable and branded office space ready within 45-60 days",
+        "Designed by experts and IGBC and LEED certified",
         "Flexible lease terms with utility costs included",
-        "Complete administrative management including visitor management",
-        "Access to co-working spaces, lounges, WellnessWrk Gym and BuzzWrk Café",
+        "Complete administrative management including visitor management ",
+        "Access to lounges, gym and café",
         "Exclusive access to all our events, seminars and industry talks",
       ],
       card2: [
@@ -39,7 +39,7 @@ export const Jsons = {
         {
           title: "We are where work thrives",
           source: "/images/solutionsLanding/solutionsImg/working2.png",
-          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
+          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Access the best that your city has to offer in connectivity, restaurants, cafés and safety.",
           alt: "make connection in workplace",
         },
         {
@@ -58,8 +58,8 @@ export const Jsons = {
           desc: "Share your requirements so that we can work out the best solution for your organisation size",
         },
         {
-          title: "Explore neighbourhoods",
-          desc: "Choose the area that is perfect for the team that you are building",
+          title: "Create your blueprint",
+          desc: "Choose the area, and work with our design experts to bring your vision to life.",
         },
         {
           title: "Walk into your workspace",
@@ -114,7 +114,7 @@ export const Jsons = {
         {
           title: "We facilitate zero upfront costs",
           source: "/images/solutionsLanding/solutionsImg/working6.png",
-          desc: "Establish or expand your business presence without the upfront costs typically associated with setting up a new office with our zero capex model.",
+          desc: "With our zero capex model, establish or expand your business presence without the upfront costs typically associated with setting up a new office.",
           alt: "new office space"
         },
       ],
@@ -162,7 +162,6 @@ export const Jsons = {
       brandData: [
         "Get a premium business address",
         "Easy business registration",
-        "Flexible lease terms with utility costs included",
         "Mail handling and forwarding services",
         "Priority booking of meeting rooms and access to exclusive events",
       ],
@@ -243,7 +242,7 @@ export const Jsons = {
         {
           title: "We are where work thrives",
           source: "/images/solutionsLanding/solutionsImg/working11.png",
-          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Connectivity, restaurants, cafes and safety, everything is the best that your city has to offer.",
+          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Access the best that your city has to offer in connectivity, restaurants, cafés and safety.",
           alt: ""
         },
         {
@@ -262,8 +261,8 @@ export const Jsons = {
           desc: "Share your requirements so that we can work out the best solution for your organisation size",
         },
         {
-          title: "Explore neighbourhoods",
-          desc: "Choose the area that is perfect for the team that you are building",
+          title: "Create your blueprint",
+          desc: "Choose the area, and work with our design experts to bring your vision to life.",
         },
         {
           title: "Walk into your workspace",
@@ -390,16 +389,12 @@ export const Jsons = {
       card3_content: [
         {
           title: "Connect with us",
-          desc: "Share your requirements so that we can work out the best solution for your organisation size",
+          desc: "Share your details and get a customised plan for your brand campaign.",
         },
         {
           title: "Customise your campaign",
-          desc: "Tailor your advertisement to align with your brand identity and our spaces",
-        },
-        {
-          title: "Launch and monitor",
-          desc: "Utilise our tools for viewer engagement insights and adjust your strategy",
-        },
+          desc: "Tailor your advertisement to align with your brand identity and our spaces.",
+        }
       ],
       card4_img: "/images/solutionsLanding/solutionsImg/productivity4.png",
       card4_title1: "Brimming with",
