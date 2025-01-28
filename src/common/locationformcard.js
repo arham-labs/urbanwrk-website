@@ -11,7 +11,7 @@ import "react-international-phone/style.css";
 import { LoadingButton } from '@mui/lab';
 
 export default function LocationFormCard() {
-    const { register, handleSubmit, watch, formState: { errors }, reset, control } = useForm();
+    const { register, handleSubmit, watch, formState: { errors }, reset, setValue, control } = useForm({ mode: "onChange" });
     const [isLoading, setIsLoading] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune"];
@@ -30,6 +30,10 @@ export default function LocationFormCard() {
     const [phone, setPhone] = useState("");
     const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
     const phoneUtil = PhoneNumberUtil.getInstance();
+
+    useEffect(() => {
+        setValue('phone', '')
+    }, [])
 
     // Function to validate phone number
     const isPhoneValid = (phone) => {
@@ -170,10 +174,7 @@ export default function LocationFormCard() {
                         defaultValue={phone}
                         rules={{
                             required: "Phone number is required",
-                            validate: (value) => {
-                                // Show error for invalid phone or empty number
-                                if (!value || !isPhoneValid(value)) return "Enter a valid phone number";
-                            },
+                            validate: (value) => (phoneTouched && !isPhoneValid(value) || value === "") ? "Enter a valid phone number" : undefined,
                         }}
                         render={({ field: { onChange, value } }) => (
                             <>
