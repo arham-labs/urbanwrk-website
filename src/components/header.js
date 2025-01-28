@@ -24,10 +24,10 @@ export default function Header() {
             title: "solutions",
             subMenu: true,
             dropdown: [
-                { subLink: '/solutions/tailormade-office', subName: 'Tailormade Offices' },
-                { subLink: '/solutions/ready-to-work-in', subName: 'Ready-To-Work-In ' },
-                { subLink: '/solutions/virtual-offices', subName: 'Virtual Offices' },
+                { subLink: '/solutions/tailormade-offices', subName: 'Tailormade Offices' },
+                { subLink: '/solutions/ready-to-work-in', subName: 'Ready-To-Work-In Offices' },
                 { subLink: '/solutions/meeting-rooms', subName: 'Meeting Rooms' },
+                { subLink: '/solutions/virtual-offices', subName: 'Virtual Offices' },
                 { subLink: '/solutions/events-launches', subName: 'Events & Launches' },
                 { subLink: '/solutions/advertise-with-us', subName: 'Advertise With Us' },
             ]
@@ -41,7 +41,8 @@ export default function Header() {
                 { subLink: '/hyderabad', subName: 'Hyderabad' },
                 { subLink: '/kolkata', subName: 'Kolkata ' },
                 { subLink: '/mumbai', subName: 'Mumbai' },
-                { subLink: '/ncr', subName: 'NCR' },
+                { subLink: '/delhi', subName: 'Delhi' },
+                { subLink: '/gurgaon', subName: 'Gurgaon' },
                 { subLink: '/pune', subName: 'Pune' },
             ]
         },
@@ -52,13 +53,14 @@ export default function Header() {
             subMenu: true,
             dropdown: [
                 { subLink: '/about-us/sustainability', subName: 'Sustainability' },
+                { subLink: '/about-us/urbanWrk-tech', subName: 'UrbanWrk Tech' }
 
             ]
         },
         {
-            link: '/urbanWrk-tech',
-            title: "urbanwrk-tech",
-            name: "UrbanWrk Tech",
+            link: '/careers',
+            title: "Careers",
+            name: "Careers",
             subMenu: false,
         },
 

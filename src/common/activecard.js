@@ -12,10 +12,10 @@ import LinkButton from "./linkbtn";
 import { useParams } from "next/navigation";
 
 const titles = [
-    { id: 1, title: "TAILORMADE OFFICES", href: "/solutions/tailormade-office" },
+    { id: 1, title: "TAILORMADE OFFICES", href: "/solutions/tailormade-offices" },
     { id: 2, title: "READY-TO-WORK-IN OFFICES", href: "/solutions/ready-to-work-in" },
-    { id: 3, title: "VIRTUAL OFFICES", href: "/solutions/virtual-offices" },
-    { id: 4, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
+    { id: 3, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
+    { id: 4, title: "VIRTUAL OFFICES", href: "/solutions/virtual-offices" },
     { id: 5, title: "EVENTS & LAUNCHES", href: "/solutions/events-launches" },
     { id: 6, title: "ADVERTISE WITH US", href: "/solutions/advertise-with-us" }
 ]
@@ -23,16 +23,16 @@ const titles = [
 const activeData = [
     {
         id: 1,
-        desc: "Customised offices with exclusive amenities like breakaway spaces and conference rooms, created according to your brand’s blueprint. Walk into your sustainable office within 45-60 days.",
+        desc: "Customised offices with exclusive amenities like breakaway spaces and conference rooms, created according to your brand’s blueprint. Walk into your sustainable office within 45 days.",
         list: ["Your customised private office with bespoke design and furnishings", "Flexible lease starting from a 6-month contract", "Full floor occupancy with option to scale", "Sustainable and eco-conscious materials used across", "24/7 access to your workspace", "Priority booking of meeting rooms and access to exclusive events"],
         source: section5,
         btn: "Explore",
-        href: "/solutions/tailormade-office",
+        href: "/solutions/tailormade-offices",
         bannerAlt: "tailor-made offices",
     },
     {
         id: 2,
-        desc: "Offices for a team of up to 100 people that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, beautiful and built for boosting productivity.",
+        desc: "Offices that are ready to move in within a week, with full access to all our amenities, lounge and events. Get working in your space that is sustainable, elegant and built for boosting productivity.",
         list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "IGBC & LEED Certified, sustainable offices", "24/7 access to your workspace"],
         source: section1,
         btn: "Explore",
@@ -41,21 +41,21 @@ const activeData = [
     },
     {
         id: 3,
+        desc: "Connect, create and collaborate in our individually designed meeting rooms, all enabled with the latest technology.",
+        list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater available when given a 48-hour notice", "Booking available by the hour, half day or full day"],
+        source: section2,
+        btn: "Explore",
+        href: "/solutions/meeting-rooms",
+        bannerAlt: "meeting rooms",
+    },
+    {
+        id: 4,
         desc: "A comprehensive package tailored for those who need the credibility and infrastructure of a permanent office without the physical space. Get a premium address for business registration, professional mail handling and forwarding services.",
         list: ["Get a premium business address", "Easy business registration", "Mail handling and forwarding services", "Priority booking of meeting rooms and access to exclusive events"],
         source: section6,
         btn: "Explore",
         href: "/solutions/virtual-offices",
         bannerAlt: "virtual offices",
-    },
-    {
-        id: 4,
-        desc: "Connect, create and collaborate in our individually designed meeting rooms, all enabled with the latest technology.",
-        list: ["High speed WiFi with video and telephone conferencing technology", "SMART TVs that align with latest OS, and surround sound for immersive projection", "On-call tea and coffee with option to cater; available when given a 48-hour notice", "Booking available by the hour, half day or full day"],
-        source: section2,
-        btn: "Explore",
-        href: "/solutions/meeting-rooms",
-        bannerAlt: "meeting rooms",
     },
     {
         id: 5,
@@ -69,7 +69,7 @@ const activeData = [
     {
         id: 6,
         desc: "Make your message stand out. Capitalise on our network of strategic displays to elevate your brand’s presence, connect with your audience on a deeper level, and achieve a lasting impact.",
-        list: ["Digital and physical promotional spaces across prime real estate", "Eye-catching digital displays in a network of prestigious locations"],
+        list: ["Digital and physical promotional spaces across prime real estate", "Eye-catching digital displays in a network of prestigious location"],
         source: section3,
         btn: "Explore",
         href: "/solutions/advertise-with-us",
@@ -93,14 +93,8 @@ export default function ActiveCard() {
                 return el
             }
         })
-        if(params.solution === "virtual-offices"){
-            setShowData(newData.slice(1)[0])
-            setHeaders(titlesData.slice(1))
-        }
-        else{
-            setShowData(newData[0])
-            setHeaders(titlesData)
-        }
+        setShowData(newData[0])
+        setHeaders(titlesData)
 
     }, [activeData])
 

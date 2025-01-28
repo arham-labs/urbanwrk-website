@@ -8,7 +8,7 @@ export const Jsons = {
       id: 1,
       metaTitle: "Find Custom & Tailor-Made Office Spaces at UrbanWrk",
       metaDescription: "Design your ideal office with UrbanWrk’s tailor-made solutions. Customised spaces that fit your business needs and preferences.",
-      name: "tailormade-office",
+      name: "tailormade-offices",
       bannerAlt: "Tailor-made workspace",
       titleImgDesk:
         "/images/solutionsLanding/solutionsImg/desktop-banner-1.png",
@@ -22,7 +22,7 @@ export const Jsons = {
       card1_titile3:
         "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of that is aesthetically superior, sustainable and eco-conscious, where you, your team and your client would love to visit again and again.",
       brandData: [
-        "Private, fully customisable and branded office space ready within 45-60 days",
+        "Private, fully customisable and branded office space ready within 45 days",
         "Designed by experts and IGBC and LEED certified",
         "Flexible lease terms with utility costs included",
         "Complete administrative management including visitor management ",
@@ -39,7 +39,7 @@ export const Jsons = {
         {
           title: "We are where work thrives",
           source: "/images/solutionsLanding/solutionsImg/working2.png",
-          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Access the best that your city has to offer in connectivity, restaurants, cafés and safety.",
+          desc: "Every space we are in is the most premium and buzziest neighbourhoods when it comes to work. Access the best your city has to offer in connectivity, restaurants, cafés and safety.",
           alt: "make connection in workplace",
         },
         {
@@ -55,7 +55,7 @@ export const Jsons = {
       card3_content: [
         {
           title: "Meet with our team",
-          desc: "Share your requirements so that we can work out the best solution for your organisation size",
+          desc: "Share your requirements so that we can work out the best solution for your organisation's size",
         },
         {
           title: "Create your blueprint",
@@ -63,7 +63,7 @@ export const Jsons = {
         },
         {
           title: "Walk into your workspace",
-          desc: "Settle in your customised office",
+          desc: "Settle in your fully customised office in 45 days.",
         },
       ],
       card4_img: "/images/solutionsLanding/solutionsImg/productivity1.png",
@@ -71,7 +71,7 @@ export const Jsons = {
       card4_alt: "managed office space",
       card4_title2: "productivity",
       card4_title3:
-        "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
+        "Our design philosophy integrates natural elements into our workspaces. The biophilic design reduces your ecological footprint and enhances productivity, boosts mood, and fosters a sense of well-being every time you walk in. ",
     },
     {
       id: 2,
@@ -102,7 +102,7 @@ export const Jsons = {
         {
           title: "We deliver future-proof flexibility",
           source: "/images/solutionsLanding/solutionsImg/working4.png",
-          desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up with complete ease.",
+          desc: "We have adaptable office solutions that meet the evolving demands of your business to scale up or expand across our network with complete ease.",
           alt: "adaptable office solutions"
         },
         {
@@ -181,7 +181,7 @@ export const Jsons = {
         {
           title: "We support your growth",
           source: "/images/solutionsLanding/solutionsImg/working9.png",
-          desc: "Have your operational needs are seamlessly met, no matter where you are working from. And you can access meeting rooms and event spaces on demand.",
+          desc: "Have your operational needs seamlessly met, no matter where you are working from. Get access to meeting rooms and event spaces on demand.",
           alt: "meeting room"
         },
       ],
@@ -207,7 +207,7 @@ export const Jsons = {
       card4_title2: "productivity",
       card4_alt: "managed office space",
       card4_title3:
-        "Our design philosophy integrates natural elements into our workspaces through biophilic design to reduce your ecological footprint and enhance productivity, boost mood, and foster a sense of well-being every time you walk in.",
+        "Our design philosophy integrates natural elements into our workspaces. The biophilic design reduces your ecological footprint and enhances productivity, boosts mood, and fosters a sense of well-being every time you walk in. ",
     },
     {
       id: 4,
@@ -242,7 +242,7 @@ export const Jsons = {
         {
           title: "We are where work thrives",
           source: "/images/solutionsLanding/solutionsImg/working11.png",
-          desc: "Every space we are in is the best and buzziest neighbourhood when it comes to work. Access the best that your city has to offer in connectivity, restaurants, cafés and safety.",
+          desc: "Every space we are in is the most premium and buzziest neighbourhoods when it comes to work. Access the best your city has to offer in connectivity, restaurants, cafés and safety.",
           alt: ""
         },
         {
@@ -258,7 +258,7 @@ export const Jsons = {
       card3_content: [
         {
           title: "Meet with our team",
-          desc: "Share your requirements so that we can work out the best solution for your organisation size",
+          desc: "Share your requirements so that we can work out the best solution for your organisation's size",
         },
         {
           title: "Create your blueprint",
@@ -266,7 +266,7 @@ export const Jsons = {
         },
         {
           title: "Walk into your workspace",
-          desc: "Settle in your customised office",
+          desc: "Settle in your fully customised office in 45 days.",
         },
       ],
       card4_img: "/images/solutionsLanding/solutionsImg/productivity2.png",
@@ -292,7 +292,7 @@ export const Jsons = {
       card1_titile1: "Setting the stage",
       card1_titile2: "for success",
       card1_titile3:
-        "A product launch, speaker event, or a corporate townhall, our venues are equipped to handle up to 250 attendees with flawless execution. We provide a complete package—featuring cutting-edge facilities, upscale hospitality, and the finest catering options. Make your next occasion unforgettable with every detail crafted to make an impact.",
+        "A product launch, speaker event, or a corporate townhall, our venues provide everything you need to make your event a resounding success. Make your next occasion unforgettable with every detail crafted to make an impact.",
       brandData: [
         "Capacity to hold up to 250 attendees",
         "Comprehensive packages with state-of-the-art facilities, sophisticated hospitality, and catering options",
@@ -314,7 +314,7 @@ export const Jsons = {
         {
           title: "We have global standards of hospitality",
           source: "/images/solutionsLanding/solutionsImg/working11.png",
-          desc: "Give your audience an exceptional event experience with valet parking, catering options, and hospitality of the highest calibre.",
+          desc: "Give your audience an exceptional event experience with catering options, and hospitality of the highest calibre.",
           alt: "hospitality at workplace"
         },
       ],

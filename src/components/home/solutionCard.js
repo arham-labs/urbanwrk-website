@@ -4,7 +4,7 @@ import LinkButton from '@/common/linkbtn';
 export default function SolutionCard({ item }) {
 
   return (
-    <div className='w-full relative bg-[#F6F4EE] md:rounded-lg min-h-[540px] max-md:min-h-[500px] lg:h-[590px] xl:h-[560px] 2xl:h-[540px]'>
+    <div className='w-full relative bg-[#F6F4EE] md:rounded-lg min-h-[540px] max-md:min-h-[500px] lg:h-[620px] xl:h-[560px] 2xl:h-[540px]'>
       <div className='flex flex-col justify-between '>
         <div>
           <Image src={item.img} height={400} width={422} alt={item.alt} unoptimized className='h-full w-full object-cover max-md:min-h-[300px] max-md:max-h-[350px] lg:h-[380px]' />

@@ -4,7 +4,7 @@ import React from 'react'
 export default function LocationSpecialtiesCard({ data }) {
     const Info = [
         { title: "Your modern, tailormade office", desc: "From one desk to a dedicated floor, you can create your space the way you want" },
-        { title: "With 5-Star hospitality", desc: "Enjoy on-site support team, coffee bar, fully-stocked pantry, exclusive access to WellnessWrk Gym, BuzzWrk Café and more" },
+        { title: "With deluxe hospitality", desc: "Enjoy on-site support team, coffee bar, fully-stocked pantry, exclusive access to gym, café and more." },
         { title: "Made with your blueprint", desc: "Create a home for your brand based on your vision with our design and interiors solution" },
         { title: "Uplifting spaces", desc: "Work in a visually stunning environment where form meets function" },
         { title: "Feed your curiosity", desc: "Attend exclusive member events and panel talks or sign up for courses and workshops from India’s finest business minds" },

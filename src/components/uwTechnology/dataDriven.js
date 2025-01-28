@@ -6,7 +6,7 @@ export default function DataDriven() {
         img: "/images/uwTechnology/urbanTechFeat1.png",
         title1: "THE URBANWRK APP",
         title2: "Get actionable insights",
-        desc: "Find a consolidated view of your visitor management, meeting room bookings, ticketing system, member engagement and café solutions with the UrbanWrk App.",
+        desc: "Find a consolidated view of your visitor management, meeting room bookings, tickets and member engagement with the UrbanWrk App.",
         alt: "UrbanWrk app"
     },
     // {

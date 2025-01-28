@@ -8,6 +8,7 @@ import HomeBuild from "@/components/about-us/tailormade-office/homebuild";
 import { Jsons } from "./solutionJson";
 import MeetingRoomSpace from "@/components/about-us/tailormade-office/meetingRoomSpace";
 import BreadCrumbs from "@/common/breadcrumbs";
+import SolutionWays from "@/components/solutionsLanding/solutionway";
 
 
 export async function generateMetadata({ params }) {
@@ -41,17 +42,17 @@ export default function Page({ params }) {
     <>
       <BreadCrumbs subtitle="Solutions" subpathname="/solutions" nestedpage={true} nestedtitle={solutionFind?.breadcrumbsTitle} nestedpathname={`/solutions/${solution}`} />
       <Herobanner data={solutionFind} />
-      {solutionFind.name === "meeting-rooms" && (
+      {solutionFind?.name === "meeting-rooms" && (
         <MeetingRoomSpace data={solutionFind} />
       )}
-      {/* {solutionFind.name === "meeting-rooms" && (
+      {/* {solutionFind?.name === "meeting-rooms" && (
         <MeetingListing data={solutionFind}  el={el}/>
       )} */}
-      {solutionFind.name !== "meeting-rooms" && (
+      {solutionFind?.name !== "meeting-rooms" && (
         <HomeBuild data={solutionFind} />
       )}
-      {solutionFind.name !== "meeting-rooms" && <Choose data={solutionFind} />}
-      {solutionFind.name !== "meeting-rooms" && <Space data={solutionFind} />}
+      {solutionFind?.name !== "meeting-rooms" && <Choose data={solutionFind} />}
+      {solutionFind?.name !== "meeting-rooms" && <Space data={solutionFind} />}
       <Productivity data={solutionFind} />
       <ExploreCard />
       <Ways />

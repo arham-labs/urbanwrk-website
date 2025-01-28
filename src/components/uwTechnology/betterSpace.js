@@ -6,9 +6,9 @@ import Image from 'next/image';
 export default function BetterSpace() {
 
     const GradeData = [
-        { source: betterSpace1, title: "Access Control System", subtitle: "Dual Internet Service Providers" },
-        { source: betterSpace2, title: "Palo Alto Firewall", subtitle: "Wireless Presentations" },
-        { source: betterSpace3, title: "CISCO MERAKI Networking Switches CISCO MERAKI Wi-Fi", subtitle: "Interactive TV" }
+        { source: betterSpace1, title: "Spectra Access Control System", subtitle: "Dual Internet Service Providers" },
+        { source: betterSpace2, title: "Palo Alto Networks Firewall", subtitle: "Wireless Presentations" },
+        { source: betterSpace3, title: "CISCO MERAKI Switches and Access Points", subtitle: "Interactive TVs" }
     ]
 
     return (

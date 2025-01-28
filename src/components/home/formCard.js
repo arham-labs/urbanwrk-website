@@ -13,11 +13,11 @@ import "react-international-phone/style.css";
 
 
 export default function FormCard() {
-  const { register, handleSubmit, watch, formState: { errors }, reset, control } = useForm();
+  const { register, handleSubmit, watch, formState: { errors }, reset, setValue, control } = useForm({ mode: "onChange" });
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune"];
+  const city = ["Hyderabad", "Kolkata", "Mumbai", "Delhi", "Gurgaon", "Pune"];
   const [storeCity, setStoreCity] = useState("");
   const searchParams = useSearchParams();
   const utm_source = searchParams.get("utm_source");
@@ -32,6 +32,10 @@ export default function FormCard() {
   const [phone, setPhone] = useState("");
   const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
   const phoneUtil = PhoneNumberUtil.getInstance();
+
+  useEffect(() => {
+    setValue('phone', '')
+  }, [])
 
   // Function to validate phone number
   const isPhoneValid = (phone) => {
@@ -135,6 +139,8 @@ export default function FormCard() {
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
 
+  // console.log("formValues: Home",formValues);
+
   return (
     <div className="bg-white">
       <div className="px-6 max-w-[1920px] py-20 max-lg:py-16 mx-auto 2xl:px-[160px] lg:px-[100px]">
@@ -204,10 +210,7 @@ export default function FormCard() {
                   defaultValue={phone}
                   rules={{
                     required: "Phone number is required",
-                    validate: (value) => {
-                      // Show error for invalid phone or empty number
-                      if (!value || !isPhoneValid(value)) return "Enter a valid phone number";
-                    },
+                    validate: (value) => (phoneTouched && !isPhoneValid(value) || value === "") ? "Enter a valid phone number" : undefined,
                   }}
                   render={({ field: { onChange, value } }) => (
                     <>

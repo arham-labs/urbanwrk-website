@@ -16,7 +16,8 @@ export default function ExploreCard() {
     { name: "Hyderabad", link: "/hyderabad" },
     { name: "Kolkata", link: "/kolkata" },
     { name: "Mumbai", link: "/mumbai" },
-    { name: "NCR", link: "/ncr" },
+    { name: "Delhi", link: "/delhi" },
+    { name: "Gurgaon", link: "/gurgaon" },
     { name: "Pune", link: "/pune" },
   ];
 
@@ -39,7 +40,7 @@ export default function ExploreCard() {
         </div>
         <div className="absolute md:bottom-40  bottom-80    inset-x-0 flex justify-center items-center font-medium text-[65px]">
           <p className="text-[30px] md:py-20 text-white md:w-[753px]  text-center max-md:text-[20px] max-md:mx-4 max-md:leading-[30px]">
-            Leave your mark with office spaces in cities that are shaping the
+            Leave your mark with office spaces in cities shaping the
             economy&apos;s next chapter.
           </p>
         </div>

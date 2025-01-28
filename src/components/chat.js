@@ -9,23 +9,18 @@ import BasicSelectDrop from "../components/select";
 import { toast } from "react-toastify";
 import { LoadingButton } from "@mui/lab";
 import { useSearchParams } from "next/navigation";
-
+import { PhoneNumberUtil } from "google-libphonenumber";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 export default function Chat() {
   const [openchat, setOpenChat] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-    reset,
-    control
-  } = useForm();
+  const { register, handleSubmit, watch, formState: { errors }, reset, setValue, control } = useForm({ mode: "onChange" });
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune"];
+  const city = ["Hyderabad", "Kolkata", "Mumbai", "Delhi", "Gurgaon", "Pune"];
   const [storeCity, setStoreCity] = useState("");
   const searchParams = useSearchParams();
   const utm_source = searchParams.get("utm_source");
@@ -37,6 +32,25 @@ export default function Chat() {
   const utm_adname = searchParams.get('utm_adname')
   const utm_matchtype = searchParams.get('utm_matchtype')
   const utm_network = searchParams.get('utm_network')
+  const [phone, setPhone] = useState("");
+  const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
+  const phoneUtil = PhoneNumberUtil.getInstance();
+
+  useEffect(() => {
+    if (openchat) {
+      reset(); // Reset phone value in react-hook-form explicitly
+    }
+  }, [openchat, reset]);
+
+  const isPhoneValid = (phone) => {
+    try {
+      if (!phone || phone.trim() === "") return false; // Empty check
+      const number = phoneUtil.parseAndKeepRawInput(phone, "IN");
+      return phoneUtil.isValidNumber(number);
+    } catch (error) {
+      return false;
+    }
+  };
 
 
   const onSubmit = async (data) => {
@@ -152,7 +166,11 @@ export default function Chat() {
         {openchat && (
           <div
             className="fixed w-full h-full left-0 top-0 bg-transparent -z-10"
-            onClick={() => setOpenChat(false)}
+            onClick={() => {
+              setOpenChat(false)
+              // setValue('phone',"")
+
+            }}
           ></div>
         )}
       </div>
@@ -206,23 +224,30 @@ export default function Chat() {
               </div>
               <div className="max-lg:mb-2 lg:mb-2">
                 <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="phone-number">PHONE:</label>
-                <input
-                  type="number"
-                  id="phone-number"
-                  maxLength={10}
-                  {...register("phone", {
+                <Controller
+                  control={control}
+                  name="phone"
+                  defaultValue={phone}
+                  rules={{
                     required: "Phone number is required",
-                    pattern: {
-                      value: /^\d{10}$/,
-                      message: "Phone number must be 10 digits",
-                    },
-                  })}
-                  defaultValue=""
-                  className="border-black border-solid border w-full h-[38px] px-2"
+                    validate: (value) => (phoneTouched && !isPhoneValid(value) || value === "") ? "Enter a valid phone number" : undefined,
+                  }}
+                  render={({ field: { onChange, value } }) => (
+                    <>
+                      <PhoneInput
+                        defaultCountry="in"
+                        value={value || phone}
+                        onFocus={() => setPhoneTouched(true)}
+                        onChange={(phoneValue) => {
+                          setPhone(phoneValue); // Update state
+                          onChange(phoneValue); // Update Controller field value
+                        }}
+                        forceDialCode
+                      />
+                      {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
+                    </>
+                  )}
                 />
-                {errors.phone && (
-                  <span className="text-red-500">{errors.phone.message}</span>
-                )}
               </div>
               <div className="max-lg:mb-0 lg:mb-2">
                 <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="city">CITY:</label>

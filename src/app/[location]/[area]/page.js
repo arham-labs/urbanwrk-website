@@ -8,6 +8,7 @@ import Amenities from "@/components/solutionsLanding/amenities";
 import { notFound } from "next/navigation";
 import { Jsons } from "../locationJson";
 import BreadCrumbs from "@/common/breadcrumbs";
+import SolutionWays from "@/components/solutionsLanding/solutionway";
 
 export async function generateMetadata({ params }) {
     const location = `/${params.location}/${params.area}`
@@ -61,7 +62,7 @@ export default function page({ params }) {
 
 
             <div className=" bg-bglight2   mx-auto  ">
-                <Ways />
+                <SolutionWays />
             </div>
             {/* <div className="bg-bglight4 ">
                 <div className="  max-w-[1920px] mx-auto ">

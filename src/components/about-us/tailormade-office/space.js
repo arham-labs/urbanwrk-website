@@ -5,9 +5,9 @@ import LinkButton from "@/common/linkbtn";
 export default function Space({ data }) {
 
     const MeetData = [
-        { title: "Meet with our team", desc: "Share your requirements so that we can work out the best solution for your organisation size" },
+        { title: "Meet with our team", desc: "Share your requirements so that we can work out the best solution for your organisation's size" },
         { title: "Create your blueprint", desc: "Choose the area, and work with our design experts to bring your vision to life." },
-        { title: "Walk into your workspace", desc: "Settle in your customised office" }
+        { title: "Walk into your workspace", desc: "Settle in your fully customised office in 45 days." }
     ]
 
     return (
@@ -23,7 +23,7 @@ export default function Space({ data }) {
                     </div>
                 </div>
                 <div className="px-6 lg:px-0 w-full lg:w-1/2 flex flex-col gap-7 lg:gap-14">
-                    <div className="w-full lg:w-[60%] 2xl:w-[70%] lg:ml-24 mr-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
+                    <div className="w-full lg:w-[65%] 2xl:w-[70%] lg:ml-24 mr-auto flex flex-col items-start lg:items-start gap-5 lg:gap-10">
                         {data?.card3_content?.map((item, i) =>
                             <div className="flex items-start gap-5 lg:gap-10" key={i}>
                                 <span className="text-3xl xl:text-5xl text-primary font-kepler">0{i + 1}</span>

@@ -34,7 +34,7 @@ export default function Footer() {
               <div className="flex flex-col gap-2">
                 {[
                   {
-                    link: "/solutions/tailormade-office",
+                    link: "/solutions/tailormade-offices",
                     title: "Tailormade Offices",
                   },
                   {
@@ -69,7 +69,7 @@ export default function Footer() {
                 Locations
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/hyderabad", title: "Hyderabad" }, { link: "/kolkata", title: "Kolkata" }, { link: "/mumbai", title: "Mumbai" }, { link: "/ncr", title: "NCR" }, { link: "/pune", title: "Pune" }].map((el, i) => (
+                {[{ link: "/hyderabad", title: "Hyderabad" }, { link: "/kolkata", title: "Kolkata" }, { link: "/mumbai", title: "Mumbai" }, { link: "/delhi", title: "Delhi" },{ link: "/gurgaon", title: "Gurgaon" }, { link: "/pune", title: "Pune" }].map((el, i) => (
                   <a className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
                   </a>

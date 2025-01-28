@@ -18,8 +18,8 @@ export default function LocationAmenities() {
 
   const data2 = [
     {
-      title: "With 5-Star hospitality",
-      desc: "From one desk to a dedicated floor, you can  create your space the way you want"
+      title: "With deluxe hospitality",
+      desc: "Enjoy on-site support team, coffee bar, fully-stocked pantry, exclusive access to gym, café and more."
     },
 
     {
