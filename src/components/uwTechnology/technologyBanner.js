@@ -22,7 +22,7 @@ export default function TechnologyBanner() {
             </h1>
             <div className='pt-6 max-md:pt-4 lg:pr-[20px] xl:pr-[40px]'>
               <p className='text-sm md:text-base lg:text-lg text-left'>
-              We're a tech-powered workspace where our proprietary centralised platform and app make your work day better.
+              We&#39;re a tech-powered workspace where our proprietary centralised platform and app make your work day better.
               </p>
             </div>
           </div>
