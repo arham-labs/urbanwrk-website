@@ -3,7 +3,7 @@ import UrbanTechFeat from './urbanTechFeat'
 
 export default function DataDriven() {
     const data = [{
-        img: "/images/uwTechnology/urbanTechFeat1.png",
+        img: "/images/uwTechnology/urbanTechFeat2.jpg",
         title1: "THE URBANWRK APP",
         title2: "Get actionable insights",
         desc: "Find a consolidated view of your visitor management, meeting room bookings, tickets and member engagement with the UrbanWrk App.",
