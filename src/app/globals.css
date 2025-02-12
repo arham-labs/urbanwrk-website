@@ -83,22 +83,26 @@ li::marker {
     margin-left: 28px;
     line-height: 30px;
   }
+
   .scrollbar-custom {
-    padding-right: 30px; /* Add extra space on the right to offset content */
-    margin-right: -30px; /* Pull the scrollbar track left by 100px */
-    overflow-y: scroll; /* Ensure the scrollbar appears */
-  }  
+    padding-right: 30px;
+    /* Add extra space on the right to offset content */
+    margin-right: -30px;
+    /* Pull the scrollbar track left by 100px */
+    overflow-y: scroll;
+    /* Ensure the scrollbar appears */
+  }
 }
 
-.react-international-phone-input-container{
+.react-international-phone-input-container {
   width: 100%;
 }
 
-.react-international-phone-country-selector{
+.react-international-phone-country-selector {
   width: 80px;
 }
 
-.react-international-phone-country-selector-button{
+.react-international-phone-country-selector-button {
   padding-left: 7px;
   padding-right: 3px;
   height: 38px !important;
@@ -106,15 +110,16 @@ li::marker {
   border: 1px solid #000 !important;
   border-right: 0 !important;
   width: 100% !important;
-  border-radius:  0 !important;
+  border-radius: 0 !important;
 }
-.react-international-phone-input-container .react-international-phone-input{
+
+.react-international-phone-input-container .react-international-phone-input {
   width: 100%;
   height: 38px !important;
   background-color: #F6F4EE !important;
   font-size: 16px !important;
   border: 1px solid #000 !important;
-  border-radius:  0 !important;
+  border-radius: 0 !important;
 }
 
 .MuiLoadingButton-root {
@@ -133,11 +138,59 @@ li::marker {
   color: white !important;
 }
 
-.MuiLoadingButton-root:disabled{
+.MuiLoadingButton-root:disabled {
   cursor: not-allowed !important;
   pointer-events: inherit !important;
 }
-.MuiLoadingButton-root:disabled:hover{
+
+.MuiLoadingButton-root:disabled:hover {
   background: none !important;
   color: inherit !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 72px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet {
+  background: #999999;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 62px !important;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 50px !important;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 50px !important;
 }

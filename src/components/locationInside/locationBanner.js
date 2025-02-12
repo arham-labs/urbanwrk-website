@@ -1,70 +1,127 @@
-'use client'
-import React, { useEffect, useRef, useState } from 'react';
+'use client';
+import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export default function LocationBanner({ data }) {
-    const [showIcon, setShowIcon] = useState(true)
-    const [isPlaying, setIsPlaying] = useState(false)
-    const [poster, setPoster] = useState(data?.posterImage); // default for web
+    const [poster, setPoster] = useState(data?.posterImage);
     const videoRef = useRef(null);
 
     useEffect(() => {
+        videoRef?.current?.play()
         const updatePoster = () => {
-            if (window.innerWidth <= 768) {
-                setPoster(data?.posterMobileImage); // mobile poster
-            } else {
-                setPoster(data?.posterImage); // web poster
-            }
+            setPoster(window.innerWidth <= 768 ? data?.posterMobileImage : data?.posterImage);
         };
-
-        // Set poster on initial render
         updatePoster();
-
-        // Update poster on window resize
         window.addEventListener('resize', updatePoster);
-
-        // Cleanup event listener on component unmounts
-        return () => {
-            window.removeEventListener('resize', updatePoster);
-        };
-    }, [])
+        return () => window.removeEventListener('resize', updatePoster);
+    }, [data]);
 
 
-    const handlePlay = () => {
-        setIsPlaying(!isPlaying)
-        if (!isPlaying) {
-            videoRef.current.play()
-            setShowIcon(false)
-        }
-        else {
-            videoRef.current.pause();
-            setShowIcon(true)
-        }
-    }
+    const items = [
+        <div className="flex bg-cover bg-no-repeat relative h-screen cursor-pointer">
+            <video ref={videoRef} autoPlay muted controls poster={poster} className="w-full h-full object-cover">
+                <source src={data.videourl} type="video/mp4" />
+            </video>
+        </div>,
+        ...data?.BannerData?.map((el, index) => (
+            <div className="w-full h-screen" key={`image-${index}`}>
+                <Image
+                    src={el.deskimage}
+                    alt="Poster"
+                    width={1000}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-full object-cover hidden lg:block"
+                />
+                <Image
+                    src={el.mobimage}
+                    alt="Poster"
+                    width={1000}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-full object-cover lg:hidden"
+                />
+            </div>
+        )),
+    ];
+
+
+    const items1 = [
+        
+        ...data?.BannerData?.map((el, index) => (
+            <div className="w-full h-screen" key={`image-${index}`}>
+                <Image
+                    src={el.deskimage}
+                    alt="Poster"
+                    width={1000}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-full object-cover hidden lg:block"
+                />
+                <Image
+                    src={el.mobimage}
+                    alt="Poster"
+                    width={1000}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-full object-cover lg:hidden"
+                />
+            </div>
+        )),
+    ];
+
 
     return (
         <>
-            {data.video ?
-                <div className="flex bg-cover bg-no-repeat relative h-screen cursor-pointer" onClick={handlePlay}>
-                    <video ref={videoRef} loop playsInline poster={poster} className="absolute right-0 left-0 top-0 w-full h-full object-cover back-video bottom-0 -z-[1]">
-                        <source src={data.videourl} type="video/mp4" />
-                    </video>
-                    {showIcon && <div className='absolute top-1/2 left-1/2'>
-                        <Image src="/images/locationInside/play-icon.svg" alt="play" width={100} height={100} className='w-8 lg:w-14' />
-                    </div>}
+            {data.video ? (
+                <div className="relative w-full">
+                    <Swiper loop={true} pagination={{ clickable: true }} navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+                        {items.map((el, i) =>
+                            <SwiperSlide key={i}>
+                                {el}
+                            </SwiperSlide>
+                        )}
+                    </Swiper>
                 </div>
-                :
-                <div className='h-[100vh]' style={{ position: 'relative' }}>
-                    <Image src={data?.bannerImage} alt={data?.bannerAlt}
-                        height={1000} width={1000}
-                        className='hidden lg:block h-full w-full max-md:object-cover md:object-cover'
-                        unoptimized />
-                    <Image src={data?.mobileBanner} alt={data?.bannerAlt}
-                        height={1000} width={1000}
-                        className='lg:hidden h-full w-full max-md:object-cover md:object-cover'
-                        unoptimized />
-                </div>
-            }
+            ) :
+                data.locationName === "Westport" ?
+                    <div className="relative w-full">
+                        <Swiper loop={true} pagination={{ clickable: true }} navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+                            {items1.map((el, i) =>
+                                <SwiperSlide key={i}>
+                                    {el}
+                                </SwiperSlide>
+                            )}
+                        </Swiper>
+                    </div>
+                    : (
+                        <div className="h-screen relative">
+                            <Image
+                                src={data?.bannerImage}
+                                alt={data?.bannerAlt}
+                                width={1000}
+                                height={1000}
+                                className="hidden lg:block w-full h-full object-cover"
+                                priority
+                                unoptimized
+                            />
+                            <Image
+                                src={data?.mobileBanner}
+                                alt={data?.bannerAlt}
+                                width={1000}
+                                height={1000}
+                                className="lg:hidden w-full h-full object-cover"
+                                priority
+                                unoptimized
+                            />
+                        </div>
+                    )}
+
         </>
     );
 }

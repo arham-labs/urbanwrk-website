@@ -5,7 +5,6 @@ import nodemailer from "nodemailer"; // Make sure this import is added
 
 const SHEET_ID = "1Q7VnDFsMQLMjqvENIKe_DKqDLSIpKaNpXosTQSbtIj0"; // Spreadsheet ID
 const SHEET_NAME = "Leads"; // Sheet name
-const CREDENTIALS = path.join(process.cwd(), "urbanwrk.json"); // Path to credentials.json
 
 const formatDate = (date, timeZone) => {
     const options = {
@@ -28,7 +27,11 @@ const formatDate = (date, timeZone) => {
 
 
 const auth = new google.auth.GoogleAuth({
-    keyFile: CREDENTIALS,
+    credentials: {
+        private_key: process.env.GOOGLE_PRIVATE_KEY,
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        private_key_id: process.env.GOOGLE_PRIVATE_KEY_ID
+    },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
