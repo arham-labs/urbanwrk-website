@@ -32,18 +32,18 @@ export default function LocationBanner({ data }) {
                 <Image
                     src={el.deskimage}
                     alt="Poster"
-                    width={1000}
-                    height={1000}
-                    unoptimized
+                    width={1920}
+                    height={1080}
                     className="w-full h-full object-cover hidden lg:block"
+                    priority
                 />
                 <Image
                     src={el.mobimage}
                     alt="Poster"
-                    width={1000}
-                    height={1000}
-                    unoptimized
+                    width={1920}
+                    height={1080}
                     className="w-full h-full object-cover lg:hidden"
+                    priority
                 />
             </div>
         )),
@@ -54,18 +54,18 @@ export default function LocationBanner({ data }) {
             <Image
                 src={el.deskimage}
                 alt="Poster"
-                width={1000}
-                height={1000}
-                unoptimized
+                width={1920}
+                height={1080}
                 className="w-full h-full object-cover hidden lg:block"
+                priority
             />
             <Image
                 src={el.mobimage}
                 alt="Poster"
-                width={1000}
-                height={1000}
-                unoptimized
+                width={1920}
+                height={1080}
                 className="w-full h-full object-cover lg:hidden"
+                priority
             />
         </div>
     ));
@@ -97,20 +97,18 @@ export default function LocationBanner({ data }) {
                     <Image
                         src={data?.bannerImage}
                         alt={data?.bannerAlt}
-                        width={1000}
-                        height={1000}
+                        width={1920}
+                        height={1080}
                         className="hidden lg:block w-full h-full object-cover"
                         priority
-                        unoptimized
                     />
                     <Image
                         src={data?.mobileBanner}
                         alt={data?.bannerAlt}
-                        width={1000}
-                        height={1000}
+                        width={1920}
+                        height={1080}
                         className="lg:hidden w-full h-full object-cover"
                         priority
-                        unoptimized
                     />
                 </div>
             )}
