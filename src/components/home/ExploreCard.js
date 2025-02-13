@@ -10,7 +10,7 @@ import LinkButton from "@/common/linkbtn";
 
 export default function ExploreCard() {
   const [hrefNav, setHrefNav] = useState("/");
-  const city = ["Hyderabad", "Kolkata", "Mumbai", "NCR", "Pune",];
+  const city = ["Hyderabad", "Kolkata", "Mumbai", "Delhi", "Gurgaon", "Pune"];
 
   const dataCity = [
     { name: "Hyderabad", link: "/hyderabad" },
