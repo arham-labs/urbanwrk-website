@@ -69,7 +69,7 @@ export default function Footer() {
                 Locations
               </span>
               <div className="flex flex-col gap-2">
-                {[{ link: "/hyderabad", title: "Hyderabad" }, { link: "/kolkata", title: "Kolkata" }, { link: "/mumbai", title: "Mumbai" }, { link: "/delhi", title: "Delhi" },{ link: "/gurgaon", title: "Gurgaon" }, { link: "/pune", title: "Pune" }].map((el, i) => (
+                {[{ link: "/delhi", title: "Delhi" }, { link: "/gurgaon", title: "Gurgaon" },{ link: "/hyderabad", title: "Hyderabad" }, { link: "/kolkata", title: "Kolkata" }, { link: "/mumbai", title: "Mumbai" }, { link: "/pune", title: "Pune" }].map((el, i) => (
                   <a className="text-sm font-light" href={el.link} key={i}>
                     <span className="block">{el.title}</span>
                   </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                 About Us
               </a>
               <div className="flex flex-col gap-2">
-                {[{ link: "/about-us/sustainability", title: "Sustainability" }, { link: "/urbanWrk-tech", title: "UrbanWrk Tech" }].map(
+                {[{ link: "/about-us/sustainability", title: "Sustainability" }, { link: "/about-us/urbanWrk-tech", title: "UrbanWrk Tech" }].map(
                   (el, i) => (
                     <a className="text-sm font-light" href={el.link} key={i}>
                       <span className="block">{el.title}</span>
@@ -108,18 +108,18 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-4 lg:gap-6 lg:items-end lg:w-full">
             <div className="flex gap-2">
-              <Link target="_blank" href="https://www.facebook.com/Urbanwrk.official">
-                <Image src={Facebook} alt="facebook" />
+              <Link target="_blank" href="https://www.linkedin.com/company/urbanwrk/">
+                <Image src={LinkedIn} alt="linkedin" />
               </Link>
               <Link target="_blank" href="https://www.instagram.com/urbanwrk/">
                 <Image src={Instagram} alt="instagram" />
               </Link>
-              <Link target="_blank" href="https://www.linkedin.com/company/urbanwrk/">
-                <Image src={LinkedIn} alt="linkedin" />
+              <Link target="_blank" href="https://www.facebook.com/Urbanwrk.official">
+                <Image src={Facebook} alt="facebook" />
               </Link>
             </div>
             <div className="flex flex-col text-xs gap-5">
-              <span>COPYRIGHT 2024</span>
+              <span>COPYRIGHT 2025</span>
               <a href="/terms-of-use">TERMS OF USE</a>
               <a href="/privacy-policy">PRIVACY POLICY </a>
             </div>
