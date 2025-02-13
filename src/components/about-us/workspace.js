@@ -13,7 +13,7 @@ export default function WorkSpace() {
                     <div className="flex flex-col w-full lg:w-1/2">
                         <div className="w-full lg:w-[78%]">
                             <span className="text-2xl lg:text-4xl xl:text-5xl text-primary block mb-3 lg:mb-6">Find your space</span>
-                            <p className="leading-6 text-sm xl:text-base font-medium">Designed to adapt to the evolving needs of modern businesses, our environments inspire innovation, encourage collaboration and empower growth. It's a dedicated floor tailored to your brand or a hot desk in our dynamic co-working areas, we provide the perfect launchpad for your next breakthrough</p>
+                            <p className="leading-6 text-sm xl:text-base font-medium">Designed to adapt to the evolving needs of modern businesses, our environments inspire innovation, encourage collaboration and empower growth. It&#39;s a dedicated floor tailored to your brand or a hot desk in our dynamic co-working areas, we provide the perfect launchpad for your next breakthrough</p>
                         </div>
                     </div>
                 </div>
