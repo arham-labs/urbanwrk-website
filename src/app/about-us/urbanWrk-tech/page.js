@@ -16,7 +16,7 @@ export const metadata = {
 export default function page() {
     return (
         <div>
-            <BreadCrumbs subtitle="About Us" subpathname="/about-us" nestedpage={true} nestedpathname="/about-us/urbanWrk-tech" nestedtitle="urbanWrk tech" />
+            <BreadCrumbs subtitle="About Us" subpathname="/about-us" nestedpage={true} nestedpathname="/about-us/urbanWrk-tech" nestedtitle="UrbanWrk tech" />
             <TechnologyBanner />
             <DataDriven />
             <BetterSpace />

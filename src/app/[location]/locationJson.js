@@ -380,7 +380,7 @@ export const Jsons = {
           posterMobileImage: "/images/locationInside/montclaire-mobile-banner.png",
           locationCity: "Baner",
           locationImg: MontClaireCard,
-          locationMobileImg: "/images/location/montclaire-mobile.png",
+          locationMobileImg: "/images/locationInside/montclaire-mobile.jpg",
           location1: "Metro Station - 850 m",
           location2: "Airport - 16.5 km",
           location3: "A thriving corporate park in the heart of Pune.",

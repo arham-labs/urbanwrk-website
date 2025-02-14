@@ -113,11 +113,19 @@ export default function CareerFormCard() {
                 <div className="flex flex-col lg:flex-row md:gap-14 lg:gap-16 xl:gap-24 2xl:gap-32">
                     <div className="lg:w-[640px] 2xl:w-[680px] lg:h-[650px] xl:h-[750px] max-lg:w-full order-1 sm:order-1">
                         <Image
-                            src="/images/blogs/formImage.png"
+                            src="/images/careers/mobile-form.png"
                             height={800}
                             width={604}
                             alt="formImage"
-                            className="h-full w-full object-center"
+                            className="h-full w-full object-cover lg:hidden"
+                            unoptimized
+                        />
+                        <Image
+                            src="/images/careers/formImage.png"
+                            height={800}
+                            width={604}
+                            alt="formImage"
+                            className="h-full w-full object-cover hidden lg:block"
                             unoptimized
                         />
                     </div>
