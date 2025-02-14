@@ -39,8 +39,8 @@ export default function Page() {
             <WorkSpace />
             {/* <WorkSwings /> */}
             <Speciality data={specilatiesData} title="Make your workspace" />
-            <Intro />
             <Vision />
+            <Intro />
             <FormCard />
         </>
     )
