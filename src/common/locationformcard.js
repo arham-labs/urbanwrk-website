@@ -14,7 +14,7 @@ export default function LocationFormCard() {
     const { register, handleSubmit, watch, formState: { errors }, reset, setValue, control } = useForm({ mode: "onChange" });
     const [isLoading, setIsLoading] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-    const city = ["Hyderabad", "Kolkata", "Mumbai", "Delhi", "Gurgaon", "Pune"];
+    const city = ["Delhi", "Gurgaon", "Hyderabad", "Kolkata", "Mumbai", "Pune"];
     const [storeCity, setStoreCity] = useState("");
     const router = useRouter();
     const searchParams = useSearchParams();
