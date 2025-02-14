@@ -18,7 +18,7 @@ export default function HomeBuild({ data }) {
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const city = ["Hyderabad", "Kolkata", "Mumbai", "Delhi", "Gurgaon", "Pune",];
+  const city = ["Delhi", "Gurgaon", "Hyderabad", "Kolkata", "Mumbai", "Pune"];
   const [storeCity, setStoreCity] = useState("");
   const searchParams = useSearchParams();
   const utm_source = searchParams.get("utm_source");
