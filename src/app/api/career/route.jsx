@@ -1,16 +1,16 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { Readable } from 'stream';
 
 export async function POST(request) {
-    const username = "hr@urbanwrk.com";
+    const username = "hello@urbanwrk.com";
     const password = "URB@2024";
     const myEmail = "hr@urbanwrk.com";
 
     try {
         const formData = await request.formData();
-
         const name = formData.get('name');
+        const lastname = formData.get('Last_Name');
+        const phone = formData.get('phone');
         const email = formData.get('email');
         const city = formData.get('city');
         const field_domain_of_interest = formData.get("field_domain_of_interest");
@@ -35,12 +35,12 @@ export async function POST(request) {
             replyTo: email,
             subject: `New Enquiry from ${name}`,
             html: `
-                <p>Name: ${name}</p>
+                <p>First Name: ${name}</p>
+                <p>Last Name: ${lastname}</p>
                 <p>Email: ${email}</p>
                 <p>Phone: ${phone ? phone : ""}</p>
                 <p>City: ${city ? city : ""}</p>
-                <p>Area of Interest: ${field_domain_of_interest ? field_domain_of_interest : ""}</p>
-                <p>Subscribed to Newsletter: ${newsUpdates ? newsUpdates : ""}</p>
+                <p>Department: ${field_domain_of_interest ? field_domain_of_interest : ""}</p>
             `,
         };
 

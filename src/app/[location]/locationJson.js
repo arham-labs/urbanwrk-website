@@ -23,7 +23,8 @@ import Phonebooth from '../../../public/images/locationInside/phonebooth.svg'
 import EventSpace from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN14.svg'
 import Cafe from '../../../public/images/solutionsLanding/logoAmenities/amenitiesN15.svg'
 import MontClaireCard from '../../../public/images/locationInside/montclaire-card.png'
-import PcpCard from '../../../public/images/location/pcp-card.png'
+import PcpCard from '../../../public/images/location/pcp-card.jpg'
+import PcpCard1 from '../../../public/images/location/pcp-card.png'
 
 
 export const Jsons = {
@@ -41,6 +42,54 @@ export const Jsons = {
         {
           id: 1,
           cardAlt: "office space in PCP Lower Parel",
+          metaTitle: "Custom Workspaces at Peninsula Business Park, Mumbai  | UrbanWrk",
+          metaDescription: "Explore UrbanWrk's modern workspaces at Peninsula Business Park, Mumbai, with meeting rooms, event spaces, and top amenities. Tailor your ideal office with expert design solutions.",
+          breadcrumbsTitle: "Peninsula Business Park",
+          bannerImage: "",
+          mobileBanner: "",
+          video: false,
+          videourl: "",
+          posterImage: "",
+          posterMobileImage: "",
+          locationName: "Peninsula Business Park",
+          locationCity: "Lower Parel",
+          locationImg: PcpCard,
+          locationMobileImg: "/images/location/pcp-mobile.jpg",
+          location1: "Lower Parel Station - 5 min walk",
+          location2: "Best for restaurants, commute-friendly",
+          location3: "Mumbai's premium business destination.",
+          BannerData: [{ deskimage: '/images/locationInside/pcp-desk-1.png', mobimage: '/images/locationInside/pcp-mob-image-1.png' }, { deskimage: '/images/locationInside/pcp-desk-2.png', mobimage: '/images/locationInside/pcp-mob-image-2.png' }, { deskimage: '/images/locationInside/pcp-desk-3.png', mobimage: '/images/locationInside/pcp-mob-image-3.png' }, { deskimage: '/images/locationInside/pcp-desk-4.png', mobimage: '/images/locationInside/pcp-mob-image-4.png' }],
+          AmentiesData: [
+            { source: Lounge, title: "Lounge area" },
+            { source: Conference, title: "Conference rooms " },
+            { source: Access, title: "24x7 Access" },
+            { source: EventSpace, title: "Event spaces" }
+          ],
+          url: "/mumbai/peninsula-business-park",
+          amentiesBanner: "/images/locationInside/pcp-amenities-banner.jpg",
+          amentiesBannerAlt: "tailor-made office in Lower Parel",
+          connectivityAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+          ],
+          locationInsideAmenities: [
+            { img: Lounge, title: "Lounge area" },
+            { img: "/images/locationInside/mail.svg", title: "Mail and packaging handling" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Cleaning services" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN16.svg", title: "24/7 Security" },
+          ]
+        },
+        {
+          id: 1,
+          cardAlt: "office space in PCP Lower Parel",
           metaTitle: "Custom Workspaces at Peninsula Corporate Park, Mumbai  | UrbanWrk",
           metaDescription: "Explore UrbanWrk's modern workspaces at Peninsula Corporate Park, Mumbai, with meeting rooms, event spaces, and top amenities. Tailor your ideal office with expert design solutions.",
           breadcrumbsTitle: "Peninsula Corporate Park",
@@ -52,11 +101,11 @@ export const Jsons = {
           posterMobileImage: "/images/locationInside/pcp-mobile-poster.png",
           locationName: "Peninsula Corporate Park",
           locationCity: "Lower Parel",
-          locationImg: PcpCard,
+          locationImg: PcpCard1,
           locationMobileImg: "/images/location/pcp-mobile.png",
-          location1: "Parel Station - 5 min walk",
+          location1: "Lower Parel Station - 5 min walk",
           location2: "Best for restaurants, commute-friendly",
-          location3: "A thriving corporate park in the heart of Mumbai.",
+          location3: "The cornerstone of Mumbai's business community.",
           BannerData: [{ deskimage: '/images/locationInside/pcp-desk-1.png', mobimage: '/images/locationInside/pcp-mob-image-1.png' }, { deskimage: '/images/locationInside/pcp-desk-2.png', mobimage: '/images/locationInside/pcp-mob-image-2.png' }, { deskimage: '/images/locationInside/pcp-desk-3.png', mobimage: '/images/locationInside/pcp-mob-image-3.png' }, { deskimage: '/images/locationInside/pcp-desk-4.png', mobimage: '/images/locationInside/pcp-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -118,7 +167,7 @@ export const Jsons = {
           locationMobileImg: "/images/locationInside/montclaire-mobile.jpg",
           location1: "Metro Station - 850 m",
           location2: "Airport - 16.5 km",
-          location3: "A thriving corporate park in the heart of Pune.",
+          location3: "Pune's premier destination for business",
           BannerData: [{ deskimage: '/images/locationInside/montclaire-desk-1.png', mobimage: '/images/locationInside/montclaire-mob-image-1.png' }, { deskimage: '/images/locationInside/montclaire-desk-2.png', mobimage: '/images/locationInside/montclaire-mob-image-2.png' }, { deskimage: '/images/locationInside/montclaire-desk-3.png', mobimage: '/images/locationInside/montclaire-mob-image-3.png' }, { deskimage: '/images/locationInside/montclaire-desk-4.png', mobimage: '/images/locationInside/montclaire-mob-image-4.png' }],
           amentiesBanner: "/images/locationInside/westport-amenities-banner.png",
           amentiesBannerAlt: "modern office space amenities",
@@ -170,7 +219,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/aeromall-mobile.png",
           location1: "Metro Station - 1 km",
           location2: "Airport - 10 m",
-          location3: "A thriving corporate park in the heart of Pune.",
+          location3: "The vibrant commercial hub connecting Pune to global businesses.",
           BannerData: [{ deskimage: '/images/locationInside/aeromall-desk-1.jpg', mobimage: '/images/locationInside/aeromall-mob-image-1.jpg' }, { deskimage: '/images/locationInside/aeromall-desk-2.png', mobimage: '/images/locationInside/aeromall-mob-image-2.jpg' }, { deskimage: '/images/locationInside/aeromall-desk-3.png', mobimage: '/images/locationInside/aeromall-mob-image-3.jpg' }, { deskimage: '/images/locationInside/aeromall-desk-4.png', mobimage: '/images/locationInside/aeromall-mob-image-4.jpg' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -223,7 +272,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/koncard-mobile.png",
           location1: "Metro Station - Right next door",
           location2: "Airport - 5.7 km",
-          location3: "A thriving corporate park in the heart of Pune.",
+          location3: "Situated amidst Pune’s premier corporate ecosystem.",
           BannerData: [{ deskimage: '/images/locationInside/koncard-desk-1.png', mobimage: '/images/locationInside/koncard-mob-image-1.png' }, { deskimage: '/images/locationInside/koncard-desk-2.png', mobimage: '/images/locationInside/koncard-mob-image-2.png' }, { deskimage: '/images/locationInside/koncard-desk-3.png', mobimage: '/images/locationInside/koncard-mob-image-3.png' }, { deskimage: '/images/locationInside/koncard-desk-4.png', mobimage: '/images/locationInside/koncard-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -277,7 +326,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/westport-mobile.png",
           location1: "Metro Station - 650 m",
           location2: "Airport - 19 km",
-          location3: "The commercial and residential hub of Pune.",
+          location3: "The progressive business hub in Pune's thriving IT corridor.",
           BannerData: [{ deskimage: '/images/locationInside/westport-desk-1.png', mobimage: '/images/locationInside/westport-mob-image-1.png' }, { deskimage: '/images/locationInside/westport-desk-2.png', mobimage: '/images/locationInside/westport-mob-image-2.png' }, { deskimage: '/images/locationInside/westport-desk-3.png', mobimage: '/images/locationInside/westport-mob-image-3.png' }, { deskimage: '/images/locationInside/westport-desk-4.png', mobimage: '/images/locationInside/westport-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -329,7 +378,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/nandan-mobile.png",
           location1: "Metro Station - 200 m",
           location2: "Airport - 19 km",
-          location3: "A thriving corporate park in the heart of Pune.",
+          location3: "Prime commercial spaces in Pune's thriving landscape",
           BannerData: [{ deskimage: '/images/locationInside/nandan-desk-1.png', mobimage: '/images/locationInside/nandan-mob-image-1.png' }, { deskimage: '/images/locationInside/nandan-desk-2.png', mobimage: '/images/locationInside/nandan-mob-image-2.png' }, { deskimage: '/images/locationInside/nandan-desk-3.png', mobimage: '/images/locationInside/nandan-mob-image-3.png' }, { deskimage: '/images/locationInside/nandan-desk-4.png', mobimage: '/images/locationInside/nandan-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -383,7 +432,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/sairadhe-mobile.png",
           location1: "Metro Station - 100 m",
           location2: "Airport - 6 km",
-          location3: "A thriving corporate park in the heart of Pune.",
+          location3: "Pune's landmark for business prestige and success.",
           BannerData: [],
           amentiesBanner: "/images/locationInside/sairadhe-amenities-banner.png",
           amentiesBannerAlt: "Sai Radhe office amenities",
@@ -568,7 +617,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/hyderabad-mobile.png",
           location1: "Metro Station - 500 m",
           location2: "Airport - 33 km",
-          location3: "One of India’s leading tech industry hub.",
+          location3: "Hyderabad's integrated business destination.",
           BannerData: [{ deskimage: '/images/locationInside/raheja-desk-1.jpg', mobimage: '/images/locationInside/raheja-mob-image-1.jpg' }, { deskimage: '/images/locationInside/raheja-desk-2.jpg', mobimage: '/images/locationInside/raheja-mob-image-2.jpg' }, { deskimage: '/images/locationInside/raheja-desk-3.png', mobimage: '/images/locationInside/raheja-mob-image-3.jpg' }, { deskimage: '/images/locationInside/raheja-desk-4.jpg', mobimage: '/images/locationInside/raheja-mob-image-4.jpg' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -630,7 +679,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/maxhouse-mobile.png",
           location1: "Metro Station - 1 km",
           location2: "Airport - 16.6 km",
-          location3: "One of India’s leading tech industry hub.",
+          location3: "Delhi's iconic address for business excellence",
           BannerData: [{ deskimage: '/images/locationInside/max-house-desk-1.png', mobimage: '/images/locationInside/max-house-mob-image-1.png' }, { deskimage: '/images/locationInside/max-house-desk-2.png', mobimage: '/images/locationInside/max-house-mob-image-2.png' }, { deskimage: '/images/locationInside/max-house-desk-3.png', mobimage: '/images/locationInside/max-house-mob-image-3.png' }, { deskimage: '/images/locationInside/max-house-desk-4.png', mobimage: '/images/locationInside/max-house-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },
@@ -692,7 +741,7 @@ export const Jsons = {
           locationMobileImg: "/images/location/baani-mobile.png",
           location1: "Metro Station - 500 m",
           location2: "Airport - 13.6 km",
-          location3: "One of India’s leading tech industry hub.",
+          location3: "One of India’s leading tech industry hubs",
           BannerData: [{ deskimage: '/images/locationInside/baani-desk-1.png', mobimage: '/images/locationInside/baani-mob-image-1.png' }, { deskimage: '/images/locationInside/baani-desk-2.png', mobimage: '/images/locationInside/baani-mob-image-2.png' }, { deskimage: '/images/locationInside/baani-desk-3.png', mobimage: '/images/locationInside/baani-mob-image-3.png' }, { deskimage: '/images/locationInside/baani-desk-4.png', mobimage: '/images/locationInside/baani-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Lounge area" },

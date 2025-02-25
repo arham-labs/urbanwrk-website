@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Script from "next/script";
 
 
-const worksans = Work_Sans({ subsets: ["latin"] });
+const workSans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "UrbanWrk",
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
       </head>
-      <body className={worksans.className}>
+      <body className={workSans.className}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

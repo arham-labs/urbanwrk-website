@@ -4,7 +4,7 @@ import React from 'react'
 export default function UrbanTechFeat({item}) {
   return (
     <div className="bg-[#fff] ">
-      <div className=" lg:pt-20 max-lg:pt-10">
+      <div className="">
         <div className='flex lg:flex-row flex-col lg:justify-center lg:items-center'>
           <div className='lg:w-1/2 max-lg:w-full'>
             <div className='2xl:w-[70%] lg:w-[80%]  '>

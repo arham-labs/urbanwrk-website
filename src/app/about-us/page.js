@@ -31,16 +31,16 @@ export default function Page() {
     return (
         <>
             <BreadCrumbs subtitle="About Us" subpathname="/about-us" />
-            <div className="h-screen">
-                <Image src="/images/about-us/about-mobile-map.png" alt="map" width={1920} height={1080} className="w-full object-fill h-full  lg:hidden"/>
-                <Image src="/images/about-us/about-map-desk.png" alt="map" width={1920} height={1080} className="w-full object-cover h-full hidden lg:block"/>
-            </div>
-            {/* <Herobanner /> */}
+            <Herobanner />
             <WorkSpace />
             {/* <WorkSwings /> */}
             <Speciality data={specilatiesData} title="Make your workspace" />
-            <Vision />
             <Intro />
+            <Vision />
+            <div className="w-full h-screen">
+                <Image src="/images/about-us/about-mobile-map.png" alt="map" width={1920} height={1080} className="w-full object-fill h-full  lg:hidden"/>
+                <Image src="/images/about-us/about-map-desk.png" alt="map" width={1920} height={1080} className="w-full object-cover h-full hidden lg:block"/>
+            </div> 
             <FormCard />
         </>
     )

@@ -34,7 +34,7 @@ export default function DataDriven() {
         <div className="bg-[#FFF] ">
             <div className="px-6 max-w-[1920px] py-20 max-md:py-16 mx-auto 2xl:px-[160px] lg:px-[100px]">
 
-                <div className=' flex flex-col lg:flex-row '>
+                {/* <div className=' flex flex-col lg:flex-row '>
                     <div className='  justify-center lg:w-1/2 flex flex-col'>
                         <div>
                             <h2 className='text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-left leading-tight font-normal  md:max-w-none'>
@@ -51,7 +51,7 @@ export default function DataDriven() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div>
                     {data.map((item, i) => <UrbanTechFeat key={i} item={item} />
                     )}

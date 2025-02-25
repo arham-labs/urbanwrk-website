@@ -18,7 +18,7 @@ export default function ExploreCard({ data }) {
                             <Image src={el?.locationImg} unoptimized alt={el.cardAlt} className="w-full h-[405px] object-cover aspect-[11/12]" />
                         </div>
                         <div className="w-full lg:hidden">
-                            <Image src={el?.locationMobileImg} width={500} height={500} unoptimized alt={el.cardAlt} className="w-full h-full object-cover aspect-[23/17]" />
+                            <Image src={el?.locationMobileImg} width={1920} height={1080} unoptimized alt={el.cardAlt} className="w-full h-full object-cover aspect-[23/17]" />
                         </div>
                         <div className="flex flex-col p-4 xl:p-[21.5px] 2xl:px-[25px] w-full xl:w-1/2 2xl:w-[55%]">
                             <span className="text-lg lg:text-xl font-medium capitalize">{el.locationName}</span>
