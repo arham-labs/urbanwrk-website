@@ -1,29 +1,44 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import Link from "next/link";
 import Image from "next/image";
 import BasicSelectDrop from "../../components/select";
 import { toast } from "react-toastify";
-import { TextField } from "@mui/material";
+import { PhoneNumberUtil } from "google-libphonenumber";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+import { LoadingButton } from "@mui/lab";
+
 
 
 export default function CareerFormCard() {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-        reset,
-        control
-    } = useForm();
+    const { register, handleSubmit, watch, formState: { errors }, reset, control, setValue } = useForm();
     const [isLoading, setIsLoading] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-    const city = ["Operations", "Sales", "Marketing"];
+    const departmentOptions = ["Client Experience", "Design", "Finance", "Growth", "HR", "IT", "Marketing", "Projects"];
     const [storeInterest, setStoreInterest] = useState("");
     const [fileName, setFileName] = useState('');
+    const city = ["Delhi", "Gurgaon", "Hyderabad", "Kolkata", "Mumbai", "Pune"];
+    const [storeCity, setStoreCity] = useState("");
+    const [phone, setPhone] = useState("");
+    const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
+    const phoneUtil = PhoneNumberUtil.getInstance();
 
+    useEffect(() => {
+        setValue('phone', '')
+    }, [])
+
+    // Function to validate phone number
+    const isPhoneValid = (phone) => {
+        try {
+            if (!phone || phone.trim() === "") return false; // Empty check
+            const number = phoneUtil.parseAndKeepRawInput(phone, "IN");
+            return phoneUtil.isValidNumber(number);
+        } catch (error) {
+            return false;
+        }
+    };
 
     const onSubmit = async (data) => {
         setIsLoading(true);
@@ -46,9 +61,12 @@ export default function CareerFormCard() {
             Email: data.email,
             name: data.name,
             field_domain_of_interest: data.field_domain_of_interest,
+            Cities: data.city,
+            Phone: data.phone,
             "Lead_Source": "Website",
             "Lead_Status": "Not Contacted",
         }
+
 
         fetchZohoData(ZohoFormData)
 
@@ -64,6 +82,8 @@ export default function CareerFormCard() {
             setShowPopup(true);
             reset();
             setStoreInterest("")
+            setPhone("")
+            setStoreCity("")
             setFileName("")
         } catch (error) {
             console.log(error);
@@ -83,10 +103,11 @@ export default function CareerFormCard() {
             toast.error("Something went wrong");
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
-        setShowPopup(true);
         reset();
         setStoreInterest("")
         setFileName("")
+        setPhone("")
+        setStoreCity("")
 
     }
 
@@ -113,7 +134,7 @@ export default function CareerFormCard() {
                 <div className="flex flex-col lg:flex-row md:gap-14 lg:gap-16 xl:gap-24 2xl:gap-32">
                     <div className="lg:w-[640px] 2xl:w-[680px] lg:h-[650px] xl:h-[750px] max-lg:w-full order-1 sm:order-1">
                         <Image
-                            src="/images/careers/mobile-form.png"
+                            src="/images/careers/card-mob.jpg"
                             height={800}
                             width={604}
                             alt="formImage"
@@ -121,7 +142,7 @@ export default function CareerFormCard() {
                             unoptimized
                         />
                         <Image
-                            src="/images/careers/formImage.png"
+                            src="/images/careers/card-desk.jpg"
                             height={800}
                             width={604}
                             alt="formImage"
@@ -167,7 +188,39 @@ export default function CareerFormCard() {
                                     <span className="text-red-500">{errors.Last_Name.message}</span>
                                 )}
                             </div>
-                            <div className="mb-4">
+                            <div className="mb-2">
+                                <label className="block font-semibold" htmlFor="city">CITY:</label>
+                                <Controller control={control} name="city"
+                                    render={({ field }) => (
+                                        <>
+                                            <BasicSelectDrop list={city} {...field} value={storeCity} labelName="Select City" handleSelectChange={(val) => {
+                                                field.onChange(val)
+                                                setStoreCity(val)
+                                            }} />
+                                            {errors.city && (
+                                                <span className="text-red-500">{errors.city.message}</span>
+                                            )}
+                                        </>
+                                    )}
+                                />
+                            </div>
+                            <div className="mb-2">
+                                <label className="block font-semibold" htmlFor="areas">DEPARTMENT:</label>
+                                <Controller control={control} name="field_domain_of_interest"
+                                    render={({ field }) => (
+                                        <>
+                                            <BasicSelectDrop list={departmentOptions} {...field} value={storeInterest} labelName="Select Department" handleSelectChange={(val) => {
+                                                field.onChange(val)
+                                                setStoreInterest(val)
+                                            }} />
+                                            {errors.field_domain_of_interest && (
+                                                <span className="text-red-500">{errors.field_domain_of_interest.message}</span>
+                                            )}
+                                        </>
+                                    )}
+                                />
+                            </div>
+                            <div className="mb-2">
                                 <label className="block font-semibold" htmlFor="email">EMAIL:</label>
                                 <input
                                     type="text"
@@ -185,21 +238,33 @@ export default function CareerFormCard() {
                                     <span className="text-red-500">{errors.email.message}</span>
                                 )}
                             </div>
-                            <div className="mb-2">
-                                <label className="block font-semibold" htmlFor="areas">AREA OF INTEREST:</label>
-                                <Controller control={control} name="field_domain_of_interest"
-                                    render={({ field }) => (
+                            <div className="mb-4">
+                                <label className="block font-semibold" htmlFor="phone-number">PHONE:</label>
+                                <Controller
+                                    control={control}
+                                    name="phone"
+                                    defaultValue={phone}
+                                    rules={{
+                                        required: "Phone number is required",
+                                        validate: (value) => (phoneTouched && !isPhoneValid(value) || value === "") ? "Enter a valid phone number" : undefined,
+                                    }}
+                                    render={({ field: { onChange, value } }) => (
                                         <>
-                                            <BasicSelectDrop list={city} date={true} {...field} value={storeInterest} labelName="Select Area of Interest" handleSelectChange={(val) => {
-                                                field.onChange(val)
-                                                setStoreInterest(val)
-                                            }} />
-                                            {errors.field_domain_of_interest && (
-                                                <span className="text-red-500">{errors.field_domain_of_interest.message}</span>
-                                            )}
+                                            <PhoneInput
+                                                defaultCountry="in"
+                                                value={value || phone}
+                                                onFocus={() => setPhoneTouched(true)}
+                                                onChange={(phoneValue) => {
+                                                    setPhone(phoneValue); // Update state
+                                                    onChange(phoneValue); // Update Controller field value
+                                                }}
+                                                forceDialCode
+                                            />
+                                            {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
                                         </>
                                     )}
                                 />
+
                             </div>
                             <div className="mb-4">
                                 <label className="block font-semibold" htmlFor="resume">RESUME:</label>
@@ -225,7 +290,7 @@ export default function CareerFormCard() {
                                                 style={{ display: 'none' }} // Hide the default file input
                                                 id="resume-upload"
                                             />
-                                            <label htmlFor="resume-upload" style={uploadBoxStyle}>
+                                            <label htmlFor="resume-upload" className="!font-semibold !text-black" style={uploadBoxStyle}>
                                                 {fileName || "Upload"}
                                             </label>
                                             {errors.resume && (
@@ -236,20 +301,22 @@ export default function CareerFormCard() {
                                 />
                             </div>
                             <div className={`w-full pt-2 group ${isLoading && `cursor-not-allowed pointer-events-none`}`}>
-                                <button
+                                <LoadingButton
                                     type="submit"
+                                    loading={isLoading}
                                     disabled={isButtonDisabled || isLoading}
-                                    className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-fit transition-all  ease-in-out  ${isButtonDisabled
+                                    className={`border-black border  px-4 gap-2 flex items-center h-[36px] w-[112px] transition-all  ease-in-out  ${isButtonDisabled
                                         ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
                                         : " group-hover:border-primary group-hover:bg-primary group-hover:text-white cursor-pointer"
-                                        }`}>Submit
-                                    <div
+                                        }`}>
+                                      {!isLoading ? "Submit" : ""}
+                                      {!isLoading && <div
                                         className={`${!isButtonDisabled
-                                            ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
-                                            : "bg-[url('/images/home/disableArrow.svg')]"
-                                            }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
-                                    ></div>
-                                </button>
+                                          ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                                          : "bg-[url('/images/home/disableArrow.svg')]"
+                                          }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
+                                      ></div>}
+                                </LoadingButton>
                             </div>
                             {/* <p className="py-4 max-lg:py-6">
                                 or call us at{" "}
@@ -304,6 +371,15 @@ export default function CareerFormCard() {
                     </div>
                 </div>
             )}
+            <style jsx global>{`
+            .react-international-phone-input-container .react-international-phone-input{
+                background: white !important;
+            }
+            .react-international-phone-country-selector-button {
+              background: white !important;
+            }
+
+            `}</style>
         </div>
     );
 }

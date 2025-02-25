@@ -79,29 +79,27 @@ export default function LocationFormCard() {
             Mobile: data.phone,
         };
 
-        console.log(data, 'data');
+        fetchZohoData(ZohoFormData)
 
-        // fetchZohoData(ZohoFormData)
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                body: formData,
+            });
 
-        // try {
-        //     const response = await fetch("/api/contact", {
-        //         method: "POST",
-        //         body: formData,
-        //     });
-
-        //     if (!response.ok) {
-        //         throw new Error(`Invalid response: ${response.status}`);
-        //     }
-        //     reset();
-        //     router.push("/thank-you");
-        //     setStoreCity("");
-        //     setPhone("")
-        // } catch (error) {
-        //     console.log(error);
-        // } finally {
-        //     setIsLoading(false);
-        //     setIsButtonDisabled(false);
-        // }
+            if (!response.ok) {
+                throw new Error(`Invalid response: ${response.status}`);
+            }
+            reset();
+            router.push("/thank-you");
+            setStoreCity("");
+            setPhone("")
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setIsLoading(false);
+            setIsButtonDisabled(false);
+        }
     };
 
     const fetchZohoData = async (response) => {

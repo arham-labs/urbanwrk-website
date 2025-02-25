@@ -82,7 +82,7 @@ export default function LocationBanner({ data }) {
                         ))}
                     </Swiper>
                 </div>
-            ) : data.locationName === "Westport" ? (
+            ) : (data?.locationName === "Westport" || data?.locationName === "Peninsula Business Park") ? (
                 <div className="relative w-full">
                     <Swiper loop pagination={{ clickable: true }} navigation modules={[Pagination, Navigation]} className="mySwiper">
                         {items1.map((el, i) => (
