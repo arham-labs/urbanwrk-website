@@ -53,7 +53,7 @@ export default function Header() {
             subMenu: true,
             dropdown: [
                 { subLink: '/about-us/sustainability', subName: 'Sustainability' },
-                { subLink: '/about-us/urbanWrk-tech', subName: 'UrbanWrk Tech' }
+                { subLink: '/about-us/UrbanWrk-Tech', subName: 'UrbanWrk Tech' }
 
             ]
         },

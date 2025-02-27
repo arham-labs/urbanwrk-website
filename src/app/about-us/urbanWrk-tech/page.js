@@ -8,7 +8,7 @@ export const metadata = {
     title: "Smart Workspace Solutions & Facility Management | UrbanWrk Tech",
     description: "UrbanWrk Tech offers innovative workspace solutions focusing on employee wellness, community areas, and advanced IT infrastructure to create a brighter work environment.",
     alternates: {
-        canonical: "/urbanWrk-tech",
+        canonical: "/UrbanWrk-Tech",
     },
 };
 
@@ -16,7 +16,7 @@ export const metadata = {
 export default function page() {
     return (
         <div>
-            <BreadCrumbs subtitle="About Us" subpathname="/about-us" nestedpage={true} nestedpathname="/about-us/urbanWrk-tech" nestedtitle="UrbanWrk tech" />
+            <BreadCrumbs subtitle="About Us" subpathname="/about-us" nestedpage={true} nestedpathname="/about-us/UrbanWrk-Tech" nestedtitle="UrbanWrk Tech" />
             <TechnologyBanner />
             <DataDriven />
             <BetterSpace />
