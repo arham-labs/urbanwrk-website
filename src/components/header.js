@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
     const [toggle, setToggle] = useState(false);
-
     const [showDropdown, setShowDropdown] = useState(false);
     const [selectedHeading, setSelectedHeading] = useState('');
     const [mouseHover, setMouseHover] = useState(false)
