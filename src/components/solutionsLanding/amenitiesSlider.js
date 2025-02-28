@@ -43,7 +43,7 @@ export default function AmenitiesSlider({ data }) {
             <Slider {...settings} className={`${data?.locationInsideAmenities?.length > 8 ? "pl-[10%]" : "pl-[6%]"}`}>
 
                 {data?.locationInsideAmenities?.map((item, index) => (
-                    <div key={index} className="flex flex-wrap  items-center w-[30px] px-6  py-10">
+                    <div key={index} className="flex flex-wrap  items-center w-[30px] py-10">
                         <Image src={item?.img} alt={"img"} width={50} height={50}
                         />
                         <div className="py-6">{item?.title}</div>
