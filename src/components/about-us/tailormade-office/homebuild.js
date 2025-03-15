@@ -143,7 +143,7 @@ export default function HomeBuild({ data }) {
 
 
   const brandData = [
-    "Private, fully-customisable and branded office space ready within 45 days",
+    "Private, fully-customisable and branded office space ready within 30-45 days",
     "Designed by experts and WELL and LEED certified",
     "Flexible lease terms with utility costs included",
     "Complete administrative management including visitor management and payroll",

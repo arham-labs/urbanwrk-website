@@ -22,7 +22,7 @@ export const Jsons = {
       card1_titile3:
         "Starting from the blueprint, you get to collaborate with our team in bringing your vision come alive at every step. Build the office you always dreamt of that is aesthetically superior, sustainable and eco-conscious, where you, your team and your client would love to visit again and again.",
       brandData: [
-        "Private, fully customisable and branded office space ready within 45 days",
+        "Private, fully customisable and branded office space ready within 30-45 days",
         "Designed by experts and IGBC and LEED certified",
         "Flexible lease terms with utility costs included",
         "Complete administrative management including visitor management ",

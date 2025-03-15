@@ -23,7 +23,7 @@ const titles = [
 const activeData = [
     {
         id: 1,
-        desc: "Customised offices with exclusive amenities like breakaway spaces and conference rooms, created according to your brand’s blueprint. Walk into your sustainable office within 45 days.",
+        desc: "Customised offices with exclusive amenities like breakaway spaces and conference rooms, created according to your brand’s blueprint. Walk into your sustainable office within 30-45 days.",
         list: ["Your customised private office with bespoke design and furnishings", "Flexible lease starting from a 6-month contract", "Full floor occupancy with option to scale", "Sustainable and eco-conscious materials used across", "24/7 access to your workspace", "Priority booking of meeting rooms and access to exclusive events"],
         source: section5,
         btn: "Explore",
