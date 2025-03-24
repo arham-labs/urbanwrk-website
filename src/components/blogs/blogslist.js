@@ -32,7 +32,7 @@ export default function BlogsList({ data }) {
     const secondHalf = wholeData.slice(Math.floor(wholeData.length / 2));
 
     return (
-        <div className="py-16 lg:py-36 w-full px-6 max-w-[1920px] mx-auto lg:px-[100px] 2xl:px-40">
+        <div className="pt-16 lg:pt-36 w-full px-6 max-w-[1920px] mx-auto lg:px-[100px] 2xl:px-40">
             <div className="flex flex-col lg:flex-row gap-0 lg:gap-10 items-start">
                 <div className="w-full lg:w-[46.5%] lg:hidden flex items-end">
                     <BasicSelectDrop list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
