@@ -1,25 +1,36 @@
+'use client'
 import BlogDetails from '@/components/blogs/blogdetails'
 import BlogSolutionCard from '@/components/blogs/blogssolutionscard';
 import axiosInstance from '@/libs/axiosConfigAdmin';
-import { notFound } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-export const getBlogById = async (id) => {
-    try {
-        const response = await axiosInstance.get(`/api/blogs/${id}?populate=*`);
-        return response.data;
-    }
-    catch (error) {
-        return error.response.data.data;
-    }
-};
+export default function page({ params }) {
+    const [blogData, setBlogData] = useState(null)
 
-export default async function page({ params }) {
-    const data = await getBlogById(params?.id);
-    
+    useEffect(() => {
+        const GetData = async () => {
+            try {
+                const response = await axiosInstance.get(`/api/blogs/${params?.id}?populate=*`);
+                setBlogData(response.data.data);
+            } catch (error) {
+                console.error("Error fetching blog data:", error);
+            }
+        };
+
+        GetData();
+    }, [])
+
+
     return (
         <>
-        <BlogDetails blog={data} />
-        <BlogSolutionCard/>
+            {blogData ?
+                <>
+                    <BlogDetails blog={blogData} />
+                    <BlogSolutionCard />
+                </>
+                :
+                <span className="text-center block pt-32 pb-20 text-base lg:text-3xl">No Blogs Details Found</span>}
+
         </>
     )
 }
