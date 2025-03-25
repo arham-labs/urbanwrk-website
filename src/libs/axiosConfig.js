@@ -1,7 +1,6 @@
 import axios from "axios"
-import utils from "./utils"
 
-let baseUrl = "https://urbanwrk.com/cms/api"
+let baseUrl = "https://www.urbanwrk.com/cms/api"
 
 const Axios = axios.create({
 	baseURL: baseUrl,
@@ -14,7 +13,7 @@ const Axios = axios.create({
 
 Axios.interceptors.request.use(
 	(config) => {
-			config.headers.Authorization = "Bearer " + "905a475459648dea63a4f8bc346fbc2108ebc9da796015a008a536d0a10e10f94e620872a98146fcbbed8aa91cfb3c62b2c32dfcb839e5d6c752bab405d40f3163fffea2db2acbb713d517fda697bb152a01384c61b77f65cea9eb9dffdc7f75c90df7811f289d8499c8b7bd4dd7554ce95a4d1df92ba47638b5436dbc51a250"
+			config.headers.Authorization = "Bearer " + "443d92f6c43efff829010abf94a500289c261775bc001f05e1320f14ccb615cadcf1f477727da943bebdc7116d39e29f2ec840a7796fde64f02c906a2c34c80d7e3ca5fe6bfb37ca97242efd3cbdf41e100cf653303b3494d8573547df427d88c9d9fa3897aa0a42a3c9e480d803a3abd8db51080979bc53ccd8c56eecd08b7a443d92f6c43efff829010abf94a500289c261775bc001f05e1320f14ccb615cadcf1f477727da943bebdc7116d39e29f2ec840a7796fde64f02c906a2c34c80d7e3ca5fe6bfb37ca97242efd3cbdf41e100cf653303b3494d8573547df427d88c9d9fa3897aa0a42a3c9e480d803a3abd8db51080979bc53ccd8c56eecd08b7a"
 		
 		return config
 	},
@@ -41,7 +40,6 @@ Axios.interceptors.response.use(
 				)
 			) {
 				console.log("error", error.response.data.message)
-				utils.removeLocalStorageValue("token")
 				window.location.href = "/"
 				// store.dispatch(logout());
 			}
@@ -53,7 +51,6 @@ Axios.interceptors.response.use(
 				)
 			) {
 				console.log("error", error.response.data.message)
-				utils.removeLocalStorageValue("token")
 				window.location.href = "/"
 				// store.dispatch(logout());
 			}

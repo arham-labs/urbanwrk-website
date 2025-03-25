@@ -1,25 +1,40 @@
-import BlogDetails from '@/components/blogs/blogdetails'
+'use client';
+import BlogDetails from '@/components/blogs/blogdetails';
 import BlogSolutionCard from '@/components/blogs/blogssolutionscard';
 import axiosInstance from '@/libs/axiosConfigAdmin';
-import { notFound } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-export const getBlogById = async (id) => {
-    try {
-        const response = await axiosInstance.get(`/api/blogs/${id}?populate=*`);
-        return response.data;
-    }
-    catch (error) {
-        return error.response.data.data;
-    }
-};
+export default function Page({ params }) {
+    const [blogData, setBlogData] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-export default async function page({ params }) {
-    const data = await getBlogById(params?.id);
-    
+    useEffect(() => {
+        const getData = async () => {
+            try {
+                const response = await axiosInstance.get(`/api/blogs/${params?.id}?populate=*`);
+                setBlogData(response.data.data);
+            } catch (error) {
+                console.error("Error fetching blog data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getData();
+    }, [params?.id]);
+
+    if (loading) {
+        return <span className="text-center block pt-32 pb-20 text-base lg:text-3xl">Loading...</span>;
+    }
+
+    if (!blogData) {
+        return <span className="text-center block pt-32 pb-20 text-base lg:text-3xl">No Blog Details Found</span>;
+    }
+
     return (
         <>
-        <BlogDetails blog={data} />
-        <BlogSolutionCard/>
+            <BlogDetails blog={blogData} />
+            <BlogSolutionCard />
         </>
-    )
+    );
 }
