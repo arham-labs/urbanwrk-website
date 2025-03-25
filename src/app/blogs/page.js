@@ -10,40 +10,33 @@ export default function Page() {
   const [blogData, setBlogData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const pageSize = 10;
+  const [totalPages, setTotalPages] = useState(1);
+  const pageSize = 11;
 
   useEffect(() => {
-    async function GetData() {
+    async function fetchData() {
+      setLoading(true);
       try {
-        const response = await axiosInstance.get('/api/blogs?populate=*');
+        const response = await axiosInstance.get(`/api/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}`);
         setBlogData(response.data.data);
+        setTotalPages(response.data.meta.pagination.pageCount); // Total pages from API response
       } catch (error) {
         console.error("Error fetching blogs:", error);
       } finally {
         setLoading(false);
       }
     }
-    GetData();
-  }, []);
-
-  let data = [];
-  if (Array.isArray(blogData)) {
-    const sortedData = blogData?.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-    data = [...sortedData];
-  }
-
-  // Paginate data for client-side pagination
-  const totalPages = Math.ceil(data.length / pageSize);
-  const paginatedData = data.slice((page - 1) * pageSize, page * pageSize);
+    fetchData();
+  }, [page]); // Refetch data when page changes
 
   return (
     <>
       <HeroBanner />
       {loading ? (
         <span className="text-center block py-16 text-base lg:text-3xl">Loading...</span>
-      ) : paginatedData.length > 0 ? (
+      ) : blogData.length > 0 ? (
         <>
-          <BlogsList data={paginatedData} />
+          <BlogsList data={blogData} />
           <Stack spacing={2} className="flex justify-center py-8 items-center mb-10">
             <Pagination
               count={totalPages}
@@ -54,7 +47,7 @@ export default function Page() {
                 "& .MuiPaginationItem-page.Mui-selected": {
                   backgroundColor: "#C72030",
                   color: "white",
-                  ":hover": '#C72030'
+                  ":hover": { backgroundColor: "#C72030" }
                 },
                 "& .MuiPaginationItem-ellipsis": { color: "#C72030" },
               }}
