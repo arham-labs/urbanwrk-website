@@ -13,13 +13,13 @@ export default function Page() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const pageSize = 11;
-  const [isSort,setIsSort] = useState("desc")
+  const [dateVal, setDateVal] = useState('');
 
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
       try {
-        const response = await axiosInstance.get(`/api/blogs?sort=publishedAt:${isSort}&populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}`);
+        const response = await axiosInstance.get(`/api/blogs?sort=publishedAt:${dateVal.includes("Date (Oldest - Newest)") ? "asc" : "desc"}&populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}`);
         setBlogData(response.data.data);
         setTotalPages(response.data.meta.pagination.pageCount); // Total pages from API response
       } catch (error) {
@@ -29,7 +29,7 @@ export default function Page() {
       }
     }
     fetchData();
-  }, [page, isSort]); // Refetch data when page changes
+  }, [page, dateVal]); // Refetch data when page changes
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function Page() {
         <span className="text-center block py-16 text-base lg:text-3xl">Loading...</span>
       ) : blogData.length > 0 ? (
         <>
-          <BlogsList setIsSort={setIsSort} data={blogData} />
+          <BlogsList setDateVal={setDateVal} dateVal={dateVal} data={blogData} />
           <Stack spacing={2} className="flex justify-center py-8 items-center mb-10">
             <Pagination
               count={totalPages}
