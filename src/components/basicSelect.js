@@ -8,7 +8,6 @@ import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const BootstrapInput = styled(InputBase)(({ theme, selectedOption, fullWidth }) => ({
-  // {console.log(age)}
   "label + &": {
     marginTop: theme.spacing(3),
   },
