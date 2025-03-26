@@ -1,11 +1,13 @@
+import BreadCrumbs from '@/common/breadcrumbs';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import ReactMarkdown from "react-markdown";
 
-export default function BlogDetails({ blog }) {
+export default function BlogDetails({ blog, params }) {
 
     return (
         <>
+            <BreadCrumbs subtitle="Blogs" subpathname={`/blogs`} nestedpage={true} nestedpathname={`/blogs/${params?.id}`} nestedtitle={blog?.Title} />
             {blog?.Banner?.url && <>
                 <div className="h-screen hidden lg:block">
                     <Image
@@ -13,8 +15,9 @@ export default function BlogDetails({ blog }) {
                         alt="home banner"
                         className="h-full w-full object-cover"
                         priority
-                        layout="fill"
                         unoptimized
+                        height={1800}
+                        width={1000}
                     />
                 </div>
                 <div className="lg:hidden h-screen">
@@ -37,7 +40,7 @@ export default function BlogDetails({ blog }) {
                         Published on {dayjs(blog?.publishedAt).format('MMM DD, YYYY')}
                     </span>
                 </div>
-                <div className="flex justify-center items-center flex-col gap-10 pt-16 pb-16 px-6 md:px-12 md:pt-16 lg:px-[160px] lg:pt-[100px] lg:pb-[180px] md:pb-0">
+                <div className="flex justify-center items-center flex-col gap-10 pt-16 pb-16 px-6 md:px-12 md:pt-16 lg:px-[160px] lg:py-[100px] md:pb-0">
                     <ReactMarkdown>{blog?.Description}</ReactMarkdown>
                 </div>
             </div>

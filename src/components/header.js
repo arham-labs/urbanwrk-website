@@ -58,6 +58,12 @@ export default function Header() {
             ]
         },
         {
+            link: '/blogs',
+            title: "Blogs",
+            name: "Blogs",
+            subMenu: false,
+        },
+        {
             link: '/careers',
             title: "Careers",
             name: "Careers",
