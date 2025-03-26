@@ -1,10 +1,7 @@
 'use client'
 import Image from "next/image";
-import BasicSelectDrop from "../select";
-import React, { useState } from 'react';
-
-export default function BlogsList({ data,setIsSort }) {
-    const [blogData, setBlogData] = useState(data);
+import BlogBasicSelect from "../blogselect";
+export default function BlogsList({ data, setDateVal, dateVal }) {
 
     const getAspectRatioClass = (index, section) => {
         const adjustedIndex = index - 1;
@@ -14,20 +11,8 @@ export default function BlogsList({ data,setIsSort }) {
         return adjustedIndex % 2 === 0 ? "lg:aspect-[18/24]" : "lg:aspect-[17/10]";
     };
 
-    // sort=publishedAt:asc
-
-    const handleSortChange = (val) => {
-        if (val.includes("Date (Oldest - Newest)")) {
-            setIsSort("asc")
-        }
-        else{
-            setIsSort("desc")
-        }
-        
-    }
-
-    const mainBlog = blogData[0];
-    const wholeData = blogData.slice(1);
+    const mainBlog = data[0];
+    const wholeData = data.slice(1);
     const firstHalf = wholeData.slice(0, Math.floor(wholeData.length / 2));
     const secondHalf = wholeData.slice(Math.floor(wholeData.length / 2));
 
@@ -35,8 +20,8 @@ export default function BlogsList({ data,setIsSort }) {
         <div className="pt-16 lg:pt-36 w-full px-6 max-w-[1920px] mx-auto lg:px-[100px] 2xl:px-40">
             <div className="flex flex-col lg:flex-row gap-0 lg:gap-10 items-start">
                 <div className="w-full lg:w-[46.5%] lg:hidden flex items-end">
-                    <BasicSelectDrop list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
-                        handleSelectChange={handleSortChange} labelName="Date (Newest - Oldest)" date />
+                    <BlogBasicSelect list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
+                         setDateVal={setDateVal} dateVal={dateVal} labelName="Date (Newest - Oldest)" date />
                 </div>
                 <div className="w-full lg:w-1/2 mb-7 lg:mb-0">
                     <a href={`/blogs/${mainBlog?.documentId}`} className="flex flex-col gap-3">
@@ -47,12 +32,12 @@ export default function BlogsList({ data,setIsSort }) {
                 <div className="w-full lg:w-1/2 relative">
                     <div className="mb-3 hidden lg:flex justify-end w-full absolute -top-16 right-3">
                         <div className="w-full lg:w-[46.5%]">
-                            <BasicSelectDrop list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
-                                handleSelectChange={handleSortChange} labelName="Date (Newest - Oldest)" date />
+                            <BlogBasicSelect list={["Date (Oldest - Newest)", "Date (Newest - Oldest)"]}
+                            setDateVal={setDateVal} dateVal={dateVal} labelName="Date (Newest - Oldest)" date />
                         </div>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 h-auto lg:h-[800px] xl:h-[850px] lg:overflow-y-scroll scrollbar scrollbar-custom">
-                        {[secondHalf,firstHalf].map((section, secIndex) => (
+                        {[secondHalf, firstHalf].map((section, secIndex) => (
                             <div className="flex flex-col gap-7" key={secIndex}>
                                 {section.map((item, index) => (
                                     <a href={`/blogs/${item.documentId}`} className="flex flex-col gap-2" key={item.id}>
