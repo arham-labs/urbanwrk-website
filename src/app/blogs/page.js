@@ -5,6 +5,7 @@ import axiosInstance from "@/libs/axiosConfigAdmin";
 import { useEffect, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import BreadCrumbs from "@/common/breadcrumbs";
 
 export default function Page() {
   const [blogData, setBlogData] = useState([]);
@@ -29,14 +30,21 @@ export default function Page() {
     fetchData();
   }, [page]); // Refetch data when page changes
 
+  let data = [];
+  if (Array.isArray(blogData)) {
+    const sortedData = blogData?.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    data = [...sortedData];
+  }
+
   return (
     <>
+      <BreadCrumbs subtitle="Blogs" subpathname="/blogs" />
       <HeroBanner />
       {loading ? (
         <span className="text-center block py-16 text-base lg:text-3xl">Loading...</span>
-      ) : blogData.length > 0 ? (
+      ) : data.length > 0 ? (
         <>
-          <BlogsList data={blogData} />
+          <BlogsList data={data} />
           <Stack spacing={2} className="flex justify-center py-8 items-center mb-10">
             <Pagination
               count={totalPages}

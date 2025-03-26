@@ -1,4 +1,5 @@
 'use client';
+import BreadCrumbs from '@/common/breadcrumbs';
 import BlogDetails from '@/components/blogs/blogdetails';
 import BlogSolutionCard from '@/components/blogs/blogssolutionscard';
 import axiosInstance from '@/libs/axiosConfigAdmin';
@@ -33,8 +34,8 @@ export default function Page({ params }) {
 
     return (
         <>
-            <BlogDetails blog={blogData} />
-            <BlogSolutionCard />
+            <BlogDetails blog={blogData} params={params}/>
+            {/* <BlogSolutionCard /> */}
         </>
     );
 }
