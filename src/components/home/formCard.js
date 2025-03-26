@@ -139,8 +139,6 @@ export default function FormCard() {
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
 
-  // console.log("formValues: Home",formValues);
-
   return (
     <div className="bg-white">
       <div className="px-6 max-w-[1920px] py-20 max-lg:py-16 mx-auto 2xl:px-[160px] lg:px-[100px]">

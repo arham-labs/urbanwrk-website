@@ -7,8 +7,6 @@ import LocationFormCard from "@/common/locationformcard";
 
 export default function ExploreCard({ data }) {
     const params = useParams();
-    // console.log(params, 'params');
-
     return (
         <div className="py-16 flex flex-col lg:flex-row w-full gap-8 xl:gap-7 lg:py-20 px-6 max-w-[1920px] mx-auto 2xl:px-40 lg:px-[100px] ">
             <div className="w-full lg:w-[60%] 2xl:w-[55%]  flex flex-col gap-7">
