@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function HeroBanner() {
     return (
         <div className='bg-bglight1'>
-            <div className='flex flex-col lg:flex-row pt-16 lg:h-[100vh]'>
+            <div className='flex flex-col lg:flex-row lg:h-[100vh]'>
                 <div className='lg:hidden lg:w-1/2 max-lg:h-[419px] '>
                     <Image
                         src="/images/careers/mob-banner.jpg"

@@ -3,7 +3,7 @@ import Image from "next/image";
 import BasicSelectDrop from "../select";
 import React, { useState } from 'react';
 
-export default function BlogsList({ data }) {
+export default function BlogsList({ data,setIsSort }) {
     const [blogData, setBlogData] = useState(data);
 
     const getAspectRatioClass = (index, section) => {
@@ -14,16 +14,16 @@ export default function BlogsList({ data }) {
         return adjustedIndex % 2 === 0 ? "lg:aspect-[18/24]" : "lg:aspect-[17/10]";
     };
 
+    // sort=publishedAt:asc
+
     const handleSortChange = (val) => {
         if (val.includes("Date (Oldest - Newest)")) {
-            let newData = [...blogData].sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt));
-            setBlogData(newData)
-
+            setIsSort("asc")
         }
-        else {
-            let newData = [...blogData].sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-            setBlogData(newData)
+        else{
+            setIsSort("desc")
         }
+        
     }
 
     const mainBlog = blogData[0];
