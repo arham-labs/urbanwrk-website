@@ -118,10 +118,10 @@ export default function Footer() {
                 <Image src={Facebook} alt="facebook" />
               </Link>
             </div>
-            <div className="flex flex-col text-xs gap-5">
+            <div className="flex flex-col text-xs gap-5 relative z-50">
               <span>COPYRIGHT 2025</span>
-              <a href="/terms-of-use">TERMS OF USE</a>
-              <a href="/privacy-policy">PRIVACY POLICY </a>
+              <a className="block" href="/terms-of-use">TERMS OF USE</a>
+              <a className="block" href="/privacy-policy">PRIVACY POLICY </a>
             </div>
           </div>
         </div>
