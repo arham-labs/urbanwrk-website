@@ -31,8 +31,6 @@ export default function LocationFormCard() {
     const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
     const phoneUtil = PhoneNumberUtil.getInstance();
 
-    console.log("Client Email:", process.env.GOOGLE_CLIENT_EMAIL);
-
     useEffect(() => {
         setValue('phone', '')
     }, [])
