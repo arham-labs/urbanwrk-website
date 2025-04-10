@@ -240,7 +240,7 @@ export default function Page() {
                 </div>
                 <div className="mb-5 md:mb-10 text-sm md:text-base text-[#000] leading-[24px] md:!leading-[30px]">
                     <span className="text-base pb-2 uppercase font-semibold block text-primary md:text-lg">
-                        6. External Links on Website en you visit the Website.
+                        6. External Links on Website when you visit the Website.
                     </span>
                     <ol>
                         <li p className="pb-2 ml-2">

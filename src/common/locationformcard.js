@@ -91,7 +91,6 @@ export default function LocationFormCard() {
                 throw new Error(`Invalid response: ${response.status}`);
             }
             reset();
-            router.push("/thank-you");
             setStoreCity("");
             setPhone("")
         } catch (error) {
@@ -113,6 +112,7 @@ export default function LocationFormCard() {
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
         reset();
+        router.push("/thank-you");
         setStoreCity("")
         setPhone("")
 
