@@ -66,17 +66,6 @@ export default function HomeBuild({ data }) {
       }
     }
 
-    // formData.append("location", window.location.host + window.location.pathname);
-    formData.append("utm_source", utm_source);
-    formData.append("utm_medium", utm_medium);
-    formData.append("utm_campaign", utm_campaign);
-    formData.append("utm_adgroupname", utm_adgroupname);
-    formData.append("utm_term", utm_term);
-    formData.append("utm_device", utm_device);
-    formData.append("utm_adname", utm_adname);
-    formData.append("utm_matchtype", utm_matchtype);
-    formData.append("utm_network", utm_network);
-
     const getCookie = (name) => {
       const cookies = document.cookie.split("; ");
       for (let i = 0; i < cookies.length; i++) {
@@ -93,6 +82,18 @@ export default function HomeBuild({ data }) {
     const event_utm_campaign = getCookie("event_utm_campaign") || "";
     const event_utm_id = getCookie("event_utm_id") || "";
     const event_utm_term = getCookie("event_utm_term") || "";
+    const first_visit = getCookie("first_visit") || window.location.href;
+
+    // formData.append("location", window.location.host + window.location.pathname);
+    formData.append("utm_source", event_utm_source);
+    formData.append("utm_medium", event_utm_medium);
+    formData.append("utm_campaign", event_utm_campaign);
+    formData.append("utm_adgroupname", utm_adgroupname);
+    formData.append("utm_term", event_utm_term);
+    formData.append("utm_device", utm_device);
+    formData.append("utm_adname", utm_adname);
+    formData.append("utm_matchtype", utm_matchtype);
+    formData.append("utm_network", utm_network);
 
     let ZohoFormData = {
       Last_Name: data.name,
@@ -106,7 +107,9 @@ export default function HomeBuild({ data }) {
       utm_medium: event_utm_medium,
       utm_campaign: event_utm_campaign,
       utm_id: event_utm_id,
-      utm_term: event_utm_term
+      utm_term: event_utm_term,
+      Initial_Visit_URL: first_visit,
+      Final_Visit_URL: window.location.href
     };
 
     fetchZohoData(ZohoFormData);

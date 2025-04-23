@@ -88,6 +88,7 @@ export default function CareerFormCard() {
     const event_utm_campaign = getCookie("event_utm_campaign") || "";
     const event_utm_id = getCookie("event_utm_id") || "";
     const event_utm_term = getCookie("event_utm_term") || "";
+    const first_visit = getCookie("first_visit") || window.location.href;
 
     let ZohoFormData = {
       Last_Name: data.name,
@@ -102,7 +103,9 @@ export default function CareerFormCard() {
       utm_medium: event_utm_medium,
       utm_campaign: event_utm_campaign,
       utm_id: event_utm_id,
-      utm_term: event_utm_term
+      utm_term: event_utm_term,
+      Initial_Visit_URL: first_visit,
+      Final_Visit_URL: window.location.href
     };
 
     fetchZohoData(ZohoFormData);

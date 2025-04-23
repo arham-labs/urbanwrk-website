@@ -78,6 +78,10 @@ const UseUTMCookies = () => {
       }
     });
 
+    if(!getCookie("first_visit")){
+      setCookie("first_visit",window.location.href,7);
+    }
+
     // utmParameters.forEach((utmParam) => {
     //   const cookieName = "event_" + utmParam;
     //   const cookieValue = getCookie(cookieName);
