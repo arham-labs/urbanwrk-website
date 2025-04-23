@@ -67,7 +67,7 @@ const UseUTMCookies = () => {
     };
 
     // List of UTM parameters to capture
-    const utmParameters = ["utm_source", "utm_medium", "utm_campaign"];
+    const utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_id", "utm_term"];
     const prefix = "event_";
 
     // Iterate through UTM parameters and set cookies if present in the URL
@@ -78,13 +78,13 @@ const UseUTMCookies = () => {
       }
     });
 
-    utmParameters.forEach((utmParam) => {
-      const cookieName = "event_" + utmParam;
-      const cookieValue = getCookie(cookieName);
-      if (cookieValue) {
-        console.log(`Set value for ${utmParam}: ${cookieValue}`);
-      }
-    });
+    // utmParameters.forEach((utmParam) => {
+    //   const cookieName = "event_" + utmParam;
+    //   const cookieValue = getCookie(cookieName);
+    //   if (cookieValue) {
+    //     console.log(`Set value for ${utmParam}: ${cookieValue}`);
+    //   }
+    // });
 
     // Ensure gtag is defined before calling it
     if (window.gtag && getCookie("event_utm_source") && getCookie("event_utm_medium") && getCookie("event_utm_campaign")) {

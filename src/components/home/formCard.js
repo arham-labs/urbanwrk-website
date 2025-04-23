@@ -73,6 +73,24 @@ export default function FormCard() {
     formData.append("utm_network", utm_network)
 
 
+    const getCookie = (name) => {
+      const cookies = document.cookie.split("; ");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].split("=");
+        if (cookie[0] === name) {
+          return decodeURIComponent(cookie[1]);
+        }
+      }
+      return null;
+    };
+
+    const event_utm_source = getCookie("event_utm_source") || "";
+    const event_utm_medium = getCookie("event_utm_medium") || "";
+    const event_utm_campaign = getCookie("event_utm_campaign") || "";
+    const event_utm_id = getCookie("event_utm_id") || "";
+    const event_utm_term = getCookie("event_utm_term") || "";
+
+
     let ZohoFormData = {
       Last_Name: data.name,
       Email: data.email,
@@ -80,7 +98,12 @@ export default function FormCard() {
       "Lead_Status": "Not Contacted",
       Cities: data.city,
       Phone: data.phone,
-      Mobile: data.phone
+      Mobile: data.phone,
+      utm_source: event_utm_source,
+      utm_medium: event_utm_medium,
+      utm_campaign: event_utm_campaign,
+      utm_id: event_utm_id,
+      utm_term: event_utm_term
     }
 
     fetchZohoData(ZohoFormData)
@@ -94,14 +117,18 @@ export default function FormCard() {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
-      setShowPopup(true);
-      reset();
-      setPhone("")
-      setStoreCity("")
+      // setShowPopup(true);
+      // reset();
+      // setPhone("")
+      // setStoreCity("")
     } catch (error) {
       console.log(error);
     } finally {
+      setPhone("")
+      setStoreCity("")
+      reset();
       setIsLoading(false);
+      setShowPopup(true);
       setIsButtonDisabled(false);
     }
   };
@@ -116,10 +143,9 @@ export default function FormCard() {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    reset();
-    setStoreCity("")
-    setPhone("")
-
+    // reset();
+    // setStoreCity("")
+    // setPhone("")
   }
 
   const onClose = () => {
