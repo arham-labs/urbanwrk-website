@@ -22,16 +22,15 @@ export async function POST(request) {
         }
         // Parse the response
         const data = await response.json();
-
+        let resZoho;
         if (data.access_token) {
-            CreateLead(data, requestData)
+            resZoho = await CreateLead(data, requestData)
         }
-        return NextResponse.json({ message: data })
+        return NextResponse.json({ message: resZoho})
     } catch (error) {
         // Handle any errors
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
-
 }
 
 const CreateLead = async (authorizeData, bodyData) => {
@@ -43,9 +42,11 @@ const CreateLead = async (authorizeData, bodyData) => {
         },
         body: JSON.stringify({ "data": bodyData })
     })
+    const resJson = await response.json();
 
     if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
+    }else{
+        return resJson;
     }
-
 }
