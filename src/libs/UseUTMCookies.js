@@ -6,12 +6,6 @@ const UseUTMCookies = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=G-09VS8X6Q2L`;
-    document.head.appendChild(script);
-
-
     const scriptGTM = document.createElement("script");
     scriptGTM.innerHTML = `(function(w,d,s,l,i){
       w[l]=w[l]||[];
@@ -24,6 +18,11 @@ const UseUTMCookies = () => {
     })(window,document,'script','dataLayer','GTM-NLPRNL43');`;
 
     document.head.appendChild(scriptGTM);
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=G-09VS8X6Q2L`;
+    document.head.appendChild(script);
 
     script.onload = () => {
       window.dataLayer = window.dataLayer || [];

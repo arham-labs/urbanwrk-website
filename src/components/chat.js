@@ -119,6 +119,12 @@ export default function Chat() {
 
     fetchZohoData(ZohoFormData);
 
+    gtag("event", "urbanwrk_form_submit", {
+      event_category: "Form",
+      event_label: "submit",
+      value: data.phone,
+    });
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
