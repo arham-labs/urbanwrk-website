@@ -125,7 +125,7 @@ export default function FormCard() {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
-      setShowPopup(true);
+      //setShowPopup(true);
       reset();
       setPhone("")
       setStoreCity("")
@@ -148,9 +148,6 @@ export default function FormCard() {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    // reset();
-    // setStoreCity("")
-    // setPhone("")
   }
 
   const onClose = () => {

@@ -158,8 +158,6 @@ export default function Chat() {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    // reset();
-    // setStoreCity("");
   };
 
   const onClose = () => {

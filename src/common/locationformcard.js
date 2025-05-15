@@ -131,11 +131,12 @@ export default function LocationFormCard() {
       reset();
       setStoreCity("");
       setPhone("");
+      setIsButtonDisabled(false);
+      router.push("/thank-you");
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(false);
     }
   };
 
@@ -149,10 +150,6 @@ export default function LocationFormCard() {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    reset();
-    router.push("/thank-you");
-    setStoreCity("");
-    setPhone("");
   };
 
   const formValues = watch();

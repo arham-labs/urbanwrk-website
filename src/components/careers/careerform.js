@@ -157,11 +157,6 @@ export default function CareerFormCard() {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    reset();
-    setStoreInterest("");
-    setFileName("");
-    setPhone("");
-    setStoreCity("");
   };
 
   const onClose = () => {
