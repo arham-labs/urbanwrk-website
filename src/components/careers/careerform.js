@@ -55,10 +55,13 @@ export default function CareerFormCard() {
     }
   };
 
+  // form submit
   const onSubmit = async (data) => {
     setIsLoading(true);
     setIsButtonDisabled(true);
     const formData = new FormData();
+
+    
     for (const key in data) {
       if (data.hasOwnProperty(key)) {
         if (key === "resume") {
@@ -71,6 +74,8 @@ export default function CareerFormCard() {
         }
       }
     }
+
+    console.log("formData:",formData);
 
     const getCookie = (name) => {
       const cookies = document.cookie.split("; ");
@@ -108,7 +113,8 @@ export default function CareerFormCard() {
       Final_Visit_URL: window.location.href
     };
 
-    fetchZohoData(ZohoFormData);
+    console.log("ZohoFormData:",ZohoFormData)
+    // fetchZohoData(ZohoFormData);
 
     gtag("event", "urbanwrk_form_submit", {
       event_category: "Form",
