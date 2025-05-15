@@ -6,7 +6,7 @@ import Image from "next/image";
 import BasicSelectDrop from "../../../components/select";
 import { toast } from "react-toastify";
 import { LoadingButton } from "@mui/lab";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { PhoneNumberUtil } from "google-libphonenumber";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
@@ -40,6 +40,7 @@ export default function HomeBuild({ data }) {
   const [phone, setPhone] = useState("");
   const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
   const phoneUtil = PhoneNumberUtil.getInstance();
+  const router = useRouter();
 
   useEffect(() => {
     setValue("phone", "");
@@ -129,15 +130,16 @@ export default function HomeBuild({ data }) {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
-      setShowPopup(true);
+      //setShowPopup(true);
       reset();
       setStoreCity("");
       setPhone("");
+      setIsButtonDisabled(false);
+      router.push("/thank-you");
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(false);
     }
   };
 
@@ -151,9 +153,9 @@ export default function HomeBuild({ data }) {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    reset();
-    setStoreCity("");
-    setPhone("");
+    // reset();
+    // setStoreCity("");
+    // setPhone("");
   };
 
   const onClose = () => {

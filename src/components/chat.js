@@ -8,7 +8,7 @@ import { Checkbox } from "@mui/material";
 import BasicSelectDrop from "../components/select";
 import { toast } from "react-toastify";
 import { LoadingButton } from "@mui/lab";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { PhoneNumberUtil } from "google-libphonenumber";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
@@ -43,6 +43,7 @@ export default function Chat() {
   const [phone, setPhone] = useState("");
   const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
   const phoneUtil = PhoneNumberUtil.getInstance();
+  const router = useRouter();
 
   useEffect(() => {
     if (openchat) {
@@ -134,15 +135,16 @@ export default function Chat() {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
-      setShowPopup(true);
+      //setShowPopup(true);
       reset();
       setOpenChat(false);
       setStoreCity("");
+      setIsButtonDisabled(false);
+      router.push("/thank-you");
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(false);
     }
   };
 
@@ -156,8 +158,8 @@ export default function Chat() {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    reset();
-    setStoreCity("");
+    // reset();
+    // setStoreCity("");
   };
 
   const onClose = () => {

@@ -8,6 +8,7 @@ import { PhoneNumberUtil } from "google-libphonenumber";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { LoadingButton } from "@mui/lab";
+import { useRouter } from "next/navigation";
 
 export default function CareerFormCard() {
   const {
@@ -39,6 +40,7 @@ export default function CareerFormCard() {
   const [phone, setPhone] = useState("");
   const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
   const phoneUtil = PhoneNumberUtil.getInstance();
+  const router = useRouter();
 
   useEffect(() => {
     setValue("phone", "");
@@ -130,17 +132,18 @@ export default function CareerFormCard() {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
-      setShowPopup(true);
+      //setShowPopup(true);
       reset();
       setStoreInterest("");
       setPhone("");
       setStoreCity("");
       setFileName("");
+      setIsButtonDisabled(false);
+      router.push("/thank-you");
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(false);
     }
   };
 
