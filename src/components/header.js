@@ -25,7 +25,7 @@ export default function Header() {
             subMenu: true,
             dropdown: [
                 { subLink: '/solutions/tailormade-offices', subName: 'Tailormade Offices' },
-                { subLink: '/solutions/ready-to-work-in', subName: 'Ready-To-Work-In Offices' },
+                { subLink: '/solutions/urbanwrk-studios', subName: 'UrbanWrk Studios' },
                 { subLink: '/solutions/meeting-rooms', subName: 'Meeting Rooms' },
                 { subLink: '/solutions/virtual-offices', subName: 'Virtual Offices' },
                 { subLink: '/solutions/events-launches', subName: 'Events & Launches' },

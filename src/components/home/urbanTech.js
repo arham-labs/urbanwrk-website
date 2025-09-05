@@ -13,7 +13,7 @@ export default function UrbanTech() {
                         <>
                             <h2 className='font-normal text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl '>Integrate the</h2>
                             <h2 className='font-normal text-[32px] lg:text-[44px] xl:text-[56px] 2xl:text-[68px] pb-6 font-kepler leading-[1.2] '> next gen of work</h2>
-                            <p className='text-base pb-6 w-[80%]'>Step into the future of workspaces where technology empowers productivity. Harness our proprietary app and digital platforms that give you unprecedented insights and enhanced convenience.</p>
+                            <p className='text-base pb-6 w-[80%]'>Workspaces where tech, connectivity and productivity are built-in, not added on.</p>
                             <LinkButton href="/about-us/UrbanWrk-Tech" title="Explore" />
                         </>
                     </div>
@@ -28,7 +28,7 @@ export default function UrbanTech() {
                         <>
                             <h2 className='font-normal text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl '>Integrate the</h2>
                             <h2 className='font-normal  text-[32px] lg:text-[44px] xl:text-[56px] 2xl:text-[68px] pb-6 font-kepler leading-[1.2] '> next gen of work</h2>
-                            <p className='text-base pb-6 w-full'>Step into the future of workspaces where technology empowers productivity. Harness our proprietary app and digital platforms that give you unprecedented insights and enhanced convenience.</p>
+                            <p className='text-base pb-6 w-full'>Workspaces where tech, connectivity and productivity are built-in, not added on.</p>
                             <LinkButton href="/about-us/UrbanWrk-Tech" title="Explore" />
                         </>
                     </div>

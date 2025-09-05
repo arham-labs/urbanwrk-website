@@ -18,7 +18,7 @@ export default function page() {
         <div>
             <BreadCrumbs subtitle="About Us" subpathname="/about-us" nestedpage={true} nestedpathname="/about-us/UrbanWrk-Tech" nestedtitle="UrbanWrk Tech" />
             <TechnologyBanner />
-            <DataDriven />
+            {/* <DataDriven /> */}
             <BetterSpace />
             {/* <Testimonial /> */}
             <FormCard />

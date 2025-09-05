@@ -155,7 +155,7 @@ export default function FormCard() {
           </div>
           <div className="flex flex-col order-1 sm:order-2 max-lg:pt-[48px] justify-center">
             <h2 className="text-2xl font-normal lg:text-4xl lg:pb-2">
-              Always find your space
+              Find your space
             </h2>
             <h2 className="text-3xl font-normal lg:text-5xl font-kepler">
               in the city of your choice.
@@ -246,9 +246,9 @@ export default function FormCard() {
               </div>
               <div className="mb-4 max-lg:mt-6">
                 <p className="text-sm">
-                  By clicking the button below, you agree to our Website&nbsp;
+                  By submitting, you agree to our website’s.&nbsp;
                   <a href="/terms-of-use"><span className="underline">Terms of Service</span></a>
-                  &nbsp;and acknowledge our&nbsp;
+                  &nbsp;and&nbsp;
                   <a href="/privacy-policy"><span className="underline">Privacy Policy</span></a>
                 </p>
               </div>

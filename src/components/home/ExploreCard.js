@@ -32,16 +32,15 @@ export default function ExploreCard() {
         <LookingImageSlider />
         <div className="absolute  top-14   md:top-20 inset-x-0 flex justify-center items-center font-medium text-6xl max-md:text-[28px] max-md:tracking-[-0.56px]">
           <div>
-            What are you{" "}
-            <span className="font-kepler max-md:text-[28px] text-6xl ">
-              looking for?
+            Future-ready offices.&nbsp;
+            <span className="font-kepler max-md:text-[28px] text-6xl">
+              Now ready for you.
             </span>
           </div>
         </div>
         <div className="absolute md:bottom-40  bottom-80    inset-x-0 flex justify-center items-center font-medium text-[65px]">
           <p className="text-[30px] md:py-20 text-white md:w-[753px]  text-center max-md:text-[20px] max-md:mx-4 max-md:leading-[30px]">
-            Leave your mark with office spaces in cities shaping the
-            economy&apos;s next chapter.
+            Discover workspaces in cities driving India&apos;s future, built for leaders who shape it.
           </p>
         </div>
 

@@ -38,8 +38,8 @@ export default function Footer() {
                     title: "Tailormade Offices",
                   },
                   {
-                    link: "/solutions/ready-to-work-in",
-                    title: "Ready-To-Work-In Offices",
+                    link: "/solutions/urbanwrk-studios",
+                    title: "UrbanWrk Studios",
                   },
                   {
                     link: "/solutions/virtual-offices",
