@@ -8,14 +8,22 @@ import { Checkbox } from "@mui/material";
 import BasicSelectDrop from "../components/select";
 import { toast } from "react-toastify";
 import { LoadingButton } from "@mui/lab";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { PhoneNumberUtil } from "google-libphonenumber";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
 export default function Chat() {
   const [openchat, setOpenChat] = useState(false);
-  const { register, handleSubmit, watch, formState: { errors }, reset, setValue, control } = useForm({ mode: "onChange" });
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+    setValue,
+    control,
+  } = useForm({ mode: "onChange" });
   const [isLoading, setIsLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -26,15 +34,16 @@ export default function Chat() {
   const utm_source = searchParams.get("utm_source");
   const utm_medium = searchParams.get("utm_medium");
   const utm_campaign = searchParams.get("utm_campaign");
-  const utm_adgroupname = searchParams.get('utm_adgroupname')
-  const utm_term = searchParams.get('utm_term')
-  const utm_device = searchParams.get('utm_device')
-  const utm_adname = searchParams.get('utm_adname')
-  const utm_matchtype = searchParams.get('utm_matchtype')
-  const utm_network = searchParams.get('utm_network')
+  const utm_adgroupname = searchParams.get("utm_adgroupname");
+  const utm_term = searchParams.get("utm_term");
+  const utm_device = searchParams.get("utm_device");
+  const utm_adname = searchParams.get("utm_adname");
+  const utm_matchtype = searchParams.get("utm_matchtype");
+  const utm_network = searchParams.get("utm_network");
   const [phone, setPhone] = useState("");
   const [phoneTouched, setPhoneTouched] = useState(false); // Track if phone input has been touched
   const phoneUtil = PhoneNumberUtil.getInstance();
+  const router = useRouter();
 
   useEffect(() => {
     if (openchat) {
@@ -52,10 +61,9 @@ export default function Chat() {
     }
   };
 
-
   const onSubmit = async (data) => {
     setIsLoading(true);
-    setIsButtonDisabled(true)
+    setIsButtonDisabled(true);
 
     const formData = new FormData();
     for (const key in data) {
@@ -64,32 +72,61 @@ export default function Chat() {
       }
     }
 
-    // formData.append("location", window.location.host + window.location.pathname);
-    formData.append("utm_source", utm_source)
-    formData.append("utm_medium", utm_medium)
-    formData.append("utm_campaign", utm_campaign)
-    formData.append("utm_adgroupname", utm_adgroupname)
-    formData.append("utm_term", utm_term)
-    formData.append("utm_device", utm_device)
-    formData.append("utm_adname", utm_adname)
-    formData.append("utm_matchtype", utm_matchtype)
-    formData.append("utm_network", utm_network)
+    const getCookie = (name) => {
+      const cookies = document.cookie.split("; ");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].split("=");
+        if (cookie[0] === name) {
+          return decodeURIComponent(cookie[1]);
+        }
+      }
+      return null;
+    };
 
+    const event_utm_source = getCookie("event_utm_source") || "";
+    const event_utm_medium = getCookie("event_utm_medium") || "";
+    const event_utm_campaign = getCookie("event_utm_campaign") || "";
+    const event_utm_id = getCookie("event_utm_id") || "";
+    const event_utm_term = getCookie("event_utm_term") || "";
+    const first_visit = getCookie("first_visit") || window.location.href;
+
+    // formData.append("location", window.location.host + window.location.pathname);
+    formData.append("utm_source", event_utm_source);
+    formData.append("utm_medium", event_utm_medium);
+    formData.append("utm_campaign", event_utm_campaign);
+    formData.append("utm_adgroupname", utm_adgroupname);
+    formData.append("utm_term", event_utm_term);
+    formData.append("utm_device", utm_device);
+    formData.append("utm_adname", utm_adname);
+    formData.append("utm_matchtype", utm_matchtype);
+    formData.append("utm_network", utm_network);
 
     let ZohoFormData = {
       Last_Name: data.name,
       Email: data.email,
-      "Lead_Source": "Website",
-      "Lead_Status": "Not Contacted",
+      Lead_Source: "Website",
+      Lead_Status: "Not Contacted",
       Cities: data.city,
       Phone: data.phone,
-      Mobile: data.phone
-    }
+      Mobile: data.phone,
+      utm_source: event_utm_source,
+      utm_medium: event_utm_medium,
+      utm_campaign: event_utm_campaign,
+      utm_id: event_utm_id,
+      utm_term: event_utm_term,
+      Initial_Visit_URL: first_visit,
+      Final_Visit_URL: window.location.href
+    };
 
-    fetchZohoData(ZohoFormData)
+    fetchZohoData(ZohoFormData);
+
+    gtag("event", "urbanwrk_form_submit", {
+      event_category: "Form",
+      event_label: "submit",
+      value: data.phone,
+    });
 
     try {
-
       const response = await fetch("/api/contact", {
         method: "POST",
         body: formData,
@@ -98,32 +135,30 @@ export default function Chat() {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
-      setShowPopup(true);
+      //setShowPopup(true);
       reset();
-      setOpenChat(false)
-      setStoreCity("")
+      setOpenChat(false);
+      setStoreCity("");
+      setIsButtonDisabled(false);
+      router.push("/thank-you");
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(false);
     }
   };
 
   const fetchZohoData = async (response) => {
-    let data = [{ ...response }]
+    let data = [{ ...response }];
     const res = await fetch("/api/zoho", {
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
+      method: "POST",
+      body: JSON.stringify(data),
+    });
     if (!res.ok) {
       toast.error("Something went wrong");
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    reset();
-    setStoreCity("")
-
-  }
+  };
 
   const onClose = () => {
     setShowPopup(false);
@@ -132,12 +167,9 @@ export default function Chat() {
 
   const formValues = watch();
   useEffect(() => {
-
     const hasErrors = Object.keys(errors).length > 0;
 
-    const isFormFilled = Object.values(formValues).every((value) =>
-      value
-    );
+    const isFormFilled = Object.values(formValues).every((value) => value);
     setIsButtonDisabled(hasErrors || !isFormFilled);
   }, [formValues, errors]);
   return (
@@ -146,9 +178,8 @@ export default function Chat() {
         <div
           className="cursor-pointer hover-card"
           onClick={() => {
-
-            setOpenChat(!openchat)
-            setIsButtonDisabled((prev) => !prev)
+            setOpenChat(!openchat);
+            setIsButtonDisabled((prev) => !prev);
           }}
         >
           <Image
@@ -160,16 +191,19 @@ export default function Chat() {
             loading="eager"
           />
         </div>
-        <div className={`bg-primary fixed hidden ${openchat ? "hidden lg:hidden" : "block"} card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}>
+        <div
+          className={`bg-primary fixed hidden ${
+            openchat ? "hidden lg:hidden" : "block"
+          } card lg:block chat-shadow transition-opacity opacity-0 bottom-[135px] right-20 p-[7.917px] rounded-[7.917px] w-fit text-xl text-[#ffffff]`}
+        >
           <span>How can we help?</span>
         </div>
         {openchat && (
           <div
             className="fixed w-full h-full left-0 top-0 bg-transparent -z-10"
             onClick={() => {
-              setOpenChat(false)
+              setOpenChat(false);
               // setValue('phone',"")
-
             }}
           ></div>
         )}
@@ -179,11 +213,17 @@ export default function Chat() {
           <div className="flex flex-col order-1 sm:order-2  justify-center bg-white p-6 custom-shadow-top shadow-lg ">
             <p className="pb-0 text-base max-lg:text-[16px] max-lg:pb-2">
               Fill in the details below or call us at{" "}
-              <Link href="tel:+91 8399959996" className="font-semibold lg:hidden ">+91 8399959996</Link>
+              <Link
+                href="tel:+91 8399959996"
+                className="font-semibold lg:hidden "
+              >
+                +91 8399959996
+              </Link>
             </p>
             <p className="pb-2 text-base max-lg:hidden">
-              <Link href="tel:+91 8399959996" className="font-semibold ">+91 8399959996</Link>
-
+              <Link href="tel:+91 8399959996" className="font-semibold ">
+                +91 8399959996
+              </Link>
             </p>
 
             <form
@@ -191,7 +231,12 @@ export default function Chat() {
               className="flex flex-col md:w-full lg:w-[400px] lg:mt-0 max-lg:mt-4"
             >
               <div className="max-lg:mb-2 lg:mb-2">
-                <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="name">NAME:</label>
+                <label
+                  className="block font-semibold  lg:text-sm max-lg:text-sm"
+                  htmlFor="name"
+                >
+                  NAME:
+                </label>
                 <input
                   id="name"
                   type="text"
@@ -204,7 +249,12 @@ export default function Chat() {
                 )}
               </div>
               <div className="max-lg:mb-2 lg:mb-2">
-                <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="email">EMAIL:</label>
+                <label
+                  className="block font-semibold  lg:text-sm max-lg:text-sm"
+                  htmlFor="email"
+                >
+                  EMAIL:
+                </label>
                 <input
                   type="text"
                   id="email"
@@ -223,14 +273,22 @@ export default function Chat() {
                 )}
               </div>
               <div className="max-lg:mb-2 lg:mb-2">
-                <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="phone-number">PHONE:</label>
+                <label
+                  className="block font-semibold  lg:text-sm max-lg:text-sm"
+                  htmlFor="phone-number"
+                >
+                  PHONE:
+                </label>
                 <Controller
                   control={control}
                   name="phone"
                   defaultValue={phone}
                   rules={{
                     required: "Phone number is required",
-                    validate: (value) => (phoneTouched && !isPhoneValid(value) || value === "") ? "Enter a valid phone number" : undefined,
+                    validate: (value) =>
+                      (phoneTouched && !isPhoneValid(value)) || value === ""
+                        ? "Enter a valid phone number"
+                        : undefined,
                   }}
                   render={({ field: { onChange, value } }) => (
                     <>
@@ -244,34 +302,63 @@ export default function Chat() {
                         }}
                         forceDialCode
                       />
-                      {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
+                      {errors.phone && (
+                        <span className="text-red-500">
+                          {errors.phone.message}
+                        </span>
+                      )}
                     </>
                   )}
                 />
               </div>
               <div className="max-lg:mb-0 lg:mb-2">
-                <label className="block font-semibold  lg:text-sm max-lg:text-sm" htmlFor="city">CITY:</label>
-                <Controller control={control} name="city"
+                <label
+                  className="block font-semibold  lg:text-sm max-lg:text-sm"
+                  htmlFor="city"
+                >
+                  CITY:
+                </label>
+                <Controller
+                  control={control}
+                  name="city"
                   render={({ field }) => (
                     <>
-                      <BasicSelectDrop list={city} {...field} value={storeCity} labelName="Select City" handleSelectChange={(val) => {
-                        field.onChange(val)
-                        setStoreCity(val)
-                      }} />
+                      <BasicSelectDrop
+                        list={city}
+                        {...field}
+                        value={storeCity}
+                        labelName="Select City"
+                        handleSelectChange={(val) => {
+                          field.onChange(val);
+                          setStoreCity(val);
+                        }}
+                      />
                       {errors.city && (
-                        <span className="text-red-500">{errors.city.message}</span>
+                        <span className="text-red-500">
+                          {errors.city.message}
+                        </span>
                       )}
                     </>
                   )}
                 />
               </div>
               <div className="max-lg:mb-2 lg:mb-4 flex align-baseline justify-center max-lg:pb-3 ">
-                <input type="checkbox" id="news"
-                  {...register("newsUpdates")} className="lg:!w-6  max-lg:!w-9 max-lg:mb-5" htmlFor="news" />
-                <label className="ml-2 text-sm mt-4">You agree to our Website&nbsp;
-                  <a href="/terms-of-use"><span className="underline">Terms of Service</span></a>
+                <input
+                  type="checkbox"
+                  id="news"
+                  {...register("newsUpdates")}
+                  className="lg:!w-6  max-lg:!w-9 max-lg:mb-5"
+                  htmlFor="news"
+                />
+                <label className="ml-2 text-sm mt-4">
+                  You agree to our Website&nbsp;
+                  <a href="/terms-of-use">
+                    <span className="underline">Terms of Service</span>
+                  </a>
                   &nbsp;and acknowledge our&nbsp;
-                  <a href="/privacy-policy"><span className="underline">Privacy Policy</span></a>
+                  <a href="/privacy-policy">
+                    <span className="underline">Privacy Policy</span>
+                  </a>
                 </label>
               </div>
 
@@ -280,17 +367,22 @@ export default function Chat() {
                   type="submit"
                   disabled={isButtonDisabled || isLoading}
                   loading={isLoading}
-                  className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${isButtonDisabled
-                    ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
-                    : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
-                    }`}>
+                  className={`border-black border w-full justify-center    max-lg:px-0 px-4 gap-2 flex items-center h-[36px] transition-all  ease-in-out  ${
+                    isButtonDisabled
+                      ? "bg-transparent !text-[#999999] !border-[#999999] cursor-not-allowed"
+                      : " group-hover:border-none group-hover:bg-primary group-hover:text-white cursor-pointer"
+                  }`}
+                >
                   {!isLoading ? "Submit" : ""}
-                  {!isLoading && <div
-                    className={`${!isButtonDisabled
-                      ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
-                      : "bg-[url('/images/home/disableArrow.svg')]"
+                  {!isLoading && (
+                    <div
+                      className={`${
+                        !isButtonDisabled
+                          ? "bg-[url('/images/home/btnArrow.svg')] group-hover:bg-[url('/images/home/lightArrow.svg')]"
+                          : "bg-[url('/images/home/disableArrow.svg')]"
                       }   bg-contain w-[14px] h-[14px] bg-no-repeat `}
-                  ></div>}
+                    ></div>
+                  )}
                 </LoadingButton>
               </div>
             </form>

@@ -5,10 +5,10 @@ export async function POST(request) {
     const requestData = await request.json();
 
     let params = {
-        client_id: "1000.1N0RVMXL84LYXWE8EZA49EFJB1DGHA",
-        client_secret: "56d6426750da97a02ab47c07af12abe854b4bfe517",
+        client_id: process.env.ZOHO_CLIENT_ID,
+        client_secret: process.env.ZOHO_CLIENT_SECRET,
         grant_type: "refresh_token",
-        refresh_token: "1000.b50e1463096ffeb673a0b35d7c432b6b.474c29aa97f0d4cf2c0fc5ea1dacc6e0"
+        refresh_token: process.env.ZOHO_REFRESH_TOKEN
     }
 
     try {
@@ -22,16 +22,16 @@ export async function POST(request) {
         }
         // Parse the response
         const data = await response.json();
-
+        let resZoho;
+        console.log(data);
         if (data.access_token) {
-            CreateLead(data, requestData)
+            resZoho = await CreateLead(data, requestData)
         }
-        return NextResponse.json({ message: data })
+        return NextResponse.json({ message: resZoho})
     } catch (error) {
         // Handle any errors
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
-
 }
 
 const CreateLead = async (authorizeData, bodyData) => {
@@ -43,9 +43,13 @@ const CreateLead = async (authorizeData, bodyData) => {
         },
         body: JSON.stringify({ "data": bodyData })
     })
+    const resJson = await response.json();
+
+    console.log(resJson);
 
     if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
+    }else{
+        return resJson;
     }
-
 }

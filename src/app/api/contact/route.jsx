@@ -37,9 +37,9 @@ const auth = new google.auth.GoogleAuth({
 
 export async function POST(request) {
 
-    const username = "hello@urbanwrk.com";
-    const password = "URB@2024";
-    const myEmail = "hello@urbanwrk.com";
+    const username = process.env.SMTP_MAIL_ID;
+    const password = process.env.SMTP_PASSWORD;
+    const myEmail = process.env.SMTP_MAIL_ID;
 
     try {
         const formData = await request.formData();

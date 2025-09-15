@@ -2,9 +2,9 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
-    const username = "hello@urbanwrk.com";
-    const password = "URB@2024";
-    const myEmail = "hr@urbanwrk.com";
+    const username = process.env.SMTP_MAIL_ID;
+    const password = process.env.SMTP_PASSWORD;
+    const myEmail = process.env.HR_EMAIL_ID;
 
     try {
         const formData = await request.formData();
@@ -19,6 +19,7 @@ export async function POST(request) {
         const transporter = nodemailer.createTransport({
             host: "smtp-mail.outlook.com",
             port: 587,
+            secure: false,
             tls: {
                 ciphers: "SSLv3",
                 rejectUnauthorized: false,
@@ -44,13 +45,14 @@ export async function POST(request) {
             `,
         };
 
+        
         if (resume) {
             // Convert the resume to a buffer
             const resumeBuffer = Buffer.from(await resume.arrayBuffer());
             
             // Get the original file name from formData
             const resumeFilename = resume.name;
-
+            
             // Add resume as an attachment
             mailOptions.attachments = [
                 {
