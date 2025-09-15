@@ -13,7 +13,7 @@ import { useParams } from "next/navigation";
 
 const titles = [
     { id: 1, title: "TAILORMADE OFFICES", href: "/solutions/tailormade-offices" },
-    { id: 2, title: "READY-TO-WORK-IN OFFICES", href: "/solutions/ready-to-work-in" },
+    { id: 2, title: "UrbanWrk Studios", href: "/solutions/urbanwrk-studios" },
     { id: 3, title: "MEETING ROOMS", href: "/solutions/meeting-rooms" },
     { id: 4, title: "VIRTUAL OFFICES", href: "/solutions/virtual-offices" },
     { id: 5, title: "EVENTS & LAUNCHES", href: "/solutions/events-launches" },
@@ -36,8 +36,8 @@ const activeData = [
         list: ["Ready office space that can take on your brand identity", "Flexible lease starting from a 6-month contract", "Optimised to fit current team with option to scale up", "IGBC & LEED Certified, sustainable offices", "24/7 access to your workspace"],
         source: section1,
         btn: "Explore",
-        href: "/solutions/ready-to-work-in",
-        bannerAlt: "ready-to-work-in office",
+        href: "/solutions/urbanwrk-studios",
+        bannerAlt: "UrbanWrk Studios",
     },
     {
         id: 3,

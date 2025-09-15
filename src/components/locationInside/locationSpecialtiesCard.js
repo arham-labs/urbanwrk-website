@@ -3,11 +3,11 @@ import React from 'react'
 
 export default function LocationSpecialtiesCard({ data }) {
     const Info = [
-        { title: "Your modern, tailormade office", desc: "From one desk to a dedicated floor, you can create your space the way you want" },
-        { title: "With deluxe hospitality", desc: "Enjoy on-site support team, coffee bar and a fully stocked pantry." },
-        { title: "Made with your blueprint", desc: "Create a home for your brand based on your vision with our design and interiors solution" },
-        { title: "Uplifting spaces", desc: "Work in a visually stunning environment where form meets function" },
-        { title: "Feed your curiosity", desc: "Attend exclusive member events and panel talks or sign up for courses and workshops from India’s finest business minds" },
+        { title: "Your modern, tailored workspace", desc: "From one desk to a dedicated floor, scale your office space exactly how you envision it." },
+        { title: "Premium on-site services", desc: "Dedicated support team, specialty coffee bar, and fully stocked pantry keep you focused" },
+        { title: "Custom office design", desc: "Professional interiors and branding that reflect your company's unique identity" },
+        { title: "Beautifully designed workspaces", desc: "Stunning environments where great design meets seamless functionality" },
+        { title: "Exclusive member community", desc: "Access curated events, expert panels, and workshops with India's leading business minds" },
 
     ]
     return (

@@ -19,8 +19,8 @@ export default function page() {
 
     const data = {
         locationInsideAmenities: [
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Conference rooms " },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24x7 Access" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms " },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN2.svg", title: "Enterprise grade IT set-up " },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "IT room" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN3.svg", title: "Seamless connectivity" },

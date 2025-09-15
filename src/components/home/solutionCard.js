@@ -15,7 +15,7 @@ export default function SolutionCard({ item }) {
               <div className='text-[22px] max-md:text-lg  leading-[1.2] '>{item.title1}</div>
               <div className='text-[22px] max-md:text-lg leading-[1.2]'>{item.title2}</div>
             </div>
-            <LinkButton href={item?.link} title="Explore" />
+            {item.link && <LinkButton href={item?.link} title="Explore" />}
           </div>
           <div className='px-5'>
             <div className='border-black border'></div>

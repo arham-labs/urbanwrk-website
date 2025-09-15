@@ -14,6 +14,7 @@ export default function Restaurants({ data }) {
                         <p className='text-[#7D7C7C] text-xs font-semibold'>CONNECTIVITY</p>
                         <p className='pt-4'>{data.location1}</p>
                         <p>{data.location2}</p>
+                        <p>{data.location3}</p>
                     </div>
                     <div className='flex flex-wrap max-md:w-[300px] md:w-full gap-4'>
                         {data?.connectivityAmenities?.map((item, i) => <div className='flex mt-7  items-center justify-center ' key={i}>
