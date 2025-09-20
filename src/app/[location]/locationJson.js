@@ -61,7 +61,7 @@ export const Jsons = {
           BannerData: [{ deskimage: '/images/locationInside/pcp-desk-1.png', mobimage: '/images/locationInside/pcp-mob-image-1.png' }, { deskimage: '/images/locationInside/pcp-desk-2.png', mobimage: '/images/locationInside/pcp-mob-image-2.png' }, { deskimage: '/images/locationInside/pcp-desk-3.png', mobimage: '/images/locationInside/pcp-mob-image-3.png' }, { deskimage: '/images/locationInside/pcp-desk-4.png', mobimage: '/images/locationInside/pcp-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Member lounge & café" },
-            { source: Conference, title: "Tech-enabled Tech-enabled conference rooms" },
+            { source: Conference, title: "Tech-enabled conference rooms" },
             { source: Access, title: "24/7 secure access" },
             { source: EventSpace, title: "Event spaces" }
           ],
@@ -70,7 +70,7 @@ export const Jsons = {
           amentiesBannerAlt: "tailor-made office in Lower Parel",
           connectivityAmenities: [
             { img: Lounge, title: "Member lounge & café" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
@@ -79,7 +79,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Housekeeping & concierge services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "Server / IT rooms" },
@@ -109,7 +109,7 @@ export const Jsons = {
           BannerData: [{ deskimage: '/images/locationInside/pcp-desk-1.png', mobimage: '/images/locationInside/pcp-mob-image-1.png' }, { deskimage: '/images/locationInside/pcp-desk-2.png', mobimage: '/images/locationInside/pcp-mob-image-2.png' }, { deskimage: '/images/locationInside/pcp-desk-3.png', mobimage: '/images/locationInside/pcp-mob-image-3.png' }, { deskimage: '/images/locationInside/pcp-desk-4.png', mobimage: '/images/locationInside/pcp-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Member lounge & café" },
-            { source: Conference, title: "Tech-enabled Tech-enabled conference rooms" },
+            { source: Conference, title: "Tech-enabled conference rooms" },
             { source: Access, title: "24/7 secure access" },
             { source: EventSpace, title: "Event spaces" }
           ],
@@ -118,7 +118,7 @@ export const Jsons = {
           amentiesBannerAlt: "tailor-made office in Lower Parel",
           connectivityAmenities: [
             { img: Lounge, title: "Member lounge & café" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
@@ -127,7 +127,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Housekeeping & concierge services" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN7.svg", title: "Server / IT rooms" },
@@ -189,7 +189,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: Cafe, title: "Cafeteria area" },
             { img: Phonebooth, title: "Phonebooth" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
@@ -241,7 +241,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: GameRoom, title: "Game room" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: Gym, title: "Gym" },
             { img: Cafe, title: "Cafeteria area" },
@@ -294,7 +294,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: GameRoom, title: "Game room" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: Gym, title: "Gym" },
             { img: Cafe, title: "Cafeteria area" },
@@ -348,7 +348,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: Cafe, title: "Cafeteria area" },
             { img: Phonebooth, title: "Phonebooth" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
@@ -400,7 +400,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: Cafe, title: "Cafeteria area" },
             { img: Phonebooth, title: "Phonebooth" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
@@ -454,7 +454,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: GameRoom, title: "Game room" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: Gym, title: "Gym" },
             { img: Cafe, title: "Cafeteria area" },
@@ -511,7 +511,7 @@ export const Jsons = {
         //   locationInsideAmenities: [
         //     { img: Lounge, title: "Member lounge & café" },
         //     { img: GameRoom, title: "Game room" },
-        //     { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+        //     { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
         //     { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
         //     { img: Gym, title: "Gym" },
         //     { img: Cafe, title: "Cafeteria area" },
@@ -558,7 +558,7 @@ export const Jsons = {
           BannerData: [{ deskimage: '/images/locationInside/techno-desk-1.png', mobimage: '/images/locationInside/techno-mob-image-1.png' }, { deskimage: '/images/locationInside/techno-desk-2.png', mobimage: '/images/locationInside/techno-mob-image-2.png' }, { deskimage: '/images/locationInside/techno-desk-3.png', mobimage: '/images/locationInside/techno-mob-image-3.png' }, { deskimage: '/images/locationInside/techno-desk-4.png', mobimage: '/images/locationInside/techno-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Member lounge & café" },
-            { source: Conference, title: "Tech-enabled Tech-enabled conference rooms" },
+            { source: Conference, title: "Tech-enabled conference rooms" },
             { source: Cafe, title: "Live kitchen" },
             { source: Phonebooth, title: "Phonebooth" }
           ],
@@ -576,7 +576,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: GameRoom, title: "Game room" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "24/7 secure access" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN6.svg", title: "Live kitchen" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
@@ -603,7 +603,7 @@ export const Jsons = {
           id: 1,
           cardAlt: "UrbanWrk Raheja Mindspace",
           metaTitle: "Customised Office at Raheja Mindspace Hyderabad | UrbanWrk",
-          metaDescription: "Find your ideal customised office at Raheja Mindspace, Hyderabad. UrbanWrk offers exclusive amenities such as breakaway spaces and Tech-enabled Tech-enabled conference roomsto boost productivity.",
+          metaDescription: "Find your ideal customised office at Raheja Mindspace, Hyderabad. UrbanWrk offers exclusive amenities such as breakaway spaces and Tech-enabled conference roomsto boost productivity.",
           breadcrumbsTitle: "Raheja Mindspace",
           locationName: "Raheja Mindspace",
           bannerImage: "",
@@ -621,7 +621,7 @@ export const Jsons = {
           BannerData: [{ deskimage: '/images/locationInside/raheja-desk-1.jpg', mobimage: '/images/locationInside/raheja-mob-image-1.jpg' }, { deskimage: '/images/locationInside/raheja-desk-2.jpg', mobimage: '/images/locationInside/raheja-mob-image-2.jpg' }, { deskimage: '/images/locationInside/raheja-desk-3.png', mobimage: '/images/locationInside/raheja-mob-image-3.jpg' }, { deskimage: '/images/locationInside/raheja-desk-4.jpg', mobimage: '/images/locationInside/raheja-mob-image-4.jpg' }],
           AmentiesData: [
             { source: Lounge, title: "Member lounge & café" },
-            { source: Conference, title: "Tech-enabled Tech-enabled conference rooms" },
+            { source: Conference, title: "Tech-enabled conference rooms" },
             { source: GameRoom, title: "Game room" },
             { source: Access, title: "24/7 secure access" },
           ],
@@ -639,7 +639,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: Cafe, title: "Live kitchen" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: GameRoom, title: "Game room" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
@@ -683,7 +683,7 @@ export const Jsons = {
           BannerData: [{ deskimage: '/images/locationInside/max-house-desk-1.png', mobimage: '/images/locationInside/max-house-mob-image-1.png' }, { deskimage: '/images/locationInside/max-house-desk-2.png', mobimage: '/images/locationInside/max-house-mob-image-2.png' }, { deskimage: '/images/locationInside/max-house-desk-3.png', mobimage: '/images/locationInside/max-house-mob-image-3.png' }, { deskimage: '/images/locationInside/max-house-desk-4.png', mobimage: '/images/locationInside/max-house-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Member lounge & café" },
-            { source: Conference, title: "Tech-enabled Tech-enabled conference rooms" },
+            { source: Conference, title: "Tech-enabled conference rooms" },
             { source: Phonebooth, title: "Phonebooth" },
             { source: Access, title: "24/7 secure access" },
           ],
@@ -701,7 +701,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: Cafe, title: "Cafeteria area" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: Phonebooth, title: "Phonebooth" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
@@ -745,7 +745,7 @@ export const Jsons = {
           BannerData: [{ deskimage: '/images/locationInside/baani-desk-1.png', mobimage: '/images/locationInside/baani-mob-image-1.png' }, { deskimage: '/images/locationInside/baani-desk-2.png', mobimage: '/images/locationInside/baani-mob-image-2.png' }, { deskimage: '/images/locationInside/baani-desk-3.png', mobimage: '/images/locationInside/baani-mob-image-3.png' }, { deskimage: '/images/locationInside/baani-desk-4.png', mobimage: '/images/locationInside/baani-mob-image-4.png' }],
           AmentiesData: [
             { source: Lounge, title: "Member lounge & café" },
-            { source: Conference, title: "Tech-enabled Tech-enabled conference rooms" },
+            { source: Conference, title: "Tech-enabled conference rooms" },
             { source: Gym, title: "Gym" },
             { source: Conference, title: "Outdoor space" },
           ],
@@ -763,7 +763,7 @@ export const Jsons = {
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
             { img: Cafe, title: "Live kitchen" },
-            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled Tech-enabled conference rooms" },
+            { img: "/images/solutionsLanding/logoAmenities/amenitiesN1.svg", title: "Tech-enabled conference rooms" },
             { img: Phonebooth, title: "Phonebooth" },
             { img: Gym, title: "Gym" },
             { img: GameRoom, title: "Game room" },

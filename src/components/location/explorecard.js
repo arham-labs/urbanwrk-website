@@ -24,7 +24,6 @@ export default function ExploreCard({ data }) {
                             <div className="flex flex-col text-sm font-light mb-4">
                                 <span>{el.location1}</span>
                                 <span>{el.location2}</span>
-                                <span>{el.location2}</span>
                             </div>
                             <p className="text-sm mb-5 lg:mb-3 2xl:mb-5">{el.location3}</p>
                             <div className="grid gap-5 grid-cols-2 pb-5 border-b border-[#747474] mb-7">
