@@ -25,6 +25,9 @@ import Cafe from '../../../public/images/solutionsLanding/logoAmenities/amenitie
 import MontClaireCard from '../../../public/images/locationInside/montclaire-card.png'
 import PcpCard from '../../../public/images/location/pcp-card.jpg'
 import PcpCard1 from '../../../public/images/location/pcp-card.png'
+import Recycle from '../../../public/images/locationInside/recycle.svg'
+import Phonebooth1 from '../../../public/images/locationInside/phonebooth-1.svg'
+
 
 
 export const Jsons = {
@@ -54,7 +57,7 @@ export const Jsons = {
           locationName: "Peninsula Business Park",
           locationCity: "Lower Parel",
           locationImg: PcpCard,
-          locationMobileImg: "/images/location/pcp-mobile.jpg",
+          locationMobileImg: PcpCard,
           location1: "Studios & managed offices in Lower Parel.",
           location2: "5-minute walk to Lower Parel station.",
           location3: "Move into UrbanWrk Studios today or get a tailor-made managed office delivered in just 45 days.",
@@ -63,7 +66,10 @@ export const Jsons = {
             { source: Lounge, title: "Member lounge & café" },
             { source: Conference, title: "Tech-enabled conference rooms" },
             { source: Access, title: "24/7 secure access" },
-            { source: EventSpace, title: "Event spaces" }
+            { source: EventSpace, title: "Event spaces" },
+            { source: Recycle, title: "Recycling & Green Standards (IBGC Platinum)" },
+            { source: Phonebooth1, title: "Phone Booths and Focus Pods" }
+
           ],
           url: "/mumbai/peninsula-business-park",
           amentiesBanner: "/images/locationInside/pcp-amenities-banner.jpg",
@@ -75,6 +81,8 @@ export const Jsons = {
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN14.svg", title: "Event spaces" },
             { img: "/images/locationInside/mail.svg", title: "Mail & courier" },
             { img: "/images/solutionsLanding/logoAmenities/amenitiesN17.svg", title: "Housekeeping & concierge services" },
+            { img: Recycle, title: "Recycling & Green Standards (IBGC Platinum)" },
+            { img: Phonebooth1, title: "Phone Booths and Focus Pods" }
           ],
           locationInsideAmenities: [
             { img: Lounge, title: "Member lounge & café" },
